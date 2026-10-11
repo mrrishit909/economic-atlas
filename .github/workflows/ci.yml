@@ -1,0 +1,45 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install 3.12
+      - run: uv sync --python 3.12 --frozen
+      # data/raw and data/interim are gitignored and absent in CI. 8 tests rebuild from them
+      # (test_clusters.py x4, test_deterministic_rebuild, test_reconciliation_published_matches_raw,
+      # test_coverage_matches_panel, and test_layout_byte_identical_on_rerun, which re-solves the
+      # seed-head layouts, about 45 minutes). They are deselected; the other 51 run against the
+      # committed artifacts. (`-m "not slow"` would drop 36 more that need no raw data.)
+      - run: >
+          uv run pytest -q
+          --deselect tests/test_clusters.py
+          --deselect tests/test_artifacts.py::test_deterministic_rebuild
+          --deselect tests/test_cleaning.py::test_reconciliation_published_matches_raw
+          --deselect tests/test_coverage_rankings.py::test_coverage_matches_panel
+          --deselect tests/test_seedhead.py::test_layout_byte_identical_on_rerun
+
+  site:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      # Playwright e2e is not run here: it needs browsers and WebGL and is verified locally against
+      # the production build.
