@@ -23,4 +23,12 @@
 - **Constant-USD 1960 and 1980 sensitivity points are not published,** so those options in the lab are disabled and labelled NOT PUBLISHED. Terciles, set-aside and PPP sensitivity points are derived exactly in the browser from the published panel.
 - **hhi5 understates product-level concentration** (five broad merchandise groups, 147 countries in 2022).
 - **Value-added shares sum to about 93 percent of GDP at the median** (net product taxes); services are not a residual.
-- **Frame pacing** was measured only on software GL (no GPU) by the builder; real-device pacing, and the builder's Lighthouse figures, are pending independent QA. The site has quality tiers (high, low, no-GL) and a reduced-motion rendering, but their cost on real hardware is unmeasured.
+- **Frame pacing** was measured only on software GL (no GPU); real-device pacing is unmeasured. The site has quality tiers (high, low, no-GL) and a reduced-motion rendering.
+
+## Open minors at release (independent QA pass 3, none blocks release)
+
+- **D-025 (minor).** Phone S03a: the readout panels cover 26% (390), 36% (375) and 48% (360) of the disc area, so a FOLLOW outline can be partly hidden at the narrowest widths.
+- **D-032 (minor).** 768 with reduced motion: the S04 verdict card rests over the top of the plane's y-axis title at the scene's natural rest position (the unit also appears in the chip and the x-axis line).
+- **D-033 (low).** Phone ATLAS: with the sheet open, a second "CLOSE CONTROLS" button (bottom-left toggle) sits under the sheet; it is covered visually but assistive technology sees two same-named buttons.
+- **D-030 (low).** S01 mid-scrub (progress about 0.5) has no honesty chip in view while the disc is shown.
+- **D-031 (low).** The S00 IDN seed label is clipped at the top edge at 1440 and 1280.

@@ -16,37 +16,26 @@
 | `tests/test_artifacts.py` | every artifact validates and has a schema and size budget; no NaN tokens; validation all passed; vintage and licence in meta; not-causal copy present; no IMF endpoint called; facts cover copy numbers; narratives render only from inputs; deterministic rebuild |
 | `tests/test_contracts.py` | schemas valid and complete; artifacts validate; no U+2014/U+2015 in tracked files or decoded JSON strings |
 
-## Commands run (2026-10-11, HEAD 322be7a, working tree with `data/raw` and `data/interim` present)
+## Final release counts (2026-10-11, product HEAD 2bd5930, QA commit 211f436)
 
-| Command | Result |
+| Check | Result |
 |---|---|
-| `uv run pytest -q` | 59 passed (44.55 s) |
-| `uv run pytest -q -m "not slow"` | 15 passed, 44 deselected (3.50 s) |
-| `uv run pytest -q` in a fresh `git clone` (no raw data, as in CI) | 51 passed, 1 failed, 7 errors (25.53 s); all 8 need `data/interim` |
-| the CI invocation (see `.github/workflows/ci.yml`: 8 raw-dependent tests deselected) in that clone | 51 passed, 8 deselected (3.53 s) |
-| `npm run typecheck` (site) | clean |
-| `npm run lint` (site) | clean |
-| `npm test` (site, Vitest) | 9 files, 110 tests passed (0.48 s) |
+| pytest (`uv run pytest -q`, raw data present) | 59 passed |
+| Vitest (`npm test`, site) | 111 passed |
+| Playwright e2e (production build, 1440x900, 768x1024, 390x844) | 181 passed, 0 failed |
+| axe-core | 44 scans, 0 violations |
+| typecheck, lint | clean |
+| Independent QA | pass 1 FAILED (P05-QA-001, 2 blockers, 8 majors); pass 2 FAILED (P05-QA-002, D-023, D-024); pass 3 PASSED with minors (P05-QA-003, no blocker or major open). See `docs/QA_REPORT.md` |
 
-CI therefore runs the 51 tests that need only committed files. The 8 skipped there are checked locally: `test_clusters.py` (4), `test_deterministic_rebuild`, `test_reconciliation_published_matches_raw`, `test_coverage_matches_panel`, and `test_layout_byte_identical_on_rerun` (re-solves the layouts, about 45 minutes).
+CI runs the 51 pytest tests that need only committed files; the 8 raw-data tests are checked locally: `test_clusters.py` (4), `test_deterministic_rebuild`, `test_reconciliation_published_matches_raw`, `test_coverage_matches_panel`, and `test_layout_byte_identical_on_rerun` (about 45 minutes).
 
 ## Site tests
 
 | Layer | What it proves |
 |---|---|
 | Vitest (`site/src/**/*.test.ts`) | `loader` typed states; `copy` agrees with `facts.json`; atlas, likeness, narratives (parity with the Python reference), plane and seed-state models; seed layout decoding against a fixture |
-| Playwright (`site/e2e/`: `shell`, `prototype`, `stageb`, `qa`) | shell, intro, nav, keyboard and focus; zero external requests across every scene; reduced-motion in-flow rendering; S00 disc rules; one price basis per visual element; slot and seed counts in the DOM equal published facts; 404 on a layout shows COULD NOT LOAD and RETRY recovers; S04 flight lands on plane positions; ATLAS rules (no aggregates, INDEX disabled for shares, RESET); axe-core with no serious or critical violations in the Stage B scenes; QA lessons L1 to L10 (no text collisions at 390x844 and 1280x720, classic scrollbars). Runs against the production build (`npm run e2e`, served by `site/tests/serve.mjs` on port 4341) at 1440x900, 768x1024 and 390x844 |
-
-Not run in this pass (the frontend owner builds production): `npm run build`, `npm run e2e`. The builder reported 151 e2e tests passed (`docs/BUILD_STATUS.md`); this release pass did not reproduce it: `TBD (pending QA)`.
+| Playwright (`site/e2e/`: `shell`, `prototype`, `stageb`, `qa`) | shell, intro, nav, keyboard and focus; zero external requests across every scene; reduced-motion in-flow rendering; S00 disc rules; one price basis per visual element; slot and seed counts in the DOM equal published facts; 404 on a layout shows COULD NOT LOAD and RETRY recovers; S04 flight lands on plane positions; ATLAS rules; axe-core on the scenes; QA lessons L1 to L20. Runs against the production build (`npm run e2e`, `site/tests/serve.mjs`, port 4341) |
 
 ## Performance, accessibility, visual QA
 
-| Item | Result |
-|---|---|
-| Lighthouse, mobile (production build, builder-measured, pending independent QA) | LCP 1.81 s; performance 88 / 99 / 99 across three runs; accessibility 100 |
-| Lighthouse, desktop (builder-measured, pending independent QA) | performance 100; accessibility 100 |
-| Frame pacing | builder measured on software GL only; real-device pacing `TBD (pending QA)` |
-| axe-core | covered by `site/e2e/stageb.spec.ts`; independent re-run `TBD (pending QA)` |
-| Independent visual QA, deployed URL screenshot, curl checks | `TBD (pending QA)` |
-
-Builder evidence (screenshots, contact sheets, Lighthouse JSON) is under `artifacts/evidence/stage-b/`.
+Independent measurements are in `docs/QA_REPORT.md` (pass 3, `artifacts/evidence/qa-3/`). Deployed-site measurements (Lighthouse x3 mobile and desktop, curl, Playwright on the live URL, screenshots) are in `artifacts/evidence/live/` and summarized in `docs/BUILD_STATUS.md`. Frame pacing was measured on software GL only; real-device pacing is not measured.

@@ -1,6 +1,6 @@
 # Deployment
 
-Target: GitHub Pages at https://mrrishit909.github.io/economic-atlas/ (placeholder until the first deploy). The GitHub repo does not exist yet; creating it, pushing and deploying are separate, authorized steps.
+Target: GitHub Pages at https://mrrishit909.github.io/economic-atlas/ (deployed 2026-10-11 from the public repo https://github.com/mrrishit909/economic-atlas, Pages source `gh-pages` at `/`).
 
 ## How
 
@@ -26,7 +26,11 @@ Fonts (Latin subsets of Newsreader and JetBrains Mono, woff2) are bundled and se
 4. Deploy, then verify: `curl -sI https://mrrishit909.github.io/economic-atlas/` returns 200; `curl -sI` on `.../data/facts.json` and `.../data/seedhead/gdppc_ppp_latest.json` returns 200; take a real screenshot of the live URL.
 5. Add the case study to the projects site (`~/data-frontier/portfolio/05-economic-atlas/project.json` is the draft; schema `contracts/portfolio.schema.json`) and verify every link.
 
-Results of steps 2 to 5: TBD (pending QA / deploy).
+Results: steps 1 to 3 PASSED (independent QA pass 3, `docs/QA_REPORT.md`). Steps 4 and 5: live checks are saved under `artifacts/evidence/live/` and summarized in `docs/BUILD_STATUS.md`; the case study is on the projects site branch `add-economic-atlas` pending the orchestrator merge.
+
+## Licence
+
+No code licence file (`LICENSE`) is included. The choice of licence is a pending owner decision; until then the code is published without one (all rights reserved by default). Data attributions are in `docs/DATA_SOURCES.md`.
 
 ## CI
 

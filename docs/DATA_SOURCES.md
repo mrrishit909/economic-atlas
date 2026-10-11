@@ -55,3 +55,10 @@ are third-party (UN, ILO, IMF IFS, Comtrade) redistributed under the WDI CC BY 4
 ## 5. Unverified items (declared)
 - Which WDI series were revised in the 2026-10-08 release: not checkable; vintage only.
 - WDI's own treatment of pre-1991 Germany/Yemen/Russia etc. series: WDI documentation was not machine-readable here. Treatment in `boundaries.json` is conservative (flag, exclude from the primary sample).
+
+## Licence and vintage summary (release)
+
+- **World Bank WDI**: CC BY 4.0, vintage 2026-10-08 (API `lastupdated` at retrieval); attribution shown on the site. Not sponsored or endorsed by the World Bank.
+- **Maddison Project Database 2023** (Bolt and van Zanden) via Our World in Data: CC BY 4.0, long-run context only, 2011 dollars, never combined with WDI series.
+- **IMF**: excluded (bulk download needs written permission); no IMF endpoint is called and no IMF figure appears.
+- The site is a dated snapshot; later WDI revisions are not reflected.
