@@ -1,0 +1,891 @@
+{
+ "D023_1440": [
+  {
+   "sid": "catch-up",
+   "f": 0,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.2,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.4,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.6,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.8,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.2,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.4,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.6,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.8,
+   "svg": [
+    0,
+    0,
+    1440,
+    900
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  }
+ ],
+ "D023_768": [
+  {
+   "sid": "catch-up",
+   "f": 0,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.2,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.4,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.6,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.8,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.2,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.4,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.6,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.8,
+   "svg": [
+    0,
+    0,
+    768,
+    1024
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  }
+ ],
+ "D023_390": [
+  {
+   "sid": "catch-up",
+   "f": 0,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.2,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.4,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.6,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "catch-up",
+   "f": 0.8,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.2,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.4,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.6,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  },
+  {
+   "sid": "lab",
+   "f": 0.8,
+   "svg": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pos": "fixed",
+   "xLabels": 5,
+   "unit": "GDP PER CAPITA IN 1990CONSTANT 2021 INTL $ (PPP)",
+   "zero": true,
+   "fit": true,
+   "ci": true,
+   "basis": "ppp_constant_intl_2021",
+   "textOverLabels": []
+  }
+ ],
+ "D024_768": [
+  {
+   "p": 0.05,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_PRIMARY",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.075,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_PRIMARY",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.1,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_TERCILE_LOW",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.125,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_TERCILE_LOW",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.15,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_TERCILE_LOW",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.175,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_POP_WEIGHTED",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.2,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_POP_WEIGHTED",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.225,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_POP_WEIGHTED",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.25,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_POP_WEIGHTED_EX_CHN_",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.275,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_POP_WEIGHTED_EX_CHN_",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 0.3,
+   "chip": "DERIVED · GDPPC_PPP_1990_2025_PRIMARY",
+   "inView": true,
+   "onTop": true,
+   "hits": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  }
+ ],
+ "D025_26_27_390": {
+  "s03aDisc": {
+   "R": 125,
+   "cx": 195,
+   "cy": 410,
+   "inViewDiscSamples": 3062,
+   "coveredPct": 25.7
+  },
+  "ticks": [
+   {
+    "t": "1K",
+    "top": 511,
+    "bottom": 525,
+    "svgBottom": 844,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "3K",
+    "top": 511,
+    "bottom": 525,
+    "svgBottom": 844,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "10K",
+    "top": 511,
+    "bottom": 525,
+    "svgBottom": 844,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "30K",
+    "top": 511,
+    "bottom": 525,
+    "svgBottom": 844,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "100K",
+    "top": 511,
+    "bottom": 525,
+    "svgBottom": 844,
+    "topVisible": false,
+    "inView": true
+   }
+  ],
+  "s06caption": {
+   "caption": [
+    165,
+    733,
+    315,
+    784
+   ],
+   "hollow": [
+    165,
+    733,
+    315,
+    784
+   ],
+   "hollowCls": "group-cap group-cap--ungrouped"
+  }
+ },
+ "D025_26_27_375": {
+  "s03aDisc": {
+   "R": 120,
+   "cx": 188,
+   "cy": 394,
+   "inViewDiscSamples": 2825,
+   "coveredPct": 35.7
+  },
+  "ticks": [
+   {
+    "t": "1K",
+    "top": 492,
+    "bottom": 506,
+    "svgBottom": 812,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "3K",
+    "top": 492,
+    "bottom": 506,
+    "svgBottom": 812,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "10K",
+    "top": 492,
+    "bottom": 506,
+    "svgBottom": 812,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "30K",
+    "top": 492,
+    "bottom": 506,
+    "svgBottom": 812,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "100K",
+    "top": 492,
+    "bottom": 506,
+    "svgBottom": 812,
+    "topVisible": false,
+    "inView": true
+   }
+  ],
+  "s06caption": {
+   "caption": [
+    164,
+    705,
+    314,
+    755
+   ],
+   "hollow": [
+    164,
+    705,
+    314,
+    755
+   ],
+   "hollowCls": "group-cap group-cap--ungrouped"
+  }
+ },
+ "D025_26_27_360": {
+  "s03aDisc": {
+   "R": 115,
+   "cx": 180,
+   "cy": 389,
+   "inViewDiscSamples": 2601,
+   "coveredPct": 47.8
+  },
+  "ticks": [
+   {
+    "t": "1K",
+    "top": 485,
+    "bottom": 499,
+    "svgBottom": 800,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "3K",
+    "top": 485,
+    "bottom": 499,
+    "svgBottom": 800,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "10K",
+    "top": 485,
+    "bottom": 499,
+    "svgBottom": 800,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "30K",
+    "top": 485,
+    "bottom": 499,
+    "svgBottom": 800,
+    "topVisible": false,
+    "inView": true
+   },
+   {
+    "t": "100K",
+    "top": 485,
+    "bottom": 499,
+    "svgBottom": 800,
+    "topVisible": false,
+    "inView": true
+   }
+  ],
+  "s06caption": {
+   "caption": [
+    163,
+    694,
+    313,
+    745
+   ],
+   "hollow": [
+    163,
+    694,
+    313,
+    745
+   ],
+   "hollowCls": "group-cap group-cap--ungrouped"
+  }
+ }
+}

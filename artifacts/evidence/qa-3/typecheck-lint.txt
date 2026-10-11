@@ -1,0 +1,5 @@
+> tsc --noEmit
+
+> economic-atlas@0.1.0 lint
+> eslint .
+

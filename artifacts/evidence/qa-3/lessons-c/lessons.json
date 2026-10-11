@@ -1,0 +1,38 @@
+[
+ {
+  "viewport": "1440x900",
+  "defects": [
+   "eight-billion@0.5: L3 no in-viewport honesty chip"
+  ]
+ },
+ {
+  "viewport": "768x1024",
+  "defects": [
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "lab@0.45: L2/L11/L13 \"Same data. Different questions.\" x \"→\" (8x8) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (31x16) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (38x7) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (31x15) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (46x15)",
+   "atlas@0: L2/L11/L13 \"ONE INDICATOR, ONE UNIT AT A TIME.\" x \"ATLAS\" (42x17)"
+  ]
+ },
+ {
+  "viewport": "390x844",
+  "defects": [
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "catch-up@0.04: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"Did the poor grow faster?\" x \"DATA TABLE FOR THIS WINDOW\" (34x10) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.24: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"Did the poor grow faster?\" x \"DATA TABLE FOR THIS WINDOW\" (34x10) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.6: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.95: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 2010 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.45: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)"
+  ]
+ },
+ {
+  "viewport": "360x800",
+  "defects": [
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "catch-up@0.04: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"Did the poor grow faster?\" x \"DATA TABLE FOR THIS WINDOW\" (34x10) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.24: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"Did the poor grow faster?\" x \"DATA TABLE FOR THIS WINDOW\" (34x10) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.6: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.95: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 2010 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.45: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)"
+  ]
+ }
+]

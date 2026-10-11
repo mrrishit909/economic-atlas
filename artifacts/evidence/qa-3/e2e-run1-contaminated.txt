@@ -1,0 +1,1246 @@
+13:52  up 2 days, 16:22, 4 users, load averages: 19.85 17.88 14.18
+
+Running 438 tests using 1 worker
+
+  ✓    1 [desktop] › e2e/prototype.spec.ts:15:1 › S00: the disc is giant from the first dust frame, never shrinks, and keeps a visible edge outside every scrim (4.4s)
+  ✓    2 [desktop] › e2e/prototype.spec.ts:52:1 › slot and seed counts in the DOM equal the published facts (4.2s)
+  ✓    3 [desktop] › e2e/prototype.spec.ts:72:1 › S03b controls change the visible state; set aside hollows China and India; not-causal copy is on screen (4.6s)
+  ✓    4 [desktop] › e2e/prototype.spec.ts:89:1 › basis is never mixed in one view (S00, S03a, S03b) (3.9s)
+  ✓    5 [desktop] › e2e/prototype.spec.ts:101:1 › S03a: integer years only, the readout equals DR-1's median person, FOLLOW outlines a country (5.4s)
+  ✓    6 [desktop] › e2e/prototype.spec.ts:116:1 › 404 on the year layouts shows COULD NOT LOAD + RETRY, and RETRY re-runs the fetch (3.0s)
+  ✓    7 [desktop] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides (10.7s)
+  ✓    8 [desktop] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides (10.5s)
+  ✓    9 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill (21.3s)
+  ✓   10 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   11 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   12 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill (24.2s)
+  ✓   13 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   14 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill (24.2s)
+  ✓   15 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill (24.2s)
+  ✓   16 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill (24.4s)
+  ✓   17 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) (8.8s)
+  ✓   18 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) (8.6s)
+  ✓   19 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) (8.6s)
+  ✓   20 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) (9.0s)
+  ✓   21 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) (8.9s)
+  ✓   22 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) (8.7s)
+  ✓   23 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) (8.5s)
+  ✓   24 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.2s)
+  ✓   25 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.3s)
+  ✓   26 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.3s)
+  ✓   27 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.3s)
+  ✓   28 [desktop] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page (3.6s)
+  ✓   29 [desktop] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page (3.5s)
+  ✓   30 [desktop] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page (3.3s)
+  ✓   31 [desktop] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (14.1s)
+  ✓   32 [desktop] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (15.0s)
+  ✓   33 [desktop] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (8.9s)
+  ✓   34 [desktop] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (9.1s)
+  ✓   35 [desktop] › e2e/qa.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible (9.1s)
+  ✓   36 [desktop] › e2e/qa.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound (10.4s)
+  ✓   37 [desktop] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (7.8s)
+  ✓   38 [desktop] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (7.4s)
+  ✓   39 [desktop] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (7.7s)
+  ✓   40 [desktop] › e2e/qa.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible (15.1s)
+  ✓   41 [desktop] › e2e/qa.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed (6.0s)
+  ✘   42 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background (26.0s)
+  ✓   43 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background (23.5s)
+  ✓   44 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background (25.6s)
+  ✓   45 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background (23.1s)
+  ✓   46 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background (25.3s)
+  ✓   47 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background (22.7s)
+  ✓   48 [desktop] › e2e/shell.spec.ts:15:1 › shell: title, ten scene tracks, hero headline is static HTML ghosted from first paint (809ms)
+  ✓   49 [desktop] › e2e/shell.spec.ts:25:1 › intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it (1.5s)
+  ✓   50 [desktop] › e2e/shell.spec.ts:35:1 › intro plays once per session; REPLAY plays it again and completes (9.8s)
+  ✓   51 [desktop] › e2e/shell.spec.ts:48:1 › zero external requests while visiting every scene (2.7s)
+  ✓   52 [desktop] › e2e/shell.spec.ts:58:1 › desktop nav: keyboard jump, aria-current, focus, back (646ms)
+  -   53 [desktop] › e2e/shell.spec.ts:77:1 › T/M menu pill: open, Esc closes and returns focus, item jumps
+  ✓   54 [desktop] › e2e/shell.spec.ts:93:1 › reduced motion renders in flow: no pinned stages, static discs (1.3s)
+  ✓   55 [desktop] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (eight-billion) (2.6s)
+  ✓   56 [desktop] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (years) (2.5s)
+  ✓   57 [desktop] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (weight) (2.5s)
+  ✓   58 [desktop] › e2e/shell.spec.ts:116:1 › production build excludes the dev gallery (268ms)
+  ✓   59 [desktop] › e2e/stageb.spec.ts:35:3 › Stage B scenes › every scene renders its heading at its landing; never two bases in one visual element (18.5s)
+  ✓   60 [desktop] › e2e/stageb.spec.ts:52:3 › Stage B scenes › S05 basis swap: no sampled frame shows two bases (DOM) or a canvas palette of another basis (8.5s)
+  ✓   61 [desktop] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree (9.4s)
+  ✓   62 [desktop] › e2e/stageb.spec.ts:92:3 › Stage B scenes › S04 flight: seeds start on their disc slots and land on their plane positions (1px) (6.4s)
+  ✓   63 [desktop] › e2e/stageb.spec.ts:109:3 › Stage B scenes › S04 windows draw only published fits; not-causal copy always on screen (5.9s)
+  ✓   64 [desktop] › e2e/stageb.spec.ts:121:3 › Stage B scenes › S06: Ward hollow count is the published disagree_count; rho readout from pairs; groups are descriptive (6.7s)
+  ✓   65 [desktop] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores (9.3s)
+  ✓   66 [desktop] › e2e/stageb.spec.ts:165:3 › Stage B scenes › S08: the echo dissolves and re-sorts at giant size; the closing names vintage, WDI, Maddison and the IMF exclusion (4.6s)
+  ✓   67 [desktop] › e2e/stageb.spec.ts:179:3 › Stage B scenes › axe: no serious or critical violations in any Stage B scene (13.8s)
+  ✓   68 [desktop] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers (2.7s)
+  ✓   69 [desktop] › e2e/stageb.spec.ts:249:1 › S02 names the vintage, the WDI attribution and the IMF exclusion; S05 never calls a loading panel unpublished (4.9s)
+  ✓   70 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST + RETRY in view, and recovers (1.9s)
+  ✓   71 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD FACTS + RETRY in view, and recovers (2.3s)
+  ✓   72 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD RECONCILIATION + RETRY in view, and recovers (2.3s)
+  ✓   73 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (2.3s)
+  ✓   74 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD LONGRUN + RETRY in view, and recovers (2.5s)
+  ✓   75 [desktop] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (1.8s)
+  ✓   76 [desktop] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.2s)
+  ✓   77 [desktop] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.1s)
+  ✓   78 [desktop] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (1.7s)
+  ✓   79 [desktop] › e2e/stageb.spec.ts:262:3 › L4: catch-up shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.5s)
+  ✓   80 [desktop] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.4s)
+  ✓   81 [desktop] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.3s)
+  ✓   82 [desktop] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (2.4s)
+  ✓   83 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD VALIDATION + RETRY in view, and recovers (2.2s)
+  ✓   84 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD BOUNDARIES + RETRY in view, and recovers (2.4s)
+  ✓   85 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.3s)
+  ✓   86 [desktop] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (3.0s)
+  ✓   87 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (1.7s)
+  ✓   88 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD META + RETRY in view, and recovers (2.3s)
+  ✓   89 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.3s)
+  ✓   90 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (1.8s)
+  ✓   91 [desktop] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.3s)
+  ✓   92 [desktop] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (3.2s)
+  ✓   93 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (1.9s)
+  ✓   94 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.2s)
+  ✓   95 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (2.3s)
+  ✓   96 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (2.6s)
+  ✓   97 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers (2.3s)
+  ✓   98 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers (2.2s)
+  ✓   99 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.3s)
+  ✓  100 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.3s)
+  ✓  101 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.3s)
+  ✓  102 [desktop] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD FACTS + RETRY in view, and recovers (3.0s)
+  ✓  103 [desktop] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD META + RETRY in view, and recovers (1.8s)
+  ✘  104 [desktop] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides (0ms)
+  ✘  105 [desktop] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides (0ms)
+  ✘  106 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  107 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  108 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  109 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  110 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  111 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  112 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  113 [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  114 [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  115 [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  116 [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  117 [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  118 [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  119 [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  120 [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  121 [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  122 [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  123 [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  124 [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  125 [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page (0ms)
+  ✘  126 [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page (0ms)
+  ✘  127 [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page (0ms)
+  ✘  128 [desktop] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (0ms)
+  ✘  129 [desktop] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (0ms)
+  ✘  130 [desktop] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (0ms)
+  ✘  131 [desktop] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (0ms)
+  ✘  132 [desktop] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible (0ms)
+  ✘  133 [desktop] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound (0ms)
+  ✘  134 [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  135 [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  136 [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  137 [desktop] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible (0ms)
+  ✘  138 [desktop] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed (0ms)
+  ✘  139 [desktop] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast (0ms)
+  ✘  140 [desktop] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast (0ms)
+  ✘  141 [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  142 [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  143 [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  144 [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  145 [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  146 [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✓  147 [tablet] › e2e/prototype.spec.ts:15:1 › S00: the disc is giant from the first dust frame, never shrinks, and keeps a visible edge outside every scrim (4.3s)
+  ✓  148 [tablet] › e2e/prototype.spec.ts:52:1 › slot and seed counts in the DOM equal the published facts (4.2s)
+  ✓  149 [tablet] › e2e/prototype.spec.ts:72:1 › S03b controls change the visible state; set aside hollows China and India; not-causal copy is on screen (5.8s)
+  ✓  150 [tablet] › e2e/prototype.spec.ts:89:1 › basis is never mixed in one view (S00, S03a, S03b) (3.3s)
+  ✓  151 [tablet] › e2e/prototype.spec.ts:101:1 › S03a: integer years only, the readout equals DR-1's median person, FOLLOW outlines a country (4.5s)
+  ✓  152 [tablet] › e2e/prototype.spec.ts:116:1 › 404 on the year layouts shows COULD NOT LOAD + RETRY, and RETRY re-runs the fetch (885ms)
+  -  153 [tablet] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides
+  -  154 [tablet] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides
+  -  155 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  156 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  157 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  158 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  159 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  160 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  161 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  162 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  163 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top)
+  -  164 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top)
+  -  165 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top)
+  -  166 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top)
+  -  167 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top)
+  -  168 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top)
+  -  169 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top)
+  -  170 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  171 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  172 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  173 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  174 [tablet] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page
+  -  175 [tablet] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page
+  -  176 [tablet] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page
+  -  177 [tablet] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  178 [tablet] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  179 [tablet] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  180 [tablet] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  181 [tablet] › e2e/qa.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible
+  -  182 [tablet] › e2e/qa.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound
+  -  183 [tablet] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  184 [tablet] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  185 [tablet] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  186 [tablet] › e2e/qa.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible
+  -  187 [tablet] › e2e/qa.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed
+  -  188 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background
+  -  189 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  190 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background
+  -  191 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  192 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background
+  -  193 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  ✓  194 [tablet] › e2e/shell.spec.ts:15:1 › shell: title, ten scene tracks, hero headline is static HTML ghosted from first paint (961ms)
+  ✓  195 [tablet] › e2e/shell.spec.ts:25:1 › intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it (1.2s)
+  ✓  196 [tablet] › e2e/shell.spec.ts:35:1 › intro plays once per session; REPLAY plays it again and completes (9.8s)
+  ✓  197 [tablet] › e2e/shell.spec.ts:48:1 › zero external requests while visiting every scene (2.5s)
+  -  198 [tablet] › e2e/shell.spec.ts:58:1 › desktop nav: keyboard jump, aria-current, focus, back
+  ✓  199 [tablet] › e2e/shell.spec.ts:77:1 › T/M menu pill: open, Esc closes and returns focus, item jumps (916ms)
+  ✓  200 [tablet] › e2e/shell.spec.ts:93:1 › reduced motion renders in flow: no pinned stages, static discs (1.3s)
+  ✓  201 [tablet] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (eight-billion) (2.6s)
+  ✓  202 [tablet] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (years) (2.4s)
+  ✓  203 [tablet] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (weight) (2.5s)
+  ✓  204 [tablet] › e2e/shell.spec.ts:116:1 › production build excludes the dev gallery (117ms)
+  ✓  205 [tablet] › e2e/stageb.spec.ts:35:3 › Stage B scenes › every scene renders its heading at its landing; never two bases in one visual element (18.5s)
+  -  206 [tablet] › e2e/stageb.spec.ts:52:3 › Stage B scenes › S05 basis swap: no sampled frame shows two bases (DOM) or a canvas palette of another basis
+  -  207 [tablet] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree
+  ✓  208 [tablet] › e2e/stageb.spec.ts:92:3 › Stage B scenes › S04 flight: seeds start on their disc slots and land on their plane positions (1px) (6.4s)
+  ✓  209 [tablet] › e2e/stageb.spec.ts:109:3 › Stage B scenes › S04 windows draw only published fits; not-causal copy always on screen (5.8s)
+  ✓  210 [tablet] › e2e/stageb.spec.ts:121:3 › Stage B scenes › S06: Ward hollow count is the published disagree_count; rho readout from pairs; groups are descriptive (6.7s)
+  -  211 [tablet] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores
+  ✓  212 [tablet] › e2e/stageb.spec.ts:165:3 › Stage B scenes › S08: the echo dissolves and re-sorts at giant size; the closing names vintage, WDI, Maddison and the IMF exclusion (7.9s)
+  -  213 [tablet] › e2e/stageb.spec.ts:179:3 › Stage B scenes › axe: no serious or critical violations in any Stage B scene
+  -  214 [tablet] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers
+  -  215 [tablet] › e2e/stageb.spec.ts:249:1 › S02 names the vintage, the WDI attribution and the IMF exclusion; S05 never calls a loading panel unpublished
+  -  216 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST + RETRY in view, and recovers
+  -  217 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD FACTS + RETRY in view, and recovers
+  -  218 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD RECONCILIATION + RETRY in view, and recovers
+  -  219 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers
+  -  220 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD LONGRUN + RETRY in view, and recovers
+  -  221 [tablet] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers
+  -  222 [tablet] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  223 [tablet] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  224 [tablet] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers
+  -  225 [tablet] › e2e/stageb.spec.ts:262:3 › L4: catch-up shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  226 [tablet] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  227 [tablet] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers
+  -  228 [tablet] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers
+  -  229 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD VALIDATION + RETRY in view, and recovers
+  -  230 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD BOUNDARIES + RETRY in view, and recovers
+  -  231 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers
+  -  232 [tablet] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers
+  -  233 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers
+  -  234 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD META + RETRY in view, and recovers
+  -  235 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers
+  -  236 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  237 [tablet] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  238 [tablet] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  239 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  240 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers
+  -  241 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers
+  -  242 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers
+  -  243 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers
+  -  244 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers
+  -  245 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  246 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers
+  -  247 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers
+  -  248 [tablet] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD FACTS + RETRY in view, and recovers
+  -  249 [tablet] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD META + RETRY in view, and recovers
+  ✘  250 [tablet] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides (0ms)
+  ✘  251 [tablet] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides (0ms)
+  ✘  252 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  253 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  254 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  255 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  256 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  257 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  258 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  259 [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  260 [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  261 [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  262 [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  263 [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  264 [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  265 [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  266 [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  267 [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  268 [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  269 [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  270 [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  271 [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page (0ms)
+  ✘  272 [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page (0ms)
+  ✘  273 [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page (0ms)
+  ✘  274 [tablet] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (0ms)
+  ✘  275 [tablet] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (0ms)
+  ✘  276 [tablet] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (0ms)
+  ✘  277 [tablet] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (0ms)
+  ✘  278 [tablet] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible (0ms)
+  ✘  279 [tablet] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound (0ms)
+  ✘  280 [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  281 [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  282 [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  283 [tablet] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible (0ms)
+  ✘  284 [tablet] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed (0ms)
+  ✘  285 [tablet] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast (0ms)
+  ✘  286 [tablet] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast (0ms)
+  ✘  287 [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  288 [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  289 [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  290 [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  291 [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  292 [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✓  293 [mobile] › e2e/prototype.spec.ts:15:1 › S00: the disc is giant from the first dust frame, never shrinks, and keeps a visible edge outside every scrim (4.3s)
+  ✓  294 [mobile] › e2e/prototype.spec.ts:52:1 › slot and seed counts in the DOM equal the published facts (4.0s)
+  ✓  295 [mobile] › e2e/prototype.spec.ts:72:1 › S03b controls change the visible state; set aside hollows China and India; not-causal copy is on screen (3.3s)
+  ✓  296 [mobile] › e2e/prototype.spec.ts:89:1 › basis is never mixed in one view (S00, S03a, S03b) (3.4s)
+  ✓  297 [mobile] › e2e/prototype.spec.ts:101:1 › S03a: integer years only, the readout equals DR-1's median person, FOLLOW outlines a country (4.5s)
+  ✓  298 [mobile] › e2e/prototype.spec.ts:116:1 › 404 on the year layouts shows COULD NOT LOAD + RETRY, and RETRY re-runs the fetch (912ms)
+  -  299 [mobile] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides
+  -  300 [mobile] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides
+  -  301 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  302 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  303 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  304 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  305 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  306 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  307 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  308 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  309 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top)
+  -  310 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top)
+  -  311 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top)
+  -  312 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top)
+  -  313 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top)
+  -  314 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top)
+  -  315 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top)
+  -  316 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  317 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  318 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  319 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  320 [mobile] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page
+  -  321 [mobile] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page
+  -  322 [mobile] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page
+  -  323 [mobile] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  324 [mobile] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  325 [mobile] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  326 [mobile] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  327 [mobile] › e2e/qa.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible
+  -  328 [mobile] › e2e/qa.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound
+  -  329 [mobile] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  330 [mobile] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  331 [mobile] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  332 [mobile] › e2e/qa.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible
+  -  333 [mobile] › e2e/qa.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed
+  -  334 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background
+  -  335 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  336 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background
+  -  337 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  338 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background
+  -  339 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  ✓  340 [mobile] › e2e/shell.spec.ts:15:1 › shell: title, ten scene tracks, hero headline is static HTML ghosted from first paint (463ms)
+  ✓  341 [mobile] › e2e/shell.spec.ts:25:1 › intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it (1.2s)
+  ✓  342 [mobile] › e2e/shell.spec.ts:35:1 › intro plays once per session; REPLAY plays it again and completes (9.9s)
+  ✓  343 [mobile] › e2e/shell.spec.ts:48:1 › zero external requests while visiting every scene (2.5s)
+  -  344 [mobile] › e2e/shell.spec.ts:58:1 › desktop nav: keyboard jump, aria-current, focus, back
+  ✓  345 [mobile] › e2e/shell.spec.ts:77:1 › T/M menu pill: open, Esc closes and returns focus, item jumps (918ms)
+  ✓  346 [mobile] › e2e/shell.spec.ts:93:1 › reduced motion renders in flow: no pinned stages, static discs (1.3s)
+  ✓  347 [mobile] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (eight-billion) (2.4s)
+  ✓  348 [mobile] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (years) (2.3s)
+  ✓  349 [mobile] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (weight) (2.3s)
+  ✓  350 [mobile] › e2e/shell.spec.ts:116:1 › production build excludes the dev gallery (271ms)
+  ✓  351 [mobile] › e2e/stageb.spec.ts:35:3 › Stage B scenes › every scene renders its heading at its landing; never two bases in one visual element (18.5s)
+  -  352 [mobile] › e2e/stageb.spec.ts:52:3 › Stage B scenes › S05 basis swap: no sampled frame shows two bases (DOM) or a canvas palette of another basis
+  -  353 [mobile] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree
+  ✓  354 [mobile] › e2e/stageb.spec.ts:92:3 › Stage B scenes › S04 flight: seeds start on their disc slots and land on their plane positions (1px) (6.3s)
+  ✓  355 [mobile] › e2e/stageb.spec.ts:109:3 › Stage B scenes › S04 windows draw only published fits; not-causal copy always on screen (5.7s)
+  ✓  356 [mobile] › e2e/stageb.spec.ts:121:3 › Stage B scenes › S06: Ward hollow count is the published disagree_count; rho readout from pairs; groups are descriptive (6.7s)
+  ✓  357 [mobile] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores (10.8s)
+  ✓  358 [mobile] › e2e/stageb.spec.ts:165:3 › Stage B scenes › S08: the echo dissolves and re-sorts at giant size; the closing names vintage, WDI, Maddison and the IMF exclusion (7.7s)
+  ✓  359 [mobile] › e2e/stageb.spec.ts:179:3 › Stage B scenes › axe: no serious or critical violations in any Stage B scene (13.4s)
+  ✓  360 [mobile] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers (3.1s)
+  -  361 [mobile] › e2e/stageb.spec.ts:249:1 › S02 names the vintage, the WDI attribution and the IMF exclusion; S05 never calls a loading panel unpublished
+  ✓  362 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST + RETRY in view, and recovers (1.8s)
+  ✓  363 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD FACTS + RETRY in view, and recovers (2.2s)
+  ✓  364 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD RECONCILIATION + RETRY in view, and recovers (2.3s)
+  ✓  365 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (2.2s)
+  ✓  366 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD LONGRUN + RETRY in view, and recovers (2.3s)
+  ✓  367 [mobile] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.2s)
+  ✓  368 [mobile] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.3s)
+  ✓  369 [mobile] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.1s)
+  ✓  370 [mobile] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.1s)
+  ✓  371 [mobile] › e2e/stageb.spec.ts:262:3 › L4: catch-up shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.0s)
+  ✓  372 [mobile] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.3s)
+  ✓  373 [mobile] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.3s)
+  ✓  374 [mobile] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (2.3s)
+  ✓  375 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD VALIDATION + RETRY in view, and recovers (2.3s)
+  ✓  376 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD BOUNDARIES + RETRY in view, and recovers (2.3s)
+  ✓  377 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.1s)
+  ✓  378 [mobile] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.8s)
+  ✓  379 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (1.7s)
+  ✓  380 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD META + RETRY in view, and recovers (2.2s)
+  ✓  381 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.2s)
+  ✓  382 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.2s)
+  ✓  383 [mobile] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.2s)
+  ✓  384 [mobile] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.9s)
+  ✓  385 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (1.7s)
+  ✓  386 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.2s)
+  ✓  387 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (2.3s)
+  ✓  388 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (2.3s)
+  ✓  389 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers (2.3s)
+  ✓  390 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers (2.2s)
+  ✓  391 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.3s)
+  ✓  392 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.3s)
+  ✓  393 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.2s)
+  ✓  394 [mobile] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD FACTS + RETRY in view, and recovers (2.7s)
+  ✓  395 [mobile] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD META + RETRY in view, and recovers (2.8s)
+  ✘  396 [mobile] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides (0ms)
+  ✘  397 [mobile] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides (0ms)
+  ✘  398 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  399 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  400 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  401 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  402 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  403 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  404 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  405 [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill (0ms)
+  ✘  406 [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  407 [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  408 [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  409 [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  410 [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  411 [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  412 [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) (0ms)
+  ✘  413 [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  414 [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  415 [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  416 [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (0ms)
+  ✘  417 [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page (0ms)
+  ✘  418 [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page (0ms)
+  ✘  419 [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page (0ms)
+  ✘  420 [mobile] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (0ms)
+  ✘  421 [mobile] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (0ms)
+  ✘  422 [mobile] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (0ms)
+  ✘  423 [mobile] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (0ms)
+  ✘  424 [mobile] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible (0ms)
+  ✘  425 [mobile] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound (0ms)
+  ✘  426 [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  427 [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  428 [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (0ms)
+  ✘  429 [mobile] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible (0ms)
+  ✘  430 [mobile] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed (0ms)
+  ✘  431 [mobile] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast (0ms)
+  ✘  432 [mobile] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast (0ms)
+  ✘  433 [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  434 [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  435 [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  436 [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  437 [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+  ✘  438 [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background (0ms)
+
+
+  1) [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "eight-billion@0.78: 3.09:1 'MOVES.' fs 15 bg rgb(105,13,226)",
+    + ]
+
+      427 |         all.push(...(await lowContrast(page, id)).map((c) => `${id}@${p}: ${c}`));
+      428 |       }
+    > 429 |       expect(all).toEqual([]);
+          |                   ^
+      430 |       await ctx.close();
+      431 |     });
+      432 |   }
+        at /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/qa.spec.ts:429:19
+
+    Error Context: test-results/qa-QA-lessons-L16-pixel-co-b739a-1-on-its-sampled-background-desktop/error-context.md
+
+  2) [desktop] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  3) [desktop] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  4) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  5) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  6) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  7) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  8) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  9) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  10) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  11) [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  12) [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  13) [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  14) [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  15) [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  16) [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  17) [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  18) [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  19) [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  20) [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  21) [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  22) [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  23) [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  24) [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  25) [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  26) [desktop] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  27) [desktop] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  28) [desktop] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  29) [desktop] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  30) [desktop] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  31) [desktop] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  32) [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  33) [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  34) [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  35) [desktop] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  36) [desktop] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  37) [desktop] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  38) [desktop] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  39) [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  40) [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  41) [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  42) [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  43) [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  44) [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  45) [tablet] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  46) [tablet] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  47) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  48) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  49) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  50) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  51) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  52) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  53) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  54) [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  55) [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  56) [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  57) [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  58) [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  59) [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  60) [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  61) [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  62) [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  63) [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  64) [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  65) [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  66) [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  67) [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  68) [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  69) [tablet] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  70) [tablet] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  71) [tablet] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  72) [tablet] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  73) [tablet] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  74) [tablet] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  75) [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  76) [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  77) [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  78) [tablet] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  79) [tablet] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  80) [tablet] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  81) [tablet] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  82) [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  83) [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  84) [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  85) [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  86) [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  87) [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  88) [mobile] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  89) [mobile] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  90) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  91) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  92) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  93) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  94) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  95) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  96) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  97) [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  98) [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  99) [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  100) [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  101) [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  102) [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  103) [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  104) [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  105) [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  106) [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  107) [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  108) [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  109) [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  110) [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  111) [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  112) [mobile] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  113) [mobile] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  114) [mobile] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  115) [mobile] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  116) [mobile] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  117) [mobile] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  118) [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  119) [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  120) [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  121) [mobile] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  122) [mobile] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  123) [mobile] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  124) [mobile] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  125) [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  126) [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  127) [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  128) [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  129) [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  130) [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+
+    Error: Cannot find module '/Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/e2e/zz-qa3-fixture.spec.ts' imported from /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site/node_modules/playwright/lib/common/index.js
+        at eval (<anonymous>:1:1)
+
+  130 failed
+    [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background 
+    [desktop] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background 
+    [tablet] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 1440: injected low-contrast text is flagged by lowContrast 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:423:5 › QA lessons › QA3 fixture 390: injected low-contrast text is flagged by lowContrast 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background 
+    [mobile] › e2e/zz-qa3-fixture.spec.ts:437:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background 
+  128 skipped
+  180 passed (20.0m)
+14:12  up 2 days, 16:42, 4 users, load averages: 13.66 18.01 19.49

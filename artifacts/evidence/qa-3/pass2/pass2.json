@@ -1,0 +1,661 @@
+{
+ "L18_s05_1440": [
+  {
+   "to": "CONSTANT US$",
+   "click": "ok",
+   "frames": 122,
+   "mixed": 0,
+   "first": null
+  },
+  {
+   "to": "PPP",
+   "click": "ok",
+   "frames": 133,
+   "mixed": 0,
+   "first": null
+  },
+  {
+   "to": "CONSTANT US$",
+   "click": "ok",
+   "frames": 133,
+   "mixed": 0,
+   "first": null
+  },
+  {
+   "to": "PPP",
+   "click": "ok",
+   "frames": 119,
+   "mixed": 0,
+   "first": null
+  }
+ ],
+ "D006_1440": [
+  {
+   "basis": "PPP",
+   "win": "1990",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -1.60 PP / YR PER LN UNIT (95% CI -3.05 TO -0.15, HC3; BOOTSTRAP -2.23 TO -0.42) · N 175 · R² 0.54 / AT THIS PACE, HALF THE GAP CLOSES IN 30 YEARS / PEOPLE-WEIGHTED, ALL: -1.60 (95% CI -3.05 TO -0.15) · N 175 / CHINA + INDIA SET ASIDE: -0.56 (95% CI -0.8",
+   "nNumbers": 12
+  },
+  {
+   "basis": "PPP",
+   "win": "1990",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.56 PP / YR PER LN UNIT (95% CI -0.88 TO -0.23, HC3; BOOTSTRAP -0.84 TO -0.22) · N 173 · R² 0.22 / AT THIS PACE, HALF THE GAP CLOSES IN 112 YEARS / PEOPLE-WEIGHTED, ALL: -1.60 (95% CI -3.05 TO -0.15) · N 175 / CHINA + INDIA SET ASIDE: -0.56 (95% CI -0.",
+   "nNumbers": 12
+  },
+  {
+   "basis": "PPP",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -1.32 PP / YR PER LN UNIT (95% CI -2.08 TO -0.55, HC3; BOOTSTRAP -1.89 TO -0.54) · N 180 · R² 0.36 / AT THIS PACE, HALF THE GAP CLOSES IN 43 YEARS / PEOPLE-WEIGHTED, ALL: -1.32 (95% CI -2.08 TO -0.55) · N 180 / CHINA + INDIA SET ASIDE: -0.67 (95% CI -0.9",
+   "nNumbers": 12
+  },
+  {
+   "basis": "PPP",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.67 PP / YR PER LN UNIT (95% CI -0.93 TO -0.42, HC3; BOOTSTRAP -0.91 TO -0.41) · N 178 · R² 0.31 / AT THIS PACE, HALF THE GAP CLOSES IN 94 YEARS / PEOPLE-WEIGHTED, ALL: -1.32 (95% CI -2.08 TO -0.55) · N 180 / CHINA + INDIA SET ASIDE: -0.67 (95% CI -0.9",
+   "nNumbers": 12
+  },
+  {
+   "basis": "PPP",
+   "win": "2010",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.86 PP / YR PER LN UNIT (95% CI -1.34 TO -0.37, HC3; BOOTSTRAP -1.23 TO -0.34) · N 183 · R² 0.16 / AT THIS PACE, HALF THE GAP CLOSES IN 75 YEARS / PEOPLE-WEIGHTED, ALL: -0.86 (95% CI -1.34 TO -0.37) · N 183 / CHINA + INDIA SET ASIDE: -0.53 (95% CI -0.8",
+   "nNumbers": 12
+  },
+  {
+   "basis": "PPP",
+   "win": "2010",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.53 PP / YR PER LN UNIT (95% CI -0.87 TO -0.19, HC3; BOOTSTRAP -0.83 TO -0.22) · N 181 · R² 0.15 / AT THIS PACE, HALF THE GAP CLOSES IN 126 YEARS / PEOPLE-WEIGHTED, ALL: -0.86 (95% CI -1.34 TO -0.37) · N 183 / CHINA + INDIA SET ASIDE: -0.53 (95% CI -0.",
+   "nNumbers": 12
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1960",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.82 PP / YR PER LN UNIT (95% CI -1.95 TO 0.31, HC3; BOOTSTRAP -1.26 TO -0.01) · N 102 · R² 0.45 / NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / PEOPLE-WEIGHTED, ALL: -0.82 (95% CI -1.95 TO 0.31) · N 102 / CHINA + INDIA SET ASIDE: -0.12 (95% CI -0.37",
+   "nNumbers": 12
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1960",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.12 PP / YR PER LN UNIT (95% CI -0.37 TO 0.12, HC3; BOOTSTRAP -0.32 TO 0.14) · N 100 · R² 0.02 / NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / PEOPLE-WEIGHTED, ALL: -0.82 (95% CI -1.95 TO 0.31) · N 102 / CHINA + INDIA SET ASIDE: -0.12 (95% CI -0.37 ",
+   "nNumbers": 12
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1980",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -1.12 PP / YR PER LN UNIT (95% CI -2.34 TO 0.09, HC3; BOOTSTRAP -1.77 TO -0.17) · N 154 · R² 0.44 / NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / PEOPLE-WEIGHTED, ALL: -1.12 (95% CI -2.34 TO 0.09) · N 154 / CHINA + INDIA SET ASIDE: -0.26 (95% CI -0.53",
+   "nNumbers": 12
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1980",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.26 PP / YR PER LN UNIT (95% CI -0.53 TO 0.00, HC3; BOOTSTRAP -0.49 TO -0.02) · N 152 · R² 0.10 / NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / PEOPLE-WEIGHTED, ALL: -1.12 (95% CI -2.34 TO 0.09) · N 154 / CHINA + INDIA SET ASIDE: -0.26 (95% CI -0.53",
+   "nNumbers": 12
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.83 PP / YR PER LN UNIT (95% CI -1.08 TO -0.58, HC3; BOOTSTRAP -1.14 TO -0.44) · N 191 · R² 0.22 / AT THIS PACE, HALF THE GAP CLOSES IN 74 YEARS / PEOPLE-WEIGHTED, ALL: -0.83 (95% CI -1.08 TO -0.58) · N 191 / CHINA + INDIA SET ASIDE: -0.53 (95% CI -0.7",
+   "nNumbers": 12
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": true,
+   "text": "SLOPE -0.53 PP / YR PER LN UNIT (95% CI -0.74 TO -0.33, HC3; BOOTSTRAP -0.72 TO -0.35) · N 189 · R² 0.29 / AT THIS PACE, HALF THE GAP CLOSES IN 121 YEARS / PEOPLE-WEIGHTED, ALL: -0.83 (95% CI -1.08 TO -0.58) · N 191 / CHINA + INDIA SET ASIDE: -0.53 (95% CI -0.",
+   "nNumbers": 12
+  }
+ ],
+ "L18_atlas_1440": [
+  {
+   "ind": "gdppc_const",
+   "frames": 63,
+   "mixed": 0,
+   "first": null,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individual members can differ from that average;"
+  },
+  {
+   "ind": "gdppc_nominal",
+   "frames": 47,
+   "mixed": 0,
+   "first": null,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individual members can differ from that average;"
+  },
+  {
+   "ind": "agr_share",
+   "frames": 54,
+   "mixed": 0,
+   "first": null,
+   "narr": "Agriculture's share of value added moved from 21.6% in 2000 to 16.2% in 2025; industry from 27.3% to 25.2%; services from 42.7% to 49.3%. / Agriculture's share of value added moved from 4.8% in 2000 t"
+  },
+  {
+   "ind": "gdppc_ppp",
+   "frames": 56,
+   "mixed": 0,
+   "first": null,
+   "narr": "In 2025, GDP per capita in India (10,039, rank 124 of 185) was 0.50 times that of Brazil (20,025, rank 82); both in constant 2021 international dollars (PPP). / From 1990 to 2025, GDP per capita (PPP)"
+  },
+  {
+   "ind": "productivity",
+   "frames": 102,
+   "mixed": 0,
+   "first": null,
+   "narr": "In 2025, India had GDP per capita of 10,039 (constant 2021 international dollars, PPP), ranking 124 of 185 countries with data. / From 1990 to 2025, India's GDP per capita (PPP) grew 4.4% per year, ag"
+  },
+  {
+   "ind": "gdppc_const",
+   "frames": 54,
+   "mixed": 0,
+   "first": null,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individual members can differ from that average;"
+  }
+ ],
+ "D009c_1440": {
+  "click": "ok",
+  "status": "GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP) · 2025 · 185 COUNTRIES WITH DATA · 2026-10-08 WDI",
+  "legend": "2824 5361 10.1K 16K 28K 48.1K CONSTANT 2021 INTL $ (PPP) 1 SEED ≈ 1 MILLION PEOPLE",
+  "paths": "IND 334 BRA 143 INDEX, 2000 = 100 · FROM CONSTANT 2021 INTL $ (PPP) · 2000 TO 2025"
+ },
+ "L17_1440": {
+  "chipClick": "ok",
+  "opened": true,
+  "closeInView": true,
+  "scenes": [
+   [
+    "eight-billion",
+    false
+   ],
+   [
+    "sources",
+    false
+   ],
+   [
+    "years",
+    false
+   ],
+   [
+    "weight",
+    false
+   ],
+   [
+    "catch-up",
+    false
+   ],
+   [
+    "lab",
+    false
+   ],
+   [
+    "likeness",
+    false
+   ],
+   [
+    "evidence",
+    false
+   ],
+   [
+    "resorted",
+    false
+   ]
+  ],
+  "s08Link": "ok",
+  "afterLinkScene": "atlas"
+ },
+ "D009ab_1440": [
+  {
+   "n": 1,
+   "ind": "gdppc_ppp",
+   "mismatch": false,
+   "narr": "In 2025, India had GDP per capita of 10,039 (constant 2021 international dollars, PPP), ranking 124 of 185 countries with data. / From 1990 to 2025, India's GDP"
+  },
+  {
+   "n": 1,
+   "ind": "gdppc_const",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 1,
+   "ind": "gdppc_nominal",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 1,
+   "ind": "agr_share",
+   "mismatch": false,
+   "narr": "Agriculture's share of value added moved from 21.6% in 2000 to 16.2% in 2025; industry from 27.3% to 25.2%; services from 42.7% to 49.3%. / DERIVED / · TEMPLATE"
+  },
+  {
+   "n": 1,
+   "ind": "inflation",
+   "mismatch": false,
+   "narr": "Median consumer-price inflation in India over 2014 to 2023 was 5.0% a year, with a peak of 6.7% in 2022. / DERIVED / · TEMPLATE RENDERINGS OF PUBLISHED INPUTS"
+  },
+  {
+   "n": 1,
+   "ind": "trade_open",
+   "mismatch": false,
+   "narr": "Exports plus imports of goods and services were 45.9% of India's GDP in 2024, ranking 138 of 172 countries with data. / DERIVED / · TEMPLATE RENDERINGS OF PUBLI"
+  },
+  {
+   "n": 1,
+   "ind": "hhi5",
+   "mismatch": false,
+   "narr": "India's coarse export concentration index across five broad merchandise groups was 0.45 in 2022 (0.2 means evenly spread, 1 means a single group). It understate"
+  },
+  {
+   "n": 2,
+   "ind": "gdppc_ppp",
+   "mismatch": false,
+   "narr": "In 2025, GDP per capita in India (10,039, rank 124 of 185) was 0.50 times that of Brazil (20,025, rank 82); both in constant 2021 international dollars (PPP). /"
+  },
+  {
+   "n": 2,
+   "ind": "gdppc_const",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 2,
+   "ind": "gdppc_nominal",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 2,
+   "ind": "agr_share",
+   "mismatch": false,
+   "narr": "Agriculture's share of value added moved from 21.6% in 2000 to 16.2% in 2025; industry from 27.3% to 25.2%; services from 42.7% to 49.3%. / Agriculture's share "
+  },
+  {
+   "n": 2,
+   "ind": "inflation",
+   "mismatch": false,
+   "narr": "Median consumer-price inflation in India over 2014 to 2023 was 5.0% a year, with a peak of 6.7% in 2022. / Median consumer-price inflation in Brazil over 2014 t"
+  },
+  {
+   "n": 2,
+   "ind": "trade_open",
+   "mismatch": false,
+   "narr": "Exports plus imports of goods and services were 45.9% of India's GDP in 2024, ranking 138 of 172 countries with data. / Exports plus imports of goods and servic"
+  },
+  {
+   "n": 2,
+   "ind": "hhi5",
+   "mismatch": false,
+   "narr": "India's coarse export concentration index across five broad merchandise groups was 0.45 in 2022 (0.2 means evenly spread, 1 means a single group). It understate"
+  }
+ ],
+ "D010_1440": {
+  "visibleCards": 1,
+  "alpha": 0.15000000000000002
+ },
+ "L18_s05_390": [
+  {
+   "to": "CONSTANT US$",
+   "click": "ok",
+   "frames": 136,
+   "mixed": 0,
+   "first": null
+  },
+  {
+   "to": "PPP",
+   "click": "ok",
+   "frames": 134,
+   "mixed": 0,
+   "first": null
+  },
+  {
+   "to": "CONSTANT US$",
+   "click": "ok",
+   "frames": 135,
+   "mixed": 0,
+   "first": null
+  },
+  {
+   "to": "PPP",
+   "click": "ok",
+   "frames": 135,
+   "mixed": 0,
+   "first": null
+  }
+ ],
+ "D006_390": [
+  {
+   "basis": "PPP",
+   "win": "1990",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 30 YEARS / ALL: -1.60 (95% CI -3.05 TO -0.15) · N 175 / CHN + IND OUT: -0.56 (95% CI -0.88 TO -0.23) · N 173 / DERIVED / · GDPPC_PPP_1990_2025_POP_WEIGHTED",
+   "nNumbers": 6
+  },
+  {
+   "basis": "PPP",
+   "win": "1990",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 112 YEARS / ALL: -1.60 (95% CI -3.05 TO -0.15) · N 175 / CHN + IND OUT: -0.56 (95% CI -0.88 TO -0.23) · N 173 / DERIVED / · GDPPC_PPP_1990_2025_POP_WEIGHTED_EX_CHN_IND",
+   "nNumbers": 6
+  },
+  {
+   "basis": "PPP",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 43 YEARS / ALL: -1.32 (95% CI -2.08 TO -0.55) · N 180 / CHN + IND OUT: -0.67 (95% CI -0.93 TO -0.42) · N 178 / DERIVED / · GDPPC_PPP_2000_2025_POP_WEIGHTED",
+   "nNumbers": 6
+  },
+  {
+   "basis": "PPP",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 94 YEARS / ALL: -1.32 (95% CI -2.08 TO -0.55) · N 180 / CHN + IND OUT: -0.67 (95% CI -0.93 TO -0.42) · N 178 / DERIVED / · GDPPC_PPP_2000_2025_POP_WEIGHTED_EX_CHN_IND",
+   "nNumbers": 6
+  },
+  {
+   "basis": "PPP",
+   "win": "2010",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 75 YEARS / ALL: -0.86 (95% CI -1.34 TO -0.37) · N 183 / CHN + IND OUT: -0.53 (95% CI -0.87 TO -0.19) · N 181 / DERIVED / · GDPPC_PPP_2010_2025_POP_WEIGHTED",
+   "nNumbers": 6
+  },
+  {
+   "basis": "PPP",
+   "win": "2010",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 126 YEARS / ALL: -0.86 (95% CI -1.34 TO -0.37) · N 183 / CHN + IND OUT: -0.53 (95% CI -0.87 TO -0.19) · N 181 / DERIVED / · GDPPC_PPP_2010_2025_POP_WEIGHTED_EX_CHN_IND",
+   "nNumbers": 6
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1960",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / ALL: -0.82 (95% CI -1.95 TO 0.31) · N 102 / CHN + IND OUT: -0.12 (95% CI -0.37 TO 0.12) · N 100 / DERIVED / · GDPPC_CONST_1960_2024_POP_WEIGHTED",
+   "nNumbers": 6
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1960",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / ALL: -0.82 (95% CI -1.95 TO 0.31) · N 102 / CHN + IND OUT: -0.12 (95% CI -0.37 TO 0.12) · N 100 / DERIVED / · GDPPC_CONST_1960_2024_POP_WEIGHTED_EX_CHN_IND",
+   "nNumbers": 6
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1980",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / ALL: -1.12 (95% CI -2.34 TO 0.09) · N 154 / CHN + IND OUT: -0.26 (95% CI -0.53 TO 0.00) · N 152 / DERIVED / · GDPPC_CONST_1980_2024_POP_WEIGHTED",
+   "nNumbers": 6
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "1980",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "NO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW / ALL: -1.12 (95% CI -2.34 TO 0.09) · N 154 / CHN + IND OUT: -0.26 (95% CI -0.53 TO 0.00) · N 152 / DERIVED / · GDPPC_CONST_1980_2024_POP_WEIGHTED_EX_CHN_IND",
+   "nNumbers": 6
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 74 YEARS / ALL: -0.83 (95% CI -1.08 TO -0.58) · N 191 / CHN + IND OUT: -0.53 (95% CI -0.74 TO -0.33) · N 189 / DERIVED / · GDPPC_CONST_2000_2024_POP_WEIGHTED",
+   "nNumbers": 6
+  },
+  {
+   "basis": "CONSTANT US$",
+   "win": "2000",
+   "sample": "PEOPLE-WEIGHTED WITHOUT CHINA + INDIA",
+   "click": "ok",
+   "hasBoth": false,
+   "text": "AT THIS PACE, HALF THE GAP CLOSES IN 121 YEARS / ALL: -0.83 (95% CI -1.08 TO -0.58) · N 191 / CHN + IND OUT: -0.53 (95% CI -0.74 TO -0.33) · N 189 / DERIVED / · GDPPC_CONST_2000_2024_POP_WEIGHTED_EX_CHN_IND",
+   "nNumbers": 6
+  }
+ ],
+ "L18_atlas_390": [
+  {
+   "ind": "gdppc_const",
+   "frames": 188,
+   "mixed": 0,
+   "first": null,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individual members can differ from that average;"
+  },
+  {
+   "ind": "gdppc_nominal",
+   "frames": 188,
+   "mixed": 0,
+   "first": null,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individual members can differ from that average;"
+  },
+  {
+   "ind": "agr_share",
+   "frames": 107,
+   "mixed": 0,
+   "first": null,
+   "narr": "Agriculture's share of value added moved from 21.6% in 2000 to 16.2% in 2025; industry from 27.3% to 25.2%; services from 42.7% to 49.3%. / Agriculture's share of value added moved from 4.8% in 2000 t"
+  },
+  {
+   "ind": "gdppc_ppp",
+   "frames": 147,
+   "mixed": 0,
+   "first": null,
+   "narr": "In 2025, GDP per capita in India (10,039, rank 124 of 185) was 0.50 times that of Brazil (20,025, rank 82); both in constant 2021 international dollars (PPP). / From 1990 to 2025, GDP per capita (PPP)"
+  },
+  {
+   "ind": "productivity",
+   "frames": 195,
+   "mixed": 0,
+   "first": null,
+   "narr": "In 2025, India had GDP per capita of 10,039 (constant 2021 international dollars, PPP), ranking 124 of 185 countries with data. / From 1990 to 2025, India's GDP per capita (PPP) grew 4.4% per year, ag"
+  },
+  {
+   "ind": "gdppc_const",
+   "frames": 191,
+   "mixed": 0,
+   "first": null,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individual members can differ from that average;"
+  }
+ ],
+ "D009c_390": {
+  "click": "covered by inspector__name serif",
+  "status": "GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP) · 2025 · 185 COUNTRIES WITH DATA · 2026-10-08 WDI",
+  "legend": "2824 5361 10.1K 16K 28K 48.1K CONSTANT 2021 INTL $ (PPP) 1 SEED ≈ 1 MILLION PEOPLE",
+  "paths": "IND 10,039 BRA 20,025 CONSTANT 2021 INTL $ (PPP) · 2000 TO 2025"
+ },
+ "L17_390": {
+  "chipClick": "ok",
+  "opened": true,
+  "closeInView": true,
+  "scenes": [
+   [
+    "eight-billion",
+    false
+   ],
+   [
+    "sources",
+    false
+   ],
+   [
+    "years",
+    false
+   ],
+   [
+    "weight",
+    false
+   ],
+   [
+    "catch-up",
+    false
+   ],
+   [
+    "lab",
+    false
+   ],
+   [
+    "likeness",
+    false
+   ],
+   [
+    "evidence",
+    false
+   ],
+   [
+    "resorted",
+    false
+   ]
+  ],
+  "s08Link": "ok",
+  "afterLinkScene": "atlas",
+  "atlasSheetAfterJump": {
+   "wasOpen": true,
+   "stillOpen": true,
+   "toggleExpanded": "true"
+  },
+  "labSheetAfterJump": {
+   "expanded": "true",
+   "visibleControls": true
+  }
+ },
+ "D009ab_390": [
+  {
+   "n": 1,
+   "ind": "gdppc_ppp",
+   "mismatch": false,
+   "narr": "In 2025, India had GDP per capita of 10,039 (constant 2021 international dollars, PPP), ranking 124 of 185 countries with data. / From 1990 to 2025, India's GDP"
+  },
+  {
+   "n": 1,
+   "ind": "gdppc_const",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 1,
+   "ind": "gdppc_nominal",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 1,
+   "ind": "agr_share",
+   "mismatch": false,
+   "narr": "Agriculture's share of value added moved from 21.6% in 2000 to 16.2% in 2025; industry from 27.3% to 25.2%; services from 42.7% to 49.3%. / DERIVED / · TEMPLATE"
+  },
+  {
+   "n": 1,
+   "ind": "inflation",
+   "mismatch": false,
+   "narr": "Median consumer-price inflation in India over 2014 to 2023 was 5.0% a year, with a peak of 6.7% in 2022. / DERIVED / · TEMPLATE RENDERINGS OF PUBLISHED INPUTS"
+  },
+  {
+   "n": 1,
+   "ind": "trade_open",
+   "mismatch": false,
+   "narr": "Exports plus imports of goods and services were 45.9% of India's GDP in 2024, ranking 138 of 172 countries with data. / DERIVED / · TEMPLATE RENDERINGS OF PUBLI"
+  },
+  {
+   "n": 1,
+   "ind": "hhi5",
+   "mismatch": false,
+   "narr": "India's coarse export concentration index across five broad merchandise groups was 0.45 in 2022 (0.2 means evenly spread, 1 means a single group). It understate"
+  },
+  {
+   "n": 2,
+   "ind": "gdppc_ppp",
+   "mismatch": false,
+   "narr": "In 2025, GDP per capita in India (10,039, rank 124 of 185) was 0.50 times that of Brazil (20,025, rank 82); both in constant 2021 international dollars (PPP). /"
+  },
+  {
+   "n": 2,
+   "ind": "gdppc_const",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 2,
+   "ind": "gdppc_nominal",
+   "mismatch": false,
+   "narr": "On standardized indicators India falls in peer group 1 of 3, a group of 39 countries whose average profile is high agriculture share, low income level. Individu"
+  },
+  {
+   "n": 2,
+   "ind": "agr_share",
+   "mismatch": false,
+   "narr": "Agriculture's share of value added moved from 21.6% in 2000 to 16.2% in 2025; industry from 27.3% to 25.2%; services from 42.7% to 49.3%. / Agriculture's share "
+  },
+  {
+   "n": 2,
+   "ind": "inflation",
+   "mismatch": false,
+   "narr": "Median consumer-price inflation in India over 2014 to 2023 was 5.0% a year, with a peak of 6.7% in 2022. / Median consumer-price inflation in Brazil over 2014 t"
+  },
+  {
+   "n": 2,
+   "ind": "trade_open",
+   "mismatch": false,
+   "narr": "Exports plus imports of goods and services were 45.9% of India's GDP in 2024, ranking 138 of 172 countries with data. / Exports plus imports of goods and servic"
+  },
+  {
+   "n": 2,
+   "ind": "hhi5",
+   "mismatch": false,
+   "narr": "India's coarse export concentration index across five broad merchandise groups was 0.45 in 2022 (0.2 means evenly spread, 1 means a single group). It understate"
+  }
+ ],
+ "D010_390": {
+  "visibleCards": 1,
+  "alpha": 0.15000000000000002
+ }
+}

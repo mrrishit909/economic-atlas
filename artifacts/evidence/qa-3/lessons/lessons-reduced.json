@@ -1,0 +1,122 @@
+[
+ {
+  "viewport": "1440x900-reduced",
+  "defects": [
+   "eight-billion@0.5: L2/L11/L13 \"BELOW\" x \"EIGHT BILLION\" (46x3) ; \"15,091\" x \"EIGHT BILLION\" (50x3) ; \"PER\" x \"SOURCES\" (26x3) ; \"2021\" x \"EIGHT BILLION\" (22x17) ; \"INTL\" x \"EIGHT BILLION\" (37x17) ; \"$\" x \"EIGHT BILLION\" (9x17) (+2)",
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "sources@0.124: L2/L11/L13 \"≠\" x \"WEIGHT\" (10x8) ; \"4,925 CURRENT US$\" x \"WEIGHT\" (17x8) ; \"4,925 CURRENT US$\" x \"CATCH-UP\" (67x8) ; \"4,925 CURRENT US$\" x \"LAB\" (25x8)",
+   "sources@0.314: L2/L11/L13 \"Missing stays missing.\" x \"WEIGHT\" (36x7) ; \"Missing stays missing.\" x \"CATCH-UP\" (67x7) ; \"Missing stays missing.\" x \"LAB\" (25x7) ; \"Missing stays missing.\" x \"LIKENESS\" (67x7) ; \"Missing stays missing.\" x \"EVIDENCE\" (24x7)",
+   "sources@0.504: L2/L11/L13 \"LATEST-YEAR RULE\" x \"CATCH-UP\" (67x14) ; \"LATEST-YEAR RULE\" x \"LAB\" (24x14)",
+   "sources@0.504: L9/L12 LATEST-YEAR RULE under nav__item",
+   "sources@0.694: L2/L11/L13 \"Two centuries, another dollar.\" x \"WEIGHT\" (36x17) ; \"Two centuries, another dollar.\" x \"CATCH-UP\" (67x17) ; \"Two centuries, another dollar.\" x \"LAB\" (25x17) ; \"Two centuries, another dollar.\" x \"LIKENESS\" (13x17)",
+   "years@0.7: L2/L11/L13 \"1990 · 5,202 SEEDS · 5.17 BN PEOPL\" x \"EIGHT BILLION\" (29x15) ; \"2000 · 6,078 SEEDS · 6.05 BN PEOPL\" x \"EIGHT BILLION\" (11x15) ; \"2000 · 6,078 SEEDS · 6.05 BN PEOPL\" x \"SOURCES\" (58x15) ; \"2000 · 6,078 SEEDS · 6.05 BN PEOPL\" x \"YEARS\" (42x15) ; \"2000 · 6,078 SEEDS · 6.05 BN PEOPL\" x \"WEIGHT\" (50x15) ; \"2000 · 6,078 SEEDS · 6.05 BN PEOPL\" x \"EIGHT BILLION\" (11x3) (+16)",
+   "weight@0.2: L2/L11/L13 \"COUNTRIES · 2025\" x \"EIGHT BILLION\" (31x3) ; \"COUNTRIES · 2025\" x \"SOURCES\" (58x3) ; \"COUNTRIES · 2025\" x \"YEARS\" (2x3) ; \"PEOPLE · 1990\" x \"CATCH-UP\" (47x3) ; \"PEOPLE · 1990\" x \"LAB\" (25x3) ; \"PEOPLE · 2025 · CHINA + INDIA SET \" x \"ATLAS\" (42x3) (+4)",
+   "evidence@0.65: L2/L11/L13 \"· PIPELINE v\" x \"EIGHT BILLION\" (62x15) ; \"1.0.0\" x \"EIGHT BILLION\" (38x15)",
+   "evidence@0.95: L2/L11/L13 \"World Bank WDI as last updated 202\" x \"EIGHT BILLION\" (108x12) ; \"World Bank WDI as last updated 202\" x \"SOURCES\" (58x12) ; \"World Bank WDI as last updated 202\" x \"YEARS\" (7x12) ; \"World Bank WDI as last updated 202\" x \"EIGHT BILLION\" (108x5) ; \"World Bank WDI as last updated 202\" x \"SOURCES\" (58x5) ; \"World Bank WDI as last updated 202\" x \"YEARS\" (7x5)"
+  ]
+ },
+ {
+  "viewport": "1280x720-reduced",
+  "defects": [
+   "eight-billion@0.5: L2/L11/L13 \"7.98\" x \"EIGHT BILLION\" (29x5) ; \"BN\" x \"EIGHT BILLION\" (18x5) ; \"PEOPLE\" x \"EIGHT BILLION\" (43x5) ; \"LIVE\" x \"EIGHT BILLION\" (37x16) ; \"IN\" x \"EIGHT BILLION\" (18x16) ; \"THE\" x \"SOURCES\" (3x16) (+5)",
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "eight-billion@0.78: L2/L11/L13 \"World Bank WDI as last updated 202\" x \"EIGHT BILLION\" (108x2) ; \"World Bank WDI as last updated 202\" x \"SOURCES\" (58x2) ; \"World Bank WDI as last updated 202\" x \"YEARS\" (42x2) ; \"World Bank WDI as last updated 202\" x \"WEIGHT\" (50x2) ; \"World Bank WDI as last updated 202\" x \"CATCH-UP\" (67x2) ; \"World Bank WDI as last updated 202\" x \"LAB\" (25x2) (+2)",
+   "sources@0.124: L2/L11/L13 \"15,091 CONSTANT 2021 INTL $ (PPP)\" x \"WEIGHT\" (17x9) ; \"15,091 CONSTANT 2021 INTL $ (PPP)\" x \"CATCH-UP\" (67x9) ; \"15,091 CONSTANT 2021 INTL $ (PPP)\" x \"LAB\" (25x9) ; \"15,091 CONSTANT 2021 INTL $ (PPP)\" x \"LIKENESS\" (67x9) ; \"15,091 CONSTANT 2021 INTL $ (PPP)\" x \"EVIDENCE\" (58x9)",
+   "sources@0.504: L2/L11/L13 \"TRADE_OPEN\" x \"CATCH-UP\" (53x12) ; \"·\" x \"CATCH-UP\" (14x12) ; \"2024\" x \"LAB\" (20x12) ; \"· N\" x \"LAB\" (5x12) ; \"· N\" x \"LIKENESS\" (14x12) ; \"172\" x \"LIKENESS\" (21x12)",
+   "sources@0.694: L2/L11/L13 \"Two centuries, another dollar.\" x \"WEIGHT\" (36x12) ; \"Two centuries, another dollar.\" x \"CATCH-UP\" (67x12) ; \"Two centuries, another dollar.\" x \"LAB\" (25x12) ; \"Two centuries, another dollar.\" x \"LIKENESS\" (67x12) ; \"Two centuries, another dollar.\" x \"EVIDENCE\" (67x12)",
+   "years@0.7: L3 no in-viewport honesty chip",
+   "weight@0.9: L3 no in-viewport honesty chip",
+   "evidence@0.05: L2/L11/L13 \"LOOSELY. SILHOUETTE 0.23. THE SAME\" x \"REPLAY INTRO\" (116x4) ; \"LOOSELY. SILHOUETTE 0.23. THE SAME\" x \"MOTION OFF\" (99x4)",
+   "evidence@0.35: L2/L11/L13 \"WHAT ABOUT THE GAPS?\" x \"EIGHT BILLION\" (82x2)",
+   "evidence@0.95: L2/L11/L13 \"World Bank WDI as last updated 202\" x \"EIGHT BILLION\" (108x10) ; \"World Bank WDI as last updated 202\" x \"SOURCES\" (58x10) ; \"World Bank WDI as last updated 202\" x \"YEARS\" (42x10) ; \"World Bank WDI as last updated 202\" x \"WEIGHT\" (30x10)"
+  ]
+ },
+ {
+  "viewport": "768x1024-reduced",
+  "defects": [
+   "eight-billion@0.5: L2/L11/L13 \"WITH\" x \"EIGHT BILLION\" (2x17) ; \"THE\" x \"EIGHT BILLION\" (27x17) ; \"MIDDLE\" x \"EIGHT BILLION\" (7x17)",
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "weight@0.9: L3 no in-viewport honesty chip",
+   "lab@0.12: L2/L11/L13 \"Same data. Different questions.\" x \"→\" (8x8) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (31x16) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (38x7) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (31x15) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (46x15)",
+   "lab@0.27: L2/L11/L13 \"Same data. Different questions.\" x \"→\" (8x8) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (31x16) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (38x7) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (31x15) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (46x15)",
+   "lab@0.45: L2/L11/L13 \"Same data. Different questions.\" x \"→\" (8x8) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (31x16) ; \"Same data. Different questions.\" x \"DATA TABLE FOR THIS WINDOW\" (38x7) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (31x15) ; \"SLOPE -0.37 PP / YR PER LN UNIT (9\" x \"DATA TABLE FOR THIS WINDOW\" (46x15)",
+   "evidence@0.05: L2/L11/L13 \"THESE ARE DESCRIPTIVE RANK CORRELA\" x \"EVIDENCE\" (67x5) ; \"THESE ARE DESCRIPTIVE RANK CORRELA\" x \"EVIDENCE\" (67x11) ; \"THESE ARE DESCRIPTIVE RANK CORRELA\" x \"REPLAY INTRO\" (9x11)",
+   "evidence@0.65: L2/L11/L13 \"EVENT YEARS COME FROM GENERAL HIST\" x \"EVIDENCE\" (67x16) ; \"EVENT YEARS COME FROM GENERAL HIST\" x \"REPLAY INTRO\" (19x15)",
+   "atlas@0: L2/L11/L13 \"ONE INDICATOR, ONE UNIT AT A TIME.\" x \"ATLAS\" (42x17)"
+  ]
+ },
+ {
+  "viewport": "390x844-reduced",
+  "defects": [
+   "eight-billion@0.78: L2/L11/L13 \"World Bank WDI as last updated 202\" x \"EIGHT BILLION\" (108x14)",
+   "sources@0.504: L2/L11/L13 \"· N\" x \"SOURCES\" (21x14) ; \"147\" x \"SOURCES\" (21x14)",
+   "sources@0.694: L2/L11/L13 \"Two centuries, another dollar.\" x \"SOURCES\" (45x7) ; \"Two centuries, another dollar.\" x \"SOURCES\" (45x10)",
+   "years@0.7: L3 no in-viewport honesty chip",
+   "weight@0.43: L3 no in-viewport honesty chip",
+   "weight@0.6: L3 no in-viewport honesty chip",
+   "weight@0.9: L3 no in-viewport honesty chip",
+   "catch-up@0.04: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.24: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.6: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.95: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.12: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.12: L3 no in-viewport honesty chip",
+   "lab@0.27: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.27: L3 no in-viewport honesty chip",
+   "lab@0.45: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.45: L3 no in-viewport honesty chip",
+   "evidence@0.05: L2/L11/L13 \"DOESN'T INCOME CAUSE PRODUCTIVITY?\" x \"EVIDENCE\" (67x11)",
+   "evidence@0.65: L2/L11/L13 \"THE 1960 TO 2024 CONSTANT-USD WIND\" x \"EVIDENCE\" (67x11) ; \"THE 1960 TO 2024 CONSTANT-USD WIND\" x \"REPLAY INTRO\" (31x3) ; \"THE 1960 TO 2024 CONSTANT-USD WIND\" x \"REPLAY INTRO\" (24x13)"
+  ]
+ },
+ {
+  "viewport": "375x812-reduced",
+  "defects": [
+   "eight-billion@0.78: L2/L11/L13 \"World Bank WDI as last updated 202\" x \"EIGHT BILLION\" (108x14) ; \"World Bank WDI as last updated 202\" x \"REPLAY INTRO\" (5x9) ; \"World Bank WDI as last updated 202\" x \"REPLAY INTRO\" (5x6)",
+   "sources@0.124: L2/L11/L13 \"CONSTANT 2021 INTL $ (PPP)\" x \"SOURCES\" (58x4)",
+   "sources@0.694: L2/L11/L13 \"Two centuries, another dollar.\" x \"SOURCES\" (45x17)",
+   "years@0.7: L3 no in-viewport honesty chip",
+   "weight@0.43: L3 no in-viewport honesty chip",
+   "weight@0.6: L3 no in-viewport honesty chip",
+   "weight@0.9: L3 no in-viewport honesty chip",
+   "catch-up@0.04: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.24: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.6: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.95: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.12: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.12: L3 no in-viewport honesty chip",
+   "lab@0.27: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.27: L3 no in-viewport honesty chip",
+   "lab@0.45: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.45: L3 no in-viewport honesty chip",
+   "evidence@0.65: L2/L11/L13 \"EVENT YEARS COME FROM GENERAL HIST\" x \"EVIDENCE\" (67x6) ; \"EVENT YEARS COME FROM GENERAL HIST\" x \"REPLAY INTRO\" (32x10) ; \"THE 1960 TO 2024 CONSTANT-USD WIND\" x \"EVIDENCE\" (67x5) ; \"THE 1960 TO 2024 CONSTANT-USD WIND\" x \"REPLAY INTRO\" (11x9)"
+  ]
+ },
+ {
+  "viewport": "360x800-reduced",
+  "defects": [
+   "eight-billion@0.78: L2/L11/L13 \"World Bank WDI as last updated 202\" x \"EIGHT BILLION\" (108x14) ; \"World Bank WDI as last updated 202\" x \"REPLAY INTRO\" (20x9) ; \"World Bank WDI as last updated 202\" x \"REPLAY INTRO\" (13x7)",
+   "sources@0.124: L2/L11/L13 \"CONSTANT 2021 INTL $ (PPP)\" x \"SOURCES\" (58x14)",
+   "sources@0.504: L2/L11/L13 \"2024\" x \"SOURCES\" (28x5) ; \"· N\" x \"SOURCES\" (31x5)",
+   "sources@0.694: L2/L11/L13 \"Two centuries, another dollar.\" x \"SOURCES\" (45x17)",
+   "years@0.7: L2/L11/L13 \"2010 · 6,900 SEEDS · 6.87 BN PEOPL\" x \"YEARS\" (42x10)",
+   "years@0.7: L3 no in-viewport honesty chip",
+   "weight@0.43: L3 no in-viewport honesty chip",
+   "weight@0.6: L3 no in-viewport honesty chip",
+   "weight@0.9: L3 no in-viewport honesty chip",
+   "catch-up@0.04: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.24: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.6: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "catch-up@0.95: L2/L11/L13 \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"CATCH-UP ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"ACROSS = INCOME IN 1990 · UP = GRO\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.12: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.12: L3 no in-viewport honesty chip",
+   "lab@0.27: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.27: L3 no in-viewport honesty chip",
+   "lab@0.45: L2/L11/L13 \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (19x11) ; \"LAB ·\" x \"DATA TABLE FOR THIS WINDOW\" (34x3) ; \"YOUR CHOICE: EACH COMBINATION IS O\" x \"DATA TABLE FOR THIS WINDOW\" (34x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"World Bank WDI as last updated 202\" (19x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (26x14) ; \"DATA TABLE FOR THIS WINDOW\" x \"Source: World Bank, World Developm\" (11x13)",
+   "lab@0.45: L3 no in-viewport honesty chip",
+   "evidence@0.35: L2/L11/L13 \"COVERAGE.JSON\" x \"EVIDENCE\" (67x4)",
+   "evidence@0.65: L2/L11/L13 \"THE 1960 TO 2024 CONSTANT-USD WIND\" x \"EVIDENCE\" (67x9)",
+   "evidence@0.95: L2/L11/L13 \"WDI REVISES HISTORY AND LATER YEAR\" x \"EVIDENCE\" (42x3)"
+  ]
+ }
+]

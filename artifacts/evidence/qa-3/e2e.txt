@@ -1,0 +1,319 @@
+14:18  up 2 days, 16:49, 4 users, load averages: 5.44 9.63 14.82
+
+Running 309 tests using 1 worker
+
+  ✓    1 [desktop] › e2e/prototype.spec.ts:15:1 › S00: the disc is giant from the first dust frame, never shrinks, and keeps a visible edge outside every scrim (4.3s)
+  ✓    2 [desktop] › e2e/prototype.spec.ts:52:1 › slot and seed counts in the DOM equal the published facts (4.1s)
+  ✓    3 [desktop] › e2e/prototype.spec.ts:72:1 › S03b controls change the visible state; set aside hollows China and India; not-causal copy is on screen (2.6s)
+  ✓    4 [desktop] › e2e/prototype.spec.ts:89:1 › basis is never mixed in one view (S00, S03a, S03b) (3.3s)
+  ✓    5 [desktop] › e2e/prototype.spec.ts:101:1 › S03a: integer years only, the readout equals DR-1's median person, FOLLOW outlines a country (4.9s)
+  ✓    6 [desktop] › e2e/prototype.spec.ts:116:1 › 404 on the year layouts shows COULD NOT LOAD + RETRY, and RETRY re-runs the fetch (1.4s)
+  ✓    7 [desktop] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides (10.1s)
+  ✓    8 [desktop] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides (10.1s)
+  ✓    9 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill (24.2s)
+  ✓   10 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   11 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   12 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   13 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   14 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   15 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   16 [desktop] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill (24.3s)
+  ✓   17 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top) (8.8s)
+  ✓   18 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top) (8.6s)
+  ✓   19 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top) (8.6s)
+  ✓   20 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top) (8.8s)
+  ✓   21 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top) (8.7s)
+  ✓   22 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top) (8.5s)
+  ✓   23 [desktop] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top) (8.8s)
+  ✓   24 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.2s)
+  ✓   25 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.3s)
+  ✓   26 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.2s)
+  ✓   27 [desktop] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable (30.2s)
+  ✓   28 [desktop] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page (3.3s)
+  ✓   29 [desktop] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page (3.6s)
+  ✓   30 [desktop] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page (3.3s)
+  ✓   31 [desktop] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (14.1s)
+  ✓   32 [desktop] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame (14.9s)
+  ✓   33 [desktop] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (8.7s)
+  ✓   34 [desktop] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer (9.1s)
+  ✓   35 [desktop] › e2e/qa.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible (9.0s)
+  ✓   36 [desktop] › e2e/qa.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound (10.4s)
+  ✓   37 [desktop] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (8.7s)
+  ✓   38 [desktop] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (8.2s)
+  ✓   39 [desktop] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them (7.6s)
+  ✓   40 [desktop] › e2e/qa.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible (15.1s)
+  ✓   41 [desktop] › e2e/qa.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed (6.0s)
+  ✓   42 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background (25.9s)
+  ✓   43 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background (23.6s)
+  ✓   44 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background (25.7s)
+  ✓   45 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background (22.8s)
+  ✓   46 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background (25.3s)
+  ✓   47 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background (22.9s)
+  ✓   48 [desktop] › e2e/shell.spec.ts:15:1 › shell: title, ten scene tracks, hero headline is static HTML ghosted from first paint (711ms)
+  ✓   49 [desktop] › e2e/shell.spec.ts:25:1 › intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it (992ms)
+  ✓   50 [desktop] › e2e/shell.spec.ts:35:1 › intro plays once per session; REPLAY plays it again and completes (12.6s)
+  ✓   51 [desktop] › e2e/shell.spec.ts:48:1 › zero external requests while visiting every scene (2.6s)
+  ✓   52 [desktop] › e2e/shell.spec.ts:58:1 › desktop nav: keyboard jump, aria-current, focus, back (785ms)
+  -   53 [desktop] › e2e/shell.spec.ts:77:1 › T/M menu pill: open, Esc closes and returns focus, item jumps
+  ✓   54 [desktop] › e2e/shell.spec.ts:93:1 › reduced motion renders in flow: no pinned stages, static discs (1.4s)
+  ✓   55 [desktop] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (eight-billion) (2.7s)
+  ✓   56 [desktop] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (years) (2.5s)
+  ✓   57 [desktop] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (weight) (2.5s)
+  ✓   58 [desktop] › e2e/shell.spec.ts:116:1 › production build excludes the dev gallery (119ms)
+  ✓   59 [desktop] › e2e/stageb.spec.ts:35:3 › Stage B scenes › every scene renders its heading at its landing; never two bases in one visual element (18.6s)
+  ✓   60 [desktop] › e2e/stageb.spec.ts:52:3 › Stage B scenes › S05 basis swap: no sampled frame shows two bases (DOM) or a canvas palette of another basis (8.5s)
+  ✓   61 [desktop] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree (9.5s)
+  ✓   62 [desktop] › e2e/stageb.spec.ts:92:3 › Stage B scenes › S04 flight: seeds start on their disc slots and land on their plane positions (1px) (6.5s)
+  ✓   63 [desktop] › e2e/stageb.spec.ts:109:3 › Stage B scenes › S04 windows draw only published fits; not-causal copy always on screen (5.9s)
+  ✓   64 [desktop] › e2e/stageb.spec.ts:121:3 › Stage B scenes › S06: Ward hollow count is the published disagree_count; rho readout from pairs; groups are descriptive (6.7s)
+  ✓   65 [desktop] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores (9.7s)
+  ✓   66 [desktop] › e2e/stageb.spec.ts:165:3 › Stage B scenes › S08: the echo dissolves and re-sorts at giant size; the closing names vintage, WDI, Maddison and the IMF exclusion (8.1s)
+  ✓   67 [desktop] › e2e/stageb.spec.ts:179:3 › Stage B scenes › axe: no serious or critical violations in any Stage B scene (13.9s)
+  ✓   68 [desktop] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers (2.7s)
+  ✓   69 [desktop] › e2e/stageb.spec.ts:249:1 › S02 names the vintage, the WDI attribution and the IMF exclusion; S05 never calls a loading panel unpublished (4.9s)
+  ✓   70 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST + RETRY in view, and recovers (1.8s)
+  ✓   71 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD FACTS + RETRY in view, and recovers (2.3s)
+  ✓   72 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD RECONCILIATION + RETRY in view, and recovers (2.3s)
+  ✓   73 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (2.3s)
+  ✓   74 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD LONGRUN + RETRY in view, and recovers (2.3s)
+  ✓   75 [desktop] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.3s)
+  ✓   76 [desktop] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.3s)
+  ✓   77 [desktop] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.1s)
+  ✓   78 [desktop] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.2s)
+  ✓   79 [desktop] › e2e/stageb.spec.ts:262:3 › L4: catch-up shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.6s)
+  ✓   80 [desktop] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.2s)
+  ✓   81 [desktop] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.3s)
+  ✓   82 [desktop] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (2.4s)
+  ✓   83 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD VALIDATION + RETRY in view, and recovers (2.2s)
+  ✓   84 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD BOUNDARIES + RETRY in view, and recovers (2.3s)
+  ✓   85 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.2s)
+  ✓   86 [desktop] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.5s)
+  ✓   87 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (1.7s)
+  ✓   88 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD META + RETRY in view, and recovers (2.3s)
+  ✓   89 [desktop] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.3s)
+  ✓   90 [desktop] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.4s)
+  ✓   91 [desktop] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.3s)
+  ✓   92 [desktop] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (3.0s)
+  ✓   93 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (1.8s)
+  ✓   94 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.3s)
+  ✓   95 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (1.8s)
+  ✓   96 [desktop] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (1.8s)
+  ✓   97 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers (2.3s)
+  ✓   98 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers (2.2s)
+  ✓   99 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.3s)
+  ✓  100 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.3s)
+  ✓  101 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.3s)
+  ✓  102 [desktop] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD FACTS + RETRY in view, and recovers (2.2s)
+  ✓  103 [desktop] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD META + RETRY in view, and recovers (2.2s)
+  ✓  104 [tablet] › e2e/prototype.spec.ts:15:1 › S00: the disc is giant from the first dust frame, never shrinks, and keeps a visible edge outside every scrim (4.3s)
+  ✓  105 [tablet] › e2e/prototype.spec.ts:52:1 › slot and seed counts in the DOM equal the published facts (4.0s)
+  ✓  106 [tablet] › e2e/prototype.spec.ts:72:1 › S03b controls change the visible state; set aside hollows China and India; not-causal copy is on screen (5.3s)
+  ✓  107 [tablet] › e2e/prototype.spec.ts:89:1 › basis is never mixed in one view (S00, S03a, S03b) (3.3s)
+  ✓  108 [tablet] › e2e/prototype.spec.ts:101:1 › S03a: integer years only, the readout equals DR-1's median person, FOLLOW outlines a country (4.5s)
+  ✓  109 [tablet] › e2e/prototype.spec.ts:116:1 › 404 on the year layouts shows COULD NOT LOAD + RETRY, and RETRY re-runs the fetch (1.3s)
+  -  110 [tablet] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides
+  -  111 [tablet] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides
+  -  112 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  113 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  114 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  115 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  116 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  117 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  118 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  119 [tablet] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  120 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top)
+  -  121 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top)
+  -  122 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top)
+  -  123 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top)
+  -  124 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top)
+  -  125 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top)
+  -  126 [tablet] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top)
+  -  127 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  128 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  129 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  130 [tablet] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  131 [tablet] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page
+  -  132 [tablet] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page
+  -  133 [tablet] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page
+  -  134 [tablet] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  135 [tablet] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  136 [tablet] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  137 [tablet] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  138 [tablet] › e2e/qa.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible
+  -  139 [tablet] › e2e/qa.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound
+  -  140 [tablet] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  141 [tablet] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  142 [tablet] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  143 [tablet] › e2e/qa.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible
+  -  144 [tablet] › e2e/qa.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed
+  -  145 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background
+  -  146 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  147 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background
+  -  148 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  149 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background
+  -  150 [tablet] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  ✓  151 [tablet] › e2e/shell.spec.ts:15:1 › shell: title, ten scene tracks, hero headline is static HTML ghosted from first paint (875ms)
+  ✓  152 [tablet] › e2e/shell.spec.ts:25:1 › intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it (1.1s)
+  ✓  153 [tablet] › e2e/shell.spec.ts:35:1 › intro plays once per session; REPLAY plays it again and completes (9.8s)
+  ✓  154 [tablet] › e2e/shell.spec.ts:48:1 › zero external requests while visiting every scene (2.5s)
+  -  155 [tablet] › e2e/shell.spec.ts:58:1 › desktop nav: keyboard jump, aria-current, focus, back
+  ✓  156 [tablet] › e2e/shell.spec.ts:77:1 › T/M menu pill: open, Esc closes and returns focus, item jumps (927ms)
+  ✓  157 [tablet] › e2e/shell.spec.ts:93:1 › reduced motion renders in flow: no pinned stages, static discs (1.2s)
+  ✓  158 [tablet] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (eight-billion) (2.6s)
+  ✓  159 [tablet] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (years) (2.4s)
+  ✓  160 [tablet] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (weight) (2.4s)
+  ✓  161 [tablet] › e2e/shell.spec.ts:116:1 › production build excludes the dev gallery (257ms)
+  ✓  162 [tablet] › e2e/stageb.spec.ts:35:3 › Stage B scenes › every scene renders its heading at its landing; never two bases in one visual element (18.5s)
+  -  163 [tablet] › e2e/stageb.spec.ts:52:3 › Stage B scenes › S05 basis swap: no sampled frame shows two bases (DOM) or a canvas palette of another basis
+  -  164 [tablet] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree
+  ✓  165 [tablet] › e2e/stageb.spec.ts:92:3 › Stage B scenes › S04 flight: seeds start on their disc slots and land on their plane positions (1px) (6.4s)
+  ✓  166 [tablet] › e2e/stageb.spec.ts:109:3 › Stage B scenes › S04 windows draw only published fits; not-causal copy always on screen (5.8s)
+  ✓  167 [tablet] › e2e/stageb.spec.ts:121:3 › Stage B scenes › S06: Ward hollow count is the published disagree_count; rho readout from pairs; groups are descriptive (6.7s)
+  -  168 [tablet] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores
+  ✓  169 [tablet] › e2e/stageb.spec.ts:165:3 › Stage B scenes › S08: the echo dissolves and re-sorts at giant size; the closing names vintage, WDI, Maddison and the IMF exclusion (7.8s)
+  -  170 [tablet] › e2e/stageb.spec.ts:179:3 › Stage B scenes › axe: no serious or critical violations in any Stage B scene
+  -  171 [tablet] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers
+  -  172 [tablet] › e2e/stageb.spec.ts:249:1 › S02 names the vintage, the WDI attribution and the IMF exclusion; S05 never calls a loading panel unpublished
+  -  173 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST + RETRY in view, and recovers
+  -  174 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD FACTS + RETRY in view, and recovers
+  -  175 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD RECONCILIATION + RETRY in view, and recovers
+  -  176 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers
+  -  177 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD LONGRUN + RETRY in view, and recovers
+  -  178 [tablet] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers
+  -  179 [tablet] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  180 [tablet] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  181 [tablet] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers
+  -  182 [tablet] › e2e/stageb.spec.ts:262:3 › L4: catch-up shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  183 [tablet] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  184 [tablet] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers
+  -  185 [tablet] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers
+  -  186 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD VALIDATION + RETRY in view, and recovers
+  -  187 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD BOUNDARIES + RETRY in view, and recovers
+  -  188 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers
+  -  189 [tablet] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers
+  -  190 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers
+  -  191 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD META + RETRY in view, and recovers
+  -  192 [tablet] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers
+  -  193 [tablet] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  194 [tablet] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  195 [tablet] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  196 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers
+  -  197 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers
+  -  198 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers
+  -  199 [tablet] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers
+  -  200 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers
+  -  201 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers
+  -  202 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  203 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers
+  -  204 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers
+  -  205 [tablet] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD FACTS + RETRY in view, and recovers
+  -  206 [tablet] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD META + RETRY in view, and recovers
+  ✓  207 [mobile] › e2e/prototype.spec.ts:15:1 › S00: the disc is giant from the first dust frame, never shrinks, and keeps a visible edge outside every scrim (4.2s)
+  ✓  208 [mobile] › e2e/prototype.spec.ts:52:1 › slot and seed counts in the DOM equal the published facts (3.9s)
+  ✓  209 [mobile] › e2e/prototype.spec.ts:72:1 › S03b controls change the visible state; set aside hollows China and India; not-causal copy is on screen (6.2s)
+  ✓  210 [mobile] › e2e/prototype.spec.ts:89:1 › basis is never mixed in one view (S00, S03a, S03b) (3.3s)
+  ✓  211 [mobile] › e2e/prototype.spec.ts:101:1 › S03a: integer years only, the readout equals DR-1's median person, FOLLOW outlines a country (689ms)
+  ✓  212 [mobile] › e2e/prototype.spec.ts:116:1 › 404 on the year layouts shows COULD NOT LOAD + RETRY, and RETRY re-runs the fetch (1.3s)
+  -  213 [mobile] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 1024x768 with classic scrollbars: JS class = CSS class, no text collides
+  -  214 [mobile] › e2e/qa.spec.ts:94:5 › QA lessons › L1: 768x1024 with classic scrollbars: JS class = CSS class, no text collides
+  -  215 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1920x1080: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  216 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1440x900: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  217 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1280x720: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  218 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 1024x768: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  219 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 768x1024: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  220 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 390x844: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  221 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 375x812: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  222 [mobile] › e2e/qa.spec.ts:108:5 › QA lessons › L2/L11/L13: 360x800: no text, control or seed label collides in any scene position; S02 cards never spill
+  -  223 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1920x1080: normal flow, nothing overprints (first paint and every scene top)
+  -  224 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1440x900: normal flow, nothing overprints (first paint and every scene top)
+  -  225 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 1024x768: normal flow, nothing overprints (first paint and every scene top)
+  -  226 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 768x1024: normal flow, nothing overprints (first paint and every scene top)
+  -  227 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 390x844: normal flow, nothing overprints (first paint and every scene top)
+  -  228 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 375x812: normal flow, nothing overprints (first paint and every scene top)
+  -  229 [mobile] › e2e/qa.spec.ts:122:5 › QA lessons › D-001 reduced motion 360x800: normal flow, nothing overprints (first paint and every scene top)
+  -  230 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 360px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  231 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 375px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  232 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 390px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  233 [mobile] › e2e/qa.spec.ts:140:5 › QA lessons › L3/L5/L7/L8/L9/L14 at 768px: tags visible, no sideways scroll (vs the configured width), 11px floor, corner clear of pill, controls hit-testable
+  -  234 [mobile] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 360px: no sideways scroll anywhere on the page
+  -  235 [mobile] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 390px: no sideways scroll anywhere on the page
+  -  236 [mobile] › e2e/qa.spec.ts:184:5 › QA lessons › L5/L14 reduced motion at 768px: no sideways scroll anywhere on the page
+  -  237 [mobile] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 1440: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  238 [mobile] › e2e/qa.spec.ts:215:5 › QA lessons › L18 at 390: S05 BASIS swap and ATLAS indicator swap never show two bases in any frame
+  -  239 [mobile] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 1440: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  240 [mobile] › e2e/qa.spec.ts:243:5 › QA lessons › L17/L12 at 390: the inspector closes when its scene is left; CLOSE is in view; S08 links take a real pointer
+  -  241 [mobile] › e2e/qa.spec.ts:267:3 › QA lessons › D-008: on phones ATLAS has a CONTROLS sheet and the ATLAS and S03a discs are at least half visible
+  -  242 [mobile] › e2e/qa.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound
+  -  243 [mobile] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 1440: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  244 [mobile] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 768: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  245 [mobile] › e2e/qa.spec.ts:325:5 › QA lessons › D-023 reduced motion 390: the S04 and S05 planes draw axes, unit line, zero line, fit and CI band (pixels), and a basis change swaps them
+  -  246 [mobile] › e2e/qa.spec.ts:348:3 › QA lessons › D-024 768: the S05 guided tour (p 0.05 to 0.30) collides nowhere and its honesty chip is fully visible
+  -  247 [mobile] › e2e/qa.spec.ts:365:3 › QA lessons › L19: the DOM-generated collision helper catches an overlapping element with a class name nobody listed
+  -  248 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background
+  -  249 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  250 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768: every small text run in view is >= 4.5:1 on its sampled background
+  -  251 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 768 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  -  252 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390: every small text run in view is >= 4.5:1 on its sampled background
+  -  253 [mobile] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 390 reduced: every small text run in view is >= 4.5:1 on its sampled background
+  ✓  254 [mobile] › e2e/shell.spec.ts:15:1 › shell: title, ten scene tracks, hero headline is static HTML ghosted from first paint (759ms)
+  ✓  255 [mobile] › e2e/shell.spec.ts:25:1 › intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it (1.2s)
+  ✓  256 [mobile] › e2e/shell.spec.ts:35:1 › intro plays once per session; REPLAY plays it again and completes (9.8s)
+  ✓  257 [mobile] › e2e/shell.spec.ts:48:1 › zero external requests while visiting every scene (2.7s)
+  -  258 [mobile] › e2e/shell.spec.ts:58:1 › desktop nav: keyboard jump, aria-current, focus, back
+  ✓  259 [mobile] › e2e/shell.spec.ts:77:1 › T/M menu pill: open, Esc closes and returns focus, item jumps (919ms)
+  ✓  260 [mobile] › e2e/shell.spec.ts:93:1 › reduced motion renders in flow: no pinned stages, static discs (1.3s)
+  ✓  261 [mobile] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (eight-billion) (2.5s)
+  ✓  262 [mobile] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (years) (2.3s)
+  ✓  263 [mobile] › e2e/shell.spec.ts:106:3 › axe: no serious or critical violations (weight) (2.3s)
+  ✓  264 [mobile] › e2e/shell.spec.ts:116:1 › production build excludes the dev gallery (124ms)
+  ✓  265 [mobile] › e2e/stageb.spec.ts:35:3 › Stage B scenes › every scene renders its heading at its landing; never two bases in one visual element (18.5s)
+  -  266 [mobile] › e2e/stageb.spec.ts:52:3 › Stage B scenes › S05 basis swap: no sampled frame shows two bases (DOM) or a canvas palette of another basis
+  -  267 [mobile] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree
+  ✓  268 [mobile] › e2e/stageb.spec.ts:92:3 › Stage B scenes › S04 flight: seeds start on their disc slots and land on their plane positions (1px) (6.3s)
+  ✓  269 [mobile] › e2e/stageb.spec.ts:109:3 › Stage B scenes › S04 windows draw only published fits; not-causal copy always on screen (5.8s)
+  ✓  270 [mobile] › e2e/stageb.spec.ts:121:3 › Stage B scenes › S06: Ward hollow count is the published disagree_count; rho readout from pairs; groups are descriptive (6.6s)
+  ✓  271 [mobile] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores (9.3s)
+  ✓  272 [mobile] › e2e/stageb.spec.ts:165:3 › Stage B scenes › S08: the echo dissolves and re-sorts at giant size; the closing names vintage, WDI, Maddison and the IMF exclusion (7.7s)
+  ✓  273 [mobile] › e2e/stageb.spec.ts:179:3 › Stage B scenes › axe: no serious or critical violations in any Stage B scene (13.3s)
+  ✓  274 [mobile] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers (3.1s)
+  -  275 [mobile] › e2e/stageb.spec.ts:249:1 › S02 names the vintage, the WDI attribution and the IMF exclusion; S05 never calls a loading panel unpublished
+  ✓  276 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST + RETRY in view, and recovers (1.9s)
+  ✓  277 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD FACTS + RETRY in view, and recovers (2.2s)
+  ✓  278 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD RECONCILIATION + RETRY in view, and recovers (2.2s)
+  ✓  279 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (2.3s)
+  ✓  280 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD LONGRUN + RETRY in view, and recovers (2.2s)
+  ✓  281 [mobile] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.2s)
+  ✓  282 [mobile] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.2s)
+  ✓  283 [mobile] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.1s)
+  ✓  284 [mobile] › e2e/stageb.spec.ts:262:3 › L4: weight shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.1s)
+  ✓  285 [mobile] › e2e/stageb.spec.ts:262:3 › L4: catch-up shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (3.5s)
+  ✓  286 [mobile] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (2.2s)
+  ✓  287 [mobile] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.2s)
+  ✓  288 [mobile] › e2e/stageb.spec.ts:262:3 › L4: likeness shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (2.2s)
+  ✓  289 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD VALIDATION + RETRY in view, and recovers (2.2s)
+  ✓  290 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD BOUNDARIES + RETRY in view, and recovers (2.2s)
+  ✓  291 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.2s)
+  ✓  292 [mobile] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (1.7s)
+  ✓  293 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.2s)
+  ✓  294 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD META + RETRY in view, and recovers (2.1s)
+  ✓  295 [mobile] › e2e/stageb.spec.ts:262:3 › L4: eight-billion shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.1s)
+  ✓  296 [mobile] › e2e/stageb.spec.ts:262:3 › L4: sources shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.2s)
+  ✓  297 [mobile] › e2e/stageb.spec.ts:262:3 › L4: years shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.2s)
+  ✓  298 [mobile] › e2e/stageb.spec.ts:262:3 › L4: lab shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.9s)
+  ✓  299 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CONVERGENCE + RETRY in view, and recovers (1.7s)
+  ✓  300 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CLUSTERS + RETRY in view, and recovers (2.2s)
+  ✓  301 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD CORRELATIONS + RETRY in view, and recovers (2.3s)
+  ✓  302 [mobile] › e2e/stageb.spec.ts:262:3 › L4: evidence shows COULD NOT LOAD COVERAGE + RETRY in view, and recovers (2.1s)
+  ✓  303 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers (2.3s)
+  ✓  304 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers (2.3s)
+  ✓  305 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.2s)
+  ✓  306 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.2s)
+  ✓  307 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.2s)
+  ✓  308 [mobile] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD FACTS + RETRY in view, and recovers (2.8s)
+  ✓  309 [mobile] › e2e/stageb.spec.ts:262:3 › L4: resorted shows COULD NOT LOAD META + RETRY in view, and recovers (1.7s)
+
+  Slow test file: [desktop] › e2e/qa.spec.ts (11.1m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  128 skipped
+  181 passed (19.5m)
+14:38  up 2 days, 17:08, 5 users, load averages: 11.99 10.37 10.98

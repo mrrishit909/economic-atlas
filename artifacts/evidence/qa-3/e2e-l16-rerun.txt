@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 [desktop] › e2e/qa.spec.ts:422:5 › QA lessons › L16 pixel contrast 1440: every small text run in view is >= 4.5:1 on its sampled background (26.0s)
+
+  1 passed (26.3s)

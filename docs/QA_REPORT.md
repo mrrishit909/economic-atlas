@@ -500,3 +500,127 @@ Then a limited QA pass 3:
 - rerun `qa-2/probes/lessons.mjs` at 768
 - reduced-motion frames at 1440/768/390 for S04/S05
 - `qa-2/probes/pass2.mjs`
+
+---
+
+# Pass 3 (task P05-QA-003)
+
+Independent QA reviewer (qa-reviewer, Claude Opus 5.5), 2026-10-11, on `main` at `2bd5930` (FIX-B), fresh
+`npm run build`, production preview on 4341. Evidence is in `artifacts/evidence/qa-3/` (19 MB committed). The other
+captures are local only, in `artifacts/evidence/recordings/qa-3-local-only/`. Load average was 5 to 30.
+
+**Verdict: PASSED with minors only.**
+- Both pass-2 majors are closed: D-023 (reduced-motion plane overlay) and D-024 (768 tour chip).
+- No blocker or major remains, and every measured row of the release gate passes.
+- Open items are minors and lows: D-025 at 360, D-030, D-031, and the new D-032 and D-033.
+
+## P3.1 What I ran
+
+| Check | Result |
+|---|---|
+| `uv run pytest -q` | **59 passed** |
+| typecheck, lint | clean |
+| Vitest | **111 passed** |
+| Playwright full suite `--workers 1 --retries 0` | **181 passed, 128 skipped, 0 failed** (19.5 min, load 5 to 12; `e2e.txt`) |
+| Contaminated earlier run | `e2e-run1-contaminated.txt` is my own mistake: while it ran I placed a temporary probe spec in `site/e2e/`. Its 129 "failures" are that file's tests (deleted mid-run, 0 ms). The one real failure in that run (L16 1440: "MOVES." at 3.09:1 while the S01 card is still typing in at p 0.78) **passed on a serial rerun** (`e2e-l16-rerun.txt`), so it is a timing flake of the typing animation, not product. The clean full run above is the result of record |
+| Builder L16 contrast helper, fixture proof | The helper (`lowContrast` in `site/e2e/qa.spec.ts`) was run on a temporary copy with one added test that injects a 12 px `#3a3a3a` text into S05. It reports **0 issues before** the injection and **flags the fixture after**, at 1440 (1.49:1) and 390 (1.85:1). The copy was deleted and not committed (`l16-fixture.log`) |
+| Evidence harness (headed, ANGLE Metal, M3 Pro) | 7 required viewports + 1280x720, plus reduced 1440/768/390/360 (full sequences). Contact sheets read, plus more than 30 full-resolution frames |
+| Whole-document collision sweep (`qa-3/probes/lessons.mjs`) | Text-node line rects + controls + seed labels, with the fixed nav, pill, corner buttons, open menu panel and inspector in scope. Runs: 8 viewports in default motion; reduced at 1440/1280/768/390/375/360; the **MOTION toggle** (real-pointer click on MOTION ON/OFF) at 1440/768/390; and a **layer-toggle** pass at all 8 viewports with the menu open, the S05 sheet open, S06 free pickers, S07 limitations open, the ATLAS sheet open and the inspector open. The novel-class fixture was caught at every default viewport |
+| L16 pixel contrast | Captured with each text run's own colour. The pass-3 probe fixes an owner-colour error in my pass-2 probe that had mis-scored the S07 "THE ATLAS" eyebrow, which is black 11 px on pink or orange, about 7 to 9:1. Result: **25 of 5,861 boxes under 4.5:1, all of them with a white p95 background**, meaning text sampled under the white nav block or the pill (fixed chrome), not real low contrast. **0 real failures** (`contrast.txt`) |
+| L18 sampler (`qa-3/probes/pass2.mjs`) | **0 mixed frames in 2,439**: S05 basis swaps 1,047 frames, ATLAS cross-family changes 1,392 frames, at 1440 and 390 |
+| D-006 | 24/24 states show both slopes. Phones use the short labels "ALL:" and "CHN + IND OUT:" |
+| D-009 | 0 narrative or unit mismatches |
+| L17 | Inspector closed in 9/9 scenes; S08 link works by real pointer |
+| D-010 | Card in view, disc alpha 0.15 |
+| Route-block (real-pointer RETRY) | 90/98 at the landing. The other 8 (S02 cards 2/3/4, S06 correlations) **pass at the card or part that consumes them** (`routeblock-own-positions.log`), so **98/98** |
+| axe | **44 scans, 0 violations**. The keyboard journey passes; the S06 ORDER BY probe miss is the known type-ahead artefact |
+| Lighthouse | Run x1. FIX-B did not touch `index.html`, `public/`, `src/main.tsx` or `src/app` (LCP path unchanged; pass 2 holds the x3). Mobile perf 0.99, LCP 1.81 s, CLS 0, a11y **1.0**, BP 1.0. Desktop perf 1.0, LCP 0.42 s, a11y 1.0. Load 28 to 30 |
+
+## P3.2 Pass-2 defects re-verified
+
+| ID | Status | Evidence |
+|---|---|---|
+| D-023 reduced S04/S05 plane | **Closed** | Natural scroll under reduced motion at 1440/768/390, 5 positions per scene: `svg.plane` present (fixed), 5 x labels, unit line "GDP PER CAPITA IN 1990 · CONSTANT 2021 INTL $ (PPP)", zero line, fit line and CI hatch, `data-basis` set. No flow text painted over a plane label at any probed position (`pass3/pass3.json`, `pass3/d023-*.jpg`) |
+| D-024 768 tour chip | **Closed** | p 0.05 to 0.30 in 0.025 steps: the chip is in view and on top at all 5 hit points in 11 of 11 steps (`pass3/d024-768-p012.jpg`); the DOM sweep has no lab tour flags at 768 |
+| D-025 phone S03a | **Partly closed: minor, not major.** Ruling below | The legend now clears the headline at 360 to 390. The readout panels cover **26% (390), 36% (375) and 48% (360)** of the S03a disc (sampled share of the disc area under panels with more than 60% opacity). `pass3/d025-s03a-*.jpg` |
+| D-026 phone tick labels | **Closed** | 2x captures at 390/360 for S04 and S05 show 1K to 100K fully painted (`pass3/d026-*.png`) |
+| D-027 S06 NOT GROUPED caption | **Closed** | The caption sits beside the hollow set at 390/375/360 (`pass3/d027-s06-*.jpg`) |
+| D-028 contrast | **Closed** | 0 real failures (see P3.1) |
+| D-029 skip-link target | **Closed** | `#chapters` exists; Lighthouse a11y 1.0 mobile and desktop |
+| D-030 S01 mid-scrub chip | Open (low) | Not addressed; sweep flags `eight-billion@0.5` at every viewport |
+| D-031 S00 IDN label clipped | Open (low) | `qa-3/screenshots/1440x900/00-s00-end.jpg` |
+| D-021 | Accepted (ED #75) | |
+
+**Builder's open question: under reduced motion the plane is fixed while flow text scrolls past it. Ruling: acceptable.**
+- A static, non-animated figure behind scrolling copy suits reduced motion. No flow text overprints a plane label at any probed position.
+- The cards that pass over the plane are opaque, so the figure is covered for a moment rather than overprinted.
+- The one resting case is logged as D-032 (minor): at 768 reduced, the S04 verdict card sits over the top of the plane's y-axis title at the scene's natural rest position (`pass3/d023-catch-up-768-0.4.jpg`). The unit also appears in the chip and the x-axis line.
+
+**D-025 ruling: minor.**
+- The disc is still recognisable and correctly labelled (CHN, USA, IDN visible).
+- The year, readout and FOLLOW all work, and nothing on screen is false.
+- What is lost is composition (the lower part of the disc and any FOLLOW outline there), at 360 and 375 only.
+- Recommended for a later polish pass.
+
+**Layer and mode toggles:**
+- The open menu is a translucent blurred overlay (the reference pattern), so text beneath it is expected.
+- The ATLAS and S05 sheets and the inspector are opaque overlays. Their "collisions" are page text under the overlay.
+- The S07 limitations box clips its overflow; the flagged lines lie outside its scroll box.
+- None of these is painted over visible text (`pass3/tog-*.jpg`).
+
+## P3.3 New items
+
+### P05-D-032 · minor · 768 reduced: the S04 verdict card rests over the top of the plane's y-axis title
+- **Evidence:** `qa-3/pass3/d023-catch-up-768-0.4.jpg`, `d023-catch-up-768-0.8.jpg`.
+
+### P05-D-033 · low · phone ATLAS: with the sheet open, a second "CLOSE CONTROLS" (the bottom-left toggle) sits under the sheet
+- **Detail:** the sheet covers it (`elementFromPoint` returns RESET). The sheet's own CLOSE CONTROLS works, so this costs nothing visually, but assistive technology sees two buttons with the same name.
+- **Evidence:** `qa-3/pass3/tog-atlas-sheet-360.jpg`.
+
+### Note · low · 390 reduced: the S05 CONTROLS toggle can show while the pill still reads CATCH-UP at the S04/S05 boundary
+- **Detail:** in flow mode the S05 readout and toggle are already in view at that point. Not a defect, recorded for polish.
+- **Evidence:** `pass3/d023-catch-up-390-0.8.jpg`.
+
+## P3.4 L1 to L20
+
+| # | Result |
+|---|---|
+| L1 | PASS (the pass-2 classic result stands; FIX-B did not touch the class logic) |
+| L2 | PASS (no collisions in default motion at any viewport apart from ruled artefacts) |
+| L3 | PASS (D-030 is low) |
+| L4 | PASS, 98/98 |
+| L5 | PASS |
+| L6 | PASS |
+| L7 | PASS |
+| L8 | PASS |
+| L9 | PASS |
+| L10 | PASS |
+| L11 | PASS with minor D-025 |
+| L12 | PASS |
+| L13 | PASS |
+| L14 | PASS |
+| L15 | PASS (reduced S04/S05 figures now complete) |
+| L16 | PASS, and the builder's test is proven to catch a fixture |
+| L17 | PASS |
+| L18 | PASS, 0/2,439 |
+| L19 | PASS (fixture caught) |
+| L20 | N/A |
+
+## P3.5 Release gate (pass 3)
+
+| Row | Result | Measured evidence |
+|---|---|---|
+| Visual design | PASS | Criteria 2/5/19 hold; compositions fixed at every viewport and in reduced motion |
+| Motion UI | PASS | 6 layers; the MOTION toggle reaches the reduced rendering, which is complete |
+| UX | PASS | L17, L12, keyboard, skip link |
+| Functionality | PASS | 98/98 route-block with real-pointer RETRY; reduced S04/S05 complete |
+| AI / analytical honesty | PASS | L18 0/2,439; D-006 24/24; D-009 0 mismatches; numbers as verified in passes 1 and 2 |
+| Performance | PASS | Lighthouse mobile 0.99, LCP 1.81 s, CLS 0, a11y 1.0; desktop 1.0. LCP path unchanged since the pass-2 x3 (1.22 to 1.81 s) |
+| Responsiveness | PASS | No collisions at the 7 viewports + 1280; D-025 (360/375) is minor |
+| Professional quality | PASS | pytest 59, Vitest 111, Playwright 181/0 failed, typecheck and lint clean, axe 0/44 |
+| GitHub / Deployment / Portfolio | BLOCKED | out of QA scope; ED #58 Pages LCP re-measure not needed (local LCP passes) |
+
+## P3.6 Next action
+
+The project may move to publish (public repo, Pages, case study) under the standing pre-authorisation, then live-URL
+verification. Optional polish: D-025 (360/375 disc coverage), D-032, D-033, D-030, D-031.

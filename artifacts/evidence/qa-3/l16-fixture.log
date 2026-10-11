@@ -1,0 +1,6 @@
+P05-QA-003: builder L16 helper (site/e2e/qa.spec.ts lowContrast) run on a temporary copy of qa.spec.ts with one added test
+(file deleted after the run, not committed). A 12px #3a3a3a <p class="qa3-fixture-lowcontrast"> was injected into #lab at S05 p 0.45.
+npx playwright test e2e/zz-qa3-fixture.spec.ts -g "QA3 fixture" --workers 1 --retries 0 --project desktop
+QA3 1440 before=0 after=1 :: 1.49:1 'QA3 LOW CONTRAST FIXTURE' fs 12 bg rgb(105,13,226)
+QA3 390 before=0 after=1 :: 1.85:1 'QA3 LOW CONTRAST FIXTURE' fs 12 bg rgb(0,0,0)
+2 passed (14.6s): the helper reports nothing on the real page and flags the fixture at both widths.
