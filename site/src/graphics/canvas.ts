@@ -24,3 +24,6 @@ export const stageH = () => document.documentElement.clientHeight;
 export type ViewportClass = "D" | "T" | "M";
 /** Same cutoffs as the CSS: < 768 M, 768..1023 T, >= 1024 D. */
 export const viewportClass = (vw: number): ViewportClass => (vw < 768 ? "M" : vw < 1024 ? "T" : "D");
+
+/** The composition class as the CSS media queries see it (viewport width incl. a classic scrollbar), ED #39. */
+export const cssClass = (): ViewportClass => viewportClass(typeof innerWidth === "number" ? innerWidth : 1440);

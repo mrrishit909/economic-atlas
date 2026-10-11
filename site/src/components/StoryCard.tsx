@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export type CardVariant = "dark" | "blue" | "light" | "orb";
+export type CardVariant = "dark" | "blue" | "light" | "orb" | "violet";
 
 export interface StoryCardProps {
   variant: CardVariant;

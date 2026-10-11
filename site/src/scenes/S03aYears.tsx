@@ -8,7 +8,7 @@ import { HonestyChip } from "../components/HonestyChip";
 import { Legend } from "../components/Legend";
 import { NoDataSet } from "../components/NoDataSet";
 import { StaticDisc } from "../components/StaticDisc";
-import { ArtifactStatus } from "../components/StateUI";
+import { ArtifactStatus, Statuses } from "../components/StateUI";
 import { Footer } from "../components/Footer";
 import { useMotion } from "../scroll/hooks";
 import { useStore, years as yearsStore } from "../state/scenes";
@@ -36,7 +36,7 @@ export function S03aYears({ def }: { def: SceneDef }) {
   const [f] = useArtifact(FACTS, false);
   const [cs] = useArtifact(COUNTRIES, false);
   const [ind] = useArtifact(INDICATORS, false);
-  const [pan] = useArtifact(PANEL, false);
+  const [pan, retryPan] = useArtifact(PANEL, false);
   const { year, follow } = useStore(yearsStore);
   const motion = useMotion();
   const [q, setQ] = useState("");
@@ -86,6 +86,7 @@ export function S03aYears({ def }: { def: SceneDef }) {
         <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="statement">{S03A.statement}</h2>
       </div>
       {followBox}
+      <Statuses items={[["panel_income", pan, retryPan]]} />
       <div className="years-readout" tabIndex={0} onKeyDown={onKey} aria-label="Year readout. Left and right arrows step the year.">
         <ArtifactStatus file="seedhead/gdppc_ppp" state={ys} retry={retry} empty={S03A.notPublished(year)}>
           {() => y ? (
@@ -105,8 +106,8 @@ export function S03aYears({ def }: { def: SceneDef }) {
         {disp ? <Legend edges={disp.bins} labels={disp.edge_labels} unit={S00.legendUnit} note={S00.legendNote}
           sigma={sd !== null && mu !== null ? { mean: mu, sd, label: "±1 SD OF LN INCOME, PEOPLE-WEIGHTED" } : null} /> : null}
       </div>
-      <Footer />
       </div>
+      <Footer />
       {y && f.status === "ready" ? (
         <div className="years-nodata">
           <NoDataSet rows={y.no_data} caption={noData(y.no_data.length, y.no_data.reduce((a, r) => a + r.population, 0) / 1e9)} />

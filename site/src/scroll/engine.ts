@@ -240,3 +240,11 @@ export function resolveInitialHash() {
 }
 
 export const trackIds = () => ordered().map((t) => t.id);
+
+/** Evidence/test hook: scroll to a track progress like a visitor would (no jump event, so stepped states animate). */
+export function scrollToProgress(id: string, p: number) {
+  measure();
+  const t = tracks.get(id);
+  if (!t) return;
+  setScroll(Math.round(t.top + p * Math.max(0, t.height - vh)));
+}

@@ -57,3 +57,16 @@ export function ArtifactStatus<T>({ file, state, retry, empty, children }: {
       return <>{children(state.data)}</>;
   }
 }
+
+/** Inline errors (with RETRY) for every failed file a scene consumes, in that scene (QA L4). Loading lines only when asked. */
+export function Statuses({ items, loading = false }: { items: [string, LoadState<unknown>, () => void][]; loading?: boolean }) {
+  const bad = items.filter(([, s]) => s.status === "error" || (loading && s.status === "loading"));
+  if (!bad.length) return null;
+  return (
+    <div className="statuses">
+      {bad.map(([file, s, retry]) => s.status === "error"
+        ? <ErrorLine key={file} file={file} reason={s.reason} attempt={s.attempt} onRetry={retry} />
+        : s.status === "loading" ? <LoadingLine key={file} file={file} loaded={s.loaded} total={s.total} /> : null)}
+    </div>
+  );
+}

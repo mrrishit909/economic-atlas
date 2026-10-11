@@ -6,7 +6,8 @@
     <meta name="theme-color" content="#000000" />
     <title>Economic Atlas</title>
     <meta name="description" content="Economic Atlas: the world's people as one disc of grains, one per million people, sorted by GDP per capita (PPP) from World Bank World Development Indicators." />
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2" />
+    <!-- only the display face the LCP headline uses is preloaded (QA L6) -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/src/assets/fonts/newsreader-opsz-400-site.woff2" />
     <script>
       // Before first paint: motion preference (OS or in-site session override) and gallery flag.
       (function () {

@@ -1,11 +1,13 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useArtifact } from "../data/useArtifact";
-import { FACTS, INDICATORS, META, SEED_LATEST } from "../data/artifacts";
-import { S00 } from "../data/copy";
+import { COUNTRIES, FACTS, INDICATORS, META, SEED_LATEST, fact } from "../data/artifacts";
+import { S00, S01 } from "../data/copy";
+import { WordReveal } from "../components/WordReveal";
+import { NotificationCard } from "../components/NotificationCard";
 import { HonestyChip } from "../components/HonestyChip";
 import { Legend } from "../components/Legend";
 import { NoDataSet } from "../components/NoDataSet";
-import { ErrorLine, LoadingLine } from "../components/StateUI";
+import { ErrorLine, LoadingLine, Statuses } from "../components/StateUI";
 import { useProgress } from "../scroll/hooks";
 import { windowed } from "../motion/progress";
 import { easeSymmetric } from "../motion/ease";
@@ -34,24 +36,33 @@ function DiscStatus({ items }: { items: [string, LoadState<unknown>, () => void]
  * scrub: the headline shrinks to the top, the scrim and corner labels fade as the disc moves to G1.
  */
 export function S00Layer({ introPlaying }: { introPlaying: boolean }) {
-  const [f] = useArtifact(FACTS, false);
-  const [m] = useArtifact(META, false);
+  const [f, retryF] = useArtifact(FACTS, false);
+  const [m, retryM] = useArtifact(META, false);
   const [lay, retryLay] = useArtifact(SEED_LATEST, false);
   const [ind, retryInd] = useArtifact(INDICATORS, false);
+  const [cs, retryCs] = useArtifact(COUNTRIES, false);
   const fade = useRef<HTMLDivElement>(null);
-  const kicker = useRef<HTMLParagraphElement>(null);
+  const kicker = useRef<HTMLDivElement>(null);
+  const [cards, setCards] = useState(0);
+  const cardsOn = useRef(false);
+  const name = (iso: string) => (cs.status === "ready" ? cs.data.countries.find((c) => c.iso3 === iso)?.name ?? iso : iso);
 
   useProgress("eight-billion", (p) => {
     const h = document.querySelector<HTMLElement>("h1[data-hero]"), scrim = document.querySelector<HTMLElement>(".hero-scrim");
     const t = motionEnabled() ? windowed(p, 0, 0.4, easeSymmetric) : 0; // reduced motion: in flow, nothing scrubs
     if (h) {
-      const cls = viewportClass(innerWidth), top = cls === "D" ? 96 : cls === "T" ? 72 : 56;
+      const cls = viewportClass(innerWidth), top = cls === "D" ? 96 : cls === "T" ? 72 : 96;
       const dy = (top - h.offsetTop) * t;
       h.style.transform = t > 0 ? `translateY(${dy}px) scale(${1 - 0.5 * t})` : "";
     }
     if (scrim) scrim.style.opacity = String(1 - t);
     if (fade.current) fade.current.style.opacity = String(1 - windowed(p, 0, 0.2));
-    if (kicker.current) kicker.current.style.opacity = String(windowed(p, 0.45, 0.6));
+    if (kicker.current) kicker.current.style.opacity = String(motionEnabled() ? windowed(p, 0.35, 0.45) : 1);
+    const foot = document.querySelector<HTMLElement>(".s01-footer");
+    if (foot) foot.style.opacity = String(motionEnabled() ? windowed(p, 0.35, 0.45) : 1);
+    // the two cards type in once p passes 0.6 (stepped, hysteresis by the 0.05 gap)
+    const on = p >= 0.6 || !motionEnabled();
+    if (on !== cardsOn.current && (on || p < 0.55)) { cardsOn.current = on; setCards(on ? (motionEnabled() ? Date.now() % 100000 + 1 : 0) : 0); }
   });
 
   const ready = f.status === "ready";
@@ -76,10 +87,22 @@ export function S00Layer({ introPlaying }: { introPlaying: boolean }) {
           {edges ? <Legend edges={edges.bins} labels={edges.edge_labels} unit={S00.legendUnit} note={S00.legendNote} /> : null}
         </div>
         <div className="s00-status">
-          <DiscStatus items={[["seedhead/gdppc_ppp_latest.json", lay, retryLay], ["indicators.json", ind, retryInd]]} />
+          <DiscStatus items={[["seedhead/gdppc_ppp_latest.json", lay, retryLay], ["indicators.json", ind, retryInd], ["facts.json", f, retryF], ["meta.json", m, retryM], ["countries.json", cs, retryCs]]} />
         </div>
       </div>
-      <p ref={kicker} className="s01-kicker scene-kicker" style={{ opacity: 0 }}>S01 · EIGHT BILLION · STATEMENT AND CARDS BUILT IN STAGE B</p>
+      <div ref={kicker} className="s01" style={{ opacity: 0 }}>
+        <Statuses items={[["facts", f, retryF], ["countries", cs, retryCs], ["meta", m, retryM]]} />
+        {ready && cs.status === "ready" ? (
+          <>
+            <p className="scene-kicker s01__kicker">{S01.kicker(f.data, name(String(fact(f.data, "gdppc_ppp_top_iso3").value)), name(String(fact(f.data, "gdppc_ppp_bottom_iso3").value)))}</p>
+            <WordReveal as="p" className="statement s01__statement" text={S01.statement(f.data)} mode={{ kind: "scrub", track: "eight-billion", from: 0.35, to: 0.75 }} />
+            {cards || !motionEnabled() ? <div className="s01__cards">
+              <NotificationCard from={S01.card1From(f.data)} when="DERIVED" body={S01.card1(f.data)} playKey={cards} tag={<HonestyChip tag="DERIVED" />} />
+              <NotificationCard variant="violet" from={S01.card2From(f.data)} when="DERIVED" body={S01.card2(f.data)} playKey={cards ? cards + 1 : 0} tag={<HonestyChip tag="DERIVED" />} />
+            </div> : null}
+          </>
+        ) : null}
+      </div>
       {m.status === "ready" ? <div className="s01-footer"><Footer /></div> : null}
     </>
   );

@@ -7,7 +7,7 @@ import { S00, S03B } from "../data/copy";
 import { HonestyChip } from "../components/HonestyChip";
 import { Legend } from "../components/Legend";
 import { StaticDisc } from "../components/StaticDisc";
-import { ArtifactStatus } from "../components/StateUI";
+import { ArtifactStatus, Statuses } from "../components/StateUI";
 import { Footer } from "../components/Footer";
 import { useMotion } from "../scroll/hooks";
 import { useStore, view, weight, type Count } from "../state/scenes";
@@ -33,7 +33,7 @@ function Segmented<T extends string | number>({ label, value, options, onChange 
 export function S03bWeight({ def }: { def: SceneDef }) {
   const [f] = useArtifact(FACTS, false);
   const [cv, retryCv] = useArtifact(CONVERGENCE, false);
-  const [ys] = useArtifact(SEED_YEARS, false);
+  const [ys, retryYs] = useArtifact(SEED_YEARS, false);
   const [lay] = useArtifact(SEED_LATEST, false);
   const [ind] = useArtifact(INDICATORS, false);
   const [pan] = useArtifact(PANEL, false);
@@ -65,6 +65,7 @@ export function S03bWeight({ def }: { def: SceneDef }) {
           <p className="scene-kicker">WEIGHT · {S00.line2}</p>
           <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="statement">{S03B.statement}</h2>
         </div>
+        <Statuses items={[["seedhead/gdppc_ppp", ys, retryYs]]} />
         <div className="weight-controls">
           <Segmented label="COUNT" value={w.count} onChange={(c) => setWeight({ count: c })}
             options={[{ v: "countries", text: "COUNTRIES" }, { v: "people", text: "PEOPLE" }]} />
@@ -104,8 +105,8 @@ export function S03bWeight({ def }: { def: SceneDef }) {
         {disp ? <Legend edges={disp.bins} labels={disp.edge_labels} unit={S00.legendUnit}
           sigma={sd !== null && mu !== null ? { mean: mu, sd, label: `±1 SD OF LN INCOME, ${w.count === "people" ? "PEOPLE-WEIGHTED" : "COUNTRIES"}` } : null} /> : null}
       </div>
-      <Footer />
       </div>
+      <Footer />
       {!motion && statics.length && f.status === "ready" ? (
         <div className="static-row">
           {statics.map((s) => <StaticDisc key={s.label} state={staticState(s.t)} scaleSlots={factNum(f.data, "seedhead_slots_latest")} size={240} label={s.label} />)}

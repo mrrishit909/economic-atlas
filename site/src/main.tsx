@@ -4,8 +4,9 @@ import "lenis/dist/lenis.css";
 import "./styles/app.css";
 import { ErrorBoundary } from "./app/ErrorBoundary";
 import { App } from "./app/App";
-import { getProgress, jumpTo, startEngine } from "./scroll/engine";
-import { debug, intro, introSortT, quality, restState } from "./scenes/director";
+import { getProgress, jumpTo, scrollToProgress, startEngine } from "./scroll/engine";
+import { cssClass } from "./graphics/canvas";
+import { debug, expectedPx, intro, introSortT, quality, restState, seedPx } from "./scenes/director";
 import "./styles/scenes.css";
 
 // The dev gallery is excluded from production builds: the guard is a build-time constant, so the
@@ -19,8 +20,8 @@ if (!isGallery) document.documentElement.classList.remove("is-gallery");
 // debug(): the disc as drawn; freeze(t) holds the S00 clock at t ms for evidence frames (-1 releases).
 Object.assign(window, {
   __eca: {
-    jumpTo, getProgress,
-    debug: () => ({ ...debug, tier: quality.tier }),
+    jumpTo, getProgress, scrollToProgress, seedPx, expectedPx,
+    debug: () => ({ ...debug, tier: quality.tier, cls: cssClass() }),
     freeze: (t: number) => { intro.frozen = t; },
     introStats: () => ({ playing: intro.playing, minR: intro.minR, monotonic: intro.monotonic, sortT: introSortT() }),
     rest: () => { const s = restState(); return s ? { n: s.key.length, hollow: [...s.hollow].filter((h) => h > 0.5).length, keys: s.key.slice(0, 3) } : null; },
