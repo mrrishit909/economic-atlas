@@ -1,0 +1,18 @@
+[
+ {
+  "viewport": "1024x768-classic",
+  "defects": [
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"CLUSTER SILHOUETTE IS LOW (WEAK SE\" x \"REPLAY INTRO\" (100x13) ; \"CLUSTER SILHOUETTE IS LOW (WEAK SE\" x \"MOTION ON\" (35x13) ; \"CLUSTER SILHOUETTE IS LOW (WEAK SE\" x \"REPLAY INTRO\" (116x16) ; \"CLUSTER SILHOUETTE IS LOW (WEAK SE\" x \"MOTION ON\" (43x16) ; \"CLUSTER SILHOUETTE IS LOW (WEAK SE\" x \"REPLAY INTRO\" (100x4) ; \"CLUSTER SILHOUETTE IS LOW (WEAK SE\" x \"MOTION ON\" (43x4) (+2)"
+  ]
+ },
+ {
+  "viewport": "768x1024-classic",
+  "defects": [
+   "eight-billion@0.5: L3 no in-viewport honesty chip",
+   "lab@0.12: L2/L11/L13 \"DERIVED\" x \"A NEGATIVE SLOPE MEANS POORER COUN\" (58x2) ; \"·\" x \"A NEGATIVE SLOPE MEANS POORER COUN\" (17x2) ; \"GDPPC_PPP_1990_2025_TERCILE_LOW\" x \"A NEGATIVE SLOPE MEANS POORER COUN\" (185x2)",
+   "lab@0.27: L2/L11/L13 \"DERIVED\" x \"A NEGATIVE SLOPE MEANS POORER COUN\" (58x8) ; \"·\" x \"A NEGATIVE SLOPE MEANS POORER COUN\" (17x8) ; \"GDPPC_PPP_1990_2025_POP_WEIGHTED_E\" x \"A NEGATIVE SLOPE MEANS POORER COUN\" (185x8)",
+   "atlas@0: L2/L11/L13 \"ONE INDICATOR, ONE UNIT AT A TIME.\" x \"ATLAS\" (42x17)"
+  ]
+ }
+]

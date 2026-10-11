@@ -328,3 +328,175 @@ I read every contact sheet: 1920, 1440, 1280, 1024, 768, 390, 375, 360, both cla
 
 FIX pass for D-001 to D-010 (and preferably D-011 to D-019). Then run a limited QA pass 2 that reruns `probes/`
 (routeblock, lessons, extra, contrast) and the harness at 1440/768/390 plus reduced mode.
+
+---
+
+# Pass 2 (task P05-QA-002)
+
+Independent QA reviewer (qa-reviewer, Claude Opus 5.5), 2026-10-11, on `main` at `daf4f92` (FIX-A), fresh
+`npm run build`, production preview on 4341 (`site/tests/serve.mjs`). Evidence is in `artifacts/evidence/qa-2/`
+(23 MB committed). Frames and captures not committed are kept locally in
+`artifacts/evidence/recordings/qa-2-local-only/` (gitignored). Load average was 10 to 22 during this pass.
+
+**Verdict: FAILED.** All 22 pass-1 defects are verified closed, apart from D-021 (accepted, ED #75) and two partial
+minors. Both blockers are gone, and the BASIS and ATLAS swaps are clean in every sampled frame. Two majors remain, one
+of which I missed in pass 1:
+- **D-023:** under reduced motion, S04 and S05 draw the catch-up seeds with no axes, fit line, CI band or unit.
+- **D-024:** at 768 the S05 guided tour hides its honesty chip under the not-causal paragraph.
+
+## P2.1 What I ran
+
+| Check | Result |
+|---|---|
+| `uv run pytest -q` | **59 passed** |
+| `npm run typecheck`, `npm run lint` | clean |
+| `npm test` (Vitest) | **111 passed** |
+| `npx playwright test --workers 1 --retries 0` | **170 passed, 106 skipped, 0 failed** (16.2 min, load 17 to 22). No serial reruns needed |
+| Evidence harness (headed, ANGLE Metal, M3 Pro) | 7 required viewports + 1280x720 + classic 1024x768 / 768x1024 + reduced 1440x900 / 768x1024 / 390x844 (`--full`). Every contact sheet read, plus more than 40 full-resolution frames |
+| L19 collision sweep (`qa-2/probes/lessons.mjs`) | Box list built from the DOM: Range client rects of every visible text node (so overflowing text is measured where it is painted), every visible control, and the `.seed-label` canvas-label layer (L13). 32 scene positions x 8 viewports, plus reduced at 5 viewports and classic at 2. **Self-test:** an injected overlapping element with a novel class name was caught at every normal viewport (2/2 per viewport). `lessons.log` |
+| L16 pixel contrast (`probes/contrast.py`) | p95 background under each painted text line, 15,096 boxes. Results in P2.3 |
+| L18 per-frame sampler (`qa-2/probes/pass2.mjs`) | rAF-rate sampling of every unit-bearing element plus the canvas palette. S05 BASIS swaps both ways at 1440 and 390: **0 mixed frames in 1,061**. ATLAS cross-family changes (const, nominal, agriculture share, PPP, productivity) at 1440 and 390: **0 mixed frames in 1,593**. `extra.mjs` swap sampler: 0 mixed in 77 |
+| D-006 literal | Every people-weighted and ex-CHN+IND record across 2 bases x 3 windows (12 states) at 1440 and 390 shows both rows: "PEOPLE-WEIGHTED, ALL ..." and "CHINA + INDIA SET ASIDE ...". **24 of 24** |
+| L4 route-block (`qa-2/probes/routeblock.mjs`, real-pointer RETRY) | 90 of 98 pass at the scene landing. The 8 remaining rows were re-run at the card or part that consumes the file: S02 cards 2/3/4 for panel_income/coverage/longrun, and S06 p 0.62 for correlations. **All 8 pass** (alert in view, RETRY hit-testable, exactly 1 refetch, recovered; `routeblock-own-positions.log`), so 98/98. `extra.mjs`: 32/32 per-indicator seedheads, 4/4 inspector files and 8/8 S02 cards pass, and every deep link with facts/meta/countries/indicators/panel/latest-seedhead blocked shows its alert in view |
+| L17 | Inspector opened in ATLAS by real pointer, then a jump to each of the 9 other scenes: **closed in every scene** at 1440 and 390. The S08 `OPEN THE ATLAS` real-pointer click then navigates to ATLAS. CLOSE is in the viewport. The phone ATLAS and S05 sheets keep their open state after a jump, but are positioned in their own section and not in view elsewhere (`pass2/l17-*.jpg`): not a defect |
+| L12 sweep (`extra.mjs`) | All 18 controls work by touch at 390 and by mouse at 1440, including inspector CLOSE and the S08 links. ATLAS phone CONTROLS sheet by touch: opens with every control in view, and a chip tap opens the inspector bottom sheet with CLOSE in view (`pass2/atlas-sheet-390.jpg`, `atlas-inspector-390.jpg`) |
+| axe + keyboard (`probes/a11y.mjs`) | **44 scans, 0 violations**. Keyboard journey all pass. The one probe miss (S06 ORDER BY with type-ahead "t") is the pass-1 probe artefact, verified working with "a". Skip link: first Tab focuses SKIP TO CHAPTERS, and Enter moves focus to the nav (1440) or the MENU pill (390) |
+| Lighthouse (`run-lighthouse.sh` x3, load 9.9 to 11.8) | mobile perf **0.99 / 1.0 / 0.99**, LCP **1.81 / 1.22 / 1.81 s**, CLS 0, TBT at most 29 ms. Desktop perf **1.0** x3, LCP 0.41 s. BP **1.0** (favicon fixed). a11y 0.98 mobile / 0.99 desktop: the only failing audit is `skip-link` ("No skip link target", D-029). LCP element `h1#hero-title span.wr-word`. #58 is not needed |
+| L14 | The configured-width check still catches the 2000 px fixture under `isMobile` (`extra.log`) |
+| L15 | Reduced-motion figures are sized: S03a 4 x 260x260, S03b 240x240, with real pixel content (`extra.log`) |
+| S08 radius at p 0.75 | 1.42 (1920/1440), 1.21 (768), 1.21 (390), 1.21 (375), 1.20 (360) x frame height |
+
+## P2.2 Pass-1 defects, re-verified from my frames
+
+| ID | Status | Evidence |
+|---|---|---|
+| D-001 reduced S00/S01 overprint | **Closed** | `qa-2/screenshots/1440x900-reduced/00-s00-end.jpg`, `768x1024-reduced/`, `390x844-reduced/00-s00-end.jpg`; no collisions at S00 in reduced lessons |
+| D-002 S05 mixed bases | **Closed** | L18 sampler 0/1,061; `1440x900/s05-06-basis-t120.jpg`: axis, readout and chip all still read PPP 1990 while the controls show the choice |
+| D-003 S02 card overprint | **Closed** | `1440x900/s02-01-card2.jpg`, `s02-03-card4.jpg`, `contact-sheets/1280x720.jpg`; DOM sweep clean on every card at D |
+| D-004 silent failures | **Closed** | route-block 98/98, extra 44/44, silent-deep-link probes all show alerts |
+| D-005 inspector persistence | **Closed** | L17 probe; S08 link real-pointer ok |
+| D-006 criterion 7 | **Closed** | 24/24 states show both rows |
+| D-007 phone S00 header and legend | **Closed** | `390x844/00-s00-end.jpg`, `360x800` S00 frame (local) |
+| D-008 ATLAS phone sheet (criterion 11) | **Closed** for ATLAS. S03a phone disc still largely under the readout, recorded as part of D-025 | `pass2/atlas-sheet-390.jpg`, `390x844/s03a-03-follow-nga.jpg` |
+| D-009 ATLAS narratives and units | **Closed** | `D009ab` 0 mismatches over 7 indicators x {1, 2} countries at 1440 and 390; INDEX now keeps the status line level-unit and labels the paths `INDEX, 2000 = 100 · FROM CONSTANT 2021 INTL $ (PPP)` |
+| D-010 EVIDENCE landing | **Closed** | 1 card in view after a nav click, disc alpha 0.15 |
+| D-011 contrast | **Closed** for all 4 listed items (S00 corner lines, chip on purple, comb labels, limitations over orange). New items in D-028 | `contrast.txt` |
+| D-012 seed-label collisions | **Closed** | no `[L13]` flags at any viewport |
+| D-013 S07 receipt overlaps | **Closed.** The 1280/1024 flags are lines clipped inside the limitations scroll box (rects past its overflow edge), visually clear | `1024x768/s07-01-ex7.jpg` (local), `1440x900/s07-03-ex7.jpg` |
+| D-014 S04 flight chip | **Closed** | no L3 flag at catch-up p 0.24 |
+| D-015 360 unit line clipped | **Closed** (unit line in view); tick labels clipped, see D-026 | `360x800/s04-02-w2010-verdict.jpg` (local) |
+| D-016 "0 BYTES GZIP" | **Closed** ("SIZE NOT PUBLISHED") | `390x844/s07-03-ex7.jpg` |
+| D-017 lab landing sample | **Closed** (PPP 1990 PRIMARY) | `1440x900/s05-06-basis-t120.jpg` |
+| D-018 tab order | **Closed** (skip link works); its missing target is D-029 | skip-link probe |
+| D-019 phone S06/S08 collisions | **Partly closed**: S08 is clean, the S06 NOT GROUPED caption still sits on its hollow set at 390/360 (D-027) | `390x844/s06-00-kmeans.jpg` |
+| D-020 favicon 404 | **Closed** (BP 1.0) | lighthouse |
+| D-021 area rule to 4 decimals | **Accepted** (ED #75) | |
+| D-022 plane y values | **Closed** (+8% to -4% labels) | `1440x900/s04-06-w2010-verdict.jpg` |
+
+Builder-flagged probe items, ruled from my own captures:
+- **S02 p 0.694 horizontal strip:** the off-screen deck cards are by design. **Artefact.**
+- **S07 p 0.95 side panel at 1280/1024:** text clipped inside its own scroll box. **Artefact.**
+- **Reduced-motion text passing under fixed chrome at landing positions:** normal-flow content scrolls under the fixed nav and pill, and clears it on scroll. **Accepted** (ED #57 pattern).
+- **The 8 route-block rows:** all pass at their own card or part. **Artefact of the landing position.**
+- **Phone "DATA TABLE FOR THIS WINDOW" collisions:** the summary is visually hidden (`clip-path: inset(50%)`, 12 px wide), so no painted overlap. **Artefact.**
+- **768 ATLAS "ONE INDICATOR" under the pill:** normal flow, ED #57. **Accepted.**
+
+## P2.3 Pass-2 defect register
+
+### P05-D-023 · MAJOR · reduced motion: S04 and S05 planes have no axes, fit line, CI band or unit
+- **Where:** `S04CatchUp.tsx:61` and `S05Lab.tsx:63` render `{motion ? <PlaneOverlay … /> : null}`, so with motion off nothing replaces the overlay. Seen at 1440x900, 768x1024 and 390x844, reduced.
+- **Repro:** `prefers-reduced-motion: reduce`, then scroll to S04 or S05.
+- **Expected:** MOTION_SYSTEM 8: "S04: … then the plane with the 1990 fit (interactive hover)" and "S05: the lab, live". The plane carries its x labels in the record's basis, the zero line, the fit and the CI hatch. ED #57 accepts only the missing flight strip.
+- **Actual:** only the country seeds are drawn (canvas). There is no `svg.plane` in the DOM (`svg: null` at every position probed), so there are no x labels, no unit line, no zero line, no fit and no CI. The readout states a slope for a line that is not drawn. Income and growth cannot be read off the plane.
+- **History:** this was present in pass 1 too (`qa/screenshots/390x844-reduced/s04-04-w1990.jpg`). I missed it then.
+- **Evidence:** `qa-2/screenshots/1440x900-reduced/s04-04-w1990.jpg`, `s05-04-live.jpg`, `s05-08-basis-settled.jpg`; `qa-2/screenshots/390x844-reduced/s04-04-w1990.jpg`; `qa-2/pass2/reduced-*.jpg`.
+- **Verification test:** under reduced motion, at S04 and S05 the plane SVG exists with the x unit line, at least 3 x labels, the zero line and `.plane__fit` for the shown record, and a basis change swaps them.
+
+### P05-D-024 · MAJOR · 768: the S05 guided tour hides its honesty chip under the not-causal paragraph (L2/L3)
+- **Where:** S05 p 0.05 to 0.30 (tour states). Seen at 768x1024 (normal and classic scrollbar).
+- **Actual:** the `DERIVED · GDPPC_PPP_1990_2025_TERCILE_LOW` and `… POP_WEIGHTED_EX_CHN_IND` chips sit under the opaque not-causal paragraph. Only the tail "…GHTED_EX_CHN_IND" shows. The DOM sweep flags it at p 0.12 and 0.27 (185 x 2 to 8 px).
+- **Evidence:** `qa-2/screenshots/768x1024/s05-01-tour-tercile.jpg`, `s05-03-tour-ex.jpg`, `qa-2/lessons.log` (768x1024 lab@0.12/0.27).
+- **Verification test:** the DOM-generated collision sweep at 768 over S05 p 0.05 to 0.30 returns no pairs, and the chip is fully visible.
+
+### P05-D-025 · minor · phone S03a: the legend strip crosses the headline and the readout still covers most of the disc
+- **Where:** 390, 375 and 360.
+- **Actual:** the 7-swatch legend bar runs through the descenders of "grew, and its middle moved." Below the cap of the disc, the readout panel covers the rest, so a FOLLOW outline cannot be seen.
+- **Evidence:** `qa-2/screenshots/390x844/s03a-03-follow-nga.jpg`.
+
+### P05-D-026 · minor · phone plane x tick labels clipped at the top
+- **Where:** S04 and S05 at 390 and 360.
+- **Actual:** the plot clip cuts the top of "10K 30K 100K".
+- **Evidence:** `qa-2/screenshots/390x844/s04-06-w2010-verdict.jpg`.
+
+### P05-D-027 · minor · S06 "NOT GROUPED: 52" caption still sits on its hollow set at 390/360 (rest of D-019)
+- **Evidence:** `qa-2/screenshots/390x844/s06-00-kmeans.jpg`.
+
+### P05-D-028 · minor · pixel contrast under 4.5:1 (L16)
+- **Detail:**
+  - S07 answer cards' "THE ATLAS" eyebrow: 2.35:1 on the older pink card and 3.33:1 on the orange card, at every viewport.
+  - Seed labels CHN, USA and MEX over the bright core at S03a/S03b/S00 on D and T: 3.1 to 3.9:1.
+  - S02 footer lines at 1024/360: 3.9 to 4.3:1.
+  - Flags with a white p95 background are text under the white nav block or pill (fixed chrome) and are not counted.
+- **Evidence:** `qa-2/contrast.txt`.
+
+### P05-D-029 · low · skip link targets `#chapters`, which does not exist
+- **Detail:** focus is moved by an inline `onclick`, so it works with JS. Lighthouse a11y is 0.98 (`skip-link` audit).
+- **Evidence:** `qa-2/lighthouse/mobile-1.report.json`, `site/index.html:24`.
+
+### P05-D-030 · low · S01 mid-scrub (p about 0.5) has no honesty chip in view while the disc is shown (L3)
+- **Detail:** seen at all viewports.
+- **Evidence:** `qa-2/screenshots/1440x900/s01-01-p50.jpg`, `qa-2/lessons.log`.
+
+### P05-D-031 · low · the S00 IDN seed label is clipped at the top edge (1440, 1280)
+- **Evidence:** `qa-2/screenshots/1440x900/00-s00-end.jpg`.
+
+## P2.4 L1 to L20
+
+| # | Result |
+|---|---|
+| L1 | PASS: classic 1024/768, JS class = CSS class |
+| L2 | **FAIL**: D-024 |
+| L3 | **FAIL (narrow)**: D-024 (hidden chip), D-030 (low) |
+| L4 | PASS: 98/98 + 44/44 |
+| L5 | PASS |
+| L6 | PASS: mobile LCP 1.22 to 1.81 s |
+| L7 | PASS |
+| L8 | PASS |
+| L9 | PASS (ATLAS normal flow under the pill, ED #57) |
+| L10 | PASS |
+| L11 | PASS with minors D-025, D-026, D-027 |
+| L12 | PASS |
+| L13 | PASS: no seed-label collisions |
+| L14 | PASS: fixture caught |
+| L15 | PASS for the S03a/S03b/S06 figures. D-023 is a missing reduced-motion overlay, not a zero-size canvas |
+| L16 | PASS for the pass-1 items; D-028 minor |
+| L17 | PASS |
+| L18 | PASS: 0 mixed frames in 2,654 sampled (S05 + ATLAS, 1440 and 390) |
+| L19 | PASS: DOM-generated sweep with the novel-class fixture caught |
+| L20 | N/A (no timing series in P05) |
+
+## P2.5 Release gate (pass 2)
+
+| Row | Result | Measured evidence |
+|---|---|---|
+| Visual design | PASS | Criteria 2/5/19 hold (S08 1.20 to 1.42 x height, edge arcs visible); S02, S00, ATLAS and reduced S00 compositions fixed |
+| Motion UI | PASS | 6 layers; intro and transitions unchanged from pass 1 |
+| UX | PASS | D-005, D-008 and D-010 closed; L17 and L12 sweeps pass |
+| Functionality | **FAIL** | D-023: the reduced-motion S04/S05 plane is missing its overlay |
+| AI / analytical honesty | PASS | L18 0 mixed frames; D-006 24/24; D-009 0 mismatches; S04/S05 numbers re-checked against `convergence.json` (-0.35 / -0.37, -1.60 / -0.56, -0.82 / -0.12, n 183/175/102/100) |
+| Performance | PASS | Lighthouse mobile 0.99 to 1.0 x3, LCP at most 1.81 s, CLS 0; desktop 1.0. Pacing from pass 1 (no renderer changes in FIX-A) |
+| Responsiveness | **FAIL** | D-024 at 768 (gate composition) |
+| Professional quality | PASS | pytest 59, Vitest 111, Playwright 170/0 failed, lint/type clean, axe 0/44 |
+| GitHub / Deployment / Portfolio | BLOCKED | out of QA scope |
+
+## P2.6 Next action
+
+A FIX-B pass:
+- **D-023:** render the plane overlay (labels, zero line, fit and CI) under reduced motion.
+- **D-024:** move the S05 tour chip out from under the not-causal paragraph at 768.
+- **Preferably also:** D-025 to D-028.
+
+Then a limited QA pass 3:
+- rerun `qa-2/probes/lessons.mjs` at 768
+- reduced-motion frames at 1440/768/390 for S04/S05
+- `qa-2/probes/pass2.mjs`

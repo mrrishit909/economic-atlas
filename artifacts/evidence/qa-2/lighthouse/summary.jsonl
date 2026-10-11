@@ -1,0 +1,6 @@
+{"run":1,"preset":"mobile","perf":0.99,"a11y":0.98,"bp":1,"seo":1,"lcp_ms":1805,"fcp_ms":1505,"cls":0,"tbt_ms":29,"uptime":"12:48  up 2 days, 15:18, 4 users, load averages: 11.77 10.37 13.90"}
+{"run":1,"preset":"desktop","perf":1,"a11y":0.99,"bp":1,"seo":1,"lcp_ms":416,"fcp_ms":376,"cls":0,"tbt_ms":0,"uptime":"12:48  up 2 days, 15:19, 4 users, load averages: 11.06 10.30 13.81"}
+{"run":2,"preset":"mobile","perf":1,"a11y":0.98,"bp":1,"seo":1,"lcp_ms":1215,"fcp_ms":923,"cls":0,"tbt_ms":9,"uptime":"12:48  up 2 days, 15:19, 4 users, load averages: 11.20 10.36 13.79"}
+{"run":2,"preset":"desktop","perf":1,"a11y":0.99,"bp":1,"seo":1,"lcp_ms":406,"fcp_ms":366,"cls":0,"tbt_ms":0,"uptime":"12:49  up 2 days, 15:19, 4 users, load averages: 10.51 10.24 13.69"}
+{"run":3,"preset":"mobile","perf":0.99,"a11y":0.98,"bp":1,"seo":1,"lcp_ms":1807,"fcp_ms":1507,"cls":0,"tbt_ms":5,"uptime":"12:49  up 2 days, 15:19, 4 users, load averages: 9.99 10.14 13.59"}
+{"run":3,"preset":"desktop","perf":1,"a11y":0.99,"bp":1,"seo":1,"lcp_ms":414,"fcp_ms":369,"cls":0,"tbt_ms":0,"uptime":"12:49  up 2 days, 15:19, 4 users, load averages: 9.93 10.12 13.55"}
