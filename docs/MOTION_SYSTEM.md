@@ -83,7 +83,7 @@ Each rule is checked in QA.
 | **LCP:** `h1[data-hero]` is in the HTML and painted from first paint as ghost text (opacity 0.55, `filter: blur(12px)`, ENGINEERING_DECISIONS #10), never at opacity 0. The display font is preloaded, with a metric-matched fallback. The WebGL canvas is created after first paint | Lighthouse: the LCP element is `h1[data-hero]`, LCP is 2.5s or less and CLS is 0.1 or less (mobile and desktop presets) |
 | **Nothing heavy on the LCP path.** First paint needs only `facts.json`, `meta.json`, `countries.json` and `seedhead/gdppc_ppp_latest.json` (DR-1, under 6 KB gz). Everything else loads at idle or on scene entry (9.3) | A Lighthouse waterfall shows no panel, narratives or other seedhead request before FCP |
 | **No value tween, no basis tween.** Grains change colour only on landing or in a crossfade. Fit lines only crossfade. A basis change goes through the neutral phase | Vitest on the transition builder: no attribute stream mixes two bins with a weight strictly between 0 and 1 for more than 200ms. Playwright samples 10 frames of a BASIS swap: never two unit strings in the DOM, and never two bin palettes on the canvas (debug hook) |
-| **Area rule.** Total drawn seed area / `s²` equals people / 1M within 0.5% at every rest state in PEOPLE mode | Debug hook at S00 end, S03a p 0.5 and the ATLAS default |
+| **Area rule.** Area is carried by slots: `Σ slots × area_scale` equals people / 1M exactly (1e-9 relative) at every rest state in PEOPLE mode, and each glyph's drawn area / its interior or seam base area equals its `area_scale` within 1%. Seams are symmetric (both sides of a border) | Debug hook at S00 end, S03a p 0.5 and the ATLAS default |
 | **Straight paths only.** Grain paths are linear in position (eased in time). No rotation uniform exists | Code review plus a Vitest on the shader inputs: positions are `mix(from, to, e(t))` |
 | Animate only `transform`, `opacity` and `filter` (at most 14 word spans at once) in the DOM. The canvas draws its own pixels. Never animate layout properties or `backdrop-filter` | A DevTools trace shows no Layout events inside scrubbed frames |
 | **One `requestAnimationFrame` loop** owns everything: Lenis, progress, tweens and the GL draw | Grep finds one `requestAnimationFrame` call site (`src/motion/loop.ts`) |
@@ -172,7 +172,7 @@ Format for each entry:
 | 400-1000 | **Dust.** All N grains appear **at full G0 size and position**, each at the slot `perm[i]` of a seeded shuffle (seed 20261010), as neutral `#5A5A5A` at radius 0.25 s, opacity 0 to 0.6. From this frame on, the disc's visible extent is already giant. The no-data hollow set fades in (top-left) | 600ms premium |
 | 1000-1600 | **Speckle.** Each grain takes its own country's bin colour **in place** (a switch, staggered by a seeded 0-300ms delay) and grows to 0.40 s: the unsorted world | 300ms per grain, smooth |
 | 1600-3400 | **The sort.** Every grain travels in a straight line from its shuffled slot to its owned slot (keyed by `(iso3, k)`). Its delay is `aDelay` = seeded 0-200ms, and its duration 1600ms, symmetric. It keeps its colour (its colour *is* its country). The core gathers bright grains and the rim magenta ones | 1600ms + up to 200ms delay |
-| 3400-3700 | **Seams.** Seam grains shrink from 0.40 s to 0.22 s. Territories resolve, and the 6 most populous iso3 labels fade in (300ms) | 300ms smooth |
+| 3400-3700 | **Seams.** Seam grains on both sides of every border shrink their base radius from 0.40 s to 0.30 s. Territories resolve, and the 6 most populous iso3 labels fade in (300ms) | 300ms smooth |
 | 3400-3800 | The glow layer (grains at 1/4 resolution, 24px blur) fades from 0 to 14% | 400ms smooth |
 | 3600-4300 | The headline sharpens word by word (5.2, time-based, 80ms stagger). The scrim does not animate | 700ms premium |
 | 4200-4600 | Nav enters (translateY 16px to 0, opacity). The chip and legend appear bottom-left | 400ms premium |
@@ -531,7 +531,7 @@ Playwright runs against `npm run build && npm run preview` at D, T and M.
    - S04 at p 0.30, reached in reverse, matches a forward load.
 5. **Chapter jumps.** For every nav item: scrollY lands within 2px of the landing progress within 200ms, the hash updates, back/forward work, and focus is on the heading.
 6. **Resize mid-scene.** At S04 p 0.30 (mid-flight), resize 1440 to 390: the scene and p are preserved within ±0.01, there are no console errors, and the PL-M geometry matches the table.
-7. **Area rule.** Debug hook at the S00 end, S03a p 0.5 and the ATLAS default: Σ drawn seed area / `s²` equals people/1M within 0.5%, and per-country slot counts equal `max(1, round(pop/1e6))`.
+7. **Area rule.** Debug hook at the S00 end, S03a p 0.5 and the ATLAS default: `Σ slots × area_scale` equals people/1M (1e-9 relative), per-country slot counts equal `max(1, round(pop/1e6))`, glyph area follows `area_scale` within 1%, and every border's seam grains are on both sides.
 8. **No mixed bases.** During 10 sampled frames of a BASIS swap (S05) and of an ATLAS indicator change across families: never two unit strings in the DOM, and the debug hook reports one bin palette id on the canvas.
 9. **Integer and real states.**
    - During slow S03a scrubs, sampled `mix` values are 0 or 1 whenever no change happened in the previous 250ms.
@@ -542,7 +542,8 @@ Playwright runs against `npm run build && npm run preview` at D, T and M.
 13. **Reduced motion.** No sticky in scenes, no animated filter, a stable canvas counter, and every control still works.
 14. **Pause offscreen.** With S07 centred (after the cards settle), the canvas frame counter is flat for 2s.
 15. **Giant geometry and the P01/P02/P03/P04 confusion check (QA evidence).**
-    - A debug hook reports the disc radius at or above the G0 value (D 640, T 626, M 528) from 400ms into S00 to its end, never decreasing, and again at S08 p 0.75.
+    - A debug hook reports the disc radius at or above the G0 value (D 640, T 620, M 510) from 400ms into S00 to its end, never decreasing, and again at S08 p 0.75.
+    - At the S00 end state and S08 p 0.75, a screenshot check at D, T and M finds disc-edge pixels (grains with black beyond them, radially) outside every scrim rectangle: the D left arc, the T bottom-right arc and the M bottom arc.
     - The evidence harness writes `artifacts/evidence/<stage>/p01-p04-vs-p05-open-close.png`: S00 frames (0.5s, 1.5s, 3s, end) and S08 frames (p 0.3, 0.75, 0.9) of all five sites, at D and M, as 240px-tall tiles.
     - An independent QA reviewer confirms that no P05 frame shows any of these:
       - a stroked ring

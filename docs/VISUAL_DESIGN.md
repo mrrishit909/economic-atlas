@@ -74,11 +74,11 @@ The giant circular element is **the Seed Head**: the world's people as one disc 
 
 | Aspect | Rule |
 |---|---|
-| **Seed** | One seed = one million people. A country holds `max(1, round(pop / 1,000,000))` slots, rounded **per country**, so the count never depends on the sort. Each of its seeds is drawn at area `pop / (slots × 1,000,000)` of a full seed, so **total ink is exactly proportional to people**. A country under 500,000 people holds one slot drawn at its true fraction of a seed. The legend says `1 SEED ≈ 1 MILLION PEOPLE · SMALLEST SEEDS: COUNTRIES UNDER 500,000` |
+| **Seed** | One seed = one million people. A country holds `max(1, round(pop / 1,000,000))` slots, rounded **per country**, so the count never depends on the sort. **Area is carried by slots:** every slot is `s²`, and a country's slots carry `area_scale = pop / (slots × 1,000,000)` each, so `Σ slots × area_scale = people / 1,000,000` exactly, and the disc's area is the world's people. Grains are **glyphs** inside their slots: their drawn area is proportional to `area_scale` (a country under 500,000 people holds one slot whose grain is drawn at its true fraction of a full grain), but glyph ink is texture, not the measure. The legend says `1 SEED ≈ 1 MILLION PEOPLE · SMALLEST SEEDS: COUNTRIES UNDER 500,000` |
 | **Lattice** | A Vogel (Fermat) spiral. Slot `i` sits at radius `s × sqrt(i + 0.5)` and angle `i × 137.508°`. Every slot has the same area, `s²`. The spacing `s` is constant across years, so **the disc's area is the world's people**: it holds 5,202 slots in 1990 and 8,005 in 2025, and new slots are added at the rim |
 | **Territory** | Every country owns one contiguous territory of exactly its slot count. The territory is seeded at the country's rank position, so the indicator's highest value is at the core and the lowest at the rim. The layout is computed offline (DR-1) |
 | **Order** | `rankings.json` order: descending by value, ties broken by iso3, countries with a value only. **Aggregates never appear** |
-| **Seed size** | A full seed has radius `0.40 s`. A **seam seed** (one whose lattice neighbour belongs to a higher-ranked country) has radius `0.22 s`, which draws a one-seed-wide dark seam on the lower side of every border. Territories of 6 seeds or fewer never seam, so small countries never dissolve |
+| **Seed size** | A grain's glyph radius is `r_base × sqrt(area_scale)`, with `r_base` = `0.40 s` inside a territory. A **seam grain** (any grain with a 6-NN lattice neighbour owned by another country) has `r_base` = `0.30 s`. Seams are **symmetric and rank-neutral**: both sides of every border thin by the same amount, so no border thins the poorer side. Territories of 6 slots or fewer never seam, so small countries never dissolve |
 | **Colour** | The binned Spectral ramp of the sorted indicator (below), with 7 bins whose edges come from DR-7. Each seed carries a small luminous radial gradient (bin colour at the edge, a lighter tint at 42% / 38% of its box): grains glow, never flat swatches |
 | **Count modes** | **PEOPLE** (the default above). **COUNTRIES**: one seed per country, all equal, on a Vogel lattice of `n` slots at the same disc radius. This is the unweighted view |
 | **No data** | Countries without a value in the active year are **never in the disc and never at its rim**. They form a separate hollow set (1px white outlines at 60%, one per million people) beside the disc, captioned `NO {{label}} VALUE: {{n}} COUNTRIES · {{bn}} BN PEOPLE (NOT RANKED)` |
@@ -318,7 +318,7 @@ Both lessons are now rules: section 0 seams and territories, and rejection crite
 
 **Why A gets 4 for feasibility.** The territory layout is an offline iterative solve. It takes 6.6s per layout in numpy on this machine, so it must be precomputed (DR-1). The browser needs WebGL2 for 60fps transitions of 8,005 grains, and the Canvas2D fallback is slower (MOTION_SYSTEM 9.2).
 
-**Why A gets 4 for mobile.** At M, a full seed is about 2.4px across at G0 (`s` 5.9). The grain texture holds, but iso3 labels fit only for the 4 most populous countries, so naming relies on tap. That is solvable (3.3), and it is the main M risk.
+**Why A gets 4 for mobile.** At M, a full grain is about 4.6px across at G0 (`s` 5.7). The grain texture holds, but iso3 labels fit only for the 4 most populous countries, so naming relies on tap. That is solvable (3.3), and it is the main M risk.
 
 ### Selection: A, "The Seed Head", with two grafts
 
@@ -377,7 +377,7 @@ The total is about 2,300vh. If the QA scroll recording shows fatigue, cut S06 to
 
 | State | D 1440x900 | T 768x1024 | M 390x844 | Notes |
 |---|---|---|---|---|
-| **G0 Giant** (S00, S01 start, S08 echo) | c (900, 470), s 7.15, **R 640** (diameter 1.42 x frame height) | c (384, 470), s 7.0, R 626 (1.22 x) | c (195, 330), s 5.9, R 528 (1.25 x) | Cropped top and bottom on D, and on all four sides on T and M. **Disc diameter is at least 1.2 x the frame height on every viewport.** The no-data set sits top-left (D x 32-190, y 86-150), under the wordmark |
+| **G0 Giant** (S00, S01 start, S08 echo) | c (900, 470), s 7.15, **R 640** (diameter 1.42 x frame height). The left edge arc is visible from x 260 | c (300, 420), s 6.93, R 620 (1.21 x). The edge arc is visible in the bottom-right quadrant, from (768, 827) to about (440, 1024), right of the headline scrim | c (195, 270), s 5.7, R 510 (1.21 x). The bottom edge arc is visible across the frame at y 741-780, between the headline band and the MENU pill | **Disc diameter is at least 1.2 x the frame height on every viewport, and part of the disc edge is visible outside every scrim** (so the frame reads as a giant circle, not full-frame texture). The no-data set sits top-left (D x 32-190, y 86-150), under the wordmark; on T and M it is in the S01 readout instead |
 | G1 Aside (S01 end, S02 backdrop at 20%) | c (1030, 450), s 3.9, R 349 | c (384, 700), s 3.2, R 286 | c (195, 610), s 2.3, R 206 | |
 | G2 Years (S03a) | c (1010, 460), s 4.4. R 394 in 2025, 317 in 1990 | c (384, 600), s 3.9, R 349 / 281 | c (195, 440), s 2.6, R 233 / 188 | `s` is fixed, so the disc grows with people across years |
 | G3 Weight (S03b) | c (1010, 450), s 3.8, R 340. COUNTRIES: 185 seeds over R 340 (spacing 25) | c (384, 640), s 3.4, R 304 | c (195, 420), s 2.3, R 206 | |
@@ -387,8 +387,9 @@ The total is about 2,300vh. If the QA scroll recording shows fatigue, cut S06 to
 | G5 Atlas (ATLAS) | c (560, 470), R 360 | c (384, 380), R 300 | c (195, 300), R 190 | |
 
 - **Interpolation.** Between states, the centre interpolates linearly and `s` (or R) in **log space**. These are camera moves on the whole disc; they never animate data.
-- **Mobile seed size.** At G0 M, a full seed is 2 × 0.40 × 5.9 = 4.7px across, so the grain texture is resolved at DPR 2.
-- **Arithmetic check** of `R = s × sqrt(N)` with N = 8,005 (sqrt 89.47): 7.15 gives 640, 5.9 gives 528 and 7.0 gives 626. The 2025 S00 sketch (`seed-s00-d.png`) measured R 640.
+- **Mobile grain size.** At G0 M, a full grain is 2 × 0.40 × 5.7 = 4.6px across, so the grain texture is resolved at DPR 2.
+- **Arithmetic check** of `R = s × sqrt(N)` with N = 8,005 (sqrt 89.47): 7.15 gives 640, 6.93 gives 620 and 5.7 gives 510.
+- **Sketches.** `seed-s00-d.png` (R 640) and `seed-s00-m.png` (R 510, bottom arc visible above the MENU pill) were rendered at these values.
 
 ### 3.4 Scenes
 
@@ -419,8 +420,8 @@ There are no spinners and no artificial delays.
 - **Data:** GDP per capita PPP, latest year (`seedhead/gdppc_ppp_latest.json`, DR-1), `facts`, `meta`.
 - **Per viewport.**
   - **D:** the headline is left-aligned at x 96, 2 lines at 88px (y 620-790), over a left-to-right scrim (x 0-1000, y 590-840, black 92% to 0). The disc is at G0. The sketch is `seed-s00-d.png`.
-  - **T:** 64px, 3 lines, at y 760-950, over a bottom scrim.
-  - **M:** 40px, 3 lines, at y 600-730, over a bottom scrim from y 540. The disc is cropped on all four sides (sketch `seed-s00-m.png`).
+  - **T:** 64px, 3 lines, left-aligned at x 48, y 700-890, over a left-to-right scrim (x 0-600) that leaves the bottom-right edge arc clear.
+  - **M:** 40px (36px if the first line would exceed 358px), 3 lines, at y 540-670, over a scrim band y 480-730 that fades out at both ends. The chip line sits at y 694. The disc's bottom edge arc (y 741-780) stays clear above the MENU pill (sketch `seed-s00-m.png`).
 - **Corner labels.**
   - Top-left: the mono wordmark `ECONOMIC ATLAS` (13px), with the no-data set beneath it (D).
   - Top-right, line 1: `{{year}} · {{people_with_data_bn}} BN OF {{world_pop_bn}} BN PEOPLE · {{n}} COUNTRIES`.
@@ -791,7 +792,7 @@ There are eleven interactions. Six are driven by visitor-set analytical paramete
 - **Visual output:** coalesce or burst, the hollow set-aside, the ledgers and the bracket.
 - **Keyboard:** the three controls are radio groups or a switch, and every state is reachable without scrolling.
 - **Reduced motion:** 4 static discs (PEOPLE latest, COUNTRIES latest, PEOPLE 1990, PEOPLE latest set aside) with ledgers.
-- **Test:** each ledger number equals the bound fact. In COUNTRIES mode the seed count equals `rankings…n`. In PEOPLE mode, the total seed area over `s²` equals people/1M within 0.5%.
+- **Test:** each ledger number equals the bound fact. In COUNTRIES mode the seed count equals `rankings…n`. In PEOPLE mode, `Σ slots × area_scale` equals people/1M exactly (float tolerance 1e-9 relative), and every country's slot count equals `max(1, round(pop/1e6))`.
 
 ### 4. Source Deck (S02)
 
@@ -1006,7 +1007,8 @@ I fail the build on review if any of these is true:
 1. **Any section reads as a dashboard.** That means a KPI tile row, a framed chart with gridlines and a default legend box, a full-height sidebar, or a gradient legend bar. ATLAS fails if its rail is a solid panel instead of floating glass controls. **The S04/S05 plane fails** if it has gridlines, a frame, tick marks or a legend box, or if its seeds lose their grain and highlight (reference 20).
 2. **The Seed Head becomes someone else's form or a library chart.** That means any of: an outline or outer circle, guide rings, concentric gridlines, a tick ring, nodes on any circumference, chords, rotation, a stepped angle, a sweep, wedges, petals, spokes, square cells, sphere shading or a limb, a smooth glow disc, a radial-gradient fill without grains, polygon cell outlines (a Voronoi treemap, reference 18), or packed country circles (reference 19). Any of these is an automatic redesign (P01, P03, P04, P06, P08, P09 identities).
 3. **The Seed Head lies.** That means any of:
-   - seed area not proportional to people (Σ seed area / `s²` must equal people/1M within 0.5%)
+   - disc area not equal to people (`Σ slots × area_scale` must equal people/1M exactly), or glyph area not proportional to `area_scale`
+   - a seam that thins only one side of a border (seams must be symmetric and rank-neutral)
    - a country's seed count that changes with the sort
    - a territory split into pieces (DR-1 connectivity under 95%)
    - an aggregate drawn as a seed
@@ -1035,5 +1037,5 @@ I fail the build on review if any of these is true:
 16. **Provenance is missing:** no visible tag on a data visual, the WDI vintage missing from any scene's footer, or the WDI and Maddison attributions or the IMF line missing from S08.
 17. **The closing doesn't echo the opening.** It must be the same giant G0 disc, the same corner labels and the same shuffle-and-sort.
 18. **A U+2014 or U+2015 dash appears** in the site copy.
-19. **The giant circular composition is missing or undersized:** a disc diameter under 1.2 x the frame height at the S00 end state or at S08 p 0.75 on any viewport, or the disc fully inside the frame on D.
+19. **The giant circular composition is missing or undersized:** a disc diameter under 1.2 x the frame height at the S00 end state or at S08 p 0.75 on any viewport; the disc fully inside the frame on D; or **no part of the disc edge visible outside the scrims** at G0 on any viewport (D left arc, T bottom-right arc, M bottom arc).
 20. **Aggregates appear as countries:** in the disc, a ranking, a picker, a group or a correlation.

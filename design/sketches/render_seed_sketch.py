@@ -6,9 +6,11 @@ then compose:              uv run --with pillow python design/sketches/compose_s
 
 Encoding (VISUAL_DESIGN section 0): 1 seed = 1 million people, max(1, round(pop / 1M)) per country (a country under
 0.5M holds one slot drawn at its true area). Seeds sit on a fixed-spacing Vogel lattice (equal area per slot), and each
-country owns one contiguous territory (territories.py), seeded by rank so the highest value sits at the core. Colour is
-the binned Spectral ramp of the sorted indicator. Seams: a seed whose neighbour belongs to a higher-ranked country is
-drawn smaller (a one-sided seam); territories of 6 seeds or fewer never seam. Countries without a value are a separate
+country owns one contiguous territory (territories.py), seeded by rank so the highest value sits at the core. Area is
+carried by slots (one slot = s^2 per rounded million people, scaled by area_scale = pop / (slots x 1M)); grains are glyphs
+of radius r_base x sqrt(area_scale). Colour is the binned Spectral ramp of the sorted indicator. Seams are symmetric and
+rank-neutral: every grain on either side of a border has r_base 0.30 s instead of 0.40 s; territories of 6 slots or fewer
+never seam. Countries without a value are a separate
 hollow set beside the disc, never at its rim. The production layout is computed by the pipeline (DR-1), not here.
 """
 import json
@@ -66,14 +68,12 @@ def mosaic(year, cx, cy, s, hollow=(), label_min=90e6, label=True):
     P = G * s * math.sqrt(n)
     d2 = ((P[:, None, :] - P[None, :, :]) ** 2).sum(-1)
     nn = np.argsort(d2, 1)[:, 1:7]
-    seam = ((own[nn] < own[:, None]).any(1)) & (counts[own] > 6)
+    seam = ((own[nn] != own[:, None]).any(1)) & (counts[own] > 6)  # both sides of every border: rank-neutral
     out = []
     for g, (x, y) in enumerate(P):
         c = own[g]
         iso, v, p = rows[c]
-        r = s * (0.22 if seam[g] else 0.42)
-        if p < 0.5e6:
-            r = s * 0.42 * math.sqrt(p / 1e6)  # true area of a sub-million country
+        r = s * (0.30 if seam[g] else 0.40) * math.sqrt(p / (counts[c] * 1e6))  # glyph area follows area_scale
         if iso in hollow:
             out.append(f'<circle cx="{cx + x:.1f}" cy="{cy + y:.1f}" r="{max(r, .6):.2f}" fill="none" stroke="{BINS[bin_of(v)][0]}" stroke-width=".8"/>')
         else:
@@ -149,17 +149,18 @@ def s00_d():
 
 def s00_m():
     yr = facts["gdppc_ppp_latest_year"]["value"]
-    disc, n, R, rows = mosaic(yr, 195, 330, 5.9, label_min=250e6)
+    disc, n, R, rows = mosaic(yr, 195, 270, 5.7, label_min=250e6)
     body = [disc,
             '<defs><linearGradient id="scrimm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/>'
-            '<stop offset=".35" stop-color="#000" stop-opacity=".88"/><stop offset="1" stop-color="#000" stop-opacity=".92"/></linearGradient></defs>',
-            '<rect x="0" y="540" width="390" height="304" fill="url(#scrimm)"/>',
-            f'<text x="16" y="640" fill="#fff" {SERIF} font-size="40">The world, explained</text>',
-            f'<text x="16" y="684" fill="#fff" {SERIF} font-size="40">through economic</text>',
-            f'<text x="16" y="728" fill="#fff" {SERIF} font-size="40">forces.</text>',
+            '<stop offset=".2" stop-color="#000" stop-opacity=".88"/><stop offset=".85" stop-color="#000" stop-opacity=".88"/>'
+            '<stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient></defs>',
+            '<rect x="0" y="480" width="390" height="250" fill="url(#scrimm)"/>',
+            f'<text x="16" y="572" fill="#fff" {SERIF} font-size="40">The world, explained</text>',
+            f'<text x="16" y="616" fill="#fff" {SERIF} font-size="40">through economic</text>',
+            f'<text x="16" y="660" fill="#fff" {SERIF} font-size="40">forces.</text>',
             f'<text x="16" y="28" fill="#fff" {MONO} font-size="11">ECONOMIC ATLAS</text>',
             f'<text x="374" y="28" fill="#fff" {MONO} font-size="11" text-anchor="end">{yr} · 1 SEED = 1M PEOPLE</text>',
-            f'<text x="16" y="760" fill="#fff" {MONO} font-size="10">OBSERVED · WDI · HIGHEST INCOME AT THE CORE</text>',
+            f'<text x="16" y="694" fill="#fff" {MONO} font-size="10">OBSERVED · WDI · HIGHEST INCOME AT THE CORE</text>',
             '<rect x="115" y="796" width="160" height="32" fill="#fff"/>',
             f'<text x="195" y="817" fill="#000" {MONO} font-size="12" text-anchor="middle">= MENU</text>']
     (OUT / "seed-s00-m.svg").write_text(svg("\n".join(body), 390, 844))
@@ -204,6 +205,7 @@ if __name__ == "__main__":
     n, R = s00_d()
     print(f"S00 D: {n} slots, disc radius {R:.0f}px (diameter {2 * R / 900:.2f} x frame height)")
     s00_m()
+    print("S00 M: disc radius 510px at c (195, 270): bottom edge arc y 741-780, above the MENU pill (y 796)")
     s03b_d()
     p03_orb()
     print("wrote", sorted(p.name for p in OUT.glob("*.svg")))
