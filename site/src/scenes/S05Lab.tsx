@@ -7,7 +7,6 @@ import { S05, d2 } from "../data/copy";
 import { HonestyChip } from "../components/HonestyChip";
 import { ArtifactStatus, Statuses } from "../components/StateUI";
 import { Footer } from "../components/Footer";
-import { useMotion } from "../scroll/hooks";
 import { LAB_DEFAULT, lab, useStore, type Basis } from "../state/scenes";
 import { pointsFor } from "../model/plane";
 import { labRecordId, recordOf } from "./director";
@@ -34,7 +33,6 @@ export function S05Lab({ def }: { def: SceneDef }) {
   const [cv, retry] = useArtifact(CONVERGENCE, false);
   const [pan, retryPan] = useArtifact(PANEL, false);
   const L = useStore(lab);
-  const motion = useMotion();
   const [sheet, setSheet] = useState(false);
   const set = (p: Partial<typeof L>) => lab.set({ ...p, live: true });
   return (
@@ -60,13 +58,13 @@ export function S05Lab({ def }: { def: SceneDef }) {
           };
           return (
             <>
-              {motion ? <PlaneOverlay rec={drawn} show={{ zero: 1, fit: true }} /> : null}
+              <PlaneOverlay rec={drawn} scene={def.id} show={{ zero: 1, fit: true }} />
               <div className="col col--plane">
                 <div className="col__head">
                   <p className="scene-kicker">LAB · {L.live ? `YOUR CHOICE: EACH COMBINATION IS ONE OF THE ${c.beta.length} PUBLISHED FITS` : "GUIDED: FOUR SAMPLES, PPP 1990"}</p>
                   <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="statement" key={String(L.live)}>{L.live ? S05.statement2 : S05.statement1}</h2>
                 </div>
-                <button type="button" className="btn-square sheet-toggle" aria-expanded={sheet} aria-controls="lab-controls" onClick={() => setSheet(!sheet)}>{sheet ? "CLOSE CONTROLS" : "CONTROLS"}</button>
+                <button type="button" className="btn-square sheet-toggle" aria-expanded={sheet} aria-controls="lab-controls" onClick={() => setSheet(!sheet)}>{sheet ? "CLOSE" : "CONTROLS"}</button>
                 <div id="lab-controls" className={`weight-controls lab-controls ${sheet ? "is-open" : ""}`}>
                   <Radio label="BASIS" value={L.basis} onChange={(b: Basis) => set({ basis: b, start: WINDOWS[b][0]!, sample: off(b, WINDOWS[b][0]!, L.sample) ? "primary" : L.sample })}
                     options={[{ v: "ppp" as Basis, text: "PPP" }, { v: "const" as Basis, text: "CONSTANT US$" }]} />
@@ -87,8 +85,8 @@ export function S05Lab({ def }: { def: SceneDef }) {
                   <Ledger r={rec} />
                   {pair && pair[0] && pair[1] ? (
                     <div className="weighted-pair" data-weighted-pair>
-                      <p className={`tnum ledger__row ${rec.sample === "pop_weighted" ? "is-lit" : ""}`}>PEOPLE-WEIGHTED, ALL: {d2(pair[0].beta)} (95% CI {d2(pair[0].ci95[0])} TO {d2(pair[0].ci95[1])}) · N {pair[0].n}</p>
-                      <p className={`tnum ledger__row ${rec.sample !== "pop_weighted" ? "is-lit" : ""}`}>CHINA + INDIA SET ASIDE: {d2(pair[1].beta)} (95% CI {d2(pair[1].ci95[0])} TO {d2(pair[1].ci95[1])}) · N {pair[1].n}</p>
+                      <p className={`tnum ledger__row ${rec.sample === "pop_weighted" ? "is-lit" : ""}`}><span className="ledger--long">PEOPLE-WEIGHTED, ALL: </span><span className="ledger--short">ALL: </span>{d2(pair[0].beta)} (95% CI {d2(pair[0].ci95[0])} TO {d2(pair[0].ci95[1])}) · N {pair[0].n}</p>
+                      <p className={`tnum ledger__row ${rec.sample !== "pop_weighted" ? "is-lit" : ""}`}><span className="ledger--long">CHINA + INDIA SET ASIDE: </span><span className="ledger--short">CHN + IND OUT: </span>{d2(pair[1].beta)} (95% CI {d2(pair[1].ci95[0])} TO {d2(pair[1].ci95[1])}) · N {pair[1].n}</p>
                     </div>
                   ) : null}
                   {rec.sample.startsWith("tercile") ? <p className="ledger__small">{c.copy.interpretation!.toUpperCase()}</p> : null}

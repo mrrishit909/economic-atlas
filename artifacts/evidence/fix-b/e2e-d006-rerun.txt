@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 [desktop] › e2e/qa.spec.ts:290:3 › QA lessons › D-006/D-010/D-016: S05 weighted slope with its set-aside counterpart; EVIDENCE lands on a card; receipts bound (10.4s)
+
+  1 passed (10.8s)

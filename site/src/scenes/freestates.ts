@@ -85,7 +85,7 @@ export function groupCentres(cls: ViewportClass, w: number, h: number) {
 
 /** Origin of the hollow "not grouped" set (shared with its caption). */
 export function ungroupedXY(cls: ViewportClass, w: number, h: number): [number, number] {
-  if (cls === "M") return [0.42 * w, 0.894 * h];
+  if (cls === "M") return [0.07 * w, 0.88 * h]; // phone: the caption sits to the right of the hollow set (QA D-027)
   if (cls === "T") return [0.1 * w, 0.88 * h];
   return [cls === "D" && compact() ? compactX(620, w) + 30 : 0.45 * w, 0.85 * h];
 }

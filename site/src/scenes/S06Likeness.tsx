@@ -90,7 +90,7 @@ export function S06Likeness({ def }: { def: SceneDef }) {
               return <p key={g.id} className="group-cap" style={{ transform: `translate(${tx}px, ${ty}px)`, width: room }}>{S06.caption(i, cl.data.chosen_k, g.size, g.signature)}</p>;
             });
           })()}
-          <p className="group-cap group-cap--ungrouped" style={{ transform: `translate(${ungroupedXY(box.cls, box.w, box.h)[0]}px, ${ungroupedXY(box.cls, box.w, box.h)[1] - (box.cls === "M" ? 32 : 34)}px)` }}>{S06.notGrouped(cl.data.inclusion.countries - cl.data.inclusion.complete_cases)}</p>
+          <p className="group-cap group-cap--ungrouped" style={{ transform: box.cls === "M" ? `translate(${ungroupedXY(box.cls, box.w, box.h)[0] + 138}px, ${ungroupedXY(box.cls, box.w, box.h)[1] - 10}px)` : `translate(${ungroupedXY(box.cls, box.w, box.h)[0]}px, ${ungroupedXY(box.cls, box.w, box.h)[1] - 34}px)` }}>{S06.notGrouped(cl.data.inclusion.countries - cl.data.inclusion.complete_cases)}</p>
         </div>
       ) : null}
     </Track>

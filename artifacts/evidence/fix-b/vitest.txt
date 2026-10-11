@@ -1,0 +1,36 @@
+
+ RUN  v5.0.3 /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site
+
+ ❯ src/styles/css.test.ts (2 tests | 1 failed) 8ms
+   ❯ tags and keys are never display:none (QA L3) (2)
+     × no rule hiding .chip, a tag row or a legend 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/styles/css.test.ts > tags and keys are never display:none (QA L3) > no rule hiding .chip, a tag row or a legend
+AssertionError: expected [ Array(1) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   ".scene-years .years-readout .s03-chips .chip + .chip",
++ ]
+
+ ❯ src/styles/css.test.ts:10:35
+      8|   it("no rule hiding .chip, a tag row or a legend", () => {
+      9|     const bad = rules.filter((r) => /display:\s*none/.test(r.body) && …
+     10|     expect(bad.map((r) => r.sel)).toEqual([]);
+       |                                   ^
+     11|   });
+     12|   it("no text below the 11px floor in CSS (QA L7)", () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 8 passed (9)
+      Tests  1 failed | 110 passed (111)
+   Start at  13:15:23
+   Duration  387ms (transform 56%, tests 27%, import 15%, worker 2%)
+

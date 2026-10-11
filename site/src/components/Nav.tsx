@@ -78,7 +78,7 @@ export function Nav({ items, active, onJump, introPlaying, onSkip, onReplay, spe
   return (
     <>
       {(fixed || specimen === "bar") && (
-        <nav className={`nav-bar ${fixed ? "is-fixed" : "is-specimen"} ${introPlaying && fixed ? "is-hidden" : ""}`} aria-label={fixed ? "Chapters" : "Chapters, desktop specimen"}>
+        <nav id={fixed ? "chapters" : undefined} tabIndex={fixed ? -1 : undefined} className={`nav-bar ${fixed ? "is-fixed" : "is-specimen"} ${introPlaying && fixed ? "is-hidden" : ""}`} aria-label={fixed ? "Chapters" : "Chapters, desktop specimen"}>
           <div ref={barRef} className="nav-bar__track">
           <span ref={blockRef} className="nav-bar__block" aria-hidden="true" />
           <ul className="nav-bar__items">

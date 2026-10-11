@@ -4,6 +4,8 @@ import { planeRect } from "./freestates";
 import { cssClass, stageH, stageW } from "../graphics/canvas";
 import { domain, dataView } from "./director";
 import { S04, unitOf } from "../data/copy";
+import { useMotion } from "../scroll/hooks";
+import { useStore, view } from "../state/scenes";
 
 function useStage() {
   const [s, set] = useState(() => ({ w: stageW(), h: stageH(), cls: cssClass() }));
@@ -21,10 +23,14 @@ function useStage() {
  * record's x range) and its 95% band as a 45° hatch with no edge. No gridlines, no frame, no ticks,
  * no legend box. Fits crossfade by record id; they never tween.
  */
-export function PlaneOverlay({ rec, show, labels = 8 }: { rec: BetaRecord; show: { zero: number; fit: boolean }; labels?: number }) {
+export function PlaneOverlay({ rec, show, scene, labels = 8 }: { rec: BetaRecord; show: { zero: number; fit: boolean }; scene: string; labels?: number }) {
   const { w, h, cls } = useStage();
+  // reduced motion (QA D-023): the canvas draws this plane fixed to the viewport while the scene is the one in view,
+  // so the overlay is drawn fixed too, over the same box, for exactly that scene
+  const motion = useMotion();
+  const inView = useStore(view).scene === scene;
   const dom = domain(rec.indicator);
-  if (!dom) return null;
+  if (!dom || (!motion && !inView)) return null;
   const r = planeRect(cls, w, h);
   const X = (x: number) => r.x0 + ((x - dom.x[0]) / (dom.x[1] - dom.x[0])) * (r.x1 - r.x0);
   const Y = (y: number) => r.y1 - ((y - dom.y[0]) / (dom.y[1] - dom.y[0])) * (r.y1 - r.y0);
@@ -43,13 +49,13 @@ export function PlaneOverlay({ rec, show, labels = 8 }: { rec: BetaRecord; show:
     placed.push([lx, ly]); lab.push(l);
   }
   return (
-    <svg className="plane" width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true" data-basis={rec.price_basis}>
+    <svg className={motion ? "plane" : "plane plane--fixed"} width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true" data-basis={rec.price_basis}>
       <defs>
         <pattern id="ci-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
           <line x1="0" y1="0" x2="0" y2="6" stroke="#58B8E1" strokeWidth="1" opacity="0.5" />
         </pattern>
         {/* L16: axis words and iso labels sit on a black plate so seeds passing behind never drop their contrast */}
-        <filter id="plane-plate" x="-0.06" y="-0.25" width="1.12" height="1.5"><feFlood floodColor="#000" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        <filter id="plane-plate" x="-0.06" y="-0.12" width="1.12" height="1.24"><feFlood floodColor="#000" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>
       </defs>
       {show.zero > 0 && dom.y[0] < 0 && dom.y[1] > 0 ? (
         <line x1={r.x0} x2={r.x0 + (r.x1 - r.x0) * show.zero} y1={Y(0)} y2={Y(0)} className="plane__zero" />
@@ -58,7 +64,7 @@ export function PlaneOverlay({ rec, show, labels = 8 }: { rec: BetaRecord; show:
         <g className="plane__x" style={{ opacity: show.zero }}>
           {xTicks(dom).map((t) => <text key={t.v} x={X(t.x)} y={r.y1 + 22} textAnchor="middle">{t.label}</text>)}
           {cls === "M" ? (
-            <text x={r.x1} y={r.y1 + 38} textAnchor="end" className="plane__unit" filter="url(#plane-plate)"><tspan x={r.x1}>{`GDP PER CAPITA IN ${rec.start}`}</tspan><tspan x={r.x1} dy={14}>{unitOf(rec.price_basis)}</tspan></text>
+            <text x={r.x1} y={r.y1 + 44} textAnchor="end" className="plane__unit" filter="url(#plane-plate)"><tspan x={r.x1}>{`GDP PER CAPITA IN ${rec.start}`}</tspan><tspan x={r.x1} dy={14}>{unitOf(rec.price_basis)}</tspan></text>
           ) : (
             <text x={r.x1} y={r.y1 + 40} textAnchor="end" className="plane__unit" filter="url(#plane-plate)">{`GDP PER CAPITA IN ${rec.start} · ${unitOf(rec.price_basis)}`}</text>
           )}

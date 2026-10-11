@@ -58,7 +58,7 @@ export function S04CatchUp({ def }: { def: SceneDef }) {
           const zero = motion ? windowed(p, 0.4, 0.52) : 1, v = verdictOf(rec);
           return (
             <>
-              {motion ? <PlaneOverlay rec={rec} show={{ zero, fit: p >= 0.52 }} /> : null}
+              <PlaneOverlay rec={rec} scene={def.id} show={{ zero, fit: !motion || p >= 0.52 }} />
               <div className="col col--plane">
                 <div className="col__head">
                   <p className="scene-kicker">CATCH-UP · {flight < 0.5 && motion ? S04.encodingDisc : S04.encodingPlane(rec.start, rec.end)}</p>
