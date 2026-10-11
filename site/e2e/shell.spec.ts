@@ -2,98 +2,106 @@ import { expect, test, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 const isLocal = (url: string) => /^(http:\/\/(localhost|127\.0\.0\.1):\d+\/|data:|blob:)/.test(url);
-type Hook = { __eca: { getProgress: (id: string) => number } };
+type Eca = { jumpTo: (i: string, p?: number) => void; getProgress: (id: string) => number };
+const eca = (page: Page) => page.evaluateHandle(() => (window as unknown as { __eca: Eca }).__eca);
+const IDS = ["eight-billion", "sources", "years", "weight", "catch-up", "lab", "likeness", "evidence", "atlas", "resorted"];
 
 async function open(page: Page) {
   await page.goto("");
   await page.evaluate(() => document.fonts.ready);
+  await page.keyboard.press("Escape"); // complete the intro
 }
 
-test("shell renders nine placeholder scenes", async ({ page }) => {
-  await open(page);
+test("shell: title, ten scene tracks, hero headline is static HTML ghosted from first paint", async ({ page }) => {
+  await page.goto("");
   await expect(page).toHaveTitle("Economic Atlas");
-  await expect(page.locator("section.track")).toHaveCount(9);
-  await expect(page.locator("#s00-title")).toContainText("S00 Opening");
-  await expect(page.locator("#s08-title")).toContainText("S08 Closing");
+  const h1 = page.locator("h1[data-hero]");
+  await expect(h1).toHaveText("The world, explained through economic forces.");
+  const op = await h1.locator(".wr-word").first().evaluate((w) => getComputedStyle(w).opacity);
+  expect(Number(op)).toBeGreaterThan(0.5);
+  await expect(page.locator("section.track")).toHaveCount(10);
+});
+
+test("intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it", async ({ page, isMobile }) => {
+  await page.goto("");
+  const skip = page.getByRole("button", { name: "SKIP INTRO" });
+  await expect(skip).toBeVisible({ timeout: 1000 });
+  await skip.click();
+  const nav = isMobile ? page.locator(".nav-pill.is-fixed") : page.locator(".nav-bar.is-fixed");
+  await expect(nav).not.toHaveClass(/is-hidden/, { timeout: 400 });
+  await page.waitForFunction(() => (window as unknown as { __eca: { debug: () => { introDone: boolean } } }).__eca.debug().introDone, null, { timeout: 5000 });
 });
 
 test("zero external requests while visiting every scene", async ({ page }) => {
   const external: string[] = [];
   page.on("request", (r) => { if (!isLocal(r.url())) external.push(r.url()); });
   await page.goto("", { waitUntil: "networkidle" });
-  for (let i = 0; i < 9; i++) {
-    await page.evaluate((id) => (window as unknown as { __eca: { jumpTo: (i: string) => void } }).__eca.jumpTo(id), `s0${i}`);
-    await page.waitForTimeout(100);
-  }
+  const h = await eca(page);
+  for (const id of IDS) { await h.evaluate((e, i) => e.jumpTo(i), id); await page.waitForTimeout(150); }
   await page.waitForLoadState("networkidle");
   expect(external).toEqual([]);
 });
 
-test("desktop nav: keyboard jump, aria-current, focus, back", async ({ page, isMobile }) => {
-  test.skip(!!isMobile, "desktop bar only");
+test("desktop nav: keyboard jump, aria-current, focus, back", async ({ page }, info) => {
+  test.skip(info.project.name !== "desktop", "desktop bar only");
   await open(page);
   const nav = page.getByRole("navigation", { name: "Chapters", exact: true });
-  await expect(nav).toBeVisible();
-  const s00 = nav.getByRole("link", { name: "S00" });
-  await expect(s00).toHaveAttribute("aria-current", "location");
-  const s03 = nav.getByRole("link", { name: "S03" });
-  await s03.focus();
+  await expect(nav.getByRole("link", { name: "EIGHT BILLION" })).toHaveAttribute("aria-current", "location");
+  const years = nav.getByRole("link", { name: "YEARS" });
+  await years.focus();
   await page.keyboard.press("Enter");
-  await expect(s03).toHaveAttribute("aria-current", "location");
-  await expect(page).toHaveURL(/#s03$/);
-  await expect(page.locator("#s03-title")).toBeFocused();
-  const p = await page.evaluate(() => (window as unknown as Hook).__eca.getProgress("s03"));
-  expect(Math.abs(p - 0.3)).toBeLessThan(0.01);
-  await nav.getByRole("link", { name: "S06" }).click();
-  await expect(page).toHaveURL(/#s06$/);
+  await expect(years).toHaveAttribute("aria-current", "location");
+  await expect(page).toHaveURL(/#years$/);
+  await expect(page.locator("#years-title")).toBeFocused();
+  const p = await (await eca(page)).evaluate((e) => e.getProgress("years"));
+  expect(Math.abs(p - 0.7)).toBeLessThan(0.01);
+  await nav.getByRole("link", { name: "WEIGHT" }).click();
+  await expect(page).toHaveURL(/#weight$/);
   await page.goBack();
-  await expect(page).toHaveURL(/#s03$/);
-  await expect(s03).toHaveAttribute("aria-current", "location");
+  await expect(page).toHaveURL(/#years$/);
 });
 
-test("mobile menu pill: open, Esc closes and returns focus, item jumps", async ({ page, isMobile }) => {
-  test.skip(!isMobile, "T/M pill only");
+test("T/M menu pill: open, Esc closes and returns focus, item jumps", async ({ page }, info) => {
+  test.skip(info.project.name === "desktop", "T/M pill only");
   await open(page);
   const pill = page.locator(".nav-pill.is-fixed .menu-pill");
-  await expect(pill).toBeVisible();
-  await expect(pill).toContainText("S00");
+  await expect(pill).toContainText("EIGHT BILLION");
   await pill.click();
   await expect(pill).toHaveAttribute("aria-expanded", "true");
-  const panel = page.locator("#menu-panel");
-  await expect(panel).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(pill).toHaveAttribute("aria-expanded", "false");
   await expect(pill).toBeFocused();
   await pill.click();
-  await panel.getByRole("link", { name: "S04" }).click();
-  await expect(page).toHaveURL(/#s04$/);
-  await expect(pill).toContainText("S04");
+  await page.locator("#menu-panel").getByRole("link", { name: "WEIGHT" }).click();
+  await expect(page).toHaveURL(/#weight$/);
+  await expect(pill).toContainText("WEIGHT");
 });
 
-test("reduced motion renders in flow: no pinned stages, no blur", async ({ browser }) => {
+test("reduced motion renders in flow: no pinned stages, static discs", async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: "reduce", viewport: { width: 1440, height: 900 } });
   const page = await ctx.newPage();
   await page.goto("", { waitUntil: "networkidle" });
   await expect(page.locator("html")).toHaveAttribute("data-motion", "off");
   const sticky = await page.evaluate(() => [...document.querySelectorAll(".stage")].filter((s) => getComputedStyle(s).position === "sticky").length);
   expect(sticky).toBe(0);
-  const blurred = await page.evaluate(() => [...document.querySelectorAll(".wr-word")].filter((w) => getComputedStyle(w).filter !== "none").length);
-  expect(blurred).toBe(0);
-  const height = await page.evaluate(() => document.documentElement.scrollHeight);
-  expect(height).toBeLessThan(9 * 900 * 1.2); // 9 scenes of about one viewport, not 250vh tracks
+  await expect(page.locator(".scene-years .static-disc canvas")).toHaveCount(4, { timeout: 15000 });
+  await expect(page.locator(".scene-weight .static-disc canvas")).toHaveCount(5);
   await ctx.close();
 });
 
-test("axe: no serious or critical violations", async ({ page }) => {
-  await open(page);
-  await page.waitForTimeout(400);
-  const results = await new AxeBuilder({ page }).analyze();
-  const bad = results.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
-  expect(bad.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(", ")}`)).toEqual([]);
-});
+for (const [id, p] of [["eight-billion", 0], ["years", 0.5], ["weight", 0.43]] as const) {
+  test(`axe: no serious or critical violations (${id})`, async ({ page }) => {
+    await open(page);
+    await (await eca(page)).evaluate((e, [i, q]) => e.jumpTo(i as string, q as number), [id, p]);
+    await page.waitForTimeout(1500);
+    const results = await new AxeBuilder({ page }).analyze();
+    const bad = results.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
+    expect(bad.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(", ")}`)).toEqual([]);
+  });
+}
 
 test("production build excludes the dev gallery", async ({ page }) => {
   await page.goto("?gallery");
   await expect(page.locator(".gallery")).toHaveCount(0);
-  await expect(page.locator("section.track")).toHaveCount(9);
+  await expect(page.locator("section.track")).toHaveCount(10);
 });

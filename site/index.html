@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#000000" />
     <title>Economic Atlas</title>
-    <meta name="description" content="Economic Atlas: the world explained through economic forces, from World Bank World Development Indicators." />
+    <meta name="description" content="Economic Atlas: the world's people as one disc of grains, one per million people, sorted by GDP per capita (PPP) from World Bank World Development Indicators." />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/node_modules/@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2" />
     <script>
       // Before first paint: motion preference (OS or in-site session override) and gallery flag.
       (function () {
@@ -18,7 +19,20 @@
     </script>
   </head>
   <body>
-    <main id="main"><div id="root"></div></main>
+    <main id="main">
+      <!-- S00/S01 is static HTML so the LCP headline paints before any JS (MOTION_SYSTEM 2). Layer order: canvas, scrim, h1. -->
+      <section id="eight-billion" class="track track--pinned scene scene-eb" aria-labelledby="hero-title" style="--track-h: 200vh" data-static-track>
+        <div class="stage">
+          <div class="stage-content" data-stage-content>
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <h1 id="hero-title" class="hero-title wr" data-hero data-scene-heading tabindex="-1"><span class="wr-word">The</span> <span class="wr-word">world,</span> <span class="wr-word">explained</span> <span class="wr-word">through</span> <span class="wr-word">economic</span> <span class="wr-word">forces.</span></h1>
+            <p class="sr-only">Animated introduction: the world's people drawn as about eight thousand grains, one per million people, first mixed together, then sorted by the income of their country so the highest incomes gather at the centre and the lowest at the edge. Each country becomes one patch of grains.</p>
+            <div id="eb-portal"></div>
+          </div>
+        </div>
+      </section>
+      <div id="root"></div>
+    </main>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

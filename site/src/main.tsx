@@ -5,6 +5,8 @@ import "./styles/app.css";
 import { ErrorBoundary } from "./app/ErrorBoundary";
 import { App } from "./app/App";
 import { getProgress, jumpTo, startEngine } from "./scroll/engine";
+import { debug, intro, introSortT, quality, restState } from "./scenes/director";
+import "./styles/scenes.css";
 
 // The dev gallery is excluded from production builds: the guard is a build-time constant, so the
 // chunk is not emitted. `npm run build:gallery` (VITE_GALLERY=1, separate outDir) is for evidence only.
@@ -14,7 +16,16 @@ const isGallery = !!Gallery && document.documentElement.classList.contains("is-g
 if (!isGallery) document.documentElement.classList.remove("is-gallery");
 
 // Test/evidence hook: the same instant-jump path the nav uses (deterministic captures).
-Object.assign(window, { __eca: { jumpTo, getProgress } });
+// debug(): the disc as drawn; freeze(t) holds the S00 clock at t ms for evidence frames (-1 releases).
+Object.assign(window, {
+  __eca: {
+    jumpTo, getProgress,
+    debug: () => ({ ...debug, tier: quality.tier }),
+    freeze: (t: number) => { intro.frozen = t; },
+    introStats: () => ({ playing: intro.playing, minR: intro.minR, monotonic: intro.monotonic, sortT: introSortT() }),
+    rest: () => { const s = restState(); return s ? { n: s.key.length, hollow: [...s.hollow].filter((h) => h > 0.5).length, keys: s.key.slice(0, 3) } : null; },
+  },
+});
 
 startEngine();
 createRoot(document.getElementById("root")!).render(

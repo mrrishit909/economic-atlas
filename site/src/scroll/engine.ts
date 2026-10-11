@@ -231,9 +231,11 @@ export function startEngine() {
   });
 }
 
-/** After first mount: honour a deep link (#corridors). */
+// The hash as loaded, before the first tick's scroll-driven replaceState writes the active scene into it.
+const bootHash = typeof location === "undefined" ? "" : location.hash;
+/** After first mount: honour a deep link (#years). */
 export function resolveInitialHash() {
-  const id = location.hash.slice(1);
+  const id = bootHash.slice(1);
   if (id && tracks.has(id)) jumpTo(id, undefined, { focus: true });
 }
 

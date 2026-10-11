@@ -1,0 +1,83 @@
+1440x900/01-s00-t0600.png
+1440x900/01-s00-t1300.png
+1440x900/01-s00-t2500.png
+1440x900/01-s00-t3600.png
+1440x900 S00 frame pacing (90 frames, headless Chromium, darwin) p50 16.7ms p95 16.8ms
+1440x900/01-s00-t4600-end.png
+1440x900 S00 radius min 639.7 (end 639.7, c 900,470) monotonic true
+1440x900/02-s01-p60.png
+1440x900/03-s03a-1990.png
+1440x900/03-s03a-2008.png
+1440x900/03-s03a-2025-follow-ind.png
+1440x900/04-s03b-people-2025.png
+1440x900 S03b p 0.2: mode people year 2025 seeds 8005 R 340.0
+1440x900/04-s03b-countries-2025.png
+1440x900 S03b p 0.43: mode countries year 2025 seeds 185 R 340.0
+1440x900/04-s03b-countries-1990.png
+1440x900 S03b p 0.6: mode countries year 1990 seeds 185 R 274.1
+1440x900/04-s03b-people-2025-setaside.png
+1440x900 S03b p 0.93: mode people year 2025 seeds 8005 R 340.0
+1440x900/06-state-error.png
+1440x900/06-state-after-retry.png
+1440x900/07-nogl-s00.png
+1440x900/07-nogl-s03b.png
+1440x900 external requests: none
+1440x900/08-reduced-s00.png
+1440x900/08-reduced-s03a.png
+1440x900/08-reduced-s03b.png
+768x1024/01-s00-t0600.png
+768x1024/01-s00-t1300.png
+768x1024/01-s00-t2500.png
+768x1024/01-s00-t3600.png
+768x1024 S00 frame pacing (90 frames, headless Chromium, darwin) p50 16.7ms p95 16.8ms
+768x1024/01-s00-t4600-end.png
+768x1024 S00 radius min 620.0 (end 620.0, c 300,420) monotonic true
+768x1024/02-s01-p60.png
+768x1024/03-s03a-1990.png
+768x1024/03-s03a-2008.png
+768x1024/03-s03a-2025-follow-ind.png
+768x1024/04-s03b-people-2025.png
+768x1024 S03b p 0.2: mode people year 2025 seeds 8005 R 304.2
+768x1024/04-s03b-countries-2025.png
+768x1024 S03b p 0.43: mode countries year 2025 seeds 185 R 304.2
+768x1024/04-s03b-countries-1990.png
+768x1024 S03b p 0.6: mode countries year 1990 seeds 185 R 245.2
+768x1024/04-s03b-people-2025-setaside.png
+768x1024 S03b p 0.93: mode people year 2025 seeds 8005 R 304.2
+768x1024/05-menu-open.png
+768x1024/06-state-error.png
+768x1024/06-state-after-retry.png
+768x1024/07-nogl-s00.png
+768x1024/07-nogl-s03b.png
+768x1024 external requests: none
+768x1024/08-reduced-s00.png
+768x1024/08-reduced-s03a.png
+768x1024/08-reduced-s03b.png
+390x844/01-s00-t0600.png
+390x844/01-s00-t1300.png
+390x844/01-s00-t2500.png
+390x844/01-s00-t3600.png
+390x844 S00 frame pacing (90 frames, headless Chromium, darwin) p50 16.7ms p95 16.8ms
+390x844/01-s00-t4600-end.png
+390x844 S00 radius min 510.0 (end 510.0, c 195,270) monotonic true
+390x844/02-s01-p60.png
+390x844/03-s03a-1990.png
+390x844/03-s03a-2008.png
+390x844/03-s03a-2025-follow-ind.png
+390x844/04-s03b-people-2025.png
+390x844 S03b p 0.2: mode people year 2025 seeds 8005 R 205.8
+390x844/04-s03b-countries-2025.png
+390x844 S03b p 0.43: mode countries year 2025 seeds 185 R 205.8
+390x844/04-s03b-countries-1990.png
+390x844 S03b p 0.6: mode countries year 1990 seeds 185 R 165.9
+390x844/04-s03b-people-2025-setaside.png
+390x844 S03b p 0.93: mode people year 2025 seeds 8005 R 205.8
+390x844/05-menu-open.png
+390x844/06-state-error.png
+390x844/06-state-after-retry.png
+390x844/07-nogl-s00.png
+390x844/07-nogl-s03b.png
+390x844 external requests: none
+390x844/08-reduced-s00.png
+390x844/08-reduced-s03a.png
+390x844/08-reduced-s03b.png
