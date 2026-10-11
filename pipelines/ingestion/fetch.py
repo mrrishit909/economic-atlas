@@ -105,7 +105,13 @@ def run() -> None:
         record(f, kind="owid_full_metadata", retrieved_at=now())
     except Exception as e:
         mf["failures"].append({"owid": "full_metadata", "error": str(e)[:300]})
-    write_json(MANIFESTS / "raw_manifest.json", mf, compact=False)
+    old = MANIFESTS / "raw_manifest.json"
+    if old.exists():  # cached re-run: keep the original retrieval times so published vintage text is stable
+        prev = json.loads(old.read_text())
+        if [(f["path"], f["sha256"]) for f in prev["files"]] == [(f["path"], f["sha256"]) for f in mf["files"]]:
+            print("raw files unchanged; manifest kept")
+            return
+    write_json(old, mf, compact=False)
     print(f"{len(mf['files'])} files, {len(mf['failures'])} failures")
 
 

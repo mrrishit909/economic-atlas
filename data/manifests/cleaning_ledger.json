@@ -1,0 +1,189 @@
+{
+  "aggregates": 79,
+  "countries": 217,
+  "entities": 296,
+  "hhi5": {
+    "derived_rows": 7097,
+    "indicator": "hhi5",
+    "rule": "all five export groups present and allocated share >= 80 percent; HHI over shares renormalised to allocated total"
+  },
+  "interim_rows": 153759,
+  "rows": [
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "gdp_growth",
+      "invalid_range": 0,
+      "null_value": 2914,
+      "observed": 11408,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NY.GDP.MKTP.KD.ZG"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "gdppc_ppp",
+      "invalid_range": 0,
+      "null_value": 7345,
+      "observed": 6977,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NY.GDP.PCAP.PP.KD"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "gdppc_const",
+      "invalid_range": 0,
+      "null_value": 2789,
+      "observed": 11533,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NY.GDP.PCAP.KD"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "gdppc_nominal",
+      "invalid_range": 0,
+      "null_value": 2558,
+      "observed": 11764,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NY.GDP.PCAP.CD"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "productivity",
+      "invalid_range": 0,
+      "null_value": 8203,
+      "observed": 6119,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "SL.GDP.PCAP.EM.KD"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "agr_share",
+      "invalid_range": 0,
+      "null_value": 5234,
+      "observed": 9088,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NV.AGR.TOTL.ZS"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "ind_share",
+      "invalid_range": 0,
+      "null_value": 5267,
+      "observed": 9055,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NV.IND.TOTL.ZS"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "srv_share",
+      "invalid_range": 0,
+      "null_value": 5693,
+      "observed": 8629,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NV.SRV.TOTL.ZS"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "inflation",
+      "invalid_range": 0,
+      "null_value": 5171,
+      "observed": 9151,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "FP.CPI.TOTL.ZG"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "trade_open",
+      "invalid_range": 0,
+      "null_value": 5293,
+      "observed": 9029,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "NE.TRD.GNFS.ZS"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "population",
+      "invalid_range": 0,
+      "null_value": 30,
+      "observed": 14292,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "SP.POP.TOTL"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "x_agri",
+      "invalid_range": 0,
+      "null_value": 6314,
+      "observed": 8008,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "TX.VAL.AGRI.ZS.UN"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "x_food",
+      "invalid_range": 4,
+      "null_value": 6261,
+      "observed": 8057,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "TX.VAL.FOOD.ZS.UN"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "x_fuel",
+      "invalid_range": 12,
+      "null_value": 6704,
+      "observed": 7606,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "TX.VAL.FUEL.ZS.UN"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "x_manf",
+      "invalid_range": 1,
+      "null_value": 6282,
+      "observed": 8039,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "TX.VAL.MANF.ZS.UN"
+    },
+    {
+      "aggregate_rows": 3234,
+      "country_rows": 14322,
+      "indicator": "x_mmtl",
+      "invalid_range": 2,
+      "null_value": 6413,
+      "observed": 7907,
+      "pre_1990_trimmed": 0,
+      "raw_rows": 17556,
+      "wdi_code": "TX.VAL.MMTL.ZS.UN"
+    }
+  ]
+}
