@@ -1,0 +1,993 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "aggregates": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_const_1960_beta": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_const_1960_ci_high": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_const_1960_ci_low": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_const_1960_n": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_beta": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_ci_high": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_ci_low": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_n": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_popweighted": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "cells_missing_pct_panel": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "cluster_complete_cases": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "cluster_hier_ari": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "cluster_k": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "cluster_silhouette": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "cluster_stability_ari": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "corr_pairs": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "countries": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_bottom_value": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_countries_latest": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_latest_year": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_median": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_p90_p10_ratio": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_top_value": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "hhi5_countries_latest": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "indicators": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "longrun_gdppc_ratio_top_bottom_1820": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "longrun_gdppc_ratio_top_bottom_2022": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "sigma_ppp_1990": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "sigma_ppp_latest": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "sigma_ppp_popweighted_1990": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "sigma_ppp_popweighted_latest": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "strings": {
+   "additionalProperties": true,
+   "properties": {
+    "attribution_owid": {
+     "type": "string"
+    },
+    "attribution_wdi": {
+     "type": "string"
+    },
+    "hhi_caveat": {
+     "type": "string"
+    },
+    "imf_excluded": {
+     "type": "string"
+    },
+    "not_advice": {
+     "type": "string"
+    },
+    "not_causal": {
+     "type": "string"
+    },
+    "ppp_vs_nominal": {
+     "type": "string"
+    },
+    "title": {
+     "type": "string"
+    },
+    "vintage_label": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "title",
+    "attribution_wdi",
+    "attribution_owid",
+    "vintage_label",
+    "not_causal",
+    "not_advice",
+    "ppp_vs_nominal",
+    "hhi_caveat",
+    "imf_excluded"
+   ],
+   "type": "object"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "territory_flagged_countries": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "wb_entities": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "world_pop_billion_latest": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "year_first": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "year_last": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "wb_entities",
+  "aggregates",
+  "countries",
+  "indicators",
+  "year_first",
+  "year_last",
+  "gdppc_ppp_countries_latest",
+  "gdppc_ppp_latest_year",
+  "gdppc_ppp_top_value",
+  "gdppc_ppp_median",
+  "gdppc_ppp_p90_p10_ratio",
+  "gdppc_ppp_bottom_value",
+  "world_pop_billion_latest",
+  "beta_ppp_1990_beta",
+  "beta_ppp_1990_ci_low",
+  "beta_ppp_1990_ci_high",
+  "beta_ppp_1990_n",
+  "beta_ppp_1990_popweighted",
+  "beta_const_1960_beta",
+  "beta_const_1960_ci_low",
+  "beta_const_1960_ci_high",
+  "beta_const_1960_n",
+  "sigma_ppp_1990",
+  "sigma_ppp_latest",
+  "sigma_ppp_popweighted_1990",
+  "sigma_ppp_popweighted_latest",
+  "cluster_k",
+  "cluster_silhouette",
+  "cluster_stability_ari",
+  "cluster_hier_ari",
+  "cluster_complete_cases",
+  "corr_pairs",
+  "hhi5_countries_latest",
+  "cells_missing_pct_panel",
+  "territory_flagged_countries",
+  "longrun_gdppc_ratio_top_bottom_1820",
+  "longrun_gdppc_ratio_top_bottom_2022",
+  "strings"
+ ],
+ "title": "facts",
+ "type": "object"
+}

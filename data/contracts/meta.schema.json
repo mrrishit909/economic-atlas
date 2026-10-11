@@ -1,0 +1,218 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "artifact_bytes": {
+   "type": "object"
+  },
+  "artifact_tags": {
+   "type": "object"
+  },
+  "assumptions": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "counts": {
+   "additionalProperties": true,
+   "properties": {
+    "aggregates": {
+     "type": "integer"
+    },
+    "countries": {
+     "type": "integer"
+    },
+    "indicators": {
+     "type": "integer"
+    },
+    "wb_entities": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "wb_entities",
+    "aggregates",
+    "countries",
+    "indicators"
+   ],
+   "type": "object"
+  },
+  "disclaimers": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "excluded_sources": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "reason"
+    ],
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "latest_year_rule": {
+   "additionalProperties": true,
+   "properties": {
+    "min_share_of_peak": {
+     "type": "number"
+    },
+    "peak_window": {
+     "items": {
+      "type": "integer"
+     },
+     "maxItems": 2,
+     "minItems": 2,
+     "type": "array"
+    },
+    "text": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "peak_window",
+    "min_share_of_peak"
+   ],
+   "type": "object"
+  },
+  "pipeline_version": {
+   "type": "string"
+  },
+  "retrieved_at": {
+   "type": "string"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "sources": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "attribution": {
+      "type": "string"
+     },
+     "dataset": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "licence": {
+      "type": "string"
+     },
+     "licence_url": {
+      "type": "string"
+     },
+     "publisher": {
+      "type": "string"
+     },
+     "role": {
+      "type": "string"
+     },
+     "url": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "publisher",
+     "dataset",
+     "url",
+     "licence",
+     "licence_url",
+     "attribution",
+     "role"
+    ],
+    "type": "object"
+   },
+   "minItems": 2,
+   "type": "array"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "vintage": {
+   "additionalProperties": true,
+   "properties": {
+    "owid_maddison_last_updated": {
+     "type": "string"
+    },
+    "text": {
+     "type": "string"
+    },
+    "wdi_lastupdated": {
+     "type": "string"
+    },
+    "wdi_source_id": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "wdi_lastupdated",
+    "wdi_source_id",
+    "owid_maddison_last_updated",
+    "text"
+   ],
+   "type": "object"
+  },
+  "years": {
+   "additionalProperties": true,
+   "properties": {
+    "fetch_first": {
+     "type": "integer"
+    },
+    "first": {
+     "type": "integer"
+    },
+    "last": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "first",
+    "last",
+    "fetch_first"
+   ],
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "pipeline_version",
+  "retrieved_at",
+  "vintage",
+  "years",
+  "counts",
+  "sources",
+  "excluded_sources",
+  "latest_year_rule",
+  "assumptions",
+  "disclaimers",
+  "artifact_tags",
+  "artifact_bytes"
+ ],
+ "title": "meta",
+ "type": "object"
+}

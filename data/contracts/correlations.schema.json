@@ -1,0 +1,97 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "indicators": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 5,
+   "type": "array"
+  },
+  "method": {
+   "type": "string"
+  },
+  "not_causal": {
+   "type": "string"
+  },
+  "pairs": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "a": {
+      "type": "string"
+     },
+     "b": {
+      "type": "string"
+     },
+     "ci95": {
+      "items": {
+       "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+     },
+     "money_bases": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "n": {
+      "type": "integer"
+     },
+     "p_value": {
+      "type": "number"
+     },
+     "rho": {
+      "type": "number"
+     }
+    },
+    "required": [
+     "a",
+     "b",
+     "n",
+     "rho",
+     "ci95",
+     "p_value",
+     "money_bases"
+    ],
+    "type": "object"
+   },
+   "minItems": 10,
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "window": {
+   "items": {
+    "type": "integer"
+   },
+   "maxItems": 2,
+   "minItems": 2,
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "method",
+  "window",
+  "not_causal",
+  "indicators",
+  "pairs"
+ ],
+ "title": "correlations",
+ "type": "object"
+}

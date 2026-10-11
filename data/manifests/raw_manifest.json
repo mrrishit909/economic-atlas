@@ -1,0 +1,338 @@
+{
+  "failures": [],
+  "files": [
+    {
+      "bytes": 125821,
+      "kind": "country_list",
+      "path": "data/raw/wdi/countries.json",
+      "retrieved_at": "2026-10-11T02:37:57Z",
+      "sha256": "978a15a3b8ed3e090ecd55a8d64826ff0ede225a240952040ecc4dc88083d12a"
+    },
+    {
+      "bytes": 868,
+      "code": "NY.GDP.MKTP.KD.ZG",
+      "indicator": "gdp_growth",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NY.GDP.MKTP.KD.ZG.meta.json",
+      "sha256": "35ba00c4e023318f5f73fdd55ba63a97386660df72eab604ff43475ab27acd92"
+    },
+    {
+      "bytes": 4206401,
+      "code": "NY.GDP.MKTP.KD.ZG",
+      "indicator": "gdp_growth",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NY.GDP.MKTP.KD.ZG.data.json",
+      "retrieved_at": "2026-10-11T02:36:04Z",
+      "sha256": "557687066cc6778d2d765bed390ac85688861e05322d390ff2a0b36f2347cf5a",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 2371,
+      "code": "NY.GDP.PCAP.PP.KD",
+      "indicator": "gdppc_ppp",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NY.GDP.PCAP.PP.KD.meta.json",
+      "sha256": "e69e8b5902935deb04cfe22e4a90b120f890459c872c1ca9d2a7fc9d6c66cee1"
+    },
+    {
+      "bytes": 4661753,
+      "code": "NY.GDP.PCAP.PP.KD",
+      "indicator": "gdppc_ppp",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NY.GDP.PCAP.PP.KD.data.json",
+      "retrieved_at": "2026-10-11T02:36:06Z",
+      "sha256": "495e58027ed592dca2764e7726c34c7756cb20906f737550a00e1c53da697e2b",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1059,
+      "code": "NY.GDP.PCAP.KD",
+      "indicator": "gdppc_const",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NY.GDP.PCAP.KD.meta.json",
+      "sha256": "25c4213f9c41e71a514aaac4db895d8cff57bc2bb37b907c538d68a1d92011ca"
+    },
+    {
+      "bytes": 4380388,
+      "code": "NY.GDP.PCAP.KD",
+      "indicator": "gdppc_const",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NY.GDP.PCAP.KD.data.json",
+      "retrieved_at": "2026-10-11T02:36:10Z",
+      "sha256": "3c29aee525977f568bd0093652d1cb7e4e0e60a990a4777967cd0026fc4ea0b7",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1003,
+      "code": "NY.GDP.PCAP.CD",
+      "indicator": "gdppc_nominal",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NY.GDP.PCAP.CD.meta.json",
+      "sha256": "d2b37cd4bb5e92889e2d4cbb3709eed4da202b5dfdcd9851bd1d902beb190170"
+    },
+    {
+      "bytes": 4278032,
+      "code": "NY.GDP.PCAP.CD",
+      "indicator": "gdppc_nominal",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NY.GDP.PCAP.CD.data.json",
+      "retrieved_at": "2026-10-11T02:36:12Z",
+      "sha256": "679c1199100d305ac992f5e91ddd1e2c3b8a7e54f6987980a744faa856dfbcf6",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1086,
+      "code": "SL.GDP.PCAP.EM.KD",
+      "indicator": "productivity",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/SL.GDP.PCAP.EM.KD.meta.json",
+      "sha256": "fcc79e25ca6c0de8ffd38291b091a40257d16558b059803695c19a374f910289"
+    },
+    {
+      "bytes": 4545998,
+      "code": "SL.GDP.PCAP.EM.KD",
+      "indicator": "productivity",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/SL.GDP.PCAP.EM.KD.data.json",
+      "retrieved_at": "2026-10-11T02:36:17Z",
+      "sha256": "f1cd0dec4f9147613938273b5ead020eba7f261d8d1ed0f1c38b9ec7ab545d01",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1479,
+      "code": "NV.AGR.TOTL.ZS",
+      "indicator": "agr_share",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NV.AGR.TOTL.ZS.meta.json",
+      "sha256": "3053edb0bca96b79f2185a4c680615d6e5eec99f3e55bd0d3b404f5cf7049cfe"
+    },
+    {
+      "bytes": 4764417,
+      "code": "NV.AGR.TOTL.ZS",
+      "indicator": "agr_share",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NV.AGR.TOTL.ZS.data.json",
+      "retrieved_at": "2026-10-11T02:36:20Z",
+      "sha256": "0e666c2266de00c3d4736bd628e4b2b4b6c4c6670c65b9cbee5975c1f9648dd0",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1064,
+      "code": "NV.IND.TOTL.ZS",
+      "indicator": "ind_share",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NV.IND.TOTL.ZS.meta.json",
+      "sha256": "f8854b5b35f1762c70da77c27e61e03cbc1efac37e9a9ea2ad1977ba15a46e3a"
+    },
+    {
+      "bytes": 4745974,
+      "code": "NV.IND.TOTL.ZS",
+      "indicator": "ind_share",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NV.IND.TOTL.ZS.data.json",
+      "retrieved_at": "2026-10-11T02:36:23Z",
+      "sha256": "f34f28827429c66389813e3ca14e4d558c437d3c8c7218e5821d888e30cbc47d",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1374,
+      "code": "NV.SRV.TOTL.ZS",
+      "indicator": "srv_share",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NV.SRV.TOTL.ZS.meta.json",
+      "sha256": "0382a2647bf9110f5d6b23f5705c18acc142c6fea21c40ec073098302bd37788"
+    },
+    {
+      "bytes": 4300200,
+      "code": "NV.SRV.TOTL.ZS",
+      "indicator": "srv_share",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NV.SRV.TOTL.ZS.data.json",
+      "retrieved_at": "2026-10-11T02:36:26Z",
+      "sha256": "30d09f23d3a6857a5f9c733492de92306f3c9b0558dc3b7aff2067b9dc53cec6",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 604,
+      "code": "FP.CPI.TOTL.ZG",
+      "indicator": "inflation",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/FP.CPI.TOTL.ZG.meta.json",
+      "sha256": "d8fe519340b3210d4db46915bd5215627983f59d6e64260b101a1e5326811bec"
+    },
+    {
+      "bytes": 4398896,
+      "code": "FP.CPI.TOTL.ZG",
+      "indicator": "inflation",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/FP.CPI.TOTL.ZG.data.json",
+      "retrieved_at": "2026-10-11T02:36:28Z",
+      "sha256": "a2d6fbfed424c52b37915d9b159e635e4672c3e170e0b1724f28bf93a363be38",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 741,
+      "code": "NE.TRD.GNFS.ZS",
+      "indicator": "trade_open",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/NE.TRD.GNFS.ZS.meta.json",
+      "sha256": "c5529bf3a9265e747e203990106297838af4c24e3ddb89511dd96df34759661f"
+    },
+    {
+      "bytes": 4024298,
+      "code": "NE.TRD.GNFS.ZS",
+      "indicator": "trade_open",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/NE.TRD.GNFS.ZS.data.json",
+      "retrieved_at": "2026-10-11T02:36:30Z",
+      "sha256": "8d6bfeea2673426ba57f82545ac03d3a51b41d835312046c786c8ae43378944a",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1043,
+      "code": "SP.POP.TOTL",
+      "indicator": "population",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/SP.POP.TOTL.meta.json",
+      "sha256": "21f38f8a85f86a4784166b11fe41703d89c99d756a889a68165679b41d19227c"
+    },
+    {
+      "bytes": 3914499,
+      "code": "SP.POP.TOTL",
+      "indicator": "population",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/SP.POP.TOTL.data.json",
+      "retrieved_at": "2026-10-11T02:36:31Z",
+      "sha256": "e942653ebdf535639e5fa6a9f92afd6e84f24137679ce957d28c01103f09a93c",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1156,
+      "code": "TX.VAL.AGRI.ZS.UN",
+      "indicator": "x_agri",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/TX.VAL.AGRI.ZS.UN.meta.json",
+      "sha256": "61088dfff905d2975b267656173463a9e50d0334067a85330c35211605becaa4"
+    },
+    {
+      "bytes": 4857760,
+      "code": "TX.VAL.AGRI.ZS.UN",
+      "indicator": "x_agri",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/TX.VAL.AGRI.ZS.UN.data.json",
+      "retrieved_at": "2026-10-11T02:36:34Z",
+      "sha256": "05bc35a200c76462729ee7e8b2b7f619c4379f3e1d781d3133e1858f5b558391",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1001,
+      "code": "TX.VAL.FOOD.ZS.UN",
+      "indicator": "x_food",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/TX.VAL.FOOD.ZS.UN.meta.json",
+      "sha256": "e20776aa60c6d6e9d4421f8e206e30034f3ff23d7852dacacad84e8530bac6e6"
+    },
+    {
+      "bytes": 4469040,
+      "code": "TX.VAL.FOOD.ZS.UN",
+      "indicator": "x_food",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/TX.VAL.FOOD.ZS.UN.data.json",
+      "retrieved_at": "2026-10-11T02:36:38Z",
+      "sha256": "981b2df92400d530f4b1363d14d177cb38587c6e616f472a2da6bbb7cd287db1",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 959,
+      "code": "TX.VAL.FUEL.ZS.UN",
+      "indicator": "x_fuel",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/TX.VAL.FUEL.ZS.UN.meta.json",
+      "sha256": "a9f06cb96c00d7c0efb8488991dae9873abc6a9008eff4bfe2735a45aca6d8ce"
+    },
+    {
+      "bytes": 4462125,
+      "code": "TX.VAL.FUEL.ZS.UN",
+      "indicator": "x_fuel",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/TX.VAL.FUEL.ZS.UN.data.json",
+      "retrieved_at": "2026-10-11T02:36:41Z",
+      "sha256": "9246fc84eb69bd754582771e693b4843ef45e9dfa36311b071a7f212e85d4ea7",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1023,
+      "code": "TX.VAL.MANF.ZS.UN",
+      "indicator": "x_manf",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/TX.VAL.MANF.ZS.UN.meta.json",
+      "sha256": "05a0c255faf72de1f5096c306eb0ed2024a67c8c9fcf5fb9cda075a0b36be577"
+    },
+    {
+      "bytes": 4608810,
+      "code": "TX.VAL.MANF.ZS.UN",
+      "indicator": "x_manf",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/TX.VAL.MANF.ZS.UN.data.json",
+      "retrieved_at": "2026-10-11T02:36:46Z",
+      "sha256": "eb1a4f49e8cf6d87f3bb61d8547b95a189b76855fdc4dbf5861ba3e78c8faade",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 1082,
+      "code": "TX.VAL.MMTL.ZS.UN",
+      "indicator": "x_mmtl",
+      "kind": "indicator_meta",
+      "path": "data/raw/wdi/TX.VAL.MMTL.ZS.UN.meta.json",
+      "sha256": "a427526b7d93b73ca766834c7aa93a6b6825f0a01bdef9376aeda5e5f97369db"
+    },
+    {
+      "bytes": 4662150,
+      "code": "TX.VAL.MMTL.ZS.UN",
+      "indicator": "x_mmtl",
+      "kind": "indicator_data",
+      "lastupdated": "2026-10-08",
+      "path": "data/raw/wdi/TX.VAL.MMTL.ZS.UN.data.json",
+      "retrieved_at": "2026-10-11T02:36:49Z",
+      "sha256": "2d14584af51a072862322c8b535172da5bba2e00f580a5dd1e81c96284cb1d15",
+      "total_rows": 17556
+    },
+    {
+      "bytes": 567429,
+      "kind": "owid",
+      "path": "data/raw/owid/gdp-per-capita-maddison.data.csv",
+      "retrieved_at": "2026-10-11T02:37:59Z",
+      "sha256": "3764bd2ceff342198e539a27a87ec85bc2679ed8fc40c09f430a70a21fcdf27b"
+    },
+    {
+      "bytes": 4446,
+      "kind": "owid",
+      "path": "data/raw/owid/gdp-per-capita-maddison.metadata.json",
+      "retrieved_at": "2026-10-11T02:37:59Z",
+      "sha256": "c15ba93a74b3b69d467357e69702f8e0d9363024ad6749d5dde8715861cb956b"
+    },
+    {
+      "bytes": 35159,
+      "kind": "owid_full_metadata",
+      "path": "data/raw/owid/maddison-indicator-900793.metadata.json",
+      "retrieved_at": "2026-10-11T02:37:59Z",
+      "sha256": "905fd906cef1c3df93de3846e5604e3489048cd593af4cb2efe09c8585211716"
+    }
+  ],
+  "retrieved_at": "2026-10-11T02:37:57Z"
+}

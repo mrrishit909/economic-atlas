@@ -1,0 +1,118 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "invariants": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 2,
+   "type": "array"
+  },
+  "rows": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "aggregate_rows": {
+      "type": "integer"
+     },
+     "country_rows": {
+      "type": "integer"
+     },
+     "indicator": {
+      "type": "string"
+     },
+     "lastupdated": {
+      "type": "string"
+     },
+     "null_value": {
+      "type": "integer"
+     },
+     "observed": {
+      "type": "integer"
+     },
+     "pre_1990_trimmed": {
+      "type": "integer"
+     },
+     "published": {
+      "type": "integer"
+     },
+     "raw_rows": {
+      "type": "integer"
+     },
+     "sha256": {
+      "type": "string"
+     },
+     "wdi_code": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "indicator",
+     "wdi_code",
+     "raw_rows",
+     "aggregate_rows",
+     "country_rows",
+     "null_value",
+     "observed",
+     "pre_1990_trimmed",
+     "published",
+     "sha256",
+     "lastupdated"
+    ],
+    "type": "object"
+   },
+   "maxItems": 16,
+   "minItems": 16,
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "totals": {
+   "additionalProperties": true,
+   "properties": {
+    "aggregate_rows": {
+     "type": "integer"
+    },
+    "country_rows": {
+     "type": "integer"
+    },
+    "observed": {
+     "type": "integer"
+    },
+    "published": {
+     "type": "integer"
+    },
+    "raw_rows": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "raw_rows",
+    "aggregate_rows",
+    "country_rows",
+    "observed",
+    "published"
+   ],
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "invariants",
+  "rows",
+  "totals"
+ ],
+ "title": "reconciliation",
+ "type": "object"
+}

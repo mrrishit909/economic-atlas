@@ -1,0 +1,337 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "assignments": {
+   "additionalProperties": true,
+   "properties": {
+    "cluster": {
+     "items": {
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "iso3": {
+     "items": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "silhouette": {
+     "items": {
+      "type": "number"
+     },
+     "type": "array"
+    }
+   },
+   "required": [
+    "iso3",
+    "cluster",
+    "silhouette"
+   ],
+   "type": "object"
+  },
+  "choice_rule": {
+   "type": "string"
+  },
+  "chosen_k": {
+   "type": "integer"
+  },
+  "clusters": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "centroid": {
+      "type": "object"
+     },
+     "centroid_z": {
+      "type": "object"
+     },
+     "id": {
+      "type": "integer"
+     },
+     "members": {
+      "items": {
+       "pattern": "^[A-Z]{3}$",
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "signature": {
+      "type": "string"
+     },
+     "size": {
+      "type": "integer"
+     }
+    },
+    "required": [
+     "id",
+     "size",
+     "centroid",
+     "centroid_z",
+     "signature",
+     "members"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "feature_window": {
+   "additionalProperties": true,
+   "properties": {
+    "growth": {
+     "items": {
+      "type": "integer"
+     },
+     "maxItems": 2,
+     "minItems": 2,
+     "type": "array"
+    },
+    "level": {
+     "items": {
+      "type": "integer"
+     },
+     "maxItems": 2,
+     "minItems": 2,
+     "type": "array"
+    },
+    "min_obs": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "level",
+    "growth",
+    "min_obs"
+   ],
+   "type": "object"
+  },
+  "features": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "label": {
+      "type": "string"
+     },
+     "mean": {
+      "type": "number"
+     },
+     "price_basis": {
+      "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "sd": {
+      "type": "number"
+     },
+     "source": {
+      "type": "string"
+     },
+     "transform": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "label",
+     "transform",
+     "source",
+     "mean",
+     "sd",
+     "price_basis"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "hierarchical": {
+   "additionalProperties": true,
+   "properties": {
+    "ari_vs_kmeans": {
+     "type": "number"
+    },
+    "cophenetic_corr": {
+     "type": "number"
+    },
+    "labels": {
+     "items": {
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "leaf_order": {
+     "items": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "linkage": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "linkage",
+    "cophenetic_corr",
+    "ari_vs_kmeans",
+    "labels",
+    "leaf_order"
+   ],
+   "type": "object"
+  },
+  "inclusion": {
+   "additionalProperties": true,
+   "properties": {
+    "complete_cases": {
+     "type": "integer"
+    },
+    "countries": {
+     "type": "integer"
+    },
+    "excluded": {
+     "items": {
+      "additionalProperties": true,
+      "properties": {
+       "iso3": {
+        "pattern": "^[A-Z]{3}$",
+        "type": "string"
+       },
+       "missing": {
+        "items": {
+         "type": "string"
+        },
+        "type": "array"
+       }
+      },
+      "required": [
+       "iso3",
+       "missing"
+      ],
+      "type": "object"
+     },
+     "type": "array"
+    }
+   },
+   "required": [
+    "complete_cases",
+    "countries",
+    "excluded"
+   ],
+   "type": "object"
+  },
+  "k_scan": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "inertia": {
+      "type": "number"
+     },
+     "k": {
+      "type": "integer"
+     },
+     "min_cluster_size": {
+      "type": "integer"
+     },
+     "silhouette": {
+      "type": "number"
+     },
+     "stability_ari": {
+      "type": "number"
+     }
+    },
+    "required": [
+     "k",
+     "silhouette",
+     "inertia",
+     "stability_ari",
+     "min_cluster_size"
+    ],
+    "type": "object"
+   },
+   "minItems": 5,
+   "type": "array"
+  },
+  "method": {
+   "type": "string"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "seeds": {
+   "additionalProperties": true,
+   "properties": {
+    "base": {
+     "type": "integer"
+    },
+    "n": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "n",
+    "base"
+   ],
+   "type": "object"
+  },
+  "stability": {
+   "additionalProperties": true,
+   "properties": {
+    "bootstrap_ari_mean": {
+     "type": "number"
+    },
+    "bootstrap_reps": {
+     "type": "integer"
+    },
+    "seed_ari_mean": {
+     "type": "number"
+    },
+    "seed_ari_min": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "seed_ari_mean",
+    "seed_ari_min",
+    "bootstrap_ari_mean",
+    "bootstrap_reps"
+   ],
+   "type": "object"
+  },
+  "tag_detail": {
+   "type": "string"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "method",
+  "features",
+  "feature_window",
+  "inclusion",
+  "k_scan",
+  "chosen_k",
+  "choice_rule",
+  "seeds",
+  "stability",
+  "hierarchical",
+  "clusters",
+  "assignments",
+  "tag_detail"
+ ],
+ "title": "clusters",
+ "type": "object"
+}

@@ -1,0 +1,135 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "attribution": {
+   "type": "string"
+  },
+  "benchmark_years": {
+   "items": {
+    "type": "integer"
+   },
+   "minItems": 5,
+   "type": "array"
+  },
+  "historic_entities": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "code": {
+      "type": "string"
+     },
+     "entity": {
+      "type": "string"
+     },
+     "note": {
+      "type": "string"
+     },
+     "values": {
+      "items": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "type": "array"
+     }
+    },
+    "required": [
+     "entity",
+     "code",
+     "values",
+     "note"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "iso3": {
+   "items": {
+    "pattern": "^[A-Z]{3}$",
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "note": {
+   "type": "string"
+  },
+  "price_basis": {
+   "const": "maddison_intl_2011"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "sigma": {
+   "additionalProperties": true,
+   "properties": {
+    "n": {
+     "items": {
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "sd_log": {
+     "items": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "type": "array"
+    },
+    "years": {
+     "items": {
+      "type": "integer"
+     },
+     "type": "array"
+    }
+   },
+   "required": [
+    "years",
+    "sd_log",
+    "n"
+   ],
+   "type": "object"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "unit": {
+   "type": "string"
+  },
+  "values": {
+   "items": {
+    "items": {
+     "type": [
+      "number",
+      "null"
+     ]
+    },
+    "type": "array"
+   },
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "attribution",
+  "price_basis",
+  "unit",
+  "benchmark_years",
+  "iso3",
+  "values",
+  "sigma",
+  "historic_entities",
+  "note"
+ ],
+ "title": "longrun",
+ "type": "object"
+}

@@ -1,0 +1,154 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "indicators": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "attribution": {
+      "type": "string"
+     },
+     "base_year": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "ever_observed_countries": {
+      "type": "integer"
+     },
+     "first_year": {
+      "type": "integer"
+     },
+     "id": {
+      "enum": [
+       "gdp_growth",
+       "gdppc_ppp",
+       "gdppc_const",
+       "gdppc_nominal",
+       "productivity",
+       "agr_share",
+       "ind_share",
+       "srv_share",
+       "inflation",
+       "trade_open",
+       "population",
+       "x_agri",
+       "x_food",
+       "x_fuel",
+       "x_manf",
+       "x_mmtl",
+       "hhi5"
+      ]
+     },
+     "kind": {
+      "enum": [
+       "rate",
+       "level",
+       "share",
+       "count",
+       "index"
+      ]
+     },
+     "label": {
+      "type": "string"
+     },
+     "last_year": {
+      "type": "integer"
+     },
+     "latest_year": {
+      "type": "integer"
+     },
+     "latest_year_n": {
+      "type": "integer"
+     },
+     "licence": {
+      "type": "string"
+     },
+     "price_basis": {
+      "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "quantity": {
+      "type": "string"
+     },
+     "source_org": {
+      "type": "string"
+     },
+     "tag": {
+      "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+      "type": "string"
+     },
+     "unit": {
+      "type": "string"
+     },
+     "wdi_code": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "wdi_lastupdated": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "wdi_name": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "id",
+     "wdi_code",
+     "label",
+     "unit",
+     "quantity",
+     "kind",
+     "price_basis",
+     "base_year",
+     "source_org",
+     "licence",
+     "attribution",
+     "tag",
+     "wdi_name",
+     "wdi_lastupdated",
+     "first_year",
+     "last_year",
+     "latest_year",
+     "latest_year_n",
+     "ever_observed_countries"
+    ],
+    "type": "object"
+   },
+   "maxItems": 17,
+   "minItems": 17,
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "indicators"
+ ],
+ "title": "indicators",
+ "type": "object"
+}

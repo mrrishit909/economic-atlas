@@ -1,0 +1,64 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "all_passed": {
+   "type": "boolean"
+  },
+  "checks": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "description": {
+      "type": "string"
+     },
+     "detail": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "passed": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "id",
+     "description",
+     "passed",
+     "detail"
+    ],
+    "type": "object"
+   },
+   "minItems": 6,
+   "type": "array"
+  },
+  "limitations_observed": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "checks",
+  "all_passed",
+  "limitations_observed"
+ ],
+ "title": "validation",
+ "type": "object"
+}

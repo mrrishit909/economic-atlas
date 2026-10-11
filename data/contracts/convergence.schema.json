@@ -1,0 +1,272 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "beta": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "beta": {
+      "type": "number"
+     },
+     "ci95": {
+      "items": {
+       "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+     },
+     "ci95_boot": {
+      "items": {
+       "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+     },
+     "dropped_no_start_data": {
+      "type": "integer"
+     },
+     "end": {
+      "type": "integer"
+     },
+     "excluded_territory_changes": {
+      "items": {
+       "pattern": "^[A-Z]{3}$",
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "half_life_years": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "id": {
+      "type": "string"
+     },
+     "indicator": {
+      "type": "string"
+     },
+     "intercept": {
+      "type": "number"
+     },
+     "n": {
+      "type": "integer"
+     },
+     "p_value": {
+      "type": "number"
+     },
+     "points": {
+      "additionalProperties": true,
+      "properties": {
+       "iso3": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "weight": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "x": {
+        "items": {
+         "type": "number"
+        },
+        "type": "array"
+       },
+       "y": {
+        "items": {
+         "type": "number"
+        },
+        "type": "array"
+       }
+      },
+      "required": [
+       "iso3",
+       "x",
+       "y"
+      ],
+      "type": "object"
+     },
+     "price_basis": {
+      "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "r2": {
+      "type": "number"
+     },
+     "sample": {
+      "enum": [
+       "primary",
+       "sensitivity_all",
+       "tercile_low",
+       "tercile_mid",
+       "tercile_high",
+       "pop_weighted"
+      ]
+     },
+     "se_hc3": {
+      "type": "number"
+     },
+     "start": {
+      "type": "integer"
+     },
+     "tag": {
+      "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "indicator",
+     "price_basis",
+     "tag",
+     "sample",
+     "start",
+     "end",
+     "n",
+     "beta",
+     "se_hc3",
+     "ci95",
+     "ci95_boot",
+     "intercept",
+     "r2",
+     "p_value",
+     "half_life_years",
+     "excluded_territory_changes",
+     "dropped_no_start_data"
+    ],
+    "type": "object"
+   },
+   "minItems": 6,
+   "type": "array"
+  },
+  "copy": {
+   "additionalProperties": true,
+   "properties": {
+    "absolute_only": {
+     "type": "string"
+    },
+    "interpretation": {
+     "type": "string"
+    },
+    "not_causal": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "not_causal",
+    "absolute_only",
+    "interpretation"
+   ],
+   "type": "object"
+  },
+  "method": {
+   "type": "string"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "sigma": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "definition": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "indicator": {
+      "type": "string"
+     },
+     "n": {
+      "items": {
+       "type": "integer"
+      },
+      "type": "array"
+     },
+     "price_basis": {
+      "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "sample": {
+      "enum": [
+       "unbalanced",
+       "balanced",
+       "pop_weighted"
+      ]
+     },
+     "sd_log": {
+      "items": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "type": "array"
+     },
+     "tag": {
+      "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+      "type": "string"
+     },
+     "years": {
+      "items": {
+       "type": "integer"
+      },
+      "minItems": 2,
+      "type": "array"
+     }
+    },
+    "required": [
+     "id",
+     "indicator",
+     "price_basis",
+     "tag",
+     "sample",
+     "years",
+     "sd_log",
+     "n",
+     "definition"
+    ],
+    "type": "object"
+   },
+   "minItems": 3,
+   "type": "array"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "method",
+  "copy",
+  "beta",
+  "sigma"
+ ],
+ "title": "convergence",
+ "type": "object"
+}

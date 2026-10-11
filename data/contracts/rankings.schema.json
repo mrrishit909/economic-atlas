@@ -1,0 +1,520 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "indicators": {
+   "additionalProperties": true,
+   "properties": {
+    "agr_share": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "gdp_growth": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "gdppc_const": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "gdppc_nominal": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "gdppc_ppp": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "hhi5": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "ind_share": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "inflation": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "population": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "productivity": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "srv_share": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "trade_open": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "x_agri": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "x_food": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "x_fuel": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "x_manf": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    },
+    "x_mmtl": {
+     "additionalProperties": {
+      "additionalProperties": true,
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "order": {
+        "items": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "year": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "n",
+       "year",
+       "order"
+      ],
+      "type": "object"
+     },
+     "type": "object"
+    }
+   },
+   "required": [
+    "gdp_growth",
+    "gdppc_ppp",
+    "gdppc_const",
+    "gdppc_nominal",
+    "productivity",
+    "agr_share",
+    "ind_share",
+    "srv_share",
+    "inflation",
+    "trade_open",
+    "population",
+    "x_agri",
+    "x_food",
+    "x_fuel",
+    "x_manf",
+    "x_mmtl",
+    "hhi5"
+   ],
+   "type": "object"
+  },
+  "ordering": {
+   "type": "string"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "snapshot_years": {
+   "items": {
+    "type": "integer"
+   },
+   "minItems": 2,
+   "type": "array"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "snapshot_years",
+  "ordering",
+  "indicators"
+ ],
+ "title": "rankings",
+ "type": "object"
+}

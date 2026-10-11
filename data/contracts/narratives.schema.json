@@ -1,0 +1,116 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "countries": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "inputs": {
+      "type": "object"
+     },
+     "iso3": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+     }
+    },
+    "required": [
+     "iso3",
+     "inputs"
+    ],
+    "type": "object"
+   },
+   "maxItems": 217,
+   "minItems": 217,
+   "type": "array"
+  },
+  "examples": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "iso3": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+     },
+     "template": {
+      "type": "string"
+     },
+     "text": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "iso3",
+     "template",
+     "text"
+    ],
+    "type": "object"
+   },
+   "minItems": 3,
+   "type": "array"
+  },
+  "periods": {
+   "items": {
+    "items": {
+     "type": "integer"
+    },
+    "maxItems": 2,
+    "minItems": 2,
+    "type": "array"
+   },
+   "type": "array"
+  },
+  "rule": {
+   "type": "string"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "templates": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "requires": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "text": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "text",
+     "requires"
+    ],
+    "type": "object"
+   },
+   "minItems": 4,
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "templates",
+  "periods",
+  "countries",
+  "examples",
+  "rule"
+ ],
+ "title": "narratives",
+ "type": "object"
+}

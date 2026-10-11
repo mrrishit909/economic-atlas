@@ -1,0 +1,308 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "iso3": {
+   "items": {
+    "pattern": "^[A-Z]{3}$",
+    "type": "string"
+   },
+   "maxItems": 217,
+   "minItems": 217,
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "series": {
+   "additionalProperties": true,
+   "properties": {
+    "gdp_growth": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "gdppc_const": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "gdppc_nominal": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "gdppc_ppp": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "population": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "productivity": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    }
+   },
+   "required": [
+    "gdp_growth",
+    "gdppc_ppp",
+    "gdppc_const",
+    "gdppc_nominal",
+    "productivity",
+    "population"
+   ],
+   "type": "object"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "years": {
+   "items": {
+    "type": "integer"
+   },
+   "minItems": 30,
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "years",
+  "iso3",
+  "series"
+ ],
+ "title": "panel_income",
+ "type": "object"
+}

@@ -1,0 +1,139 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "aggregates": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "code": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "code",
+     "name"
+    ],
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "countries": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "in_maddison": {
+      "type": "boolean"
+     },
+     "income_group": {
+      "type": "string"
+     },
+     "income_group_note": {
+      "type": "string"
+     },
+     "iso2": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "iso3": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "region": {
+      "type": "string"
+     },
+     "territory_flag": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "iso3",
+     "iso2",
+     "name",
+     "region",
+     "income_group",
+     "income_group_note",
+     "territory_flag",
+     "in_maddison"
+    ],
+    "type": "object"
+   },
+   "maxItems": 217,
+   "minItems": 217,
+   "type": "array"
+  },
+  "counts": {
+   "additionalProperties": true,
+   "properties": {
+    "aggregates": {
+     "type": "integer"
+    },
+    "countries": {
+     "type": "integer"
+    },
+    "raw_entities": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "raw_entities",
+    "aggregates",
+    "countries"
+   ],
+   "type": "object"
+  },
+  "nonstandard_iso3": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "code": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "code",
+     "name",
+     "reason"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "countries",
+  "aggregates",
+  "counts",
+  "nonstandard_iso3"
+ ],
+ "title": "countries",
+ "type": "object"
+}

@@ -1,0 +1,523 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "iso3": {
+   "items": {
+    "pattern": "^[A-Z]{3}$",
+    "type": "string"
+   },
+   "maxItems": 217,
+   "minItems": 217,
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "series": {
+   "additionalProperties": true,
+   "properties": {
+    "agr_share": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "hhi5": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "ind_share": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "inflation": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "srv_share": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "trade_open": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "x_agri": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "x_food": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "x_fuel": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "x_manf": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    },
+    "x_mmtl": {
+     "additionalProperties": true,
+     "properties": {
+      "decimals": {
+       "type": "integer"
+      },
+      "price_basis": {
+       "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "tag": {
+       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+       "type": "string"
+      },
+      "unit": {
+       "type": "string"
+      },
+      "values": {
+       "items": {
+        "items": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "type": "array"
+       },
+       "type": "array"
+      }
+     },
+     "required": [
+      "unit",
+      "price_basis",
+      "tag",
+      "decimals",
+      "values"
+     ],
+     "type": "object"
+    }
+   },
+   "required": [
+    "agr_share",
+    "ind_share",
+    "srv_share",
+    "inflation",
+    "trade_open",
+    "x_agri",
+    "x_food",
+    "x_fuel",
+    "x_manf",
+    "x_mmtl",
+    "hhi5"
+   ],
+   "type": "object"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "years": {
+   "items": {
+    "type": "integer"
+   },
+   "minItems": 30,
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "years",
+  "iso3",
+  "series"
+ ],
+ "title": "panel_structure",
+ "type": "object"
+}

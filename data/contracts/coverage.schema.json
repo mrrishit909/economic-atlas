@@ -1,0 +1,1222 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "indicators": {
+   "additionalProperties": true,
+   "properties": {
+    "agr_share": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "gdp_growth": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "gdppc_const": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "gdppc_nominal": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "gdppc_ppp": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "hhi5": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "ind_share": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "inflation": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "population": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "productivity": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "srv_share": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "trade_open": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "x_agri": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "x_food": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "x_fuel": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "x_manf": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    },
+    "x_mmtl": {
+     "additionalProperties": true,
+     "properties": {
+      "countries_ever": {
+       "type": "integer"
+      },
+      "first_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "last_year": {
+       "items": {
+        "type": [
+         "integer",
+         "null"
+        ]
+       },
+       "type": "array"
+      },
+      "latest_year": {
+       "type": "integer"
+      },
+      "latest_year_n": {
+       "type": "integer"
+      },
+      "missing_share_panel": {
+       "type": "number"
+      },
+      "n_by_year": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "n_obs": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "peak_n": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "n_by_year",
+      "first_year",
+      "last_year",
+      "n_obs",
+      "missing_share_panel",
+      "latest_year",
+      "latest_year_n",
+      "peak_n",
+      "countries_ever"
+     ],
+     "type": "object"
+    }
+   },
+   "required": [
+    "gdp_growth",
+    "gdppc_ppp",
+    "gdppc_const",
+    "gdppc_nominal",
+    "productivity",
+    "agr_share",
+    "ind_share",
+    "srv_share",
+    "inflation",
+    "trade_open",
+    "population",
+    "x_agri",
+    "x_food",
+    "x_fuel",
+    "x_manf",
+    "x_mmtl",
+    "hhi5"
+   ],
+   "type": "object"
+  },
+  "iso3": {
+   "items": {
+    "pattern": "^[A-Z]{3}$",
+    "type": "string"
+   },
+   "maxItems": 217,
+   "minItems": 217,
+   "type": "array"
+  },
+  "missing_by_region": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "n_countries": {
+      "type": "integer"
+     },
+     "region": {
+      "type": "string"
+     },
+     "share_missing": {
+      "additionalProperties": true,
+      "properties": {
+       "agr_share": {
+        "type": "number"
+       },
+       "gdp_growth": {
+        "type": "number"
+       },
+       "gdppc_const": {
+        "type": "number"
+       },
+       "gdppc_nominal": {
+        "type": "number"
+       },
+       "gdppc_ppp": {
+        "type": "number"
+       },
+       "hhi5": {
+        "type": "number"
+       },
+       "ind_share": {
+        "type": "number"
+       },
+       "inflation": {
+        "type": "number"
+       },
+       "population": {
+        "type": "number"
+       },
+       "productivity": {
+        "type": "number"
+       },
+       "srv_share": {
+        "type": "number"
+       },
+       "trade_open": {
+        "type": "number"
+       },
+       "x_agri": {
+        "type": "number"
+       },
+       "x_food": {
+        "type": "number"
+       },
+       "x_fuel": {
+        "type": "number"
+       },
+       "x_manf": {
+        "type": "number"
+       },
+       "x_mmtl": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "gdp_growth",
+       "gdppc_ppp",
+       "gdppc_const",
+       "gdppc_nominal",
+       "productivity",
+       "agr_share",
+       "ind_share",
+       "srv_share",
+       "inflation",
+       "trade_open",
+       "population",
+       "x_agri",
+       "x_food",
+       "x_fuel",
+       "x_manf",
+       "x_mmtl",
+       "hhi5"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "region",
+     "n_countries",
+     "share_missing"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "rule": {
+   "type": "string"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "years": {
+   "items": {
+    "type": "integer"
+   },
+   "minItems": 30,
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "years",
+  "iso3",
+  "indicators",
+  "missing_by_region",
+  "rule"
+ ],
+ "title": "coverage",
+ "type": "object"
+}

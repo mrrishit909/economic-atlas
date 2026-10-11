@@ -1,0 +1,113 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "note": {
+   "type": "string"
+  },
+  "rows": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "entity": {
+      "type": "string"
+     },
+     "event": {
+      "type": "string"
+     },
+     "event_evidence": {
+      "const": "GENERAL_KNOWLEDGE"
+     },
+     "event_year": {
+      "type": "integer"
+     },
+     "first_year_evidence": {
+      "const": "DATA"
+     },
+     "first_year_observed": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "iso3": {
+      "type": "string"
+     },
+     "sensitivity_only": {
+      "type": "boolean"
+     },
+     "territory_break_year": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "treatment": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "iso3",
+     "entity",
+     "event",
+     "event_year",
+     "event_evidence",
+     "first_year_observed",
+     "first_year_evidence",
+     "territory_break_year",
+     "treatment",
+     "sensitivity_only"
+    ],
+    "type": "object"
+   },
+   "minItems": 8,
+   "type": "array"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "windows": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "end": {
+      "type": "integer"
+     },
+     "excluded": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "start": {
+      "type": "integer"
+     }
+    },
+    "required": [
+     "start",
+     "end",
+     "excluded"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "rows",
+  "windows",
+  "note"
+ ],
+ "title": "boundaries",
+ "type": "object"
+}
