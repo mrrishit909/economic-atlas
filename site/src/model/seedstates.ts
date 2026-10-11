@@ -9,7 +9,8 @@
 import { grainIndex, seamMask, vogelX, vogelY, type Layout } from "./layout";
 import { makeState, type SeedState } from "../gl/transition";
 
-export const R_IN = 0.4, R_SEAM = 0.3, R_DUST = 0.25;
+// R_SEAM 0.40 by ruling (P05-FE-001 review, ED #41): seam thinning read as outlined packed circles at S03a/S03b scale
+export const R_IN = 0.4, R_SEAM = 0.4, R_DUST = 0.25;
 
 export interface PeopleOpts {
   seams: boolean;

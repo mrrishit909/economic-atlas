@@ -10,6 +10,8 @@
 /* ---------- layers: canvas, labels, then every track's text ---------- */
 .seed-layer { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 .seed-layer[hidden] { display: none; }
+.seed-glow { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; filter: blur(24px); opacity: 0; transition: opacity 400ms var(--ease-smooth); }
+html[data-motion="off"] .seed-glow { display: none; }
 .track { z-index: 2; }
 .seed-labels { position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0; transition: opacity 300ms var(--ease-smooth); }
 .seed-labels.is-on { opacity: 1; }

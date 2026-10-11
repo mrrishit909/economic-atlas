@@ -12,7 +12,19 @@
 import { BIN_COLORS, NEUTRAL, hexRgb } from "../model/bins";
 import { STRIDE, evalSeed, type SeedState, type Transition } from "./transition";
 
-export interface Cam { cx: number; cy: number; s: number }
+/** Camera: centre and spacing in CSS px; `rw` is the disc radius in world units (sqrt N) for the luminance ramp (0 = off). */
+export interface Cam { cx: number; cy: number; s: number; rw?: number }
+
+/**
+ * Luminance ramp by rank radius (ruling, P05-FE-001 review): a grain's light falls with its own
+ * distance from the core, so the highest-ranked (innermost) grains of every territory are brightest
+ * and the disc reads as one lit form. Bin hue is unchanged; only brightness and a small core tint move.
+ */
+export const RAMP = { dim: 0.3, tint: 0.12 };
+export function rampLight(dist: number, rw: number) {
+  const k = rw > 0 ? Math.min(1, dist / rw) : 0;
+  return 1 - RAMP.dim * k;
+}
 export interface LayerDraw { tr: Transition; now: number; alpha: number }
 export interface SeedDrawer {
   readonly kind: "gl" | "2d";
@@ -33,11 +45,11 @@ layout(location=3) in vec4 aHA;
 layout(location=4) in vec4 aFDS;
 uniform vec2 uView;
 uniform vec3 uCam;
-uniform float uNow, uT0, uDur, uDpr, uAlpha;
+uniform float uNow, uT0, uDur, uDpr, uAlpha, uRw, uDim, uTint;
 uniform vec4 uBez;
 uniform vec3 uPal[9];
 out vec2 vP;
-out float vR, vHalf, vHollow, vAlpha;
+out float vR, vHalf, vHollow, vAlpha, vK;
 out vec3 vCol;
 float bez(float a, float b, float t) { return ((1.0 - 3.0 * b + 3.0 * a) * t + (3.0 * b - 6.0 * a)) * t * t + 3.0 * a * t; }
 float bezD(float a, float b, float t) { return 3.0 * (1.0 - 3.0 * b + 3.0 * a) * t * t + 2.0 * (3.0 * b - 6.0 * a) * t + 3.0 * a; }
@@ -65,6 +77,7 @@ void main() {
   vAlpha = mix(aHA.z, aHA.w, w) * uAlpha;
   vHollow = mix(aHA.x, aHA.y, e);
   vCol = uPal[pal(raw >= aFDS.w ? aRB.w : aRB.z)];
+  vK = uRw > 0.0 ? clamp(length(world) / uRw, 0.0, 1.0) : -1.0;
   vR = r;
   vHalf = r + 1.5 / uDpr;
   vP = aCorner * vHalf;
@@ -75,9 +88,9 @@ void main() {
 const FS = `#version 300 es
 precision highp float;
 in vec2 vP;
-in float vR, vHalf, vHollow, vAlpha;
+in float vR, vHalf, vHollow, vAlpha, vK;
 in vec3 vCol;
-uniform float uDpr;
+uniform float uDpr, uDim, uTint;
 out vec4 outColor;
 void main() {
   float d = length(vP);
@@ -93,6 +106,7 @@ void main() {
   float small = clamp((2.0 - vR) / 1.2, 0.0, 1.0);
   float a = (fill * (1.0 - vHollow) + ring * vHollow * (1.0 - 0.55 * small)) * vAlpha;
   vec3 col = mix(c, vCol, vHollow);
+  if (vK >= 0.0) col = mix(col * (1.0 - uDim * vK), vec3(1.0), uTint * (1.0 - vK) * (1.0 - vHollow));
   if (a <= 0.002) discard;
   outColor = vec4(col * a, a);
 }`;
@@ -126,7 +140,7 @@ export class SeedsGL implements SeedDrawer {
     gl.linkProgram(p);
     if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p) ?? "link");
     this.prog = p;
-    for (const n of ["uView", "uCam", "uNow", "uT0", "uDur", "uDpr", "uAlpha", "uBez", "uPal"]) this.u[n] = gl.getUniformLocation(p, n);
+    for (const n of ["uView", "uCam", "uNow", "uT0", "uDur", "uDpr", "uAlpha", "uBez", "uPal", "uRw", "uDim", "uTint"]) this.u[n] = gl.getUniformLocation(p, n);
     this.corner = gl.createBuffer()!;
     gl.bindBuffer(gl.ARRAY_BUFFER, this.corner);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
@@ -177,6 +191,9 @@ export class SeedsGL implements SeedDrawer {
     gl.uniform3f(u.uCam!, cam.cx, cam.cy, cam.s);
     gl.uniform1f(u.uDpr!, this.dpr);
     gl.uniform3fv(u.uPal!, PAL_RGB);
+    gl.uniform1f(u.uRw!, cam.rw ?? 0);
+    gl.uniform1f(u.uDim!, RAMP.dim);
+    gl.uniform1f(u.uTint!, RAMP.tint);
     for (const L of layers) {
       if (L.alpha <= 0 || !L.tr.n) continue;
       const b = this.buffer(L.tr);
@@ -231,7 +248,10 @@ export function paintSeed(ctx: CanvasRenderingContext2D, x: number, y: number, r
 
 /** Paint a resting state (reduced-motion static discs, the S00/S08 glow source). */
 export function paintState(ctx: CanvasRenderingContext2D, cam: Cam, s: SeedState) {
-  for (let i = 0; i < s.key.length; i++) paintSeed(ctx, cam.cx + s.x[i]! * cam.s, cam.cy + s.y[i]! * cam.s, s.r[i]! * cam.s, s.bin[i]!, s.hollow[i]!, s.alpha[i]!);
+  for (let i = 0; i < s.key.length; i++) {
+    const a = s.alpha[i]! * (cam.rw ? rampLight(Math.hypot(s.x[i]!, s.y[i]!), cam.rw) : 1);
+    paintSeed(ctx, cam.cx + s.x[i]! * cam.s, cam.cy + s.y[i]! * cam.s, s.r[i]! * cam.s, s.bin[i]!, s.hollow[i]!, a);
+  }
   ctx.globalAlpha = 1;
 }
 
@@ -257,7 +277,7 @@ export class Seeds2D implements SeedDrawer {
         const v = evalSeed(L.tr, i, L.now);
         const x = cam.cx + v.x * cam.s, y = cam.cy + v.y * cam.s, r = v.r * cam.s;
         if (x < -r || y < -r || x > this.w + r || y > this.h + r) continue;
-        paintSeed(c, x, y, r, v.bin, v.hollow, v.alpha * L.alpha);
+        paintSeed(c, x, y, r, v.bin, v.hollow, v.alpha * L.alpha * (cam.rw ? rampLight(Math.hypot(v.x, v.y), cam.rw) : 1));
       }
     }
     c.globalAlpha = 1;

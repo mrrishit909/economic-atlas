@@ -4,7 +4,7 @@
  * vite preview on 4343), never the dev server. S00 at 4 frozen intro times + the end, S03a at 3 years
  * (one with FOLLOW), S03b at 3 states (+ COUNTRIES 1990), error + RETRY, the no-WebGL tier and reduced
  * motion, at 1440x900, 768x1024 and 390x844. Frame pacing of the live S00 sort is measured on this machine.
- * Usage: npm run build && node tests/stage-a-capture.mjs ; python3 tests/contact-sheet.py ../artifacts/evidence/stage-a
+ * Usage: npm run build && node tests/stage-a-capture.mjs [--stage stage-a2] [--only 1440x900] ; python3 tests/contact-sheet.py ../artifacts/evidence/stage-a
  */
 import { chromium } from "@playwright/test";
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -13,7 +13,8 @@ import { fileURLToPath } from "node:url";
 import { preview } from "vite";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const OUT = join(HERE, "..", "..", "artifacts", "evidence", "stage-a");
+const STAGE = process.argv.includes("--stage") ? process.argv[process.argv.indexOf("--stage") + 1] : "stage-a";
+const OUT = join(HERE, "..", "..", "artifacts", "evidence", STAGE);
 const only = process.argv.includes("--only") ? process.argv[process.argv.indexOf("--only") + 1].split(",") : null;
 const BASE = "http://localhost:4343/economic-atlas/";
 const VIEWPORTS = [[1440, 900], [768, 1024], [390, 844]].map(([width, height]) => ({ width, height, label: `${width}x${height}` }))

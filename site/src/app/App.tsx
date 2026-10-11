@@ -35,6 +35,7 @@ export function App() {
   const flat = useRef<HTMLCanvasElement>(null);
   const labels = useRef<HTMLDivElement>(null);
   const tip = useRef<HTMLParagraphElement>(null);
+  const glowRef = useRef<HTMLCanvasElement>(null);
   const v = useStore(view);
   useLayoutEffect(() => {
     const el = document.getElementById("eight-billion");
@@ -44,7 +45,7 @@ export function App() {
     // first paint (MOTION_SYSTEM 9.3): facts, meta, countries, the latest layout; then colours (deviation: values are not in DR-1)
     for (const s of [FACTS, META, COUNTRIES, SEED_LATEST]) getStore(s as never).prefetch();
     for (const s of [PANEL, INDICATORS]) getStore(s as never).prefetch();
-    startDirector(gl.current!, flat.current!, labels.current!, tip.current!);
+    startDirector(gl.current!, flat.current!, labels.current!, tip.current!, glowRef.current!);
     resolveInitialHash();
   }, []);
   useEffect(() => {
@@ -57,6 +58,7 @@ export function App() {
   const portal = document.getElementById("eb-portal");
   return (
     <>
+      <canvas ref={glowRef} className="seed-glow" aria-hidden="true" />
       <canvas ref={gl} className="seed-layer" aria-hidden="true" />
       <canvas ref={flat} className="seed-layer" aria-hidden="true" hidden />
       <div ref={labels} className="seed-labels" aria-hidden="true" />

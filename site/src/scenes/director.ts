@@ -5,7 +5,7 @@
  * when something changed. Stepped parts (intro clock, year crossfades, weight steps) live here;
  * scrubbed parts are pure functions of progress.
  */
-import { SeedsGL, Seeds2D, type Cam, type LayerDraw, type SeedDrawer } from "../gl/seeds";
+import { SeedsGL, Seeds2D, paintState, type Cam, type LayerDraw, type SeedDrawer } from "../gl/seeds";
 import { BEZ, atRest, between, makeState, stateAt, staticOf, type SeedState, type Transition } from "../gl/transition";
 import { centroids, hash01, knn6, shuffle, type Layout } from "../model/layout";
 import { countriesState, peopleState, slotDust, R_IN } from "../model/seedstates";
@@ -363,6 +363,35 @@ function hover() {
   tipEl.style.transform = `translate(${Math.min(pointer.x + 12, W - tipEl.offsetWidth - 8)}px, ${pointer.y + 12}px)`;
 }
 
+// ------------------------------------------------------------------ S00/S08 glow (VISUAL_DESIGN 3.2, MOTION_SYSTEM 9.1)
+/**
+ * The seed pass drawn once at 1/4 resolution into its own canvas, blurred 24px by CSS and composited
+ * at 14% under the grains. It is the grains' own light (it follows the territories), never a disc;
+ * rendered once per entry after the seams settle, then only its opacity changes. Off on LOW / no WebGL.
+ */
+let glowEl: HTMLCanvasElement | null = null, glowKey = "";
+function glow(id: string, p: number, cam: Cam) {
+  if (!glowEl) return;
+  const sortT = introSortT();
+  const settled = ic.done || sortT >= 3400;
+  const on = quality.tier === "high" && motionEnabled() && id === "eight-billion" && settled && !!D.latest && !!binsFor(D.latest.year);
+  const g0 = gstate("G0", W, H);
+  if (on) {
+    const key = `${W}x${H}:${D.latest!.year}`;
+    if (key !== glowKey) {
+      glowKey = key;
+      const q = 4, c = glowEl;
+      c.width = Math.ceil(W / q); c.height = Math.ceil(H / q);
+      const ctx = c.getContext("2d")!;
+      ctx.clearRect(0, 0, c.width, c.height);
+      paintState(ctx, { cx: g0.cx / q, cy: g0.cy / q, s: g0.s / q }, peopleState(D.latest!, { seams: true, bins: binsFor(D.latest!.year) }));
+    }
+  }
+  // visible only while the camera is at G0 (it never moves with the S01 camera; it fades first)
+  const atG0 = Math.abs(cam.s - g0.s) < 1e-3 && Math.abs(cam.cx - g0.cx) < 0.5;
+  glowEl.style.opacity = on && atG0 ? String(0.14 * (1 - windowed(p, 0, 0.02))) : "0";
+}
+
 // ------------------------------------------------------------------ frame
 function frame(now: number, dt: number) {
   const w = stageW(), h = stageH();
@@ -400,6 +429,9 @@ function frame(now: number, dt: number) {
     showLabels = atRest(main, now) && !xf && ["eight-billion", "years", "weight"].includes(id) && (id !== "eight-billion" || p < 0.6);
     debug.mix = xf ? m : 0;
   }
+  const Nd = shown && ic.done ? layoutFor(shown.year)?.slots ?? 0 : D.latest?.slots ?? (D.facts ? factNum(D.facts, "seedhead_slots_latest") : 0);
+  cam.rw = Math.sqrt(Nd);
+  glow(id, p, cam);
   layers.forEach((l) => (l.alpha *= alpha));
   const busy = layers.some((l) => !atRest(l.tr, l.now)) || !!xf;
   const key = `${cam.cx.toFixed(2)}|${cam.cy.toFixed(2)}|${cam.s.toFixed(4)}|${layers.map((l) => `${l.tr.version}:${l.alpha.toFixed(3)}:${atRest(l.tr, l.now) ? "r" : l.now}`).join(",")}`;
@@ -431,7 +463,8 @@ function tierCheck(dt: number) {
 }
 
 let started = false;
-export function startDirector(gl: HTMLCanvasElement, flat: HTMLCanvasElement, labels: HTMLElement, tip: HTMLElement) {
+export function startDirector(gl: HTMLCanvasElement, flat: HTMLCanvasElement, labels: HTMLElement, tip: HTMLElement, glowCanvas?: HTMLCanvasElement) {
+  glowEl = glowCanvas ?? null;
   if (started) return;
   started = true;
   glCanvas = gl; c2d = flat; labelsEl = labels; tipEl = tip;

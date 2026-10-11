@@ -15,7 +15,9 @@ export function StaticDisc({ state, overlay, scaleSlots, size, label }: { state:
     if (!c || !state) return;
     const { ctx, width, height } = fitCanvas(c, 2);
     ctx.clearRect(0, 0, width, height);
-    const cam = { cx: width / 2, cy: height / 2, s: (Math.min(width, height) / 2 - 4) / Math.sqrt(scaleSlots) };
+    let rw = 0;
+    for (let i = 0; i < state.key.length; i++) rw = Math.max(rw, Math.hypot(state.x[i]!, state.y[i]!));
+    const cam = { cx: width / 2, cy: height / 2, s: (Math.min(width, height) / 2 - 4) / Math.sqrt(scaleSlots), rw };
     paintState(ctx, cam, state);
     if (overlay) paintState(ctx, cam, overlay);
   }, [state, overlay, scaleSlots, size]);
