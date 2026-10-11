@@ -1,0 +1,20 @@
+[
+ {
+  "viewport": "1024x768-classic",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 [L13] \"The world, explained through economi\" x \"IND\" (21x11) ; [L13] \"SORTED BY GDP PER CAPITA, PPP · CONS\" x \"IDN\" (21x10)",
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | DERIVED",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"CLUSTER SILHOUETTE IS LOW (WEAK SEPA\" x \"EIGHT BILLIONSOURCESYEARSWEIGHTCATCH\" (191x28)"
+  ]
+ },
+ {
+  "viewport": "768x1024-classic",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199",
+   "years@0.7: L2/L11/L13 [L13] \"OBSERVED · WORLD BANK WDI VALUES\" x \"NGA\" (21x11)",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"IMF WORLD ECONOMIC OUTLOOK DATA IS N\" x \"RECEIPT\" (597x15) ; \"WORLD BANK WDI AS LAST UPDATED 2026-\" x \"meta.json\" (597x13) ; \"WORLD BANK WDI AS LAST UPDATED 2026-\" x \"0 BYTES GZIP · PIPELINE v1.0.0\" (597x14) ; \"✗ IMF WORLD ECONOMIC OUTLOOK\" x \"LIMITATIONS (8)\" (189x14) ; \"OBSERVED · META.JSON\" x \"EVENT YEARS COME FROM GENERAL HISTOR\" (169x20) ; \"TERCILES AND POP-WEIGHTED FITS HAVE \" x \"World Bank WDI as last updated 2026-\" (214x23) (+4)"
+  ]
+ }
+]

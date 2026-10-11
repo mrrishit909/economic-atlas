@@ -1,0 +1,75 @@
+ 8:37  up 2 days, 11:08, 4 users, load averages: 31.49 18.00 15.33
+capturing 1920x1080
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/1920x1080.jpg
+1920x1080 shots 35 errors 2 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 1024x768
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/1024x768.jpg
+1024x768 shots 35 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 768x1024
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/768x1024.jpg
+768x1024 shots 67 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 390x844
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/390x844.jpg
+390x844 shots 68 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 375x812
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/375x812.jpg
+375x812 shots 36 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 360x800
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/360x800.jpg
+360x800 shots 36 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 1280x720
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/1280x720.jpg
+1280x720 shots 35 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 1024x768-classic
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/1024x768-classic.jpg
+1024x768-classic shots 35 errors 1 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 768x1024-classic
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/768x1024-classic.jpg
+768x1024-classic shots 35 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 1440x900-reduced
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/1440x900-reduced.jpg
+1440x900-reduced shots 60 errors 2 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+capturing 390x844-reduced
+contact sheet: /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/artifacts/evidence/qa/contact-sheets/390x844-reduced.jpg
+390x844-reduced shots 58 errors 0 ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)
+ 8:57  up 2 days, 11:27, 4 users, load averages: 13.59 15.45 18.42
+[
+ {
+  "label": "1440x900 unthrottled",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+  "stateBefore": "gdppc_ppp",
+  "stateAfter": "gdppc_ppp",
+  "stateChanged": false,
+  "sampleCount": 779,
+  "p50_ms": 8.3,
+  "p95_ms": 10.3,
+  "pct_over_16_7ms": 0.003,
+  "pct_over_33ms": 0
+ },
+ {
+  "label": "1440x900 4x CPU throttle",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+  "stateBefore": "gdppc_ppp",
+  "stateAfter": "gdppc_ppp",
+  "stateChanged": false,
+  "sampleCount": 761,
+  "p50_ms": 8.3,
+  "p95_ms": 10.4,
+  "pct_over_16_7ms": 0.007,
+  "pct_over_33ms": 0.003
+ },
+ {
+  "label": "390x844 4x CPU throttle",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+  "stateBefore": "gdppc_ppp",
+  "stateAfter": "gdppc_ppp",
+  "stateChanged": false,
+  "sampleCount": 762,
+  "p50_ms": 8.3,
+  "p95_ms": 10.5,
+  "pct_over_16_7ms": 0.005,
+  "pct_over_33ms": 0.003
+ }
+]
+ 8:57  up 2 days, 11:28, 4 users, load averages: 12.85 15.12 18.22
+ALLDONE

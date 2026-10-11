@@ -1,0 +1,13 @@
+
+> economic-atlas@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.3 /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site
+
+
+ Test Files  9 passed (9)
+      Tests  110 passed (110)
+   Start at  08:32:20
+   Duration  506ms (transform 61%, tests 22%, import 15%, worker 2%)
+

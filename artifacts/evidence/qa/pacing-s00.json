@@ -1,0 +1,36 @@
+{
+ "device": "Mac15,6",
+ "uptime": "9:10  up 2 days, 11:40, 4 users, load averages: 32.00 18.34 16.30",
+ "runs": [
+  {
+   "label": "S00 sort 1440x900 unthrottled",
+   "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+   "n": 903,
+   "p50": 8.3,
+   "p95": 10,
+   "over16_7": 0.006,
+   "over33": 0.003,
+   "tier": "high"
+  },
+  {
+   "label": "S00 sort 1440x900 4x CPU",
+   "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+   "n": 886,
+   "p50": 8.4,
+   "p95": 10.3,
+   "over16_7": 0.01,
+   "over33": 0.009,
+   "tier": "high"
+  },
+  {
+   "label": "S00 sort 390x844 4x CPU",
+   "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+   "n": 896,
+   "p50": 8.4,
+   "p95": 10.4,
+   "over16_7": 0.01,
+   "over33": 0.006,
+   "tier": "high"
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "axe": [],
+ "keyboard": [
+  {
+   "name": "first Tab stop has a visible focus ring",
+   "ok": true,
+   "detail": "{\"tag\":\"BUTTON\",\"text\":\"\",\"id\":\"\",\"cls\":\"seg\",\"ring\":\"solid 2px\"}"
+  },
+  {
+   "name": "nav Enter jumps to YEARS, hash written, focus on scene heading",
+   "ok": true,
+   "detail": "#years {\"tag\":\"H2\",\"text\":\"Thirty-five years: the disc grew, and it\",\"id\":\"years-title\",\"cls\":\"statement\",\"ring\":\"none 3px\"}"
+  },
+  {
+   "name": "S03a readout: ArrowRight/Left step the year",
+   "ok": true,
+   "detail": "2016 -> 2017 -> 2015"
+  },
+  {
+   "name": "FOLLOW by keyboard shows the country's rank",
+   "ok": true,
+   "detail": "NIGERIA · RANK 135 OF 199 · 8,892 CONSTANT 2021 INTL $ (PPP)"
+  },
+  {
+   "name": "FOLLOW CLEAR reachable by Tab and works",
+   "ok": true,
+   "detail": "{\"tag\":\"BUTTON\",\"text\":\"CLEAR\",\"id\":\"\",\"cls\":\"btn-square\",\"ring\":\"solid 2px\"}"
+  },
+  {
+   "name": "S03b COUNTRIES by Space",
+   "ok": true
+  },
+  {
+   "name": "S03b 1990 by Space",
+   "ok": true
+  },
+  {
+   "name": "S03b SET ASIDE by Enter",
+   "ok": true
+  },
+  {
+   "name": "S03b RESET restores PEOPLE, latest, nothing set aside",
+   "ok": true
+  },
+  {
+   "name": "S05 BASIS by keyboard changes the record",
+   "ok": true,
+   "detail": "SLOPE -0.03 PP / YR PER LN UNIT (95% CI -0.22 TO 0.17, HC3; BOOTSTRAP -0.22 TO 0"
+  },
+  {
+   "name": "S05 WINDOW 1980 by keyboard",
+   "ok": true,
+   "detail": "SLOPE -0.31 PP / YR PER LN UNIT (95% CI -0.50 TO -0.13, HC3; BOOTSTRAP -0.50 TO "
+  },
+  {
+   "name": "S05 SAMPLE LOWER THIRD by keyboard",
+   "ok": true,
+   "detail": "SLOPE -0.96 PP / YR PER LN UNIT (95% CI -1.68 TO -0.24, HC3; BOOTSTRAP -1.69 TO -0.29) · N 52 · R² 0.11\n\nAT THIS PACE, H"
+  },
+  {
+   "name": "S05 NOT PUBLISHED option is not applied",
+   "ok": true,
+   "detail": "WITH TERRITORY CHANGES title=POINTS NOT PUBLISHED FOR THIS WINDOW"
+  },
+  {
+   "name": "S06 LIGHT BY picker by keyboard changes the pair",
+   "ok": true,
+   "detail": "SPEARMAN RHO 0.97 (95% CI 0.96 TO 0.98) · N 177 -> SPEARMAN RHO 0.03 (95% CI -0.12 TO 0.18) · N 195"
+  },
+  {
+   "name": "S06 ORDER BY picker by keyboard changes the pair",
+   "ok": false,
+   "detail": "SPEARMAN RHO 0.03 (95% CI -0.12 TO 0.18) · N 195 -> SPEARMAN RHO 0.03 (95% CI -0.12 TO 0.18) · N 195"
+  },
+  {
+   "name": "ATLAS add country by keyboard",
+   "ok": true
+  },
+  {
+   "name": "ATLAS indicator by keyboard",
+   "ok": true,
+   "detail": "INDUSTRY VALUE ADDED · PERCENT OF GDP · 2024 · 189 COUNTRIES WITH DATA · 2026-10"
+  },
+  {
+   "name": "ATLAS inspector opens from the chip by Enter, focus moves into it",
+   "ok": true,
+   "detail": "{\"tag\":\"SECTION\",\"text\":\"KEN · SUB-SAHARAN AFRICA · LOWER MIDDLE \",\"id\":\"\",\"cls\":\"inspector\",\"ring\":\"solid 2px\"}"
+  },
+  {
+   "name": "Esc closes the inspector and returns focus to the chip",
+   "ok": true
+  },
+  {
+   "name": "ATLAS RESET restores GDP per capita PPP and clears the selection",
+   "ok": true,
+   "detail": "RESET"
+  }
+ ]
+}

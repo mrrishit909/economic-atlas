@@ -1,0 +1,130 @@
+1920x1080 
+  eight-billion@0: L2/L11/L13 [L13] "The world, explained through economi" x "IND" (21x11)
+  sources@0.694: L14 text outside viewport: 296 entities. 217 economies. | 217 COUNTRIES | 79 AGGREGATES · NEVER RANKED
+  sources@0.694: L2/L11/L13 "Three different dollars." x "INDONESIA · THE MIDDLE PERSON'S COUN" (297x10)
+  catch-up@0.24: L3 no in-viewport honesty chip
+1440x900 
+  eight-billion@0: L2/L11/L13 [L13] "The world, explained through economi" x "IND" (21x11)
+  sources@0.694: L14 text outside viewport: Three different dollars. | INDONESIA · THE MIDDLE PERSON'
+  sources@0.694: L2/L11/L13 "Three different dollars." x "INDONESIA · THE MIDDLE PERSON'S COUN" (297x10)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "WDI REVISES HISTORY AND LATER YEARS " x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (93x3)
+1280x720 
+  eight-billion@0: L2/L11/L13 [L13] "The world, explained through economi" x "IND" (21x11)
+  sources@0.694: L14 text outside viewport: Three different dollars. | INDONESIA · THE MIDDLE PERSON'
+  sources@0.694: L2/L11/L13 "Three different dollars." x "INDONESIA · THE MIDDLE PERSON'S COUN" (297x17)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "VALUE-ADDED SHARES SUM TO ABOUT 93 P" x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (173x32)
+1024x768 
+  eight-billion@0: L2/L11/L13 [L13] "The world, explained through economi" x "IND" (21x11) ; [L13] "SORTED BY GDP PER CAPITA, PPP · CONS" x "IDN" (21x10)
+  sources@0.694: L14 text outside viewport: Missing stays missing. | DERIVED
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "CLUSTER SILHOUETTE IS LOW (WEAK SEPA" x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (201x32)
+768x1024 
+  sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199
+  years@0.7: L2/L11/L13 [L13] "OBSERVED · WORLD BANK WDI VALUES" x "NGA" (21x11)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "RECEIPT" (612x15) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "meta.json" (612x13) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "0 BYTES GZIP · PIPELINE v1.0.0" (612x14) ; "✗ IMF WORLD ECONOMIC OUTLOOK" x "LIMITATIONS (8)" (189x14) ; "OBSERVED · META.JSON" x "EVENT YEARS COME FROM GENERAL HISTOR" (169x20) ; "TERCILES AND POP-WEIGHTED FITS HAVE " x "World Bank WDI as last updated 2026-" (214x23) (+4)
+390x844 
+  eight-billion@0: L2/L11/L13 "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (358x9) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "USA" (21x11)
+  sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199
+  years@0.7: L2/L11/L13 [L13] "2016" x "USA" (21x11) ; [L13] "7,416 SEEDS · 7.39 BN PEOPLE WITH DA" x "IDN" (21x2) ; [L13] "MIDDLE PERSON'S COUNTRY: ZAF · 14,50" x "IDN" (21x6) ; [L13] "NO GDP PER CAPITA, PPP VALUE: 18 COU" x "IND" (21x3) ; [L13] "SPREAD (SD LN INCOME): COUNTRIES 1.1" x "IND" (21x5) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "CHN" (21x11)
+  weight@0.43: L2/L11/L13 [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "CHN" (21x11)
+  weight@0.9: L2/L11/L13 [L13] "±1 SD OF LN INCOME, PEOPLE-WEIGHTED" x "IDN" (21x11)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "WHERE IS THE IMF?" x "VALUE-ADDED SHARES SUM TO ABOUT 93 P" (110x4) ; "WHERE IS THE IMF?" x "HHI5 USES FIVE BROAD EXPORT GROUPS; " (110x5) ; "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "WDI REVISES HISTORY AND LATER YEARS " (332x27)
+  atlas@0: L9/L12 COUNTRIES under menu-pill 
+375x812 
+  eight-billion@0: L2/L11/L13 "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (343x23) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "USA" (21x11)
+  sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199
+  years@0.7: L2/L11/L13 [L13] "2016" x "USA" (21x4) ; [L13] "7,416 SEEDS · 7.39 BN PEOPLE WITH DA" x "USA" (21x4) ; [L13] "MIDDLE PERSON'S COUNTRY: ZAF · 14,50" x "IDN" (21x11) ; [L13] "SPREAD (SD LN INCOME): COUNTRIES 1.1" x "IND" (21x11) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "CHN" (21x11)
+  weight@0.43: L2/L11/L13 [L13] "±1 SD OF LN INCOME, COUNTRIES" x "CHN" (21x8)
+  weight@0.9: L2/L11/L13 [L13] "±1 SD OF LN INCOME, PEOPLE-WEIGHTED" x "IDN" (21x6)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "WHERE IS THE IMF?" x "VALUE-ADDED SHARES SUM TO ABOUT 93 P" (110x16) ; "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "HHI5 USES FIVE BROAD EXPORT GROUPS; " (317x23) ; "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "WDI REVISES HISTORY AND LATER YEARS " (317x18) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "WDI REVISES HISTORY AND LATER YEARS " (317x19)
+360x800 
+  eight-billion@0: L2/L11/L13 "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (328x23) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "USA" (21x11)
+  sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199
+  years@0.7: L2/L11/L13 [L13] "MIDDLE PERSON'S COUNTRY: ZAF · 14,50" x "USA" (21x6) ; [L13] "MIDDLE PERSON'S COUNTRY: ZAF · 14,50" x "IDN" (21x6) ; [L13] "NO GDP PER CAPITA, PPP VALUE: 18 COU" x "IDN" (21x2) ; [L13] "SPREAD (SD LN INCOME): COUNTRIES 1.1" x "IND" (21x11) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "CHN" (21x11)
+  weight@0.43: L2/L11/L13 [L13] "±1 SD OF LN INCOME, COUNTRIES" x "CHN" (21x10)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  catch-up@0.95: L14 text outside viewport: GDP PER CAPITA IN 2010 · CONST
+  lab@0.45: L14 text outside viewport: GDP PER CAPITA IN 1990 · CONST
+  likeness@0.2: L2/L11/L13 "WARD" x "NOT GROUPED: 52 COUNTRIES MISSING A " (29x4)
+  evidence@0.95: L2/L11/L13 "WHERE IS THE IMF?" x "CLUSTER SILHOUETTE IS LOW (WEAK SEPA" (110x16) ; "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "VALUE-ADDED SHARES SUM TO ABOUT 93 P" (302x44) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "HHI5 USES FIVE BROAD EXPORT GROUPS; " (302x25) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "WDI REVISES HISTORY AND LATER YEARS " (302x16) ; "✗ IMF WORLD ECONOMIC OUTLOOK" x "WDI REVISES HISTORY AND LATER YEARS " (186x14)
+  atlas@0: L9/L12 INDEX = 100 AT 2000 under menu-pill 
+  resorted@0.3: L2/L11/L13 "Eight billion people, sorted by one " x "World Bank WDI as last updated 2026-" (320x7)
+  resorted@0.9: L2/L11/L13 "Eight billion people, sorted by one " x "World Bank WDI as last updated 2026-" (320x7) ; "ECONOMIC ATLAS" x "→ OPEN THE ATLAS" (79x11) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "→ OPEN THE ATLAS" (217x11)
+1440x900-reduced 
+  eight-billion@0: L2/L11/L13 "The world, explained through economi" x "DERIVED" (89x29) ; "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (126x9) ; "NO GDP PER CAPITA, PPP VALUE: 32 COU" x "Per person, the richest economy prod" (126x43) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (236x67) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (236x50) ; "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "HALF THE 7.98 BN PEOPLE WITH DATA LI" (184x63)
+  eight-billion@0.78: L2/L11/L13 "The world, explained through economi" x "DERIVED" (89x29) ; "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (126x9) ; "NO GDP PER CAPITA, PPP VALUE: 32 COU" x "Per person, the richest economy prod" (126x43) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (236x67) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (236x50) ; "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "HALF THE 7.98 BN PEOPLE WITH DATA LI" (184x63)
+  sources@0.14: L2/L11/L13 "Three different dollars." x "INDONESIA · THE MIDDLE PERSON'S COUN" (297x10)
+  sources@0.694: L2/L11/L13 "Two centuries, another dollar." x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (312x32)
+  years@0.7: L2/L11/L13 "1990 · 5,202 SEEDS · 5.17 BN PEOPLE " x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (82x20) ; "2000 · 6,078 SEEDS · 6.05 BN PEOPLE " x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (260x20) ; "2010 · 6,900 SEEDS · 6.87 BN PEOPLE " x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (260x20) ; "2025 · 8,005 SEEDS · 7.98 BN PEOPLE " x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (218x20)
+  evidence@0.95: L2/L11/L13 "World Bank WDI as last updated 2026-" x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (214x28)
+768x1024-reduced 
+  eight-billion@0: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x9) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "SINGAPORE AND BURUNDI, 2025, PPP" (423x9) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (423x21) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (648x33) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (378x33) ; "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "HALF THE 7.98 BN PEOPLE WITH DATA LI" (238x61)
+  eight-billion@0.78: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x9) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "SINGAPORE AND BURUNDI, 2025, PPP" (423x9) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (423x21) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (648x33) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (378x33) ; "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "HALF THE 7.98 BN PEOPLE WITH DATA LI" (238x61)
+  sources@0.14: L2/L11/L13 "Three different dollars." x "INDONESIA · THE MIDDLE PERSON'S COUN" (272x20)
+  sources@0.694: L2/L11/L13 "Two centuries, another dollar." x "SOURCESOpen menu" (160x7)
+  weight@0.43: L2/L11/L13 "PEOPLE · 2025 · CHINA + INDIA SET AS" x "WEIGHTOpen menu" (152x25)
+  weight@0.9: L3 no in-viewport honesty chip
+  evidence@0.05: L2/L11/L13 "THESE ARE DESCRIPTIVE RANK CORRELATI" x "EVIDENCEOpen menu" (160x32) ; "THESE ARE DESCRIPTIVE RANK CORRELATI" x "REPLAY INTRO" (66x32)
+  evidence@0.95: L2/L11/L13 "UNCONDITIONAL BETA: POOR-COUNTRY GRO" x "World Bank WDI as last updated 2026-" (238x3) ; "TERCILES AND POP-WEIGHTED FITS HAVE " x "World Bank WDI as last updated 2026-" (238x32) ; "TERCILES AND POP-WEIGHTED FITS HAVE " x "EVIDENCEOpen menu" (160x27) ; "TERCILES AND POP-WEIGHTED FITS HAVE " x "REPLAY INTRO" (74x27) ; "CLUSTER SILHOUETTE IS LOW (WEAK SEPA" x "World Bank WDI as last updated 2026-" (238x12) ; "World Bank WDI as last updated 2026-" x "EVIDENCEOpen menu" (6x32)
+390x844-reduced 
+  eight-billion@0: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x11) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "Per person, the richest economy prod" (342x9) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (358x9) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (342x33) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (342x37) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (321x4) (+2)
+  eight-billion@0.78: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x11) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "Per person, the richest economy prod" (342x9) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (358x9) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (342x33) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (342x37) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (321x4) (+2)
+  sources@0.694: L2/L11/L13 "Two centuries, another dollar." x "SOURCESOpen menu" (160x32) ; "Two centuries, another dollar." x "REPLAY INTRO" (39x32)
+  years@0.7: L3 no in-viewport honesty chip
+  weight@0.43: L3 no in-viewport honesty chip
+  weight@0.9: L3 no in-viewport honesty chip
+  catch-up@0.24: L3 no in-viewport honesty chip
+  catch-up@0.95: L3 no in-viewport honesty chip
+  lab@0.45: L3 no in-viewport honesty chip
+  likeness@0.2: L3 no in-viewport honesty chip
+  likeness@0.62: L3 no in-viewport honesty chip
+  evidence@0.05: L2/L11/L13 "LOOSELY. SILHOUETTE 0.23. THE SAME G" x "EVIDENCEOpen menu" (160x30) ; "LOOSELY. SILHOUETTE 0.23. THE SAME G" x "REPLAY INTRO" (56x30)
+  evidence@0.95: L2/L11/L13 "EVENT YEARS COME FROM GENERAL HISTOR" x "World Bank WDI as last updated 2026-" (332x16) ; "EVENT YEARS COME FROM GENERAL HISTOR" x "EVIDENCEOpen menu" (160x32) ; "EVENT YEARS COME FROM GENERAL HISTOR" x "REPLAY INTRO" (62x32) ; "THE 1960 TO 2024 CONSTANT-USD WINDOW" x "World Bank WDI as last updated 2026-" (332x23) ; "World Bank WDI as last updated 2026-" x "EVIDENCEOpen menu" (160x15) ; "World Bank WDI as last updated 2026-" x "REPLAY INTRO" (62x15)
+  atlas@0: L9/L12 COUNTRIES under menu-pill 
+375x812-reduced 
+  eight-billion@0: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x11) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "Per person, the richest economy prod" (327x24) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (343x23) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (327x33) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (327x37) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (321x4) (+2)
+  eight-billion@0.78: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x11) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "Per person, the richest economy prod" (327x24) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (343x23) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (327x33) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (327x37) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (321x4) (+2)
+  sources@0.694: L2/L11/L13 "Two centuries, another dollar." x "SOURCESOpen menu" (160x32) ; "Two centuries, another dollar." x "REPLAY INTRO" (47x32)
+  years@0.7: L3 no in-viewport honesty chip
+  weight@0.43: L3 no in-viewport honesty chip
+  weight@0.9: L3 no in-viewport honesty chip
+  catch-up@0.24: L3 no in-viewport honesty chip
+  catch-up@0.95: L3 no in-viewport honesty chip
+  lab@0.45: L3 no in-viewport honesty chip
+  likeness@0.2: L3 no in-viewport honesty chip
+  likeness@0.62: L3 no in-viewport honesty chip
+  evidence@0.05: L2/L11/L13 "LOOSELY. SILHOUETTE 0.23. THE SAME G" x "EVIDENCEOpen menu" (160x32) ; "LOOSELY. SILHOUETTE 0.23. THE SAME G" x "REPLAY INTRO" (56x32)
+  evidence@0.95: L2/L11/L13 "EVENT YEARS COME FROM GENERAL HISTOR" x "World Bank WDI as last updated 2026-" (317x16) ; "EVENT YEARS COME FROM GENERAL HISTOR" x "EVIDENCEOpen menu" (160x32) ; "EVENT YEARS COME FROM GENERAL HISTOR" x "REPLAY INTRO" (62x32) ; "THE 1960 TO 2024 CONSTANT-USD WINDOW" x "World Bank WDI as last updated 2026-" (317x23) ; "World Bank WDI as last updated 2026-" x "EVIDENCEOpen menu" (160x12) ; "World Bank WDI as last updated 2026-" x "REPLAY INTRO" (62x12)
+360x800-reduced 
+  eight-billion@0: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x11) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "Per person, the richest economy prod" (312x24) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (328x23) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (312x33) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (312x37) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (312x4) (+2)
+  eight-billion@0.78: L2/L11/L13 "ECONOMIC ATLAS" x "SINGAPORE AND BURUNDI, 2025, PPP" (128x11) ; "2025 · 7.98 BN OF 8.19 BN PEOPLE · 1" x "Per person, the richest economy prod" (312x24) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (328x23) ; "SORTED BY GDP PER CAPITA, PPP · CONS" x "Per person, the richest economy prod" (312x33) ; "OBSERVED · WORLD BANK WDI · 1 SEED ≈" x "Per person, the richest economy prod" (312x37) ; "DERIVED · OBSERVED VALUES · DERIVED " x "Per person, the richest economy prod" (312x4) (+2)
+  sources@0.694: L2/L11/L13 "Two centuries, another dollar." x "SOURCESOpen menu" (160x32) ; "Two centuries, another dollar." x "REPLAY INTRO" (54x32)
+  years@0.7: L2/L11/L13 "2010 · 6,900 SEEDS · 6.87 BN PEOPLE " x "YEARSOpen menu" (160x12)
+  years@0.7: L3 no in-viewport honesty chip
+  weight@0.43: L3 no in-viewport honesty chip
+  weight@0.9: L3 no in-viewport honesty chip
+  catch-up@0.24: L3 no in-viewport honesty chip
+  catch-up@0.95: L3 no in-viewport honesty chip
+  lab@0.45: L3 no in-viewport honesty chip
+  likeness@0.2: L3 no in-viewport honesty chip
+  likeness@0.62: L3 no in-viewport honesty chip
+  evidence@0.05: L2/L11/L13 "LOOSELY. SILHOUETTE 0.23. THE SAME G" x "EVIDENCEOpen menu" (160x24) ; "LOOSELY. SILHOUETTE 0.23. THE SAME G" x "REPLAY INTRO" (56x24)
+  evidence@0.95: L2/L11/L13 "EVENT YEARS COME FROM GENERAL HISTOR" x "World Bank WDI as last updated 2026-" (302x31) ; "EVENT YEARS COME FROM GENERAL HISTOR" x "EVIDENCEOpen menu" (160x32) ; "EVENT YEARS COME FROM GENERAL HISTOR" x "REPLAY INTRO" (62x32) ; "World Bank WDI as last updated 2026-" x "EVIDENCEOpen menu" (160x11) ; "World Bank WDI as last updated 2026-" x "REPLAY INTRO" (62x11)
+  atlas@0: L9/L12 INDEX = 100 AT 2000 under menu-pill 
+  resorted@0.3: L2/L11/L13 "NOT SPONSORED, ENDORSED OR APPROVED " x "ATLASOpen menu" (160x18) ; "NOT SPONSORED, ENDORSED OR APPROVED " x "REPLAY INTRO" (68x18)
+  resorted@0.9: L2/L11/L13 "NOT SPONSORED, ENDORSED OR APPROVED " x "ATLASOpen menu" (160x18) ; "NOT SPONSORED, ENDORSED OR APPROVED " x "REPLAY INTRO" (68x18)
+1024x768-classic 
+  eight-billion@0: L2/L11/L13 [L13] "The world, explained through economi" x "IND" (21x11) ; [L13] "SORTED BY GDP PER CAPITA, PPP · CONS" x "IDN" (21x10)
+  sources@0.694: L14 text outside viewport: Missing stays missing. | DERIVED
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "CLUSTER SILHOUETTE IS LOW (WEAK SEPA" x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (191x28)
+768x1024-classic 
+  sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199
+  years@0.7: L2/L11/L13 [L13] "OBSERVED · WORLD BANK WDI VALUES" x "NGA" (21x11)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "RECEIPT" (597x15) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "meta.json" (597x13) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "0 BYTES GZIP · PIPELINE v1.0.0" (597x14) ; "✗ IMF WORLD ECONOMIC OUTLOOK" x "LIMITATIONS (8)" (189x14) ; "OBSERVED · META.JSON" x "EVENT YEARS COME FROM GENERAL HISTOR" (169x20) ; "TERCILES AND POP-WEIGHTED FITS HAVE " x "World Bank WDI as last updated 2026-" (214x23) (+4)

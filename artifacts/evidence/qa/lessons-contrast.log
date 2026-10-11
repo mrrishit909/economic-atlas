@@ -1,0 +1,20 @@
+1440x900 
+  eight-billion@0: L2/L11/L13 [L13] "The world, explained through economi" x "IND" (21x11)
+  sources@0.694: L14 text outside viewport: Three different dollars. | INDONESIA · THE MIDDLE PERSON'
+  sources@0.694: L2/L11/L13 "Three different dollars." x "INDONESIA · THE MIDDLE PERSON'S COUN" (297x10)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "WDI REVISES HISTORY AND LATER YEARS " x "EIGHT BILLIONSOURCESYEARSWEIGHTCATCH" (93x3)
+768x1024 
+  sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199
+  years@0.7: L2/L11/L13 [L13] "OBSERVED · WORLD BANK WDI VALUES" x "NGA" (21x11)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "RECEIPT" (612x15) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "meta.json" (612x13) ; "WORLD BANK WDI AS LAST UPDATED 2026-" x "0 BYTES GZIP · PIPELINE v1.0.0" (612x14) ; "✗ IMF WORLD ECONOMIC OUTLOOK" x "LIMITATIONS (8)" (189x14) ; "OBSERVED · META.JSON" x "EVENT YEARS COME FROM GENERAL HISTOR" (169x20) ; "TERCILES AND POP-WEIGHTED FITS HAVE " x "World Bank WDI as last updated 2026-" (214x23) (+4)
+390x844 
+  eight-billion@0: L2/L11/L13 "SORTED BY GDP PER CAPITA, PPP · CONS" x "OBSERVED · WORLD BANK WDI · 1 SEED ≈" (358x9) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "USA" (21x11)
+  sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199
+  years@0.7: L2/L11/L13 [L13] "2016" x "USA" (21x11) ; [L13] "7,416 SEEDS · 7.39 BN PEOPLE WITH DA" x "IDN" (21x2) ; [L13] "MIDDLE PERSON'S COUNTRY: ZAF · 14,50" x "IDN" (21x6) ; [L13] "NO GDP PER CAPITA, PPP VALUE: 18 COU" x "IND" (21x3) ; [L13] "SPREAD (SD LN INCOME): COUNTRIES 1.1" x "IND" (21x5) ; [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "CHN" (21x11)
+  weight@0.43: L2/L11/L13 [L13] "CONSTANT 2021 INTL $ (PPP) PER PERSO" x "CHN" (21x11)
+  weight@0.9: L2/L11/L13 [L13] "±1 SD OF LN INCOME, PEOPLE-WEIGHTED" x "IDN" (21x11)
+  catch-up@0.24: L3 no in-viewport honesty chip
+  evidence@0.95: L2/L11/L13 "WHERE IS THE IMF?" x "VALUE-ADDED SHARES SUM TO ABOUT 93 P" (110x4) ; "WHERE IS THE IMF?" x "HHI5 USES FIVE BROAD EXPORT GROUPS; " (110x5) ; "IMF WORLD ECONOMIC OUTLOOK DATA IS N" x "WDI REVISES HISTORY AND LATER YEARS " (332x27)
+  atlas@0: L9/L12 COUNTRIES under menu-pill 

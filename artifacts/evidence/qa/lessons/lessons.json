@@ -1,0 +1,91 @@
+[
+ {
+  "viewport": "1920x1080",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 [L13] \"The world, explained through economi\" x \"IND\" (21x11)",
+   "sources@0.694: L14 text outside viewport: 296 entities. 217 economies. | 217 COUNTRIES | 79 AGGREGATES · NEVER RANKED",
+   "sources@0.694: L2/L11/L13 \"Three different dollars.\" x \"INDONESIA · THE MIDDLE PERSON'S COUN\" (297x10)",
+   "catch-up@0.24: L3 no in-viewport honesty chip"
+  ]
+ },
+ {
+  "viewport": "1440x900",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 [L13] \"The world, explained through economi\" x \"IND\" (21x11)",
+   "sources@0.694: L14 text outside viewport: Three different dollars. | INDONESIA · THE MIDDLE PERSON'",
+   "sources@0.694: L2/L11/L13 \"Three different dollars.\" x \"INDONESIA · THE MIDDLE PERSON'S COUN\" (297x10)",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"WDI REVISES HISTORY AND LATER YEARS \" x \"EIGHT BILLIONSOURCESYEARSWEIGHTCATCH\" (93x3)"
+  ]
+ },
+ {
+  "viewport": "1280x720",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 [L13] \"The world, explained through economi\" x \"IND\" (21x11)",
+   "sources@0.694: L14 text outside viewport: Three different dollars. | INDONESIA · THE MIDDLE PERSON'",
+   "sources@0.694: L2/L11/L13 \"Three different dollars.\" x \"INDONESIA · THE MIDDLE PERSON'S COUN\" (297x17)",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"VALUE-ADDED SHARES SUM TO ABOUT 93 P\" x \"EIGHT BILLIONSOURCESYEARSWEIGHTCATCH\" (173x32)"
+  ]
+ },
+ {
+  "viewport": "1024x768",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 [L13] \"The world, explained through economi\" x \"IND\" (21x11) ; [L13] \"SORTED BY GDP PER CAPITA, PPP · CONS\" x \"IDN\" (21x10)",
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | DERIVED",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"CLUSTER SILHOUETTE IS LOW (WEAK SEPA\" x \"EIGHT BILLIONSOURCESYEARSWEIGHTCATCH\" (201x32)"
+  ]
+ },
+ {
+  "viewport": "768x1024",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199",
+   "years@0.7: L2/L11/L13 [L13] \"OBSERVED · WORLD BANK WDI VALUES\" x \"NGA\" (21x11)",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"IMF WORLD ECONOMIC OUTLOOK DATA IS N\" x \"RECEIPT\" (612x15) ; \"WORLD BANK WDI AS LAST UPDATED 2026-\" x \"meta.json\" (612x13) ; \"WORLD BANK WDI AS LAST UPDATED 2026-\" x \"0 BYTES GZIP · PIPELINE v1.0.0\" (612x14) ; \"✗ IMF WORLD ECONOMIC OUTLOOK\" x \"LIMITATIONS (8)\" (189x14) ; \"OBSERVED · META.JSON\" x \"EVENT YEARS COME FROM GENERAL HISTOR\" (169x20) ; \"TERCILES AND POP-WEIGHTED FITS HAVE \" x \"World Bank WDI as last updated 2026-\" (214x23) (+4)"
+  ]
+ },
+ {
+  "viewport": "390x844",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 \"SORTED BY GDP PER CAPITA, PPP · CONS\" x \"OBSERVED · WORLD BANK WDI · 1 SEED ≈\" (358x9) ; [L13] \"CONSTANT 2021 INTL $ (PPP) PER PERSO\" x \"USA\" (21x11)",
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199",
+   "years@0.7: L2/L11/L13 [L13] \"2016\" x \"USA\" (21x11) ; [L13] \"7,416 SEEDS · 7.39 BN PEOPLE WITH DA\" x \"IDN\" (21x2) ; [L13] \"MIDDLE PERSON'S COUNTRY: ZAF · 14,50\" x \"IDN\" (21x6) ; [L13] \"NO GDP PER CAPITA, PPP VALUE: 18 COU\" x \"IND\" (21x3) ; [L13] \"SPREAD (SD LN INCOME): COUNTRIES 1.1\" x \"IND\" (21x5) ; [L13] \"CONSTANT 2021 INTL $ (PPP) PER PERSO\" x \"CHN\" (21x11)",
+   "weight@0.43: L2/L11/L13 [L13] \"CONSTANT 2021 INTL $ (PPP) PER PERSO\" x \"CHN\" (21x11)",
+   "weight@0.9: L2/L11/L13 [L13] \"±1 SD OF LN INCOME, PEOPLE-WEIGHTED\" x \"IDN\" (21x11)",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"WHERE IS THE IMF?\" x \"VALUE-ADDED SHARES SUM TO ABOUT 93 P\" (110x4) ; \"WHERE IS THE IMF?\" x \"HHI5 USES FIVE BROAD EXPORT GROUPS; \" (110x5) ; \"IMF WORLD ECONOMIC OUTLOOK DATA IS N\" x \"WDI REVISES HISTORY AND LATER YEARS \" (332x27)",
+   "atlas@0: L9/L12 COUNTRIES under menu-pill "
+  ]
+ },
+ {
+  "viewport": "375x812",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 \"SORTED BY GDP PER CAPITA, PPP · CONS\" x \"OBSERVED · WORLD BANK WDI · 1 SEED ≈\" (343x23) ; [L13] \"CONSTANT 2021 INTL $ (PPP) PER PERSO\" x \"USA\" (21x11)",
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199",
+   "years@0.7: L2/L11/L13 [L13] \"2016\" x \"USA\" (21x4) ; [L13] \"7,416 SEEDS · 7.39 BN PEOPLE WITH DA\" x \"USA\" (21x4) ; [L13] \"MIDDLE PERSON'S COUNTRY: ZAF · 14,50\" x \"IDN\" (21x11) ; [L13] \"SPREAD (SD LN INCOME): COUNTRIES 1.1\" x \"IND\" (21x11) ; [L13] \"CONSTANT 2021 INTL $ (PPP) PER PERSO\" x \"CHN\" (21x11)",
+   "weight@0.43: L2/L11/L13 [L13] \"±1 SD OF LN INCOME, COUNTRIES\" x \"CHN\" (21x8)",
+   "weight@0.9: L2/L11/L13 [L13] \"±1 SD OF LN INCOME, PEOPLE-WEIGHTED\" x \"IDN\" (21x6)",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "evidence@0.95: L2/L11/L13 \"WHERE IS THE IMF?\" x \"VALUE-ADDED SHARES SUM TO ABOUT 93 P\" (110x16) ; \"IMF WORLD ECONOMIC OUTLOOK DATA IS N\" x \"HHI5 USES FIVE BROAD EXPORT GROUPS; \" (317x23) ; \"IMF WORLD ECONOMIC OUTLOOK DATA IS N\" x \"WDI REVISES HISTORY AND LATER YEARS \" (317x18) ; \"WORLD BANK WDI AS LAST UPDATED 2026-\" x \"WDI REVISES HISTORY AND LATER YEARS \" (317x19)"
+  ]
+ },
+ {
+  "viewport": "360x800",
+  "defects": [
+   "eight-billion@0: L2/L11/L13 \"SORTED BY GDP PER CAPITA, PPP · CONS\" x \"OBSERVED · WORLD BANK WDI · 1 SEED ≈\" (328x23) ; [L13] \"CONSTANT 2021 INTL $ (PPP) PER PERSO\" x \"USA\" (21x11)",
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199",
+   "years@0.7: L2/L11/L13 [L13] \"MIDDLE PERSON'S COUNTRY: ZAF · 14,50\" x \"USA\" (21x6) ; [L13] \"MIDDLE PERSON'S COUNTRY: ZAF · 14,50\" x \"IDN\" (21x6) ; [L13] \"NO GDP PER CAPITA, PPP VALUE: 18 COU\" x \"IDN\" (21x2) ; [L13] \"SPREAD (SD LN INCOME): COUNTRIES 1.1\" x \"IND\" (21x11) ; [L13] \"CONSTANT 2021 INTL $ (PPP) PER PERSO\" x \"CHN\" (21x11)",
+   "weight@0.43: L2/L11/L13 [L13] \"±1 SD OF LN INCOME, COUNTRIES\" x \"CHN\" (21x10)",
+   "catch-up@0.24: L3 no in-viewport honesty chip",
+   "catch-up@0.95: L14 text outside viewport: GDP PER CAPITA IN 2010 · CONST",
+   "lab@0.45: L14 text outside viewport: GDP PER CAPITA IN 1990 · CONST",
+   "likeness@0.2: L2/L11/L13 \"WARD\" x \"NOT GROUPED: 52 COUNTRIES MISSING A \" (29x4)",
+   "evidence@0.95: L2/L11/L13 \"WHERE IS THE IMF?\" x \"CLUSTER SILHOUETTE IS LOW (WEAK SEPA\" (110x16) ; \"IMF WORLD ECONOMIC OUTLOOK DATA IS N\" x \"VALUE-ADDED SHARES SUM TO ABOUT 93 P\" (302x44) ; \"WORLD BANK WDI AS LAST UPDATED 2026-\" x \"HHI5 USES FIVE BROAD EXPORT GROUPS; \" (302x25) ; \"WORLD BANK WDI AS LAST UPDATED 2026-\" x \"WDI REVISES HISTORY AND LATER YEARS \" (302x16) ; \"✗ IMF WORLD ECONOMIC OUTLOOK\" x \"WDI REVISES HISTORY AND LATER YEARS \" (186x14)",
+   "atlas@0: L9/L12 INDEX = 100 AT 2000 under menu-pill ",
+   "resorted@0.3: L2/L11/L13 \"Eight billion people, sorted by one \" x \"World Bank WDI as last updated 2026-\" (320x7)",
+   "resorted@0.9: L2/L11/L13 \"Eight billion people, sorted by one \" x \"World Bank WDI as last updated 2026-\" (320x7) ; \"ECONOMIC ATLAS\" x \"→ OPEN THE ATLAS\" (79x11) ; \"2025 · 7.98 BN OF 8.19 BN PEOPLE · 1\" x \"→ OPEN THE ATLAS\" (217x11)"
+  ]
+ }
+]
