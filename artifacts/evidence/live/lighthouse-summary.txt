@@ -1,0 +1,8 @@
+run 1 desktop {"perf":1,"a11y":1,"bp":1,"seo":1,"lcp_ms":409,"cls":0,"tbt_ms":22}
+run 1 mobile {"perf":0.96,"a11y":1,"bp":1,"seo":1,"lcp_ms":2505,"cls":0,"tbt_ms":45}
+run 2 desktop {"perf":1,"a11y":1,"bp":1,"seo":1,"lcp_ms":504,"cls":0,"tbt_ms":0}
+run 2 mobile {"perf":0.99,"a11y":1,"bp":1,"seo":1,"lcp_ms":1700,"cls":0,"tbt_ms":0}
+run 3 desktop {"perf":1,"a11y":1,"bp":1,"seo":1,"lcp_ms":367,"cls":0,"tbt_ms":0}
+run 3 mobile {"perf":0.99,"a11y":1,"bp":1,"seo":1,"lcp_ms":1664,"cls":0,"tbt_ms":2}
+run 4 mobile (re-measure, idle, load ~3) {"perf":0.99,"a11y":1,"bp":1,"lcp_ms":1655,"cls":0,"tbt_ms":2}
+run 5 mobile (re-measure, idle, load ~3) {"perf":0.99,"a11y":1,"bp":1,"lcp_ms":1656,"cls":0,"tbt_ms":2}

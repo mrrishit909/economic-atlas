@@ -1,0 +1,22 @@
+{
+ "1440x900": {
+  "scrollHeight": 21600,
+  "requests": 22,
+  "failed": [],
+  "errs": [],
+  "ext": [],
+  "links": [
+   "https://mrrishit909.github.io/economic-atlas/data/meta.json"
+  ]
+ },
+ "390x844": {
+  "scrollHeight": 20256,
+  "requests": 22,
+  "failed": [],
+  "errs": [],
+  "ext": [],
+  "links": [
+   "https://mrrishit909.github.io/economic-atlas/data/meta.json"
+  ]
+ }
+}
