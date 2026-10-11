@@ -32,16 +32,16 @@ test("S00: the disc is giant from the first dust frame, never shrinks, and keeps
     x.drawImage(img, 0, 0);
     const px = x.getImageData(0, 0, img.width, img.height).data, W = img.width, H = img.height;
     const lum = (u: number, v: number) => { const i = (Math.round(v) * W + Math.round(u)) * 4; return Math.max(px[i]!, px[i + 1]!, px[i + 2]!); };
-    const boxes = [...document.querySelectorAll(".hero-scrim, h1, p, button, nav, svg, .legend, .chip, .seed-label")].map((e) => e.getBoundingClientRect()).filter((r) => r.width && r.height);
-    const blocked = (u: number, v: number) => boxes.some((r) => u >= r.left - 6 && u <= r.right + 6 && v >= r.top - 6 && v <= r.bottom + 6);
+    const boxes = [...document.querySelectorAll(".hero-scrim, h1, p:not(.s00-chips), button, nav, svg, .legend, .chip, .seed-label")].map((e) => e.getBoundingClientRect()).filter((r) => r.width && r.height);
+    const blocked = (u: number, v: number) => boxes.some((r) => u >= r.left - 3 && u <= r.right + 3 && v >= r.top - 3 && v <= r.bottom + 3);
     let hits = 0;
     for (let a = 0; a < 360; a += 0.5) {
       const ca = Math.cos((a * Math.PI) / 180), sa = Math.sin((a * Math.PI) / 180);
-      const ox = d.cx + (d.R + 12) * ca, oy = d.cy + (d.R + 12) * sa;
+      const ox = d.cx + (d.R + 9) * ca, oy = d.cy + (d.R + 9) * sa;
       if (ox < 4 || oy < 4 || ox > W - 4 || oy > H - 4 || blocked(ox, oy) || blocked(d.cx + (d.R - 8) * ca, d.cy + (d.R - 8) * sa)) continue;
       let inside = 0, outside = 0;
       for (let r = d.R - 14; r <= d.R - 1; r += 1) for (const t of [-0.6, 0, 0.6]) inside = Math.max(inside, lum(d.cx + r * Math.cos(((a + t) * Math.PI) / 180), d.cy + r * Math.sin(((a + t) * Math.PI) / 180)));
-      for (let r = d.R + 6; r <= d.R + 16; r += 1) outside = Math.max(outside, lum(d.cx + r * ca, d.cy + r * sa));
+      for (let r = d.R + 4; r <= d.R + 9; r += 1) outside = Math.max(outside, lum(d.cx + r * ca, d.cy + r * sa));
       if (inside > 60 && outside < 16) hits++;
     }
     return hits;

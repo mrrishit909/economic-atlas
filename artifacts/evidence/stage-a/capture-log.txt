@@ -2,9 +2,9 @@
 1440x900/01-s00-t1300.png
 1440x900/01-s00-t2500.png
 1440x900/01-s00-t3600.png
-1440x900 S00 frame pacing (90 frames, headless Chromium, darwin) p50 16.7ms p95 16.8ms
 1440x900/01-s00-t4600-end.png
 1440x900 S00 radius min 639.7 (end 639.7, c 900,470) monotonic true
+1440x900 S00 live sort pacing: 16 frames, 17 canvas draws, p50 100.0ms p95 133.3ms (headless Chromium darwin, DPR 1, renderer: ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver))
 1440x900/02-s01-p60.png
 1440x900/03-s03a-1990.png
 1440x900/03-s03a-2008.png
@@ -29,9 +29,9 @@
 768x1024/01-s00-t1300.png
 768x1024/01-s00-t2500.png
 768x1024/01-s00-t3600.png
-768x1024 S00 frame pacing (90 frames, headless Chromium, darwin) p50 16.7ms p95 16.8ms
 768x1024/01-s00-t4600-end.png
 768x1024 S00 radius min 620.0 (end 620.0, c 300,420) monotonic true
+768x1024 S00 live sort pacing: 15 frames, 16 canvas draws, p50 100.0ms p95 200.0ms (headless Chromium darwin, DPR 1, renderer: ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver))
 768x1024/02-s01-p60.png
 768x1024/03-s03a-1990.png
 768x1024/03-s03a-2008.png
@@ -57,9 +57,9 @@
 390x844/01-s00-t1300.png
 390x844/01-s00-t2500.png
 390x844/01-s00-t3600.png
-390x844 S00 frame pacing (90 frames, headless Chromium, darwin) p50 16.7ms p95 16.8ms
 390x844/01-s00-t4600-end.png
 390x844 S00 radius min 510.0 (end 510.0, c 195,270) monotonic true
+390x844 S00 live sort pacing: 3 frames, 4 canvas draws, p50 366.6ms p95 433.3ms (headless Chromium darwin, DPR 1, renderer: ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver))
 390x844/02-s01-p60.png
 390x844/03-s03a-1990.png
 390x844/03-s03a-2008.png

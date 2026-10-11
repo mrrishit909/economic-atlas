@@ -183,7 +183,7 @@ html[data-motion="off"] .scene-eb .stage-content { height: 100dvh; }
   .s00-tl { left: 16px; top: 16px; }
   .s00-tr { left: 16px; right: 16px; top: 36px; text-align: left; }
   .s00-tr p { font-size: 11px; }
-  .s00-foot { left: 16px; right: 16px; top: 81.5%; bottom: auto; }
+  .s00-foot { left: 16px; right: 16px; top: 80.5%; bottom: auto; gap: 4px; }
   .s00-foot .legend { display: none; }
   .s00-chips .chip { font-size: 11px; padding: 4px 6px; }
   .statement { font-size: 28px; }

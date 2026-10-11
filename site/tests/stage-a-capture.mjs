@@ -46,16 +46,29 @@ async function run() {
       await shot(`01-s00-t${String(t).padStart(4, "0")}`);
     }
     await hook(page, "freeze", [-1]);
-    // frame pacing: rAF deltas while the intro plays out from the frozen point (stated device: this Mac, headless Chromium)
-    const pacing = await page.evaluate(() => new Promise((ok) => { const d = []; let last = 0; const f = (t) => { if (last) d.push(t - last); last = t; if (d.length < 90) requestAnimationFrame(f); else ok(d); }; requestAnimationFrame(f); }));
-    const s = [...pacing].sort((a, b) => a - b);
-    log.push(`${vp.label} S00 frame pacing (90 frames, headless Chromium, ${process.platform}) p50 ${s[45].toFixed(1)}ms p95 ${s[85].toFixed(1)}ms`);
     await page.waitForFunction(() => !window.__eca.introStats().playing && window.__eca.debug().introDone, null, { timeout: 20000 });
     await page.waitForTimeout(700);
     await shot("01-s00-t4600-end");
     const st = await hook(page, "introStats");
     const d0 = await hook(page, "debug");
     log.push(`${vp.label} S00 radius min ${st.minR.toFixed(1)} (end ${d0.R.toFixed(1)}, c ${d0.cx.toFixed(0)},${d0.cy.toFixed(0)}) monotonic ${st.monotonic}`);
+
+    // frame pacing across the LIVE (unfrozen) sort, intro time 1600-3400ms, on a fresh session; the draw counter must rise
+    const live = await browser.newPage({ viewport: { width: vp.width, height: vp.height } });
+    await live.goto(`${BASE}?quality=high`);
+    const pace = await live.evaluate(() => new Promise((ok) => {
+      const d = []; let last = 0, g0 = -1;
+      const f = (t) => {
+        const st = window.__eca?.introStats(), it = st?.sortT ?? -1;
+        if (it >= 1600 && it <= 3400) { if (g0 < 0) g0 = window.__eca.debug().glFrames; if (last) d.push(t - last); last = t; }
+        if (it > 3400 || performance.now() > 15000) ok({ d, draws: window.__eca.debug().glFrames - g0 }); else requestAnimationFrame(f);
+      };
+      requestAnimationFrame(f);
+    }));
+    const renderer = await live.evaluate(() => { const g = document.createElement("canvas").getContext("webgl2"); const e = g?.getExtension("WEBGL_debug_renderer_info"); return g ? (e ? g.getParameter(e.UNMASKED_RENDERER_WEBGL) : g.getParameter(g.RENDERER)) : "no webgl2"; });
+    const s = [...pace.d].sort((a, b) => a - b);
+    log.push(`${vp.label} S00 live sort pacing: ${s.length} frames, ${pace.draws} canvas draws, p50 ${s[Math.floor(s.length / 2)]?.toFixed(1)}ms p95 ${s[Math.floor(s.length * 0.95)]?.toFixed(1)}ms (headless Chromium ${process.platform}, DPR 1, renderer: ${renderer})`);
+    await live.close();
 
     await hook(page, "jumpTo", ["eight-billion", 0.6]); await page.waitForTimeout(700); await shot("02-s01-p60");
 

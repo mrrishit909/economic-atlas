@@ -32,6 +32,19 @@ test("intro: SKIP visible at once, nav enters on skip, Esc/wheel complete it", a
   await page.waitForFunction(() => (window as unknown as { __eca: { debug: () => { introDone: boolean } } }).__eca.debug().introDone, null, { timeout: 5000 });
 });
 
+test("intro plays once per session; REPLAY plays it again and completes", async ({ page }) => {
+  type I = { __eca: { debug: () => { introDone: boolean }; introStats: () => { playing: boolean } } };
+  await page.goto("");
+  await page.waitForFunction(() => (window as unknown as I).__eca.debug().introDone && !(window as unknown as I).__eca.introStats().playing, null, { timeout: 15000 });
+  await page.reload();
+  await page.waitForFunction(() => (window as unknown as I).__eca?.debug, null);
+  expect(await page.evaluate(() => (window as unknown as I).__eca.introStats().playing)).toBe(false);
+  await page.waitForFunction(() => (window as unknown as I).__eca.debug().introDone, null, { timeout: 5000 });
+  await page.locator("button:visible", { hasText: "REPLAY INTRO" }).first().click();
+  expect(await page.evaluate(() => (window as unknown as I).__eca.introStats().playing)).toBe(true);
+  await page.waitForFunction(() => !(window as unknown as I).__eca.introStats().playing && (window as unknown as I).__eca.debug().introDone, null, { timeout: 15000 });
+});
+
 test("zero external requests while visiting every scene", async ({ page }) => {
   const external: string[] = [];
   page.on("request", (r) => { if (!isLocal(r.url())) external.push(r.url()); });

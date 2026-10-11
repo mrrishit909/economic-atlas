@@ -9,9 +9,7 @@
 import { grainIndex, seamMask, vogelX, vogelY, type Layout } from "./layout";
 import { makeState, type SeedState } from "../gl/transition";
 
-// ?seam=<r> overrides the seam radius for evidence comparison only (a parameter ruling, VISUAL_DESIGN section 0 fixes 0.30)
-const seamQ = typeof location === "undefined" ? null : /[?&]seam=(0\.\d+)/.exec(location.search);
-export const R_IN = 0.4, R_SEAM = seamQ ? Number(seamQ[1]) : 0.3, R_DUST = 0.25;
+export const R_IN = 0.4, R_SEAM = 0.3, R_DUST = 0.25;
 
 export interface PeopleOpts {
   seams: boolean;
