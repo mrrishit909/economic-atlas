@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-motion="on">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23FFE6C9'/%3E%3Ccircle cx='22' cy='13' r='2.6' fill='%23FFB26B'/%3E%3Ccircle cx='11' cy='21' r='2.6' fill='%23FF6A2B'/%3E%3Ccircle cx='9' cy='11' r='2.3' fill='%23FF2F7A'/%3E%3Ccircle cx='22' cy='23' r='2.3' fill='%23C21FD6'/%3E%3Ccircle cx='17' cy='6' r='2' fill='%239A3CE0'/%3E%3C/svg%3E" />
+    <title>Economic Atlas</title>
+    <meta name="description" content="Economic Atlas: the world's people as one disc of grains, one per million people, sorted by GDP per capita (PPP) from World Bank World Development Indicators." />
+    <!-- only the display face the LCP headline uses is preloaded (QA L6) -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/economic-atlas/assets/newsreader-opsz-400-site-D_4tepeP.woff2" />
+    <script>
+      // Before first paint: motion preference (OS or in-site session override) and gallery flag.
+      (function () {
+        var d = document.documentElement, o = null;
+        try { o = sessionStorage.getItem("eca.motion"); } catch (e) {}
+        var rm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+        d.setAttribute("data-motion", o === "on" || o === "off" ? o : rm ? "off" : "on");
+        if (/[?&]gallery(=|&|$)/.test(location.search)) d.classList.add("is-gallery");
+      })();
+    </script>
+    <script type="module" crossorigin src="/economic-atlas/assets/index-CdF3FSp3.js"></script>
+    <link rel="stylesheet" crossorigin href="/economic-atlas/assets/index-jsKz-zDy.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#chapters" onclick="event.preventDefault(); var n = document.querySelector('.nav-bar.is-fixed .nav__item'); var m = document.querySelector('.nav-pill.is-fixed .menu-pill'); (n && n.offsetParent ? n : m) && (n && n.offsetParent ? n : m).focus();">SKIP TO CHAPTERS</a>
+    <main id="main">
+      <!-- S00/S01 is static HTML so the LCP headline paints before any JS (MOTION_SYSTEM 2). Layer order: canvas, scrim, h1. -->
+      <section id="eight-billion" class="track track--pinned scene scene-eb" aria-labelledby="hero-title" style="--track-h: 200vh" data-static-track>
+        <div class="stage">
+          <div class="stage-content" data-stage-content>
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <h1 id="hero-title" class="hero-title wr" data-hero data-scene-heading tabindex="-1"><span class="wr-word">The</span> <span class="wr-word">world,</span> <span class="wr-word">explained</span> <span class="wr-word">through</span> <span class="wr-word">economic</span> <span class="wr-word">forces.</span></h1>
+            <p class="sr-only">Animated introduction: the world's people drawn as about eight thousand grains, one per million people, first mixed together, then sorted by the income of their country so the highest incomes gather at the centre and the lowest at the edge. Each country becomes one patch of grains.</p>
+            <div id="eb-portal"></div>
+          </div>
+        </div>
+      </section>
+      <div id="root"></div>
+    </main>
+  </body>
+</html>
