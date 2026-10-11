@@ -33,7 +33,7 @@ def test_half_life_formula():
 @pytest.mark.slow
 def test_published_records_sane(art):
     beta = art("convergence")["beta"]
-    assert len(beta) == 36
+    assert len(beta) == 42
     for b in beta:
         assert b["ci95"][0] <= b["beta"] <= b["ci95"][1]
         assert abs(b["beta"]) < 5 and b["n"] >= 30

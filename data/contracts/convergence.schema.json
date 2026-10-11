@@ -115,7 +115,8 @@
        "tercile_low",
        "tercile_mid",
        "tercile_high",
-       "pop_weighted"
+       "pop_weighted",
+       "pop_weighted_ex_chn_ind"
       ]
      },
      "se_hc3": {
@@ -151,7 +152,7 @@
     ],
     "type": "object"
    },
-   "minItems": 6,
+   "minItems": 7,
    "type": "array"
   },
   "copy": {

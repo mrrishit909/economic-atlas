@@ -28,7 +28,7 @@ Tags: OBSERVED / DERIVED / PREDICTED / SIMULATED / SYNTHETIC (SIMULATED and SYNT
 | `panel_structure.json` | country x year | agr/ind/srv shares, inflation, trade_open, 5 export shares, `hhi5` | OBSERVED/DERIVED | structure, trade |
 | `coverage.json` | indicator x year; indicator x country | n countries per year, first/last/n_obs per country, missing share by region, latest-year rule | DERIVED | coverage panel, empty states |
 | `rankings.json` | indicator x snapshot year | ordered iso3 among countries with data, n | DERIVED | radial field order |
-| `convergence.json` | regression / year | beta records (primary, sensitivity incl. territory changes, initial-income terciles, pop-weighted) with HC3 and bootstrap CIs, scatter points; sigma series (unbalanced, balanced, pop-weighted) per basis | DERIVED | convergence chapter |
+| `convergence.json` | regression / year | beta records (primary, sensitivity incl. territory changes, initial-income terciles, pop-weighted, pop-weighted without CHN and IND) with HC3 and bootstrap CIs, scatter points; sigma series (unbalanced, balanced, pop-weighted) per basis | DERIVED | convergence chapter |
 | `clusters.json` | country | standardized feature table definition, k-means k=2..8 with silhouette, chosen k, seed stability (ARI), hierarchical Ward comparison, assignments, centroids | DERIVED/PREDICTED | peer groups |
 | `correlations.json` | indicator pair | Spearman rho, n, 95% CI, with `not_causal` copy | DERIVED | relationships |
 | `narratives.json` | country, template | templates with required placeholders; per-country numeric inputs; reference renderings for parity tests | DERIVED | evidence narratives |

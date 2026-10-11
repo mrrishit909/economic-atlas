@@ -234,12 +234,17 @@ def run() -> dict:
     bk = lambda s: next(b for b in beta if b["id"] == s)
     b90, bc60 = bk(f"gdppc_ppp_1990_{E}_primary"), bk(f"gdppc_const_1960_{Ec}_primary")
     bw90 = bk(f"gdppc_ppp_1990_{E}_pop_weighted")
+    bx90 = bk(f"gdppc_ppp_1990_{E}_pop_weighted_ex_chn_ind")
+    pop0 = p.at("population", 1990)
+    ok90 = np.isfinite(p.at("gdppc_ppp", 1990)) & np.isfinite(p.at("gdppc_ppp", E)) & np.isfinite(pop0)
+    chn_ind_w = float(100 * pop0[[p.iso3.index("CHN"), p.iso3.index("IND")]].sum() / pop0[ok90].sum())
     sg = {s["id"]: s for s in sigma}
     su, sw = sg[f"gdppc_ppp_1990_{E}_unbalanced"], sg[f"gdppc_ppp_1990_{E}_pop_weighted"]
     pop_latest = np.nansum(p.at("population", ly_all["population"][0]))
     miss_all = 1 - np.mean([np.isfinite(p.a[i][:, c0:]).mean() for i in IDS])
     lr_m = lr["M"]
-    ratio = lambda j: float(np.nanmax(lr_m[:, j]) / np.nanmin(lr_m[:, j]))
+    both = np.isfinite(lr_m[:, 0]) & np.isfinite(lr_m[:, -1])  # same countries in both years
+    ratio = lambda j: float(np.nanmax(lr_m[both, j]) / np.nanmin(lr_m[both, j]))
     facts = dict(
         wb_entities=F(len(ents), "entities", OBS), aggregates=F(len(aggs), "entities", OBS), countries=F(len(p.iso3), "countries", OBS), indicators=F(len(IDS), "series", DER),
         year_first=F(YEAR_PANEL0, "year", OBS), year_last=F(int(p.years[-1]), "year", OBS),
@@ -249,6 +254,9 @@ def run() -> dict:
         world_pop_billion_latest=F(pop_latest / 1e9, "billion persons", DER, "sum over the 217 countries, not the WB World aggregate"),
         beta_ppp_1990_beta=F(b90["beta"], "pp per year per ln unit", DER), beta_ppp_1990_ci_low=F(b90["ci95"][0], "pp per year per ln unit", DER), beta_ppp_1990_ci_high=F(b90["ci95"][1], "pp per year per ln unit", DER),
         beta_ppp_1990_n=F(b90["n"], "countries", DER), beta_ppp_1990_popweighted=F(bw90["beta"], "pp per year per ln unit", DER),
+        beta_ppp_1990_popweighted_ci_low=F(bw90["ci95"][0], "pp per year per ln unit", DER), beta_ppp_1990_popweighted_ci_high=F(bw90["ci95"][1], "pp per year per ln unit", DER),
+        beta_ppp_1990_popweighted_ex_chn_ind=F(bx90["beta"], "pp per year per ln unit", DER, f"refit without CHN and IND, n {bx90['n']}, CI {bx90['ci95'][0]:.2f} to {bx90['ci95'][1]:.2f}"),
+        beta_ppp_1990_popweighted_chn_ind_weight_pct=F(chn_ind_w, "percent", DER, "share of 1990 population weight held by CHN and IND in the weighted sample"),
         beta_const_1960_beta=F(bc60["beta"], "pp per year per ln unit", DER), beta_const_1960_ci_low=F(bc60["ci95"][0], "pp per year per ln unit", DER), beta_const_1960_ci_high=F(bc60["ci95"][1], "pp per year per ln unit", DER),
         beta_const_1960_n=F(bc60["n"], "countries", DER),
         sigma_ppp_1990=F(su["sd_log"][0], "sd of ln income", DER), sigma_ppp_latest=F(su["sd_log"][-1], "sd of ln income", DER),
@@ -258,7 +266,9 @@ def run() -> dict:
         cluster_complete_cases=F(clu["inclusion"]["complete_cases"], "countries", DER), corr_pairs=F(len(cor["pairs"]), "pairs", DER),
         hhi5_countries_latest=F(ly_all["hhi5"][1], "countries", DER, f"year {ly_all['hhi5'][0]}"), cells_missing_pct_panel=F(100 * miss_all, "percent", DER, "mean over the 17 series, 217 countries, 1990 to last year"),
         territory_flagged_countries=F(len(BREAKS), "countries", DER),
-        longrun_gdppc_ratio_top_bottom_1820=F(ratio(0), "ratio", DER, f"max/min over {lr['n'][0]} countries with data"), longrun_gdppc_ratio_top_bottom_2022=F(ratio(len(longrun.BENCH) - 1), "ratio", DER, f"max/min over {lr['n'][-1]} countries"))
+        longrun_balanced_n=F(int(both.sum()), "countries", DER, "countries observed in both 1820 and 2022"),
+        longrun_gdppc_ratio_balanced_1820=F(ratio(0), "ratio", DER, "max/min over the same countries as 2022"),
+        longrun_gdppc_ratio_balanced_2022=F(ratio(len(longrun.BENCH) - 1), "ratio", DER, "max/min over the same countries as 1820"))
     out["facts"] = dict(schema_version="v1", tags={"facts": "OBSERVED/DERIVED/PREDICTED"}, **facts, strings=dict(
         title="The World, Explained Through Economic Forces", attribution_wdi=ATTR_WDI, attribution_owid=ATTR_OWID,
         vintage_label=f"World Bank WDI vintage {files['NY.GDP.PCAP.PP.KD']['lastupdated']}, retrieved {raw_mf['retrieved_at'][:10]}",

@@ -53,7 +53,7 @@ def panel(ids):
 
 CI = arr(N, 2)
 BETA = obj({
-    "id": S, "indicator": S, "price_basis": BASIS, "tag": TAG, "sample": {"enum": ["primary", "sensitivity_all", "tercile_low", "tercile_mid", "tercile_high", "pop_weighted"]},
+    "id": S, "indicator": S, "price_basis": BASIS, "tag": TAG, "sample": {"enum": ["primary", "sensitivity_all", "tercile_low", "tercile_mid", "tercile_high", "pop_weighted", "pop_weighted_ex_chn_ind"]},
     "start": I, "end": I, "n": I, "beta": N, "se_hc3": N, "ci95": CI, "ci95_boot": CI, "intercept": N, "r2": N, "p_value": N,
     "half_life_years": NN, "excluded_territory_changes": arr(ISO3), "dropped_no_start_data": I,
     "points": obj({"iso3": arr(ISO3), "x": arr(N), "y": arr(N), "weight": arr(NN)}, ["iso3", "x", "y"])}, req=[
@@ -76,12 +76,12 @@ SCHEMAS = {
         **{k: tv(N) for k in [
             "wb_entities", "aggregates", "countries", "indicators", "year_first", "year_last", "gdppc_ppp_countries_latest",
             "gdppc_ppp_latest_year", "gdppc_ppp_top_value", "gdppc_ppp_median", "gdppc_ppp_p90_p10_ratio", "gdppc_ppp_bottom_value",
-            "world_pop_billion_latest", "beta_ppp_1990_beta", "beta_ppp_1990_ci_low", "beta_ppp_1990_ci_high", "beta_ppp_1990_n", "beta_ppp_1990_popweighted",
+            "world_pop_billion_latest", "beta_ppp_1990_beta", "beta_ppp_1990_ci_low", "beta_ppp_1990_ci_high", "beta_ppp_1990_n", "beta_ppp_1990_popweighted", "beta_ppp_1990_popweighted_ci_low", "beta_ppp_1990_popweighted_ci_high", "beta_ppp_1990_popweighted_ex_chn_ind", "beta_ppp_1990_popweighted_chn_ind_weight_pct",
             "beta_const_1960_beta", "beta_const_1960_ci_low", "beta_const_1960_ci_high", "beta_const_1960_n",
             "sigma_ppp_1990", "sigma_ppp_latest", "sigma_ppp_popweighted_1990", "sigma_ppp_popweighted_latest",
             "cluster_k", "cluster_silhouette", "cluster_stability_ari", "cluster_hier_ari", "cluster_complete_cases",
             "corr_pairs", "hhi5_countries_latest", "cells_missing_pct_panel", "territory_flagged_countries",
-            "longrun_gdppc_ratio_top_bottom_1820", "longrun_gdppc_ratio_top_bottom_2022"]},
+            "longrun_balanced_n", "longrun_gdppc_ratio_balanced_1820", "longrun_gdppc_ratio_balanced_2022"]},
         "strings": obj({k: S for k in ("title", "attribution_wdi", "attribution_owid", "vintage_label", "not_causal", "not_advice", "ppp_vs_nominal", "hhi_caveat", "imf_excluded")})}),
     "indicators": top("indicators", {
         "indicators": arr(obj({
@@ -111,7 +111,7 @@ SCHEMAS = {
         "indicators": obj({i: {"type": "object", "additionalProperties": obj({"n": I, "year": I, "order": arr(ISO3)})} for i in IDS})}),
     "convergence": top("convergence", {
         "method": S, "copy": obj({"not_causal": S, "absolute_only": S, "interpretation": S}),
-        "beta": arr(BETA, lo=6), "sigma": arr(SIGMA, lo=3)}),
+        "beta": arr(BETA, lo=7), "sigma": arr(SIGMA, lo=3)}),
     "clusters": top("clusters", {
         "method": S, "features": arr(obj({"id": S, "label": S, "transform": S, "source": S, "mean": N, "sd": N, "price_basis": BASIS})),
         "feature_window": obj({"level": arr(I, 2), "growth": arr(I, 2), "min_obs": I}),

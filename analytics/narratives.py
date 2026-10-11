@@ -32,7 +32,7 @@ TEMPLATES = [
     dict(id="concentration", requires=["name", "hhi5_latest", "hhi5_year"],
          text="{name}'s coarse export concentration index across five broad merchandise groups was {hhi5_latest|d2} in {hhi5_year} (0.2 means evenly spread, 1 means a single group). It understates product-level concentration."),
     dict(id="peers", requires=["name", "cluster", "cluster_k", "cluster_signature", "cluster_size"],
-         text="On standardized indicators {name} falls in peer group {cluster|n0} of {cluster_k|n0} ({cluster_signature}), shared with {cluster_size|n0} countries in all. Peer groups are descriptive, not causal."),
+         text="On standardized indicators {name} falls in peer group {cluster|n0} of {cluster_k|n0}, a group of {cluster_size|n0} countries whose average profile is {cluster_signature}. Individual members can differ from that average; peer groups are descriptive, not causal."),
 ]
 _PH = re.compile(r"\{(\w+)(?:\|(\w+))?\}")
 

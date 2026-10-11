@@ -242,6 +242,102 @@
    ],
    "type": "object"
   },
+  "beta_ppp_1990_popweighted_chn_ind_weight_pct": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_popweighted_ci_high": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_popweighted_ci_low": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "beta_ppp_1990_popweighted_ex_chn_ind": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
   "cells_missing_pct_panel": {
    "additionalProperties": true,
    "properties": {
@@ -626,7 +722,7 @@
    ],
    "type": "object"
   },
-  "longrun_gdppc_ratio_top_bottom_1820": {
+  "longrun_balanced_n": {
    "additionalProperties": true,
    "properties": {
     "note": {
@@ -650,7 +746,31 @@
    ],
    "type": "object"
   },
-  "longrun_gdppc_ratio_top_bottom_2022": {
+  "longrun_gdppc_ratio_balanced_1820": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "longrun_gdppc_ratio_balanced_2022": {
    "additionalProperties": true,
    "properties": {
     "note": {
@@ -967,6 +1087,10 @@
   "beta_ppp_1990_ci_high",
   "beta_ppp_1990_n",
   "beta_ppp_1990_popweighted",
+  "beta_ppp_1990_popweighted_ci_low",
+  "beta_ppp_1990_popweighted_ci_high",
+  "beta_ppp_1990_popweighted_ex_chn_ind",
+  "beta_ppp_1990_popweighted_chn_ind_weight_pct",
   "beta_const_1960_beta",
   "beta_const_1960_ci_low",
   "beta_const_1960_ci_high",
@@ -984,8 +1108,9 @@
   "hhi5_countries_latest",
   "cells_missing_pct_panel",
   "territory_flagged_countries",
-  "longrun_gdppc_ratio_top_bottom_1820",
-  "longrun_gdppc_ratio_top_bottom_2022",
+  "longrun_balanced_n",
+  "longrun_gdppc_ratio_balanced_1820",
+  "longrun_gdppc_ratio_balanced_2022",
   "strings"
  ],
  "title": "facts",

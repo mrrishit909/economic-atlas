@@ -85,6 +85,8 @@ def beta_records(p: Panel, ind: str, start: int, end: int, tag: str = "DERIVED")
         out.append(rec(name, m))
     wm = prim & np.isfinite(pop0)
     out.append(rec("pop_weighted", wm, w=pop0, points=True))
+    ex = np.array([c not in ("CHN", "IND") for c in p.iso3])
+    out.append(rec("pop_weighted_ex_chn_ind", wm & ex, w=pop0))  # how much the two largest weights drive the weighted fit
     return out
 
 
