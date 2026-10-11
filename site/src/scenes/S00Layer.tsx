@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useArtifact } from "../data/useArtifact";
-import { FACTS, INDICATORS, META, PANEL, SEED_LATEST } from "../data/artifacts";
+import { FACTS, INDICATORS, META, SEED_LATEST } from "../data/artifacts";
 import { S00 } from "../data/copy";
 import { HonestyChip } from "../components/HonestyChip";
 import { Legend } from "../components/Legend";
@@ -37,7 +37,6 @@ export function S00Layer({ introPlaying }: { introPlaying: boolean }) {
   const [f] = useArtifact(FACTS, false);
   const [m] = useArtifact(META, false);
   const [lay, retryLay] = useArtifact(SEED_LATEST, false);
-  const [pan, retryPan] = useArtifact(PANEL, false);
   const [ind, retryInd] = useArtifact(INDICATORS, false);
   const fade = useRef<HTMLDivElement>(null);
   const kicker = useRef<HTMLParagraphElement>(null);
@@ -77,7 +76,7 @@ export function S00Layer({ introPlaying }: { introPlaying: boolean }) {
           {edges ? <Legend edges={edges.bins} labels={edges.edge_labels} unit={S00.legendUnit} note={S00.legendNote} /> : null}
         </div>
         <div className="s00-status">
-          <DiscStatus items={[["seedhead/gdppc_ppp_latest.json", lay, retryLay], ["panel_income.json", pan, retryPan], ["indicators.json", ind, retryInd]]} />
+          <DiscStatus items={[["seedhead/gdppc_ppp_latest.json", lay, retryLay], ["indicators.json", ind, retryInd]]} />
         </div>
       </div>
       <p ref={kicker} className="s01-kicker scene-kicker" style={{ opacity: 0 }}>S01 · EIGHT BILLION · STATEMENT AND CARDS BUILT IN STAGE B</p>

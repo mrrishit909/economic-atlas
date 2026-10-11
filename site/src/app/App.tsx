@@ -42,16 +42,16 @@ export function App() {
     return el ? registerTrack("eight-billion", el, SCENES[0]!.landing) : undefined;
   }, []);
   useEffect(() => {
-    // first paint (MOTION_SYSTEM 9.3): facts, meta, countries, the latest layout; then colours (deviation: values are not in DR-1)
-    for (const s of [FACTS, META, COUNTRIES, SEED_LATEST]) getStore(s as never).prefetch();
-    for (const s of [PANEL, INDICATORS]) getStore(s as never).prefetch();
+    // first paint (MOTION_SYSTEM 9.3): facts, meta, countries, the latest layout (colours from its DR-9 value_bin),
+    // plus indicators.json (3.4 KB gz) for the legend's edge labels
+    for (const s of [FACTS, META, COUNTRIES, SEED_LATEST, INDICATORS]) getStore(s as never).prefetch();
     startDirector(gl.current!, flat.current!, labels.current!, tip.current!, glowRef.current!);
     resolveInitialHash();
   }, []);
   useEffect(() => {
     // idle after the intro: the 36-year layouts and the convergence file (S03a, S03b)
     if (!intro.navIn) return;
-    const go = () => { getStore(SEED_YEARS).prefetch(); getStore(CONVERGENCE).prefetch(); };
+    const go = () => { getStore(SEED_YEARS).prefetch(); getStore(CONVERGENCE).prefetch(); getStore(PANEL).prefetch(); };
     const ric = (window as { requestIdleCallback?: (f: () => void) => number }).requestIdleCallback;
     if (ric) ric(go); else go();
   }, [intro.navIn]);

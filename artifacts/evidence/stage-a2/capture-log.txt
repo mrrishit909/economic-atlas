@@ -1,0 +1,28 @@
+768x1024/01-s00-t0600.png
+768x1024/01-s00-t1300.png
+768x1024/01-s00-t2500.png
+768x1024/01-s00-t3600.png
+768x1024/01-s00-t4600-end.png
+768x1024 S00 radius min 620.0 (end 620.0, c 300,420) monotonic true
+768x1024 S00 live sort pacing: 8 frames, 9 canvas draws, p50 200.0ms p95 266.7ms (headless Chromium darwin, DPR 1, renderer: ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver))
+768x1024/02-s01-p60.png
+768x1024/03-s03a-1990.png
+768x1024/03-s03a-2008.png
+768x1024/03-s03a-2025-follow-ind.png
+768x1024/04-s03b-people-2025.png
+768x1024 S03b p 0.2: mode people year 2025 seeds 8005 R 304.2
+768x1024/04-s03b-countries-2025.png
+768x1024 S03b p 0.43: mode countries year 2025 seeds 185 R 304.2
+768x1024/04-s03b-countries-1990.png
+768x1024 S03b p 0.6: mode countries year 1990 seeds 185 R 245.2
+768x1024/04-s03b-people-2025-setaside.png
+768x1024 S03b p 0.93: mode people year 2025 seeds 8005 R 304.2
+768x1024/05-menu-open.png
+768x1024/06-state-error.png
+768x1024/06-state-after-retry.png
+768x1024/07-nogl-s00.png
+768x1024/07-nogl-s03b.png
+768x1024 external requests: none
+768x1024/08-reduced-s00.png
+768x1024/08-reduced-s03a.png
+768x1024/08-reduced-s03b.png

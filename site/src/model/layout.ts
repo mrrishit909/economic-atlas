@@ -21,6 +21,8 @@ export interface Layout {
   peopleMillions: number;
   noData: NoData[];
   medianPerson: { iso3: string; value: number };
+  /** DR-9 colour bin per country (0..6), when the layout file carries value_bin */
+  bins?: Map<string, number>;
 }
 
 export function vogelX(i: number) { return Math.sqrt(i + 0.5) * Math.cos(i * GOLDEN); }

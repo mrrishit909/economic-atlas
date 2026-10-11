@@ -18,7 +18,7 @@ export interface Country { iso3: string; name: string; region: string }
 export interface Countries { countries: Country[] }
 export interface SeedheadYear {
   year: number; order: string[]; counts: number[]; area_scale: number[]; owner: string; slots: number;
-  people_millions: number; n: number; connectivity: { min: number; mean: number; below_95: number }; no_data: { iso3: string; population: number }[]; median_person: { iso3: string; value: number };
+  people_millions: number; n: number; value_bin?: string; rank_order?: { rank_radius_spearman: number; max_radius_deviation: number; solved_cold: boolean }; connectivity: { min: number; mean: number; below_95: number }; no_data: { iso3: string; population: number }[]; median_person: { iso3: string; value: number };
 }
 export interface Seedhead { indicator: string; price_basis: string | null; seed: number; tags: Record<string, string>; years: SeedheadYear[] }
 export interface Series { unit: string; price_basis: string | null; values: (number | null)[][] }
@@ -67,7 +67,10 @@ export const CONVERGENCE: ArtifactSpec<Convergence> = {
 };
 
 export function toLayout(y: SeedheadYear): Layout {
+  // DR-9: value_bin is one uint8 per country aligned with order (bins from the legend's own edges)
+  const vb = y.value_bin ? decodeOwner(y.value_bin) : null;
   return {
+    bins: vb ? new Map(y.order.map((iso, i) => [iso, vb[i]!])) : undefined,
     year: y.year, order: y.order, counts: y.counts, areaScale: y.area_scale, owner: decodeOwner(y.owner), slots: y.slots,
     peopleMillions: y.people_millions, noData: y.no_data, medianPerson: y.median_person,
   };

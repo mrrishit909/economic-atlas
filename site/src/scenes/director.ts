@@ -65,6 +65,8 @@ const D = {
 export const dataView = D;
 
 function binsFor(year: number): Map<string, number> | null {
+  const own = layoutFor(year)?.bins;
+  if (own) return own; // DR-9: from the layout file itself, no panel needed
   const hit = D.bins.get(year);
   if (hit) return hit;
   if (!D.panel || !D.edges) return null;

@@ -209,3 +209,4 @@ html[data-motion="off"] .scene-eb .stage-content { height: 100dvh; }
   .col .scene-footer { left: 12px; right: 12px; top: 96px; bottom: auto; width: auto; }
   .scene-footer p { font-size: 10px; }
 }
+.ledger .chip, .years-readout .chip { white-space: normal; height: auto; line-height: 1.3; }

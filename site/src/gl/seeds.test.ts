@@ -127,3 +127,31 @@ describe("transitions: straight lines, switched colour, keyed coalesce", () => {
     expect(burst.key.length).toBe(L.slots);
   });
 });
+
+describe("DR-9 colour bins and the rank-order bound (P05-DATA-003)", () => {
+  const ind = read<{ indicators: { id: string; display: { bins: number[] } }[] }>("indicators.json").indicators.find((i) => i.id === "gdppc_ppp")!;
+  const valueAt = (iso: string, year: number) => panel.series.gdppc_ppp!.values[panel.iso3.indexOf(iso)]![panel.years.indexOf(year)]!;
+  const has = years.years.every((y) => y.value_bin);
+  it.skipIf(!has)("value_bin equals the legend bin of the published value, every country, every year", () => {
+    for (const y of years.years) {
+      const L = toLayout(y);
+      for (const iso of L.order) {
+        const v = valueAt(iso, y.year), b = ind.display.bins.filter((e) => e <= v).length;
+        expect(L.bins!.get(iso), `${iso} ${y.year}`).toBe(b);
+      }
+    }
+  });
+  it.skipIf(!years.years.every((y) => y.rank_order))("rank order: Spearman(rank, centroid radius) recomputed on the TS lattice matches the published value and is >= 0.85", () => {
+    const rank = (a: number[]) => { const o = a.map((v, i) => [v, i] as const).sort((p, q) => p[0] - q[0]); const r = new Array<number>(a.length); o.forEach(([, i], k) => (r[i] = k)); return r; };
+    for (const y of [...years.years, latest.years[0]!]) {
+      const L = toLayout(y), sum = new Float64Array(L.order.length);
+      for (let i = 0; i < L.slots; i++) sum[L.owner[i]!]! += Math.hypot(vogelX(i), vogelY(i));
+      const cr = [...sum].map((s, c) => s / L.counts[c]! / Math.sqrt(L.slots));
+      const rr = rank(cr), n = cr.length;
+      const rho = 1 - (6 * rr.reduce((a, r, i) => a + (r - i) ** 2, 0)) / (n * (n * n - 1));
+      expect(rho).toBeCloseTo(y.rank_order!.rank_radius_spearman, 2);
+      expect(rho).toBeGreaterThanOrEqual(0.85);
+      if (y === latest.years[0]) for (let c = 0; c < 10; c++) expect(cr[c]).toBeLessThanOrEqual(0.25);
+    }
+  });
+});
