@@ -159,7 +159,16 @@
     "cophenetic_corr": {
      "type": "number"
     },
+    "disagree_count": {
+     "type": "integer"
+    },
     "labels": {
+     "items": {
+      "type": "integer"
+     },
+     "type": "array"
+    },
+    "labels_matched": {
      "items": {
       "type": "integer"
      },
@@ -174,6 +183,9 @@
     },
     "linkage": {
      "type": "string"
+    },
+    "match_rule": {
+     "type": "string"
     }
    },
    "required": [
@@ -181,6 +193,9 @@
     "cophenetic_corr",
     "ari_vs_kmeans",
     "labels",
+    "labels_matched",
+    "disagree_count",
+    "match_rule",
     "leaf_order"
    ],
    "type": "object"

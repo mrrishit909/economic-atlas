@@ -15,6 +15,70 @@
        "null"
       ]
      },
+     "display": {
+      "additionalProperties": true,
+      "properties": {
+       "bins": {
+        "items": {
+         "type": "number"
+        },
+        "maxItems": 6,
+        "minItems": 6,
+        "type": "array"
+       },
+       "bins_rule": {
+        "type": "string"
+       },
+       "core_reads": {
+        "type": "string"
+       },
+       "edge_labels": {
+        "items": {
+         "type": "string"
+        },
+        "maxItems": 6,
+        "minItems": 6,
+        "type": "array"
+       },
+       "indexable": {
+        "type": "boolean"
+       },
+       "pooled_n": {
+        "type": "integer"
+       },
+       "pooled_years": {
+        "items": {
+         "type": "integer"
+        },
+        "maxItems": 2,
+        "minItems": 2,
+        "type": "array"
+       },
+       "scale": {
+        "enum": [
+         "log",
+         "linear",
+         "diverging",
+         "asinh"
+        ]
+       },
+       "short_label": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "scale",
+       "bins",
+       "edge_labels",
+       "short_label",
+       "indexable",
+       "core_reads",
+       "bins_rule",
+       "pooled_years",
+       "pooled_n"
+      ],
+      "type": "object"
+     },
      "ever_observed_countries": {
       "type": "integer"
      },
@@ -124,7 +188,8 @@
      "last_year",
      "latest_year",
      "latest_year_n",
-     "ever_observed_countries"
+     "ever_observed_countries",
+     "display"
     ],
     "type": "object"
    },

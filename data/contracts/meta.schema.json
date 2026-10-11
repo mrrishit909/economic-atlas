@@ -100,6 +100,9 @@
   "schema_version": {
    "const": "v1"
   },
+  "seedhead_bytes": {
+   "type": "object"
+  },
   "sources": {
    "items": {
     "additionalProperties": true,

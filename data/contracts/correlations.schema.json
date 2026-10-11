@@ -9,6 +9,15 @@
    "minItems": 5,
    "type": "array"
   },
+  "iso3": {
+   "items": {
+    "pattern": "^[A-Z]{3}$",
+    "type": "string"
+   },
+   "maxItems": 217,
+   "minItems": 217,
+   "type": "array"
+  },
   "method": {
    "type": "string"
   },
@@ -74,6 +83,12 @@
    "minProperties": 1,
    "type": "object"
   },
+  "transforms": {
+   "type": "object"
+  },
+  "values": {
+   "type": "object"
+  },
   "window": {
    "items": {
     "type": "integer"
@@ -90,7 +105,10 @@
   "window",
   "not_causal",
   "indicators",
-  "pairs"
+  "pairs",
+  "iso3",
+  "values",
+  "transforms"
  ],
  "title": "correlations",
  "type": "object"

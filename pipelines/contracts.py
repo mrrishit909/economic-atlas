@@ -56,9 +56,10 @@ BETA = obj({
     "id": S, "indicator": S, "price_basis": BASIS, "tag": TAG, "sample": {"enum": ["primary", "sensitivity_all", "tercile_low", "tercile_mid", "tercile_high", "pop_weighted", "pop_weighted_ex_chn_ind"]},
     "start": I, "end": I, "n": I, "beta": N, "se_hc3": N, "ci95": CI, "ci95_boot": CI, "intercept": N, "r2": N, "p_value": N,
     "half_life_years": NN, "excluded_territory_changes": arr(ISO3), "dropped_no_start_data": I,
-    "points": obj({"iso3": arr(ISO3), "x": arr(N), "y": arr(N), "weight": arr(NN)}, ["iso3", "x", "y"])}, req=[
+    "vcov_hc3": arr(arr(N, 2), 2), "x_domain": arr(N, 2),
+    "points": obj({"iso3": arr(ISO3), "x": arr(N), "y": arr(N), "weight": arr(NN), "population_start": arr(N)}, ["iso3", "x", "y", "population_start"])}, req=[
     "id", "indicator", "price_basis", "tag", "sample", "start", "end", "n", "beta", "se_hc3", "ci95", "ci95_boot", "intercept", "r2", "p_value", "half_life_years",
-    "excluded_territory_changes", "dropped_no_start_data"])
+    "excluded_territory_changes", "dropped_no_start_data", "vcov_hc3", "x_domain"])
 SIGMA = obj({"id": S, "indicator": S, "price_basis": BASIS, "tag": TAG, "sample": {"enum": ["unbalanced", "balanced", "pop_weighted"]},
              "years": arr(I, lo=2), "sd_log": arr(NN), "n": arr(I), "definition": S})
 NARR_IN = obj({k: NN for k in ["gdppc_ppp_latest", "gdppc_ppp_rank", "gdppc_ppp_n", "growth_cagr_1990", "growth_cagr_2000", "growth_cagr_2010", "growth_resid_2000"]}, req=[])
@@ -71,7 +72,7 @@ SCHEMAS = {
         "sources": arr(obj({"id": S, "publisher": S, "dataset": S, "url": S, "licence": S, "licence_url": S, "attribution": S, "role": S}), lo=2),
         "excluded_sources": arr(obj({"name": S, "reason": S}), lo=1),
         "latest_year_rule": obj({"text": S, "peak_window": arr(I, 2), "min_share_of_peak": N}),
-        "assumptions": arr(S, lo=1), "disclaimers": arr(S, lo=1), "artifact_tags": OBJ, "artifact_bytes": OBJ}),
+        "assumptions": arr(S, lo=1), "disclaimers": arr(S, lo=1), "artifact_tags": OBJ, "artifact_bytes": OBJ, "seedhead_bytes": OBJ}),
     "facts": top("facts", {
         **{k: tv(N) for k in [
             "wb_entities", "aggregates", "countries", "indicators", "year_first", "year_last", "gdppc_ppp_countries_latest",
@@ -81,13 +82,17 @@ SCHEMAS = {
             "sigma_ppp_1990", "sigma_ppp_latest", "sigma_ppp_popweighted_1990", "sigma_ppp_popweighted_latest",
             "cluster_k", "cluster_silhouette", "cluster_stability_ari", "cluster_hier_ari", "cluster_complete_cases",
             "corr_pairs", "hhi5_countries_latest", "cells_missing_pct_panel", "territory_flagged_countries",
-            "longrun_balanced_n", "longrun_gdppc_ratio_balanced_1820", "longrun_gdppc_ratio_balanced_2022"]},
+            "gdppc_ppp_top_bottom_ratio", "gdppc_ppp_people_with_data_billion", "gdppc_ppp_nodata_countries", "gdppc_ppp_nodata_people_billion", "median_person_gdppc_ppp",
+            "median_person_gdppc_ppp_1990", "seedhead_slots_1990", "seedhead_slots_latest", "ppp_const_rank_rho", "longrun_balanced_n", "longrun_gdppc_ratio_balanced_1820", "longrun_gdppc_ratio_balanced_2022"]},
+        **{k: tv(S) for k in ["gdppc_ppp_top_iso3", "gdppc_ppp_bottom_iso3", "median_person_iso3", "median_person_iso3_1990"]},
         "strings": obj({k: S for k in ("title", "attribution_wdi", "attribution_owid", "vintage_label", "not_causal", "not_advice", "ppp_vs_nominal", "hhi_caveat", "imf_excluded")})}),
     "indicators": top("indicators", {
         "indicators": arr(obj({
             "id": {"enum": IDS}, "wdi_code": SN, "label": S, "unit": S, "quantity": S, "kind": {"enum": ["rate", "level", "share", "count", "index"]}, "price_basis": BASIS,
             "base_year": {"type": ["integer", "null"]}, "source_org": S, "licence": S, "attribution": S, "tag": TAG, "wdi_name": SN, "wdi_lastupdated": SN,
-            "first_year": I, "last_year": I, "latest_year": I, "latest_year_n": I, "ever_observed_countries": I}), 17)}),
+            "first_year": I, "last_year": I, "latest_year": I, "latest_year_n": I, "ever_observed_countries": I,
+            "display": obj({"scale": {"enum": ["log", "linear", "diverging", "asinh"]}, "bins": arr(N, 6), "edge_labels": arr(S, 6), "short_label": S, "indexable": B,
+                            "core_reads": S, "bins_rule": S, "pooled_years": arr(I, 2), "pooled_n": I})}), 17)}),
     "countries": top("countries", {
         "countries": arr(obj({"iso3": ISO3, "iso2": SN, "name": S, "region": S, "income_group": S, "income_group_note": S, "territory_flag": B, "in_maddison": B}), 217),
         "aggregates": arr(obj({"code": S, "name": S}), lo=1),
@@ -119,18 +124,21 @@ SCHEMAS = {
         "k_scan": arr(obj({"k": I, "silhouette": N, "inertia": N, "stability_ari": N, "min_cluster_size": I}), lo=5),
         "chosen_k": I, "choice_rule": S, "seeds": obj({"n": I, "base": I}),
         "stability": obj({"seed_ari_mean": N, "seed_ari_min": N, "bootstrap_ari_mean": N, "bootstrap_reps": I}),
-        "hierarchical": obj({"linkage": S, "cophenetic_corr": N, "ari_vs_kmeans": N, "labels": arr(I), "leaf_order": arr(ISO3)}),
+        "hierarchical": obj({"linkage": S, "cophenetic_corr": N, "ari_vs_kmeans": N, "labels": arr(I), "labels_matched": arr(I), "disagree_count": I, "match_rule": S, "leaf_order": arr(ISO3)}),
         "clusters": arr(obj({"id": I, "size": I, "centroid": OBJ, "centroid_z": OBJ, "signature": S, "members": arr(ISO3)})),
         "assignments": obj({"iso3": arr(ISO3), "cluster": arr(I), "silhouette": arr(N)}),
         "tag_detail": S}),
     "correlations": top("correlations", {
         "method": S, "window": arr(I, 2), "not_causal": S, "indicators": arr(S, lo=5),
-        "pairs": arr(obj({"a": S, "b": S, "n": I, "rho": N, "ci95": CI, "p_value": N, "money_bases": arr(S)}), lo=10)}),
+        "pairs": arr(obj({"a": S, "b": S, "n": I, "rho": N, "ci95": CI, "p_value": N, "money_bases": arr(S)}), lo=10),
+        "iso3": arr(ISO3, 217), "values": OBJ, "transforms": OBJ}),
     "narratives": top("narratives", {
         "templates": arr(obj({"id": S, "text": S, "requires": arr(S)}), lo=4),
         "periods": arr(arr(I, 2)),
         "countries": arr(obj({"iso3": ISO3, "inputs": OBJ}), 217),
-        "examples": arr(obj({"iso3": ISO3, "template": S, "text": S}), lo=3), "rule": S}),
+        "examples": arr(obj({"iso3": ISO3, "template": S, "text": S}), lo=3), "rule": S,
+        "pair_templates": arr(obj({"id": S, "text": S, "requires": arr(S)}), lo=5),
+        "pair_examples": arr(obj({"a": ISO3, "b": ISO3, "template": S, "text": S}), lo=15), "pair_rule": S}),
     "longrun": top("longrun", {
         "attribution": S, "price_basis": {"const": "maddison_intl_2011"}, "unit": S, "benchmark_years": arr(I, lo=5),
         "iso3": arr(ISO3), "values": arr(arr(NN)), "sigma": obj({"years": arr(I), "sd_log": arr(NN), "n": arr(I)}),
@@ -144,6 +152,19 @@ SCHEMAS = {
         "checks": arr(obj({"id": S, "description": S, "passed": B, "detail": S}), lo=6), "all_passed": B,
         "limitations_observed": arr(S, lo=1)}),
 }
+
+SCHEMAS["meta"]["required"].remove("seedhead_bytes")  # optional: present once the seedhead stage has run
+
+SEED_YEAR = obj({
+    "year": I, "n": I, "order": arr(ISO3), "counts": arr(I), "area_scale": arr(N), "owner": {"type": "string", "pattern": "^[A-Za-z0-9+/]*={0,2}$"},
+    "slots": I, "people_millions": N, "no_data": arr(obj({"iso3": ISO3, "population": N})),
+    "median_person": obj({"iso3": ISO3, "value": N}),
+    "connectivity": obj({"min": N, "mean": N, "below_95": I})})
+SCHEMAS["seedhead"] = top("seedhead", {
+    "indicator": S, "price_basis": BASIS, "lattice": obj({"rule": {"const": "vogel"}, "golden_angle_deg": N, "slot_area": N}), "unit_people": {"const": 1000000}, "seed": I,
+    "rounding": S, "method": S, "source": obj({"panel_income_sha256": S, "population_indicator": {"const": "population"}, "values_decimals": I}),
+    "years": arr(SEED_YEAR, lo=1)})
+# seedhead files live in site/public/data/seedhead/<indicator>.json (+ gdppc_ppp_latest.json), all validated by the one schema
 
 
 def run() -> None:

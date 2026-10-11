@@ -49,6 +49,66 @@
    "minItems": 3,
    "type": "array"
   },
+  "pair_examples": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "a": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+     },
+     "b": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+     },
+     "template": {
+      "type": "string"
+     },
+     "text": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "a",
+     "b",
+     "template",
+     "text"
+    ],
+    "type": "object"
+   },
+   "minItems": 15,
+   "type": "array"
+  },
+  "pair_rule": {
+   "type": "string"
+  },
+  "pair_templates": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "requires": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "text": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "text",
+     "requires"
+    ],
+    "type": "object"
+   },
+   "minItems": 5,
+   "type": "array"
+  },
   "periods": {
    "items": {
     "items": {
@@ -109,7 +169,10 @@
   "periods",
   "countries",
   "examples",
-  "rule"
+  "rule",
+  "pair_templates",
+  "pair_examples",
+  "pair_rule"
  ],
  "title": "narratives",
  "type": "object"

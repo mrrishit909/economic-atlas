@@ -11,7 +11,7 @@ from pipelines.validate_artifacts import run as validate_all
 
 def test_schemas_are_valid_and_complete():
     files = sorted(CONTRACTS.glob("*.schema.json"))
-    assert len(files) == 16
+    assert len(files) == 17
     for f in files:
         Draft202012Validator.check_schema(json.loads(f.read_text()))
 

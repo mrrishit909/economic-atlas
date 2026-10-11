@@ -1,0 +1,209 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": true,
+ "properties": {
+  "indicator": {
+   "type": "string"
+  },
+  "lattice": {
+   "additionalProperties": true,
+   "properties": {
+    "golden_angle_deg": {
+     "type": "number"
+    },
+    "rule": {
+     "const": "vogel"
+    },
+    "slot_area": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "rule",
+    "golden_angle_deg",
+    "slot_area"
+   ],
+   "type": "object"
+  },
+  "method": {
+   "type": "string"
+  },
+  "price_basis": {
+   "pattern": "^(current_usd|constant_usd_[0-9]{4}|ppp_constant_intl_[0-9]{4}|maddison_intl_2011)$",
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "rounding": {
+   "type": "string"
+  },
+  "schema_version": {
+   "const": "v1"
+  },
+  "seed": {
+   "type": "integer"
+  },
+  "source": {
+   "additionalProperties": true,
+   "properties": {
+    "panel_income_sha256": {
+     "type": "string"
+    },
+    "population_indicator": {
+     "const": "population"
+    },
+    "values_decimals": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "panel_income_sha256",
+    "population_indicator",
+    "values_decimals"
+   ],
+   "type": "object"
+  },
+  "tags": {
+   "additionalProperties": {
+    "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+    "type": "string"
+   },
+   "minProperties": 1,
+   "type": "object"
+  },
+  "unit_people": {
+   "const": 1000000
+  },
+  "years": {
+   "items": {
+    "additionalProperties": true,
+    "properties": {
+     "area_scale": {
+      "items": {
+       "type": "number"
+      },
+      "type": "array"
+     },
+     "connectivity": {
+      "additionalProperties": true,
+      "properties": {
+       "below_95": {
+        "type": "integer"
+       },
+       "mean": {
+        "type": "number"
+       },
+       "min": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "min",
+       "mean",
+       "below_95"
+      ],
+      "type": "object"
+     },
+     "counts": {
+      "items": {
+       "type": "integer"
+      },
+      "type": "array"
+     },
+     "median_person": {
+      "additionalProperties": true,
+      "properties": {
+       "iso3": {
+        "pattern": "^[A-Z]{3}$",
+        "type": "string"
+       },
+       "value": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "iso3",
+       "value"
+      ],
+      "type": "object"
+     },
+     "n": {
+      "type": "integer"
+     },
+     "no_data": {
+      "items": {
+       "additionalProperties": true,
+       "properties": {
+        "iso3": {
+         "pattern": "^[A-Z]{3}$",
+         "type": "string"
+        },
+        "population": {
+         "type": "number"
+        }
+       },
+       "required": [
+        "iso3",
+        "population"
+       ],
+       "type": "object"
+      },
+      "type": "array"
+     },
+     "order": {
+      "items": {
+       "pattern": "^[A-Z]{3}$",
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "owner": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+     },
+     "people_millions": {
+      "type": "number"
+     },
+     "slots": {
+      "type": "integer"
+     },
+     "year": {
+      "type": "integer"
+     }
+    },
+    "required": [
+     "year",
+     "n",
+     "order",
+     "counts",
+     "area_scale",
+     "owner",
+     "slots",
+     "people_millions",
+     "no_data",
+     "median_person",
+     "connectivity"
+    ],
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema_version",
+  "tags",
+  "indicator",
+  "price_basis",
+  "lattice",
+  "unit_people",
+  "seed",
+  "rounding",
+  "method",
+  "source",
+  "years"
+ ],
+ "title": "seedhead",
+ "type": "object"
+}

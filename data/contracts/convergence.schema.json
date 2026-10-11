@@ -69,6 +69,12 @@
         },
         "type": "array"
        },
+       "population_start": {
+        "items": {
+         "type": "number"
+        },
+        "type": "array"
+       },
        "weight": {
         "items": {
          "type": [
@@ -94,7 +100,8 @@
       "required": [
        "iso3",
        "x",
-       "y"
+       "y",
+       "population_start"
       ],
       "type": "object"
      },
@@ -128,6 +135,27 @@
      "tag": {
       "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
       "type": "string"
+     },
+     "vcov_hc3": {
+      "items": {
+       "items": {
+        "type": "number"
+       },
+       "maxItems": 2,
+       "minItems": 2,
+       "type": "array"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+     },
+     "x_domain": {
+      "items": {
+       "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
      }
     },
     "required": [
@@ -148,7 +176,9 @@
      "p_value",
      "half_life_years",
      "excluded_territory_changes",
-     "dropped_no_start_data"
+     "dropped_no_start_data",
+     "vcov_hc3",
+     "x_domain"
     ],
     "type": "object"
    },

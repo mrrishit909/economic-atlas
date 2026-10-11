@@ -530,6 +530,30 @@
    ],
    "type": "object"
   },
+  "gdppc_ppp_bottom_iso3": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
   "gdppc_ppp_bottom_value": {
    "additionalProperties": true,
    "properties": {
@@ -626,6 +650,54 @@
    ],
    "type": "object"
   },
+  "gdppc_ppp_nodata_countries": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_nodata_people_billion": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
   "gdppc_ppp_p90_p10_ratio": {
    "additionalProperties": true,
    "properties": {
@@ -641,6 +713,78 @@
     },
     "value": {
      "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_people_with_data_billion": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_top_bottom_ratio": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "gdppc_ppp_top_iso3": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "string"
     }
    },
    "required": [
@@ -794,8 +938,176 @@
    ],
    "type": "object"
   },
+  "median_person_gdppc_ppp": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "median_person_gdppc_ppp_1990": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "median_person_iso3": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "median_person_iso3_1990": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "ppp_const_rank_rho": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
   "schema_version": {
    "const": "v1"
+  },
+  "seedhead_slots_1990": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
+  },
+  "seedhead_slots_latest": {
+   "additionalProperties": true,
+   "properties": {
+    "note": {
+     "type": "string"
+    },
+    "tag": {
+     "pattern": "^(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC)(/(OBSERVED|DERIVED|PREDICTED|SIMULATED|SYNTHETIC))*$",
+     "type": "string"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "value": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "tag"
+   ],
+   "type": "object"
   },
   "sigma_ppp_1990": {
    "additionalProperties": true,
@@ -1108,9 +1420,22 @@
   "hhi5_countries_latest",
   "cells_missing_pct_panel",
   "territory_flagged_countries",
+  "gdppc_ppp_top_bottom_ratio",
+  "gdppc_ppp_people_with_data_billion",
+  "gdppc_ppp_nodata_countries",
+  "gdppc_ppp_nodata_people_billion",
+  "median_person_gdppc_ppp",
+  "median_person_gdppc_ppp_1990",
+  "seedhead_slots_1990",
+  "seedhead_slots_latest",
+  "ppp_const_rank_rho",
   "longrun_balanced_n",
   "longrun_gdppc_ratio_balanced_1820",
   "longrun_gdppc_ratio_balanced_2022",
+  "gdppc_ppp_top_iso3",
+  "gdppc_ppp_bottom_iso3",
+  "median_person_iso3",
+  "median_person_iso3_1990",
   "strings"
  ],
  "title": "facts",

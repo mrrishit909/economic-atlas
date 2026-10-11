@@ -13,6 +13,15 @@ def run() -> list[str]:
     errs = []
     for sc in sorted(CONTRACTS.glob("*.schema.json")):
         name = sc.name.removesuffix(".schema.json")
+        if name == "seedhead":  # one schema, many files
+            fs = sorted((PUBLIC / "seedhead").glob("*.json"))
+            if not fs:
+                errs.append("seedhead: no files")
+            v = Draft202012Validator(json.loads(sc.read_text()))
+            for f in fs:
+                for e in list(v.iter_errors(json.loads(f.read_text())))[:3]:
+                    errs.append(f"seedhead/{f.name}: {'/'.join(map(str, e.absolute_path))[:80]}: {e.message[:160]}")
+            continue
         f = PUBLIC / f"{name}.json"
         if not f.exists():
             errs.append(f"{name}: artifact missing")
