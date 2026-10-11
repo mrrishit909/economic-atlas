@@ -8,7 +8,7 @@
 1440x900/21-s04-flight-mid.png
 1440x900/22-s04-plane-1990.png
 1440x900/23-s04-2010-verdict.png
-1440x900 S04 debug {"R":339.9885292182664,"cx":1010,"cy":450,"s":3.8,"slots":8005,"n":191,"mode":"free","year":0,"ind":"","mix":0,"scene":"catch-up","glFrames":91,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"plane:gdppc_ppp_2010_2025_primary:1440x900","flight":-1,"echo":0,"tier":"high","cls":"D"}
+1440x900 S04 debug {"R":339.9885292182664,"cx":1010,"cy":450,"s":3.8,"slots":8005,"n":191,"mode":"free","year":0,"ind":"","mix":0,"scene":"catch-up","glFrames":88,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"plane:gdppc_ppp_2010_2025_primary:1440x900","flight":-1,"echo":0,"tier":"high","cls":"D"}
 1440x900/30-s05-tour-tercile.png
 1440x900/31-s05-tour-weighted-ex.png
 1440x900/32-s05-const-1960.png
@@ -27,7 +27,7 @@
 1440x900/71-s08-paragraph.png
 1440x900/72a-s08-echo-dissolve.png
 1440x900/72-s08-echo-end.png
-1440x900 S08 debug {"R":639.7152589238434,"cx":900,"cy":470,"s":7.15,"slots":8005,"n":8005,"mode":"people","year":2025,"ind":"gdppc_ppp","mix":0,"scene":"resorted","glFrames":462,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"","flight":-1,"echo":2,"tier":"high","cls":"D"}
+1440x900 S08 debug {"R":639.7152589238434,"cx":900,"cy":470,"s":7.15,"slots":8005,"n":8005,"mode":"people","year":2025,"ind":"gdppc_ppp","mix":0,"scene":"resorted","glFrames":442,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"","flight":-1,"echo":2,"tier":"high","cls":"D"}
 1440x900 external requests: none
 1440x900/80-reduced-s04.png
 1440x900/81-reduced-s06.png
@@ -43,7 +43,7 @@
 768x1024/21-s04-flight-mid.png
 768x1024/22-s04-plane-1990.png
 768x1024/23-s04-2010-verdict.png
-768x1024 S04 debug {"R":304.2002629847647,"cx":384,"cy":640,"s":3.4,"slots":8005,"n":191,"mode":"free","year":0,"ind":"","mix":0,"scene":"catch-up","glFrames":86,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"plane:gdppc_ppp_2010_2025_primary:768x1024","flight":-1,"echo":0,"tier":"high","cls":"T"}
+768x1024 S04 debug {"R":304.2002629847647,"cx":384,"cy":640,"s":3.4,"slots":8005,"n":191,"mode":"free","year":0,"ind":"","mix":0,"scene":"catch-up","glFrames":85,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"plane:gdppc_ppp_2010_2025_primary:768x1024","flight":-1,"echo":0,"tier":"high","cls":"T"}
 768x1024/30-s05-tour-tercile.png
 768x1024/31-s05-tour-weighted-ex.png
 768x1024/32-s05-const-1960.png
@@ -62,7 +62,7 @@
 768x1024/71-s08-paragraph.png
 768x1024/72a-s08-echo-dissolve.png
 768x1024/72-s08-echo-end.png
-768x1024 S08 debug {"R":620.0317124954174,"cx":300,"cy":420,"s":6.93,"slots":8005,"n":8005,"mode":"people","year":2025,"ind":"gdppc_ppp","mix":0,"scene":"resorted","glFrames":459,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"","flight":-1,"echo":2,"tier":"high","cls":"T"}
+768x1024 S08 debug {"R":620.0317124954174,"cx":300,"cy":420,"s":6.93,"slots":8005,"n":8005,"mode":"people","year":2025,"ind":"gdppc_ppp","mix":0,"scene":"resorted","glFrames":466,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"","flight":-1,"echo":2,"tier":"high","cls":"T"}
 768x1024 external requests: none
 768x1024/80-reduced-s04.png
 768x1024/81-reduced-s06.png
@@ -78,7 +78,7 @@
 390x844/21-s04-flight-mid.png
 390x844/22-s04-plane-1990.png
 390x844/23-s04-2010-verdict.png
-390x844 S04 debug {"R":205.78253084263494,"cx":195,"cy":420,"s":2.3,"slots":8005,"n":191,"mode":"free","year":0,"ind":"","mix":0,"scene":"catch-up","glFrames":87,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"plane:gdppc_ppp_2010_2025_primary:390x844","flight":-1,"echo":0,"tier":"high","cls":"M"}
+390x844 S04 debug {"R":205.78253084263494,"cx":195,"cy":420,"s":2.3,"slots":8005,"n":191,"mode":"free","year":0,"ind":"","mix":0,"scene":"catch-up","glFrames":88,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"plane:gdppc_ppp_2010_2025_primary:390x844","flight":-1,"echo":0,"tier":"high","cls":"M"}
 390x844/30-s05-tour-tercile.png
 390x844/31-s05-tour-weighted-ex.png
 390x844/31b-s05-controls-sheet.png
@@ -98,7 +98,7 @@
 390x844/71-s08-paragraph.png
 390x844/72a-s08-echo-dissolve.png
 390x844/72-s08-echo-end.png
-390x844 S08 debug {"R":509.98279382739975,"cx":195,"cy":270,"s":5.700000000000001,"slots":8005,"n":8005,"mode":"people","year":2025,"ind":"gdppc_ppp","mix":0,"scene":"resorted","glFrames":492,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"","flight":-1,"echo":2,"tier":"high","cls":"M"}
+390x844 S08 debug {"R":509.98279382739975,"cx":195,"cy":270,"s":5.700000000000001,"slots":8005,"n":8005,"mode":"people","year":2025,"ind":"gdppc_ppp","mix":0,"scene":"resorted","glFrames":422,"alpha":1,"introDone":true,"palette":"ppp_constant_intl_2021","free":"","flight":-1,"echo":2,"tier":"high","cls":"M"}
 390x844 external requests: none
 390x844/80-reduced-s04.png
 390x844/81-reduced-s06.png

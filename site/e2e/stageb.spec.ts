@@ -198,7 +198,53 @@ const BLOCKS: [string, number, string, string][] = [
   ["evidence", 0.5, "boundaries.json", "BOUNDARIES"],
   ["atlas", 0, "seedhead/gdppc_ppp.json", "SEEDHEAD/GDPPC_PPP"],
   ["resorted", 0.9, "indicators.json", "INDICATORS"],
+  ["eight-billion", 0, "indicators.json", "INDICATORS"],
+  ["eight-billion", 0, "meta.json", "META"],
+  ["eight-billion", 0, "countries.json", "COUNTRIES"],
+  ["sources", 0.314, "panel_income.json", "PANEL_INCOME"],
+  ["years", 0.5, "panel_income.json", "PANEL_INCOME"],
+  ["lab", 0.5, "panel_income.json", "PANEL_INCOME"],
+  ["evidence", 0.5, "convergence.json", "CONVERGENCE"],
+  ["evidence", 0.5, "clusters.json", "CLUSTERS"],
+  ["evidence", 0.5, "correlations.json", "CORRELATIONS"],
+  ["evidence", 0.5, "coverage.json", "COVERAGE"],
+  ["atlas", 0, "narratives.json", "NARRATIVES"],
+  ["atlas", 0, "panel_structure.json", "PANEL_STRUCTURE"],
+  ["atlas", 0, "panel_income.json", "PANEL_INCOME"],
+  ["atlas", 0, "indicators.json", "INDICATORS"],
+  ["atlas", 0, "countries.json", "COUNTRIES"],
+  ["resorted", 0.9, "facts.json", "FACTS"],
+  ["resorted", 0.9, "meta.json", "META"],
 ];
+
+test("L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers", async ({ page }, info) => {
+  test.skip(info.project.name === "tablet", "1440 and 390 per QA L4");
+  let block = true;
+  await page.route("**/data/seedhead/agr_share.json", (r) => (block ? r.fulfill({ status: 404, body: "" }) : r.continue()));
+  await page.goto("?quality=high");
+  await page.keyboard.press("Escape");
+  await page.waitForTimeout(1500);
+  await jump(page, "atlas", 0);
+  await page.selectOption("#atlas-ind", "agr_share");
+  const alert = page.locator("#atlas [role=alert]").filter({ hasText: "COULD NOT LOAD SEEDHEAD/AGR_SHARE (HTTP 404)" });
+  await expect(alert).toBeVisible({ timeout: 15000 });
+  block = false;
+  await alert.getByRole("button", { name: "RETRY" }).click();
+  await expect(page.locator("#atlas .atlas__status")).toContainText("PERCENT OF GDP", { timeout: 15000 });
+});
+
+test("S02 names the vintage, the WDI attribution and the IMF exclusion; S05 never calls a loading panel unpublished", async ({ page }, info) => {
+  test.skip(info.project.name !== "desktop", "one run");
+  const f = await (await page.request.get("data/facts.json")).json() as { strings: Record<string, string> };
+  await page.route("**/data/panel_income.json", (r) => r.fulfill({ status: 404, body: "" }));
+  await page.goto("?quality=high"); await page.keyboard.press("Escape"); await page.waitForTimeout(1500);
+  await jump(page, "sources", 0.2); await page.waitForTimeout(800);
+  await expect(page.locator("#sources .sources-pipeline")).toContainText(f.strings.attribution_wdi!);
+  await jump(page, "sources", 0.694); await page.waitForTimeout(1200);
+  await expect(page.locator("#sources [data-imf]")).toContainText(f.strings.imf_excluded!);
+  await jump(page, "lab", 0.5); await page.waitForTimeout(1200);
+  await expect(page.locator("#lab").getByRole("radio", { name: "WITH TERRITORY CHANGES" })).toHaveAttribute("title", /PANEL_INCOME FAILED TO LOAD/);
+});
 for (const [scene, p, file, label] of BLOCKS) {
   test(`L4: ${scene} shows COULD NOT LOAD ${label} + RETRY in view, and recovers`, async ({ page }, info) => {
     test.skip(info.project.name === "tablet", "1440 and 390 per QA L4");

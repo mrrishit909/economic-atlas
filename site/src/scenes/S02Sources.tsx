@@ -102,6 +102,7 @@ export function S02Sources({ def }: { def: SceneDef }) {
       <p className="spread__readout">{S02.c4Readout(F)}</p>
       <p className="spread__unit">{S02.c4Unit}</p>
       <p className="spread__src">{F.strings.attribution_owid}</p>
+      <p className="spread__src" data-imf>{F.strings.imf_excluded}</p>
     </div>
   ) : <Unavailable file="longrun" s={lr} retry={retryLr} />;
 

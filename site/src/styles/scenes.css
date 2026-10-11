@@ -624,3 +624,17 @@ html[data-motion="off"] .scene-resorted .stage-content > * { position: relative;
 .comb__rule p { margin: 4px 0 0; }
 @media (max-width: 767px) { .comb__row figcaption { position: static; width: auto; height: auto; overflow: visible; clip-path: none; } }
 @media (max-width: 767px) { .s08-caption { top: 27%; } .s08-para { top: 37%; } }
+/* the no-data caption is beside the disc on D; on T/M it moves into the S00 chips and the S03a readout (VISUAL_DESIGN 3.3) */
+.s00-nodata-line, .years-readout__nodata { display: none; }
+@media (max-width: 1023px) {
+  .s00-nodata-line, .years-readout__nodata { display: block; margin: 0; font: 400 11px / 1.3 var(--font-mono); letter-spacing: var(--tracking-label); color: var(--text-dim); background: var(--backing); padding: 2px 4px; }
+}
+@media (max-width: 767px) {
+  .scene-sources .deck { --cw: 340px; --ch: 644px; }
+  .scene-sources .story-card { gap: 12px; padding: 18px 20px; }
+  .scene-sources .story-card__body { font-size: 12px; line-height: 1.2; }
+  .scene-sources .story-card__title { font-size: 26px; }
+  .sources-head { top: 4px; left: 12px; }
+  .sources-head .scene-kicker { font-size: 11px; }
+  .sources-pipeline { top: 20px; font-size: 11px !important; line-height: 1.25; }
+}

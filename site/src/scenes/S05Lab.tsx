@@ -5,7 +5,7 @@ import { useArtifact } from "../data/useArtifact";
 import { CONVERGENCE, PANEL } from "../data/artifacts";
 import { S05 } from "../data/copy";
 import { HonestyChip } from "../components/HonestyChip";
-import { ArtifactStatus } from "../components/StateUI";
+import { ArtifactStatus, Statuses } from "../components/StateUI";
 import { Footer } from "../components/Footer";
 import { useMotion } from "../scroll/hooks";
 import { LAB_DEFAULT, lab, useStore, type Basis } from "../state/scenes";
@@ -32,7 +32,7 @@ function Radio<T extends string | number>({ label, value, options, onChange }: {
 /** S05 Catch-up Lab (interaction 6): BASIS, WINDOW, SAMPLE over the 42 published fits. */
 export function S05Lab({ def }: { def: SceneDef }) {
   const [cv, retry] = useArtifact(CONVERGENCE, false);
-  const [pan] = useArtifact(PANEL, false);
+  const [pan, retryPan] = useArtifact(PANEL, false);
   const L = useStore(lab);
   const motion = useMotion();
   const [sheet, setSheet] = useState(false);
@@ -49,7 +49,10 @@ export function S05Lab({ def }: { def: SceneDef }) {
           const off = (b: Basis, s: number, smp: string) => {
             const r = recordOf(labRecordId(b, s, smp));
             if (!r) return "NOT PUBLISHED";
-            return pointsFor(r, c.beta, slice(r.indicator)) || smp === "pop_weighted_ex_chn_ind" || smp.startsWith("tercile") ? undefined : S05.notPublished;
+            if (smp !== "sensitivity_all" || pointsFor(r, c.beta, slice(r.indicator))) return undefined;
+            // only the constant-USD 1960/1980 windows are truly unpublished (the panel starts in 1990); otherwise the panel is still loading or failed
+            if (r.start < 1990) return S05.notPublished;
+            return pan.status === "error" ? "PANEL_INCOME FAILED TO LOAD: SEE RETRY" : "LOADING PANEL_INCOME";
           };
           return (
             <>
@@ -75,6 +78,7 @@ export function S05Lab({ def }: { def: SceneDef }) {
                   </div>
                   <button type="button" className="btn-square weight-reset" onClick={() => set({ ...LAB_DEFAULT })}>RESET</button>
                 </div>
+                <Statuses items={[["panel_income", pan, retryPan]]} />
                 <div className="plane-read">
                   <Ledger r={rec} />
                   {rec.sample.startsWith("tercile") ? <p className="ledger__small">{c.copy.interpretation!.toUpperCase()}</p> : null}

@@ -84,6 +84,7 @@ export function S00Layer({ introPlaying }: { introPlaying: boolean }) {
             <HonestyChip tag="OBSERVED" detail={S00.chip} />
             <HonestyChip tag="DERIVED" detail={S00.layoutChip} />
           </p>
+          {ready ? <p className="s00-nodata-line">{S00.noDataLatest(f.data)}</p> : null}
           {edges ? <Legend edges={edges.bins} labels={edges.edge_labels} unit={S00.legendUnit} note={S00.legendNote} /> : null}
         </div>
         <div className="s00-status">

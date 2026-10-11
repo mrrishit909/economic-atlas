@@ -94,6 +94,7 @@ export function S03aYears({ def }: { def: SceneDef }) {
               <p className="years-readout__year tnum" data-year aria-live="polite">{y.year}</p>
               <p className="tnum" data-seed-count={y.slots}>{S03A.seeds(y.slots, y.people_millions)}</p>
               <p className="tnum">{S03A.middle(y.median_person.iso3, y.median_person.value)}</p>
+              <p className="years-readout__nodata">{noData(y.no_data.length, y.no_data.reduce((a, r) => a + r.population, 0) / 1e9)}</p>
               {cv.status === "ready" ? <p className="tnum">{S03A.spread(sigmaAt(sC, y.year), sd)}</p> : <ArtifactStatus file="convergence" state={cv} retry={retryCv} empty="">{() => null}</ArtifactStatus>}
               {follow ? <p className="tnum follow__line">{followLine(y.year)}</p> : null}
               {change && y.year >= change.year ? <p className="years-note"><HonestyChip tag="DERIVED" /> {S03A.note(change.year, change.a, change.b)}</p> : null}
