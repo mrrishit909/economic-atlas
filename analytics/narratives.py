@@ -124,3 +124,37 @@ def i_in(rec, iso):
 
 def _f(v, nd=4):
     return None if v is None or not np.isfinite(v) else round(float(v), nd)
+
+
+# ---------------------------------------------------------------- pairwise (DR-8)
+# {a.key|fmt}, {b.key|fmt}: per-country inputs; {diff.key|fmt} = a - b; {ratio.key|fmt} = a / b. Nothing else is computed.
+PAIR_TEMPLATES = [
+    dict(id="compare_level", requires=["a.name", "b.name", "a.latest_year", "a.gdppc_ppp_latest", "b.gdppc_ppp_latest", "a.gdppc_ppp_rank", "b.gdppc_ppp_rank", "a.gdppc_ppp_n", "ratio.gdppc_ppp_latest"],
+         text="In {a.latest_year}, GDP per capita in {a.name} ({a.gdppc_ppp_latest|n0}, rank {a.gdppc_ppp_rank|n0} of {a.gdppc_ppp_n|n0}) was {ratio.gdppc_ppp_latest|d2} times that of {b.name} ({b.gdppc_ppp_latest|n0}, rank {b.gdppc_ppp_rank|n0}); both in constant 2021 international dollars (PPP)."),
+    *[dict(id=f"compare_growth_{y}", requires=["a.name", "b.name", "a.latest_year", f"a.cagr_{y}", f"b.cagr_{y}", f"diff.cagr_{y}"],
+           text=f"From {y} to {{a.latest_year}}, GDP per capita (PPP) grew {{a.cagr_{y}|d1}}% per year in {{a.name}} and {{b.cagr_{y}|d1}}% in {{b.name}}, a difference of {{diff.cagr_{y}|s1}} percentage points per year (positive means {{a.name}} grew faster).")
+      for y in (1990, 2000, 2010)],
+    dict(id="compare_index_2000", requires=["a.name", "b.name", "a.latest_year", "a.index_2000", "b.index_2000"],
+         text="With GDP per capita (PPP) in 2000 set to 100, {a.name} stood at {a.index_2000|n0} and {b.name} at {b.index_2000|n0} in {a.latest_year}."),
+]
+_PAIR_OPS = {"diff": lambda x, y: x - y, "ratio": lambda x, y: x / y}
+_PH2 = re.compile(r"\{(\w+)\.(\w+)(?:\|(\w+))?\}")
+
+
+def pair_value(side: str, key: str, a: dict, b: dict):
+    if side == "a":
+        return a.get(key)
+    if side == "b":
+        return b.get(key)
+    x, y = a.get(key), b.get(key)
+    if x is None or y is None or (side == "ratio" and y == 0):
+        return None
+    return _PAIR_OPS[side](x, y)
+
+
+def render_pair(template: dict, a: dict, b: dict) -> str | None:
+    for r in template["requires"]:
+        side, key = r.split(".", 1)
+        if pair_value(side, key, a, b) is None:
+            return None
+    return _PH2.sub(lambda m: fmt(pair_value(m.group(1), m.group(2), a, b), m.group(3)) if m.group(3) else str(pair_value(m.group(1), m.group(2), a, b)), template["text"])

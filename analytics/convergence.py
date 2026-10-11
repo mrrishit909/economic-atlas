@@ -37,7 +37,7 @@ def fit_beta(x, y, w=None, reps: int = 2000, seed: int = 20261010) -> dict:
             xm, ym = np.average(x[i], weights=ww), np.average(y[i], weights=ww)
             bs[r] = np.sum(ww * (x[i] - xm) * (y[i] - ym)) / np.sum(ww * (x[i] - xm) ** 2)
     return dict(beta=b, se_hc3=se, ci95=[b - t * se, b + t * se], ci95_boot=[float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))],
-                intercept=float(res.params[0]), r2=float(res.rsquared), p_value=float(2 * stats.t.sf(abs(b / se), n - 2)))
+                vcov_hc3=np.asarray(res.cov_params()).tolist(), intercept=float(res.params[0]), r2=float(res.rsquared), p_value=float(2 * stats.t.sf(abs(b / se), n - 2)))
 
 
 def half_life(beta_pct: float, T: int) -> float | None:
@@ -70,9 +70,9 @@ def beta_records(p: Panel, ind: str, start: int, end: int, tag: str = "DERIVED")
         f = fit_beta(x, g, None if w is None else w[mask])
         r = dict(id=f"{ind}_{start}_{end}_{sample}", indicator=ind, price_basis=basis, tag=tag, sample=sample, start=start, end=end, n=int(mask.sum()), **f,
                  half_life_years=half_life(f["beta"], T), excluded_territory_changes=sorted(brk) if sample != "sensitivity_all" else [],
-                 dropped_no_start_data=int((~np.isfinite(y0)).sum()))
+                 dropped_no_start_data=int((~np.isfinite(y0)).sum()), x_domain=[float(x.min()), float(x.max())])
         if points:
-            r["points"] = dict(iso3=[c for c, m in zip(p.iso3, mask) if m], x=x.tolist(), y=g.tolist(), weight=(None if w is None else w[mask].tolist()))
+            r["points"] = dict(iso3=[c for c, m in zip(p.iso3, mask) if m], x=x.tolist(), y=g.tolist(), weight=(None if w is None else w[mask].tolist()), population_start=pop0[mask].tolist())
             if w is None:
                 r["points"]["weight"] = [None] * int(mask.sum())
         return r

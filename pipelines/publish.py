@@ -9,7 +9,7 @@ from collections import defaultdict
 
 import numpy as np
 
-from analytics import clustering, convergence, correlations, longrun, narratives
+from analytics import clustering, convergence, correlations, display, longrun, narratives, seedhead as sh
 from analytics.boundaries import BREAKS, ROWS as BROWS, breaks_in_window
 from analytics.data import IDS, Panel, latest_year, load
 from analytics.units import BASIS, assert_same_basis
@@ -100,6 +100,9 @@ def run() -> dict:
     for r in rows:
         if r["price_basis"] and r["price_basis"] != "current_usd":
             assert str(r["base_year"]) == r["price_basis"][-4:], (r["id"], r["base_year"], r["price_basis"])
+    c0_ = p.col(YEAR_PANEL0)
+    for r in rows:
+        r["display"] = display.rule(r["id"], r["kind"], np.round(p.a[r["id"]][:, c0_:], DEC.get(r["id"], 2)), YEAR_PANEL0, int(p.years[-1]))
     out["indicators"] = dict(schema_version="v1", tags={"indicators": "OBSERVED/DERIVED"}, indicators=rows)
 
     # ---------------- countries, boundaries
@@ -154,7 +157,7 @@ def run() -> dict:
     for i in IDS:
         rk[i] = {}
         for key, y in [(str(s), s) for s in snaps] + [("latest", ly_all[i][0])]:
-            v = p.at(i, y)
+            v = np.round(p.at(i, y), DEC.get(i, 2))  # the published (rounded) values, so ties agree with the panel
             idx = [k for k in range(len(p.iso3)) if np.isfinite(v[k])]
             if len(idx) < 30:
                 continue
@@ -197,10 +200,17 @@ def run() -> dict:
                 txt = narratives.render(t, e["inputs"])
                 if txt:
                     examples.append(dict(iso3=e["iso3"], template=t["id"], text=txt))
+    byi = {c["iso3"]: c["inputs"] for c in nin}
+    pair_examples = [dict(a=a_, b=b_, template=t["id"], text=narratives.render_pair(t, byi[a_], byi[b_]))
+                     for a_, b_ in (("USA", "CHN"), ("IND", "NGA"), ("POL", "KOR"), ("BRA", "ZAF"), ("DEU", "JPN"))
+                     for t in narratives.PAIR_TEMPLATES if narratives.render_pair(t, byi[a_], byi[b_])]
     out["narratives"] = dict(
         schema_version="v1", tags={"countries": DER, "templates": DER},
         templates=[dict(id=t["id"], text=t["text"], requires=t["requires"]) for t in narratives.TEMPLATES], periods=[[y, E] for y in (1990, 2000, 2010)],
         countries=py(nin, 4), examples=examples,
+        pair_templates=[dict(id=t["id"], text=t["text"], requires=t["requires"]) for t in narratives.PAIR_TEMPLATES],
+        pair_examples=pair_examples,
+        pair_rule="Pairwise copy uses the same per-country inputs: {a.key}, {b.key}, {diff.key} = a - b and {ratio.key} = a / b are the only operations. compare_level compares PPP values only, so bases cannot mix. A pair with a null required input shows no text.",
         rule="Copy is rendered only from the numeric inputs in `countries[].inputs` with the placeholder syntax {key|fmt} (fmt: n0, d1, d2, d3, s1). A template with any null required input is not shown. "
              "Cross-country differences shown in a comparison are simple subtractions or ratios of two published inputs.")
 
@@ -245,7 +255,31 @@ def run() -> dict:
     lr_m = lr["M"]
     both = np.isfinite(lr_m[:, 0]) & np.isfinite(lr_m[:, -1])  # same countries in both years
     ratio = lambda j: float(np.nanmax(lr_m[both, j]) / np.nanmin(lr_m[both, j]))
+    from scipy.stats import spearmanr
+    R = lambda i, y: np.round(p.at(i, y), DEC.get(i, 2))
+    popE, vE = R("population", E), R("gdppc_ppp", E)
+    mE = np.isfinite(vE)
+    order_ = sorted(np.flatnonzero(mE), key=lambda k: (-vE[k], p.iso3[k]))
+
+    def median_person(y):
+        v, pp = R("gdppc_ppp", y), R("population", y)
+        ks = sorted([k for k in range(len(p.iso3)) if np.isfinite(v[k]) and np.isfinite(pp[k])], key=lambda k: (v[k], p.iso3[k]))
+        cum = np.cumsum([pp[k] for k in ks])
+        k = ks[int(np.searchsorted(cum, cum[-1] / 2))]
+        return p.iso3[k], float(v[k])
+    mp_l, mp_90 = median_person(E), median_person(1990)
+    slots = lambda y: int(sh.counts_for(R("population", y)[np.isfinite(R("gdppc_ppp", y))]).sum())
+    a19, b19 = p.at("gdppc_ppp", 2019), p.at("gdppc_const", 2019)
+    m19 = np.isfinite(a19) & np.isfinite(b19)
     facts = dict(
+        gdppc_ppp_top_iso3=F(p.iso3[order_[0]], "iso3", OBS), gdppc_ppp_bottom_iso3=F(p.iso3[order_[-1]], "iso3", OBS),
+        gdppc_ppp_top_bottom_ratio=F(vE[order_[0]] / vE[order_[-1]], "ratio", DER, "among countries with data in the latest PPP year"),
+        gdppc_ppp_people_with_data_billion=F(popE[mE].sum() / 1e9, "billion persons", DER), gdppc_ppp_nodata_countries=F(int((~mE).sum()), "countries", DER),
+        gdppc_ppp_nodata_people_billion=F(np.nansum(popE[~mE]) / 1e9, "billion persons", DER),
+        median_person_gdppc_ppp=F(mp_l[1], "constant 2021 international $", DER, "income per person of the country containing the median person among people with data"),
+        median_person_iso3=F(mp_l[0], "iso3", DER), median_person_gdppc_ppp_1990=F(mp_90[1], "constant 2021 international $", DER), median_person_iso3_1990=F(mp_90[0], "iso3", DER),
+        seedhead_slots_1990=F(slots(1990), "slots", DER, "1 slot = 1 million people, per-country half-up rounding, minimum 1"), seedhead_slots_latest=F(slots(E), "slots", DER),
+        ppp_const_rank_rho=F(spearmanr(a19[m19], b19[m19])[0], "Spearman rho", DER, "2019, sanity statistic only; the two bases are never compared as levels"),
         wb_entities=F(len(ents), "entities", OBS), aggregates=F(len(aggs), "entities", OBS), countries=F(len(p.iso3), "countries", OBS), indicators=F(len(IDS), "series", DER),
         year_first=F(YEAR_PANEL0, "year", OBS), year_last=F(int(p.years[-1]), "year", OBS),
         gdppc_ppp_countries_latest=F(int(pm.sum()), "countries", OBS), gdppc_ppp_latest_year=F(E, "year", OBS),

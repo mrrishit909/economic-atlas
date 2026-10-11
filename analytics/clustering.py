@@ -4,6 +4,7 @@ from __future__ import annotations
 import itertools
 
 import numpy as np
+from scipy.optimize import linear_sum_assignment
 from scipy.cluster.hierarchy import cophenet, dendrogram, fcluster, linkage
 from scipy.spatial.distance import pdist
 from sklearn.cluster import KMeans
@@ -115,6 +116,13 @@ def run(p: Panel) -> dict:
     hl = fcluster(Lk, k, "maxclust") - 1
     coph = float(cophenet(Lk, pdist(Z))[0])
     leaves = dendrogram(Lk, no_plot=True)["leaves"]
+    # Ward labels mapped to k-means ids by Hungarian assignment on the contingency table (maximum overlap)
+    cont = np.zeros((k, k), dtype=int)
+    for a_, b_ in zip(hl, lab):
+        cont[a_, b_] += 1
+    ri, ci = linear_sum_assignment(-cont)
+    mapw = {int(r_): int(c_) for r_, c_ in zip(ri, ci)}
+    hm = np.array([mapw[int(x)] for x in hl])
     ids = [f[0] for f in FEATURES]
     labels = {f[0]: f[1] for f in FEATURES}
     clusters = []
@@ -132,6 +140,7 @@ def run(p: Panel) -> dict:
         inclusion=dict(complete_cases=int(ok.sum()), countries=len(p.iso3), excluded=excl),
         k_scan=scan, chosen_k=k, choice_rule=rule, seeds=dict(n=20, base=SEED),
         stability=dict(seed_ari_mean=seed_mean, seed_ari_min=seed_min, bootstrap_ari_mean=boot_mean, bootstrap_reps=reps),
-        hierarchical=dict(linkage="ward", cophenetic_corr=coph, ari_vs_kmeans=float(adjusted_rand_score(lab, hl)), labels=[int(x) for x in hl], leaf_order=[iso[i] for i in leaves]),
+        hierarchical=dict(linkage="ward", cophenetic_corr=coph, ari_vs_kmeans=float(adjusted_rand_score(lab, hl)), labels=[int(x) for x in hl], labels_matched=[int(x) for x in hm], disagree_count=int((hm != lab).sum()),
+                          match_rule="Hungarian assignment of Ward groups to k-means ids maximising overlap; disagree_count = countries whose matched Ward id differs from their k-means id", leaf_order=[iso[i] for i in leaves]),
         clusters=clusters, assignments=dict(iso3=iso, cluster=[int(x) for x in lab], silhouette=[float(x) for x in sil.round(4)]),
         tag_detail="Assignments are PREDICTED labels from an unsupervised model on DERIVED features; groups are descriptive, not causal and not a development stage.")

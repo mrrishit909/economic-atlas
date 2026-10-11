@@ -189,7 +189,9 @@ def layout(iso3: list[str], counts: np.ndarray, warm: dict[str, np.ndarray] | No
     if warm:
         r = rank_sites(counts)
         seed = np.array([warm.get(c, r[k]) for k, c in enumerate(iso3)])
-    G, own, S = assign(counts, iters=iters or (60 if warm else 120), seed_sites=seed)
+    G, own, S = assign(counts, iters=iters or (200 if warm else 600), seed_sites=seed)
     nb = knn_graph(G)
-    own = polish(G, own, S, counts, nb)
-    return G, own, S, connectivity(G, own, counts, nb=nb)
+    own = polish(G, own, S, counts, nb)  # S here is the pre-repair site (used as the pull target)
+    cx = np.bincount(own, weights=G[:, 0], minlength=len(counts))
+    cy = np.bincount(own, weights=G[:, 1], minlength=len(counts))
+    return G, own, np.c_[cx, cy] / counts[:, None], connectivity(G, own, counts, nb=nb)
