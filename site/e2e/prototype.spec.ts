@@ -74,16 +74,16 @@ test("S03b controls change the visible state; set aside hollows China and India;
   await page.keyboard.press("Escape");
   await jump(page, "weight", 0.2);
   await page.waitForSelector(".years-readout, .weight-count");
-  await page.getByRole("radio", { name: "COUNTRIES" }).click();
+  await page.locator("#weight").getByRole("radio", { name: "COUNTRIES" }).click();
   await expect.poll(async () => (await dbg(page)).mode).toBe("countries");
-  await page.getByRole("radio", { name: "PEOPLE" }).click();
+  await page.locator("#weight").getByRole("radio", { name: "PEOPLE" }).click();
   await expect.poll(async () => (await dbg(page)).mode).toBe("people");
-  await page.getByRole("switch", { name: "CHINA + INDIA" }).click();
-  await expect(page.getByRole("switch", { name: "CHINA + INDIA" })).toHaveAttribute("aria-checked", "true");
+  await page.locator("#weight").getByRole("switch", { name: "CHINA + INDIA" }).click();
+  await expect(page.locator("#weight").getByRole("switch", { name: "CHINA + INDIA" })).toHaveAttribute("aria-checked", "true");
   await expect.poll(async () => page.evaluate(() => (window as unknown as { __eca: { rest: () => { hollow: number } } }).__eca.rest().hollow), { timeout: 5000 }).toBeGreaterThan(2000);
-  await expect(page.locator("[data-not-causal]")).toBeVisible();
-  await page.getByRole("button", { name: "RESET" }).click();
-  await expect(page.getByRole("switch", { name: "CHINA + INDIA" })).toHaveAttribute("aria-checked", "false");
+  await expect(page.locator("#weight [data-not-causal]")).toBeVisible();
+  await page.locator("#weight").getByRole("button", { name: "RESET" }).click();
+  await expect(page.locator("#weight").getByRole("switch", { name: "CHINA + INDIA" })).toHaveAttribute("aria-checked", "false");
 });
 
 test("basis is never mixed in one view (S00, S03a, S03b)", async ({ page }) => {

@@ -607,3 +607,20 @@ html[data-motion="off"] .scene-resorted .stage-content > * { position: relative;
 @media (max-width: 1023px) {
   .col > .statuses, .col > .state-error, .col > .state-line { position: absolute; z-index: 6; left: 12px; right: 12px; top: 45%; background: #000; padding: 8px; }
 }
+@media (max-width: 767px) { .sheet-toggle { z-index: 7; } .scene-lab .lab-controls.is-open { padding-bottom: 148px; } }
+.s08-para { background: var(--backing); padding: 6px 10px; margin-left: -10px; }
+.s08-disc { background: var(--backing); padding: 3px 6px; align-self: flex-start; }
+@media (max-width: 767px) {
+  .comb__row figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } /* the svg keeps its aria-label */
+  .comb { gap: 3px; }
+  .spread { gap: 1px; }
+  .spread__row { line-height: 1.1; }
+  .ev-side { top: 124px; bottom: auto; max-height: 110px; overflow: auto; gap: 4px; padding: 6px; }
+  .ev-stack { height: calc(100% - 330px); bottom: calc(var(--nav-clear) + 12px); }
+  .s08-para { margin-left: 0; }
+}
+.comb__row figcaption { white-space: nowrap; }
+.comb__rule summary { cursor: pointer; }
+.comb__rule p { margin: 4px 0 0; }
+@media (max-width: 767px) { .comb__row figcaption { position: static; width: auto; height: auto; overflow: visible; clip-path: none; } }
+@media (max-width: 767px) { .s08-caption { top: 27%; } .s08-para { top: 37%; } }

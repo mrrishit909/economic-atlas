@@ -80,12 +80,12 @@ export function S02Sources({ def }: { def: SceneDef }) {
             <svg viewBox={`0 0 ${yrs * 4} 24`} preserveAspectRatio="none" role="img" aria-label={`${id}: countries with data per year, 1990 to ${1990 + yrs - 1}`}>
               {c.n_by_year.map((n, k) => <rect key={k} x={k * 4} width={1.4} y={24 - (n / 217) * 24} height={(n / 217) * 24} className={k === ly ? "comb__latest" : ""} />)}
             </svg>
-            <figcaption>{id.toUpperCase()} · LATEST {c.latest_year} (N {c.latest_year_n})</figcaption>
+            <figcaption>{id.toUpperCase()} · {c.latest_year} · N {c.latest_year_n}</figcaption>
           </figure>
         );
       })}
       <p className="comb__readout">{S02.c3Readout(F)}</p>
-      {m.status === "ready" ? <p className="comb__rule">{(m.data as MetaFull).latest_year_rule.text.toUpperCase()}</p> : null}
+      {m.status === "ready" ? <details className="comb__rule"><summary>LATEST-YEAR RULE</summary><p>{(m.data as MetaFull).latest_year_rule.text.toUpperCase()}</p></details> : null}
     </div>
   ) : <Unavailable file="coverage" s={cov} retry={retryCov} />;
 

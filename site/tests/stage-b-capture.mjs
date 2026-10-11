@@ -52,11 +52,18 @@ async function run() {
     await at("30-s05-tour-tercile", "lab", 0.12, 2200);
     await at("31-s05-tour-weighted-ex", "lab", 0.27, 2200);
     await jump(page, "lab", 0.5); await page.waitForTimeout(1500);
+    const sheet = page.locator(".sheet-toggle");
+    if (await sheet.isVisible()) { await sheet.click(); await page.waitForTimeout(300); await shot("31b-s05-controls-sheet"); }
     await page.getByRole("radio", { name: "CONSTANT US$" }).click(); await page.waitForTimeout(3000);
+    if (await sheet.isVisible() && (await sheet.getAttribute("aria-expanded")) === "true") { await sheet.click(); await page.waitForTimeout(300); }
     await shot("32-s05-const-1960");
-    await page.getByRole("radio", { name: "PEOPLE-WEIGHTED", exact: true }).click(); await page.waitForTimeout(2200);
+    if (await sheet.isVisible()) { await sheet.click(); await page.waitForTimeout(300); }
+    await page.getByRole("radio", { name: "PEOPLE-WEIGHTED", exact: true }).click(); await page.waitForTimeout(400);
+    if (await sheet.isVisible()) { await sheet.click(); await page.waitForTimeout(300); }
+    await page.waitForTimeout(1800);
     await shot("33-s05-const-weighted");
-    await page.getByRole("button", { name: "RESET" }).first().click(); await page.waitForTimeout(3000);
+    if (await sheet.isVisible()) await sheet.click();
+    await page.locator("#lab").getByRole("button", { name: "RESET" }).click(); await page.waitForTimeout(3000);
     await at("40-s06-kmeans", "likeness", 0.2, 2400);
     await at("41-s06-ward", "likeness", 0.4, 1800);
     await at("42-s06-rel-income-prod", "likeness", 0.62, 2400);

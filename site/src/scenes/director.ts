@@ -422,7 +422,8 @@ function plan(id: string, p: number): Plan {
   // (S03a/S03b draw their own static discs, so the canvas steps aside there)
   if (id === "years" || id === "weight") return { cam: g("G0"), alpha: 0 };
   if (id === "eight-billion") return { cam: g("G0"), alpha: clamp(1 - scrollY / Math.max(1, H)), disc: disc(PPP, "people", latestYear()), labels: "none" };
-  const pl = planAt(id, SCENES.find((s) => s.id === id)?.landing ?? 0);
+  // S04 reduced: the plane with the 1990 fit (its static ledger names 1990), not the landing's 2010 window
+  const pl = planAt(id, id === "catch-up" ? 0.5 : SCENES.find((s) => s.id === id)?.landing ?? 0);
   return { ...pl, labels: "none" };
 }
 
