@@ -5,7 +5,7 @@ import { useArtifact } from "../data/useArtifact";
 import { CLUSTERS, CORRELATIONS, FACTS, factNum } from "../data/artifacts";
 import { S06 } from "../data/copy";
 import { HonestyChip } from "../components/HonestyChip";
-import { ArtifactStatus } from "../components/StateUI";
+import { ArtifactStatus, Statuses } from "../components/StateUI";
 import { Footer } from "../components/Footer";
 import { likeness, useStore } from "../state/scenes";
 import { pairOf } from "../model/likeness";
@@ -20,7 +20,7 @@ export function S06Likeness({ def }: { def: SceneDef }) {
   const [cl, retryCl] = useArtifact(CLUSTERS, false);
   const [co, retryCo] = useArtifact(CORRELATIONS, false);
   const L = useStore(likeness);
-  const [f] = useArtifact(FACTS, false);
+  const [f, retryF] = useArtifact(FACTS, false);
   const [box, setBox] = useState(() => ({ w: stageW(), h: stageH(), cls: cssClass() }));
   useEffect(() => { const on = () => setBox({ w: stageW(), h: stageH(), cls: cssClass() }); addEventListener("resize", on); return () => removeEventListener("resize", on); }, []);
   return (
@@ -30,6 +30,7 @@ export function S06Likeness({ def }: { def: SceneDef }) {
           <p className="scene-kicker">LIKENESS · {L.part === 1 ? "PEER GROUPS (K-MEANS, K = 3)" : "RELATIONS ACROSS COUNTRIES"}</p>
           <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="statement" key={L.part}>{L.part === 1 ? S06.statement1 : S06.statement2}</h2>
         </div>
+        <Statuses items={[["facts", f, retryF]]} />
         {L.part === 1 ? (
           <ArtifactStatus file="clusters" state={cl} retry={retryCl} empty="">
             {(c) => (
@@ -40,7 +41,8 @@ export function S06Likeness({ def }: { def: SceneDef }) {
                     <button key={m} type="button" role="radio" aria-checked={L.method === m} className={`opt ${L.method === m ? "is-on" : ""}`} onClick={() => likeness.set({ method: m })}>{m === "kmeans" ? "K-MEANS" : "WARD"}</button>
                   ))}
                 </div>
-                {f.status === "ready" ? <p className="tnum">{S06.ledger(factNum(f.data, "cluster_silhouette"), factNum(f.data, "cluster_stability_ari"), factNum(f.data, "cluster_hier_ari"))}</p> : null}
+                {f.status === "ready" ? <p className="tnum ledger--long">{S06.ledger(factNum(f.data, "cluster_silhouette"), factNum(f.data, "cluster_stability_ari"), factNum(f.data, "cluster_hier_ari"))}</p> : null}
+                {f.status === "ready" ? <p className="tnum ledger--short">{S06.ledgerShort(factNum(f.data, "cluster_silhouette"), factNum(f.data, "cluster_stability_ari"), factNum(f.data, "cluster_hier_ari"))}</p> : null}
                 {L.method === "ward" ? <p className="tnum" data-ward>{S06.ward(c.hierarchical.disagree_count, c.inclusion.complete_cases)}</p> : <p className="ledger__small">HOLLOW SEEDS: NEGATIVE SILHOUETTE (THEY FIT ANOTHER GROUP ABOUT AS WELL)</p>}
                 <p className="ledger__small">{S06.colourNote}</p>
                 <p className="s03-chips"><HonestyChip tag="PREDICTED" detail="DESCRIPTIVE GROUP" /><HonestyChip tag="DERIVED" detail="FEATURES" /></p>
@@ -88,7 +90,7 @@ export function S06Likeness({ def }: { def: SceneDef }) {
               return <p key={g.id} className="group-cap" style={{ transform: `translate(${tx}px, ${ty}px)`, width: room }}>{S06.caption(i, cl.data.chosen_k, g.size, g.signature)}</p>;
             });
           })()}
-          <p className="group-cap group-cap--ungrouped" style={{ transform: `translate(${ungroupedXY(box.cls, box.w, box.h)[0]}px, ${ungroupedXY(box.cls, box.w, box.h)[1] - (box.cls === "M" ? 26 : 34)}px)` }}>{S06.notGrouped(cl.data.inclusion.countries - cl.data.inclusion.complete_cases)}</p>
+          <p className="group-cap group-cap--ungrouped" style={{ transform: `translate(${ungroupedXY(box.cls, box.w, box.h)[0]}px, ${ungroupedXY(box.cls, box.w, box.h)[1] - (box.cls === "M" ? 32 : 34)}px)` }}>{S06.notGrouped(cl.data.inclusion.countries - cl.data.inclusion.complete_cases)}</p>
         </div>
       ) : null}
     </Track>

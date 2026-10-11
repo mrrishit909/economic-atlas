@@ -9,7 +9,7 @@ import { Legend } from "../components/Legend";
 import { ArtifactStatus, Statuses } from "../components/StateUI";
 import { Footer } from "../components/Footer";
 import { ATLAS_DEFAULT, atlas, inspector, useStore } from "../state/scenes";
-import { GROUPS, indexUnit, narrativeFamilies, pairsAllowed, pathOf, unitFor, type Ind } from "../model/atlas";
+import { GROUPS, atlasView, pathOf, type Ind } from "../model/atlas";
 import { render, renderPair, type Inputs } from "../model/narratives";
 import { ensureIndicator, layoutFor, yearsOf } from "./director";
 
@@ -21,12 +21,13 @@ export function Atlas({ def }: { def: SceneDef }) {
   const A = useStore(atlas);
   const [ind, retryInd] = useArtifact(INDICATORS, false);
   const [cs, retryCs] = useArtifact(COUNTRIES, false);
-  const [m] = useArtifact(META, false);
+  const [m, retryM] = useArtifact(META, false);
   const [pan, retryPan] = useArtifact(PANEL, false);
   const [ps, retryPs] = useArtifact(PANEL_STRUCT, false);
   const [nr, retryNr] = useArtifact(NARRATIVES, false);
   const [lay, retryLay] = useArtifact(seedheadOf(A.ind), false);
   const [q, setQ] = useState("");
+  const [sheet, setSheet] = useState(false);
   const [resetOk, setResetOk] = useState(false);
   useEffect(() => { ensureIndicator(A.ind); }, [A.ind]);
   useEffect(() => { if (!resetOk) return; const t = setTimeout(() => setResetOk(false), 1200); return () => clearTimeout(t); }, [resetOk]);
@@ -72,23 +73,23 @@ export function Atlas({ def }: { def: SceneDef }) {
             );
           })}
         </svg>
-        <figcaption>{index ? indexUnit(period[0]) : unitFor(shown)} · {period[0]} TO {period[1]}</figcaption>
+        <figcaption>{atlasView(shown, A.values, period[0], A.selected.length).pathsUnit} · {period[0]} TO {period[1]}</figcaption>
       </figure>
     );
   })() : null;
 
-  // narratives: template renderings only (one country: the families that fit; two: the pair templates)
-  const narratives = nr.status === "ready" && shown ? (() => {
+  // the view's text (one unit for status and legend, the paths caption, the narrative families): one pure selector
+  const view = shown ? atlasView(shown, A.values, period[0], A.selected.length) : null;
+  // narratives: template renderings only. Pairs (GDP per capita PPP only); otherwise each selected country's
+  // families that fit the indicator, so the text always matches the indicator on screen (QA D-009)
+  const narratives = nr.status === "ready" && shown && view ? (() => {
     const inputs = new Map(nr.data.countries.map((c) => [c.iso3, c.inputs as Inputs]));
-    if (A.selected.length >= 2 && pairsAllowed(shown)) {
+    if (view.pairs) {
       const [a, b] = A.selected as [string, string];
       return nr.data.pair_templates.map((t) => renderPair(t, inputs.get(a) ?? {}, inputs.get(b) ?? {})).filter((x): x is string => !!x);
     }
-    if (A.selected.length === 1 || A.selected.length >= 2) {
-      const fam = narrativeFamilies(shown.id);
-      return fam.map((f) => nr.data.templates.find((t) => t.id === f)).filter(Boolean).map((t) => render(t!, inputs.get(A.selected[0]!) ?? {})).filter((x): x is string => !!x);
-    }
-    return [];
+    const tpl = view.families.map((f) => nr.data.templates.find((t) => t.id === f)).filter(Boolean);
+    return A.selected.flatMap((iso) => tpl.map((t) => render(t!, inputs.get(iso) ?? {}))).filter((x): x is string => !!x);
   })() : null;
 
   return (
@@ -99,19 +100,22 @@ export function Atlas({ def }: { def: SceneDef }) {
           <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="atlas__line serif">{ATLAS_COPY.line}</h2>
           {shown && L ? (
             <p className="atlas__status tnum" data-status>
-              {shown.label.toUpperCase()} · {index ? indexUnit(period[0]) : unitFor(shown)} · {year} · {int(L.order.length)} COUNTRIES WITH DATA · {m.status === "ready" ? m.data.vintage.wdi_lastupdated : ""} WDI
+              {shown.label.toUpperCase()} · {view!.statusUnit} · {year} · {int(L.order.length)} COUNTRIES WITH DATA · {m.status === "ready" ? m.data.vintage.wdi_lastupdated : ""} WDI
             </p>
           ) : null}
-          <Statuses items={[["indicators", ind, retryInd], ["countries", cs, retryCs]]} />
+          <Statuses items={[["indicators", ind, retryInd], ["countries", cs, retryCs], ["meta", m, retryM]]} />
           <ArtifactStatus file={`seedhead/${A.ind}`} state={lay} retry={retryLay} empty={ATLAS_COPY.few(0, year)}>{() => null}</ArtifactStatus>
           {shown && L && L.order.length < 30 ? <p className="state-line state-line--empty">{ATLAS_COPY.few(L.order.length, year)}</p> : null}
           <Footer />
         </header>
         <div className="atlas__legend panel-glass">
-          {shown ? <Legend edges={shown.display.bins} labels={shown.display.edge_labels} unit={unitFor(shown)} note={A.count === "people" ? "1 SEED ≈ 1 MILLION PEOPLE" : "1 SEED = 1 COUNTRY"} /> : null}
+          {shown ? <Legend edges={shown.display.bins} labels={shown.display.edge_labels} unit={atlasView(shown, A.values, period[0], 0).legendUnit} note={A.count === "people" ? "1 SEED ≈ 1 MILLION PEOPLE" : "1 SEED = 1 COUNTRY"} /> : null}
           <p className="s03-chips"><HonestyChip tag="OBSERVED" detail="WDI VALUES" /><HonestyChip tag="DERIVED" detail="LAYOUT" /></p>
         </div>
         <aside className="rail" aria-label="Atlas controls">
+          <button type="button" className="btn-square atlas-sheet-toggle" aria-expanded={sheet} aria-controls="atlas-controls" onClick={() => setSheet(!sheet)}>{sheet ? "CLOSE CONTROLS" : "CONTROLS"}</button>
+          <div id="atlas-controls" className={`rail__controls ${sheet ? "is-open" : ""}`}>
+          {sheet ? <button type="button" className="btn-square rail__sheet-close" onClick={() => setSheet(false)}>CLOSE CONTROLS</button> : null}
           <div className="rail__block">
             <label htmlFor="atlas-country" className="mono-label">COUNTRIES (UP TO 4)</label>
             <input id="atlas-country" className="follow__input" list="atlas-list" placeholder="ADD A COUNTRY" value={q} onChange={(e) => pick(e.target.value)} autoComplete="off" disabled={A.selected.length >= 4} />
@@ -121,7 +125,7 @@ export function Atlas({ def }: { def: SceneDef }) {
                 const none = !!L && !L.order.includes(iso);
                 return (
                   <li key={iso} className={`chipsel ${none ? "is-none" : ""}`}>
-                    <button type="button" className="chipsel__name" onClick={(e) => inspector.set({ iso, returnTo: e.currentTarget })}>{names.get(iso)?.toUpperCase() ?? iso}{none ? ` · ${ATLAS_COPY.noData(year)}` : ""}</button>
+                    <button type="button" className="chipsel__name" onClick={(e) => { const t = sheet ? document.querySelector<HTMLElement>(".atlas-sheet-toggle") : e.currentTarget; setSheet(false); inspector.set({ iso, returnTo: t }); }}>{names.get(iso)?.toUpperCase() ?? iso}{none ? ` · ${ATLAS_COPY.noData(year)}` : ""}</button>
                     <button type="button" className="chipsel__x" aria-label={`Remove ${names.get(iso) ?? iso}`} onClick={() => set({ selected: A.selected.filter((x) => x !== iso) })}>×</button>
                   </li>
                 );
@@ -166,13 +170,14 @@ export function Atlas({ def }: { def: SceneDef }) {
           </div>
           <button type="button" className="btn-square" aria-live="polite" onClick={() => { atlas.set({ ...ATLAS_DEFAULT, shownInd: A.shownInd, touched: false }); setResetOk(true); }}>{resetOk ? "RESET ✓" : "RESET"}</button>
           <p className="ledger__small">{ATLAS_COPY.note}</p>
+          </div>
           {pan.status === "error" ? <ArtifactStatus file="panel_income" state={pan} retry={retryPan} empty="">{() => null}</ArtifactStatus> : null}
           {ps.status === "error" ? <ArtifactStatus file="panel_structure" state={ps} retry={retryPs} empty="">{() => null}</ArtifactStatus> : null}
           {paths}
           <div className="narr" aria-live="polite">
             <ArtifactStatus file="narratives" state={nr} retry={retryNr} empty="">{() => null}</ArtifactStatus>
             {narratives?.map((t) => <p key={t}>{t}</p>)}
-            {narratives && A.selected.length && !narratives.length ? <p className="ledger__small">{shown && !pairsAllowed(shown) && A.selected.length >= 2 ? ATLAS_COPY.pppOnly : "NO NARRATIVE: A REQUIRED INPUT IS MISSING FOR THIS COUNTRY"}</p> : null}
+            {narratives && A.selected.length && !narratives.length ? <p className="ledger__small">{"NO NARRATIVE: THE TEMPLATES FOR THIS INDICATOR NEED AN INPUT THAT IS MISSING FOR THIS COUNTRY"}</p> : null}
             {narratives?.length ? <p className="s03-chips"><HonestyChip tag="DERIVED" detail="TEMPLATE RENDERINGS OF PUBLISHED INPUTS" /></p> : null}
           </div>
         </aside>

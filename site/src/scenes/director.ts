@@ -31,7 +31,7 @@ import { cssClass, stageH, stageW } from "../graphics/canvas";
 import { camLerp, g4b, gstate, LABEL_MIN, type GName } from "./geometry";
 import { groupsState, neutral, planePx, planeState, rankBins, relationState } from "./freestates";
 import { SCENES } from "../app/scenes";
-import { atlas, catchup, inspector, lab, likeness, view, weight, years as yearsStore, type Basis, type Count } from "../state/scenes";
+import { LAB_DEFAULT, atlas, catchup, inspector, lab, likeness, view, weight, years as yearsStore, type Basis, type Count } from "../state/scenes";
 import { d1, d2, int, money, unitOf } from "../data/copy";
 
 export const INTRO_MS = 4600;
@@ -349,11 +349,12 @@ function applyFree(f: FreeT, now: number) {
   const nextPal = f.basis ?? palette;
   if (instant) {
     main = staticOf(to); f.onNeutral?.(); palette = nextPal;
-  } else if (f.basis && palette !== "none" && f.basis !== palette) {
+  } else if (f.basis && f.basis !== palette) {
+    // a new basis, or a new target while a swap is still neutral: (re)run the swap so the palette never stays neutral
     runSwap(to, nextPal, now, f.onNeutral);
   } else {
     main = between(stateAt(main, curNow(now)), to, { t0: now, dur: f.dur ?? DUR.scene, absorb: true, delay: (_, i) => hash01(i, 6) * 150 });
-    if (f.basis && palette !== "none") f.onNeutral?.();
+    f.onNeutral?.(); // same basis: the readout follows at once
   }
   mainNow = null;
   freeKey = f.key; shown = null;
@@ -475,12 +476,12 @@ function planAt(id: string, p: number): Plan {
         const k = stepState(labStep, p, [0.075, 0.15, 0.225]);
         labStep = k;
         lab.set({ basis: "ppp", start: 1990, sample: LAB_TOUR[k]!, live: false });
-      } else if (!lab.get().live) lab.set({ live: true });
+      } else if (!lab.get().live) lab.set({ ...LAB_DEFAULT, live: true }); // the live lab opens on PPP 1990 PRIMARY (MOTION_SYSTEM 6.2)
       const L = lab.get(), rec = record(labRecordId(L.basis, L.start, L.sample));
       if (!rec) return { cam, alpha: 1 };
       return {
         cam, alpha: 1, labels: "none", tip: planeTip(rec),
-        free: { key: `plane:${rec.id}:${W}x${H}`, build: () => planeFor(rec, cam), basis: rec.price_basis, onNeutral: () => lab.set({ shownBasis: L.basis }) },
+        free: { key: `plane:${rec.id}:${W}x${H}`, build: () => planeFor(rec, cam), basis: rec.price_basis, onNeutral: () => lab.set({ shownBasis: L.basis, shownId: rec.id }) },
       };
     }
     case "likeness": {
@@ -519,7 +520,7 @@ function planAt(id: string, p: number): Plan {
       };
     }
     case "evidence":
-      return { cam: camLerp(g("G3"), g("G1"), windowed(p, 0, 0.1, easeSymmetric)), alpha: 1 - 0.85 * windowed(p, 0, 0.1) };
+      return { cam: camLerp(g("G3"), g("G1"), windowed(p, 0, 0.03, easeSymmetric)), alpha: 1 - 0.85 * windowed(p, 0, 0.03) };
     case "atlas": {
       const a = atlas.get(), ys = yearsOf(a.ind), y = a.year && ys.includes(a.year) ? a.year : ys.at(-1) ?? 0;
       const N = layoutFor(y, a.ind)?.slots ?? 8005;
@@ -603,13 +604,27 @@ function placeLabels(cam: Cam, mode: Plan["labels"]) {
       const j = L.order.indexOf(x.iso);
       const [wx, wy] = t?.mode === "countries" ? [sp * vogelX(j), sp * vogelY(j)] : [cen[x.i * 3]!, cen[x.i * 3 + 1]!];
       el.dataset.wx = String(wx); el.dataset.wy = String(wy);
+      el.style.visibility = "hidden"; // shown only once the text check has passed (no flash over a headline)
       return el;
     }));
+    occTick = 9;
   }
   for (const el of labelsEl.children as HTMLCollectionOf<HTMLElement>) {
     el.style.transform = `translate(${cam.cx + Number(el.dataset.wx) * cam.s}px, ${cam.cy + Number(el.dataset.wy) * cam.s}px) translate(-50%, -50%)`;
   }
+  // L13: a label never sits on DOM text. Text boxes of the scene in view are re-read every 10 frames while labels show.
+  if (show && ++occTick % 10 === 0) {
+    const sec = document.getElementById(debug.scene);
+    const occ = sec ? [...sec.querySelectorAll<HTMLElement>("h1, h2, p, figure, button, input, .chip, .legend, .follow, .statuses")]
+      .map((e) => e.getBoundingClientRect()).filter((r) => r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < H) : [];
+    for (const el of labelsEl.children as HTMLCollectionOf<HTMLElement>) {
+      const r = el.getBoundingClientRect();
+      const hit = occ.some((o) => r.left < o.right + 2 && r.right > o.left - 2 && r.top < o.bottom + 2 && r.bottom > o.top - 2);
+      el.style.visibility = hit ? "hidden" : "";
+    }
+  }
 }
+let occTick = 0;
 
 let pointer: { x: number; y: number } | null = null;
 let lastCam: Cam = { cx: 0, cy: 0, s: 1 };

@@ -2,7 +2,7 @@ import { Track } from "../scroll/Track";
 import type { SceneDef } from "../app/scenes";
 import { useArtifact } from "../data/useArtifact";
 import { CONVERGENCE } from "../data/artifacts";
-import { S04, d2, money } from "../data/copy";
+import { S04, d2, money, unitOf } from "../data/copy";
 import { HonestyChip } from "../components/HonestyChip";
 import { ArtifactStatus } from "../components/StateUI";
 import { Footer } from "../components/Footer";
@@ -63,6 +63,7 @@ export function S04CatchUp({ def }: { def: SceneDef }) {
                 <div className="col__head">
                   <p className="scene-kicker">CATCH-UP · {flight < 0.5 && motion ? S04.encodingDisc : S04.encodingPlane(rec.start, rec.end)}</p>
                   <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="statement">{S04.statement}</h2>
+                  <p className="s03-chips"><HonestyChip tag="DERIVED" detail={`INCOME IN ${rec.start} · ${unitOf(rec.price_basis)} · GROWTH % / YR`} /></p>
                 </div>
                 {(zero > 0 || !motion) && !(p >= 0.9 && compactPhone()) ? (
                   <div className="plane-read">

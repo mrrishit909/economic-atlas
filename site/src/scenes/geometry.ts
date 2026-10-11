@@ -12,7 +12,7 @@ type Row = [number, number, number];
 const TABLE: Record<ViewportClass, { W: number; H: number; G0: Row; G1: Row; G2: Row; G3: Row; G5: Row }> = {
   D: { W: 1440, H: 900, G0: [900, 470, 7.15], G1: [1030, 450, 3.9], G2: [1010, 460, 4.4], G3: [1010, 450, 3.8], G5: [560, 470, 360] },
   T: { W: 768, H: 1024, G0: [300, 420, 6.93], G1: [384, 700, 3.2], G2: [384, 600, 3.9], G3: [384, 640, 3.4], G5: [384, 380, 300] },
-  M: { W: 390, H: 844, G0: [195, 270, 5.7], G1: [195, 610, 2.3], G2: [195, 440, 2.6], G3: [195, 420, 2.3], G5: [195, 300, 190] },
+  M: { W: 390, H: 844, G0: [195, 270, 5.7], G1: [195, 610, 2.3], G2: [195, 432, 2.25], G3: [195, 420, 2.3], G5: [195, 330, 170] },
 };
 export type GName = "G0" | "G1" | "G2" | "G3" | "G5";
 
@@ -49,7 +49,7 @@ export const LABEL_MIN: Record<ViewportClass, number> = { D: 90, T: 150, M: 250 
 /** G4b (S06 relations) centre and radius in px. */
 export function g4b(w: number, h: number): { c: [number, number]; R: number } {
   const t = TABLE[cssClass()], k = Math.min(w / t.W, h / t.H);
-  const [cx, cy, R] = cssClass() === "D" ? [1010, 460, 330] : cssClass() === "T" ? [384, 660, 260] : [195, 380, 150];
+  const [cx, cy, R] = cssClass() === "D" ? [1010, 460, 330] : cssClass() === "T" ? [384, 660, 260] : [195, 560, 150];
   if (compact()) { const Rm = Math.min(R * k, (w - COMPACT_COL - 24) / 2); return { c: [COMPACT_COL + Rm, (cy * h) / t.H], R: Rm }; }
   return { c: [(cx * w) / t.W, (cy * h) / t.H], R: R * k };
 }

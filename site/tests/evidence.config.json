@@ -1,5 +1,5 @@
 {
- "_comment": "P05 Economic Atlas, task P05-QA-001. Scene ids from src/app/scenes.ts; window.__eca.jumpTo(id,p) is the nav's instant-jump path. introFrames freeze the S00 clock (ms). Steps marked core run at every viewport; the rest only at fullViewports. click steps are real-pointer clicks at the element centre (L12).",
+ "_comment": "P05 Economic Atlas, task P05-QA-001. Scene ids from src/app/scenes.ts; window.__eca.jumpTo(id,p) is the nav's instant-jump path. introFrames freeze the S00 clock (ms). Steps marked core run at every viewport; the rest only at fullViewports. click steps are real-pointer clicks at the element centre (L12). FIX-A: ATLAS fills/selects use the native value setter (the phone controls live in the CONTROLS sheet, D-008); a phone-only sheet-open step precedes the chip click.",
  "fullViewports": [
   "1440x900",
   "768x1024",
@@ -333,27 +333,18 @@
      "core": true
     },
     {
-     "fill": {
-      "selector": "#atlas-country",
-      "value": "India"
-     },
+     "setup": "(()=>{const s=document.querySelector('#atlas-country'); Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(s,'India'); s.dispatchEvent(new Event('input',{bubbles:true}));})();",
      "name": "add-ind",
      "waitMs": 500
     },
     {
-     "fill": {
-      "selector": "#atlas-country",
-      "value": "Brazil"
-     },
+     "setup": "(()=>{const s=document.querySelector('#atlas-country'); Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(s,'Brazil'); s.dispatchEvent(new Event('input',{bubbles:true}));})();",
      "name": "add-bra",
      "waitMs": 900,
      "core": true
     },
     {
-     "select": {
-      "selector": "#atlas-ind",
-      "value": "agr_share"
-     },
+     "setup": "(()=>{const s=document.querySelector('#atlas-ind'); Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(s,'agr_share'); s.dispatchEvent(new Event('change',{bubbles:true}));})();",
      "name": "reflow-t300",
      "waitMs": 300,
      "core": true
@@ -365,10 +356,7 @@
      "core": true
     },
     {
-     "select": {
-      "selector": "#atlas-ind",
-      "value": "gdppc_nominal"
-     },
+     "setup": "(()=>{const s=document.querySelector('#atlas-ind'); Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype,'value').set.call(s,'gdppc_nominal'); s.dispatchEvent(new Event('change',{bubbles:true}));})();",
      "name": "swap-t250",
      "waitMs": 250
     },
@@ -376,6 +364,11 @@
      "setup": "",
      "name": "nominal-settled",
      "waitMs": 3500
+    },
+    {
+     "click": "#atlas .atlas-sheet-toggle[aria-expanded=false]",
+     "name": "sheet-open",
+     "waitMs": 700
     },
     {
      "click": "#atlas .chipsel__name",

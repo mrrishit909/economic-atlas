@@ -1,0 +1,66 @@
+1440  eight-billion 0.78 clean
+1440  sources 0.14 clean
+1440  years 0.7 clean
+1440  weight 0.43 clean
+1440  catch-up 0.95 clean
+1440  lab 0.45 clean
+1440  likeness 0.2 clean
+1440  likeness 0.62 clean
+1440  evidence 0.5 clean
+1440  atlas 0 clean
+1440  resorted 0.9 clean
+1440 reduced eight-billion 0.78 clean
+1440 reduced sources 0.14 clean
+1440 reduced years 0.7 clean
+1440 reduced weight 0.43 clean
+1440 reduced catch-up 0.95 clean
+1440 reduced lab 0.45 clean
+1440 reduced likeness 0.2 clean
+1440 reduced likeness 0.62 clean
+1440 reduced evidence 0.5 clean
+1440 reduced atlas 0 clean
+1440 reduced resorted 0.9 clean
+390  eight-billion 0.78 clean
+390  sources 0.14 clean
+390  years 0.7 clean
+390  weight 0.43 clean
+390  catch-up 0.95 clean
+390  lab 0.45 clean
+390  likeness 0.2 clean
+390  likeness 0.62 clean
+390  evidence 0.5 clean
+390  atlas 0 clean
+390  resorted 0.9 clean
+390 reduced eight-billion 0.78 clean
+390 reduced sources 0.14 clean
+390 reduced years 0.7 clean
+390 reduced weight 0.43 clean
+390 reduced catch-up 0.95 clean
+390 reduced lab 0.45 clean
+390 reduced likeness 0.2 clean
+390 reduced likeness 0.62 clean
+390 reduced evidence 0.5 clean
+390 reduced atlas 0 clean
+390 reduced resorted 0.9 clean
+PASS first Tab stop has a visible focus ring {"tag":"A","text":"SKIP TO CHAPTERS","id":"","cls":"skip-link","ring":"solid 2px"}
+PASS nav Enter jumps to YEARS, hash written, focus on scene heading #years {"tag":"H2","text":"Thirty-five years: the disc grew, and it","id":"years-title","cls":"statement","ring":"none 3px"}
+PASS S03a readout: ArrowRight/Left step the year 2016 -> 2017 -> 2015
+PASS FOLLOW by keyboard shows the country's rank NIGERIA · RANK 135 OF 199 · 8,892 CONSTANT 2021 INTL $ (PPP)
+PASS FOLLOW CLEAR reachable by Tab and works {"tag":"BUTTON","text":"CLEAR","id":"","cls":"btn-square","ring":"solid 2px"}
+PASS S03b COUNTRIES by Space 
+PASS S03b 1990 by Space 
+PASS S03b SET ASIDE by Enter 
+PASS S03b RESET restores PEOPLE, latest, nothing set aside 
+PASS S05 BASIS by keyboard changes the record SLOPE -0.03 PP / YR PER LN UNIT (95% CI -0.22 TO 0.17, HC3; BOOTSTRAP -0.22 TO 0
+PASS S05 WINDOW 1980 by keyboard SLOPE -0.31 PP / YR PER LN UNIT (95% CI -0.50 TO -0.13, HC3; BOOTSTRAP -0.50 TO 
+PASS S05 SAMPLE LOWER THIRD by keyboard SLOPE -0.96 PP / YR PER LN UNIT (95% CI -1.68 TO -0.24, HC3; BOOTSTRAP -1.69 TO -0.29) · N 52 · R² 0.11
+
+AT THIS PACE, H
+PASS S05 NOT PUBLISHED option is not applied WITH TERRITORY CHANGES title=POINTS NOT PUBLISHED FOR THIS WINDOW
+PASS S06 LIGHT BY picker by keyboard changes the pair SPEARMAN RHO 0.97 (95% CI 0.96 TO 0.98) · N 177 -> SPEARMAN RHO 0.03 (95% CI -0.12 TO 0.18) · N 195
+FAIL S06 ORDER BY picker by keyboard changes the pair SPEARMAN RHO 0.03 (95% CI -0.12 TO 0.18) · N 195 -> SPEARMAN RHO 0.03 (95% CI -0.12 TO 0.18) · N 195
+PASS ATLAS add country by keyboard 
+PASS ATLAS indicator by keyboard INDUSTRY VALUE ADDED · PERCENT OF GDP · 2024 · 189 COUNTRIES WITH DATA · 2026-10
+PASS ATLAS inspector opens from the chip by Enter, focus moves into it {"tag":"SECTION","text":"KEN · SUB-SAHARAN AFRICA · LOWER MIDDLE ","id":"","cls":"inspector","ring":"solid 2px"}
+PASS Esc closes the inspector and returns focus to the chip 
+PASS ATLAS RESET restores GDP per capita PPP and clears the selection RESET

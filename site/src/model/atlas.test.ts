@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { GROUPS, basesIn, narrativeFamilies, pairsAllowed, pathOf, unitFor, type Ind } from "./atlas";
+import { GROUPS, atlasView, basesIn, narrativeFamilies, pairsAllowed, pathOf, unitFor, type Ind } from "./atlas";
 
 const inds = (JSON.parse(readFileSync(new URL("../../public/data/indicators.json", import.meta.url), "utf8")) as { indicators: Ind[] }).indicators;
 const narr = JSON.parse(readFileSync(new URL("../../public/data/narratives.json", import.meta.url), "utf8")) as { templates: { id: string; text: string }[]; pair_templates: { id: string; text: string }[] };
@@ -18,6 +18,17 @@ describe("ATLAS unit guard (basisOf, the TS mirror of assert_same_basis)", () =>
       const found = basesIn(texts);
       expect(found.length, i.id).toBeLessThanOrEqual(1);
       if (i.price_basis) expect(basesIn([unitFor(i)]), i.id).toEqual([i.price_basis]);
+    }
+  });
+  it("every (indicator, LEVEL/INDEX, 1-4 countries) view holds one basis across status, legend, paths and narratives (QA D-009)", () => {
+    for (const i of inds) for (const values of ["level", "index"] as const) for (const n of [1, 2, 4]) {
+      const v = atlasView(i, values, 2000, n);
+      expect(v.statusUnit, i.id).toBe(v.legendUnit);
+      const texts = [v.statusUnit, v.legendUnit, v.pathsUnit, ...v.families.map((f) => narr.templates.find((t) => t.id === f)!.text.toUpperCase())];
+      if (v.pairs) texts.push(...narr.pair_templates.map((t) => t.text.toUpperCase()));
+      expect(basesIn(texts).length, `${i.id} ${values} ${n}`).toBeLessThanOrEqual(1);
+      if (v.pairs) expect(i.id).toBe("gdppc_ppp");
+      if (i.id === "agr_share") expect(v.families).toEqual(["structure"]);
     }
   });
   it("INDEX is enabled only for indexable indicators (DR-7)", () => {

@@ -19,7 +19,7 @@ const scaleRect = (cls: ViewportClass, w: number, h: number, r: [number, number,
 };
 /** PL (VISUAL_DESIGN 3.3): the plot box per composition. */
 export const planeRect = (cls: ViewportClass, w: number, h: number) => {
-  const r = scaleRect(cls, w, h, cls === "D" ? [620, 1344, 150, 740] : cls === "T" ? [48, 720, 540, 880] : [16, 374, 256, 480]);
+  const r = scaleRect(cls, w, h, cls === "D" ? [620, 1344, 150, 740] : cls === "T" ? [48, 720, 540, 880] : [16, 374, 290, 500]);
   return cls === "D" && compact() ? { ...r, x0: compactX(620, w) + 24, x1: compactX(1344, w) } : r;
 };
 const SEED_PX: Record<ViewportClass, number> = { D: 5.5, T: 4.5, M: 3.2 };
@@ -77,7 +77,7 @@ export const planePx = (dom: Domain, cls: ViewportClass, w: number, h: number, x
 /** G4a (VISUAL_DESIGN 3.3): three touching-close group discs, country spacing per composition. */
 export function groupCentres(cls: ViewportClass, w: number, h: number) {
   const [W0, H0] = REF[cls];
-  const c = cls === "D" ? { pts: [[700, 470], [975, 470], [1265, 470]], sp: 18 } : cls === "T" ? { pts: [[140, 660], [384, 660], [628, 660]], sp: 11 } : { pts: [[150, 196], [150, 300], [150, 408]], sp: 6.5 };
+  const c = cls === "D" ? { pts: [[700, 470], [975, 470], [1265, 470]], sp: 18 } : cls === "T" ? { pts: [[140, 660], [384, 660], [628, 660]], sp: 11 } : { pts: [[150, 0.584 * 844], [150, 0.689 * 844], [150, 0.794 * 844]], sp: 5.2 };
   const k = Math.min(w / W0, h / H0);
   if (cls === "D" && compact()) return { pts: c.pts.map(([x, y]) => [compactX(x!, w) + (x === 700 ? 40 : x === 1265 ? -30 : 0), (y! * h) / H0] as const), sp: c.sp * k };
   return { pts: c.pts.map(([x, y]) => [(x! * w) / W0, (y! * h) / H0] as const), sp: c.sp * k };
@@ -85,7 +85,7 @@ export function groupCentres(cls: ViewportClass, w: number, h: number) {
 
 /** Origin of the hollow "not grouped" set (shared with its caption). */
 export function ungroupedXY(cls: ViewportClass, w: number, h: number): [number, number] {
-  if (cls === "M") return [0.3 * w, 0.595 * h];
+  if (cls === "M") return [0.42 * w, 0.894 * h];
   if (cls === "T") return [0.1 * w, 0.88 * h];
   return [cls === "D" && compact() ? compactX(620, w) + 30 : 0.45 * w, 0.85 * h];
 }

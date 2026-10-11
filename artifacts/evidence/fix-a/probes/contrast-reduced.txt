@@ -1,0 +1,5 @@
+4 of 497 small-text boxes under 4.5:1
+1.00:1  1440x900-reduced_years_0.7  '2000 · 6,078 SEEDS · 6.05 BN PEOPLE WITH'  fs 12  bg p95 rgb(255, 255, 255)
+1.00:1  390x844-reduced_evidence_0.05  'DOESN'T INCOME CAUSE PRODUCTIVITY?'  fs 12  bg p95 rgb(255, 255, 255)
+1.00:1  390x844-reduced_years_0.7  '2010 · 6,900 SEEDS · 6.87 BN PEOPLE WITH'  fs 12  bg p95 rgb(255, 255, 255)
+1.00:1  768x1024-reduced_atlas_0  'ONE INDICATOR, ONE UNIT AT A TIME. COUNT'  fs 16  bg p95 rgb(255, 255, 255)

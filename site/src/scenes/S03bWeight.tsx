@@ -31,12 +31,12 @@ function Segmented<T extends string | number>({ label, value, options, onChange 
 
 /** S03b Weight (interaction 3): COUNT by countries or people, YEAR, SET ASIDE China and India. */
 export function S03bWeight({ def }: { def: SceneDef }) {
-  const [f] = useArtifact(FACTS, false);
+  const [f, retryF] = useArtifact(FACTS, false);
   const [cv, retryCv] = useArtifact(CONVERGENCE, false);
   const [ys, retryYs] = useArtifact(SEED_YEARS, false);
-  const [lay] = useArtifact(SEED_LATEST, false);
-  const [ind] = useArtifact(INDICATORS, false);
-  const [pan] = useArtifact(PANEL, false);
+  const [lay, retryLay] = useArtifact(SEED_LATEST, false);
+  const [ind, retryInd] = useArtifact(INDICATORS, false);
+  const [pan, retryPan] = useArtifact(PANEL, false);
   const w = useStore(weight);
   const v = useStore(view);
   const motion = useMotion();
@@ -65,12 +65,12 @@ export function S03bWeight({ def }: { def: SceneDef }) {
           <p className="scene-kicker">WEIGHT · {S00.line2}</p>
           <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="statement">{S03B.statement}</h2>
         </div>
-        <Statuses items={[["seedhead/gdppc_ppp", ys, retryYs]]} />
+        <Statuses items={[["seedhead/gdppc_ppp", ys, retryYs], ["seedhead/gdppc_ppp_latest", lay, retryLay], ["facts", f, retryF], ["indicators", ind, retryInd], ["panel_income", pan, retryPan]]} />
         <div className="weight-controls">
           <Segmented label="COUNT" value={w.count} onChange={(c) => setWeight({ count: c })}
             options={[{ v: "countries", text: "COUNTRIES" }, { v: "people", text: "PEOPLE" }]} />
           <Segmented label="YEAR" value={year} onChange={(y) => setWeight({ year: y })}
-            options={[{ v: 1990, text: "1990", disabled: has1990 ? undefined : "1990 LAYOUT NOT PUBLISHED" }, { v: latest, text: String(latest) }]} />
+            options={[{ v: 1990, text: "1990", disabled: has1990 ? undefined : "1990 LAYOUT NOT LOADED" }, { v: latest || -1, text: latest ? String(latest) : "LATEST", disabled: latest ? undefined : "LATEST LAYOUT NOT LOADED" }]} />
           <div className="opt-row">
             <span className="mono-label opt-row__label" aria-hidden="true">SET ASIDE</span>
             <button type="button" role="switch" aria-checked={w.setAside} className={`opt ${w.setAside ? "is-on" : ""}`} onClick={() => setWeight({ setAside: !w.setAside })}>

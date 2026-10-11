@@ -47,8 +47,25 @@ export function narrativeFamilies(id: string): string[] {
   if (id === "hhi5" || id.startsWith("x_")) return ["concentration"];
   return ["peers"];
 }
-/** Pair narratives compare PPP inputs only, so they are offered only for PPP or non-money indicators. */
-export const pairsAllowed = (i: Ind) => i.price_basis === null || i.price_basis === "ppp_constant_intl_2021";
+/** Pair narratives compare GDP per capita PPP inputs (levels, growth, index), so they fit only that indicator (QA D-009). */
+export const pairsAllowed = (i: Ind) => i.id === "gdppc_ppp";
+
+/**
+ * The ATLAS view's text, from the store: one unit string shared by the status line and the legend (the disc
+ * always shows levels in the active year), the paths caption (INDEX keeps the same basis), and the
+ * narrative families that fit the indicator. Pure, so the unit guard can be tested over every combination.
+ */
+export function atlasView(i: Ind, values: "level" | "index", start: number, nSelected: number) {
+  const unit = unitFor(i);
+  const index = values === "index" && i.display.indexable;
+  return {
+    statusUnit: unit,
+    legendUnit: unit,
+    pathsUnit: index ? `${indexUnit(start)} · FROM ${unit}` : unit,
+    pairs: nSelected >= 2 && pairsAllowed(i),
+    families: narrativeFamilies(i.id),
+  };
+}
 
 /** One path: values over the period, LEVEL or INDEX = 100 at the start year; nulls stay gaps (never joined). */
 export function pathOf(values: (number | null)[], years: number[], period: [number, number], index: boolean): { year: number; v: number | null }[] {

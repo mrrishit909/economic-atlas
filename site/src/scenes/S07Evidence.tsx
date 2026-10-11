@@ -10,7 +10,8 @@ import { copyS07, limit1960, d2, type Exchange } from "../data/copy";
 import { stepState } from "../motion/progress";
 import { useMotion, useProgress } from "../scroll/hooks";
 
-const THRESH = [0.04, 0.16, 0.28, 0.4, 0.52, 0.64, 0.76];
+// the first objection is already up at the nav landing (p 0.05, MOTION_SYSTEM 6.2; QA D-010)
+const THRESH = [0.01, 0.16, 0.28, 0.4, 0.52, 0.64, 0.76];
 
 const MW = 260; // mini visuals are drawn 1:1 in CSS px so their text keeps the 11px floor (QA L7)
 function CiBars({ rows, label }: { rows: [string, number, [number, number]][]; label: string }) {
@@ -33,8 +34,8 @@ function CiBars({ rows, label }: { rows: [string, number, [number, number]][]; l
 /** S07 Evidence (interaction 10): seven objections answered with receipts; the limitations alongside. */
 export function S07Evidence({ def }: { def: SceneDef }) {
   const motion = useMotion();
-  const [f] = useArtifact(FACTS, false);
-  const [m] = useArtifact(META, false);
+  const [f, retryF] = useArtifact(FACTS, false);
+  const [m, retryM] = useArtifact(META, false);
   const [cv, retryCv] = useArtifact(CONVERGENCE, false);
   const [val, retryVal] = useArtifact(VALIDATION, false);
   const [cl, retryCl] = useArtifact(CLUSTERS, false);
@@ -99,15 +100,15 @@ export function S07Evidence({ def }: { def: SceneDef }) {
         ))}
       </ol>
       <aside className="ev-side">
-        <Statuses items={[["validation", val, retryVal], ["convergence", cv, retryCv], ["clusters", cl, retryCl], ["correlations", co, retryCo], ["coverage", cov, retryCov], ["boundaries", bd, retryBd]]} />
+        <Statuses items={[["facts", f, retryF], ["meta", m, retryM], ["validation", val, retryVal], ["convergence", cv, retryCv], ["clusters", cl, retryCl], ["correlations", co, retryCo], ["coverage", cov, retryCov], ["boundaries", bd, retryBd]]} />
         {cur ? (
           <div className="receipt">
             <p className="receipt__h">RECEIPT</p>
             <a href={dataUrlOf(cur.receipt)}>{cur.receipt}</a>
-            {m.status === "ready" ? <p className="tnum">{((m.data as MetaFull).artifact_bytes[cur.receipt.replace(".json", "")] ?? 0).toLocaleString("en-US")} BYTES GZIP · PIPELINE v{(m.data as MetaFull).pipeline_version}</p> : null}
+            {m.status === "ready" ? (() => { const b = (m.data as MetaFull).artifact_bytes[cur.receipt.replace(".json", "")]; return <p className="tnum">{b === undefined ? "SIZE NOT PUBLISHED" : `${b.toLocaleString("en-US")} BYTES GZIP`} · PIPELINE v{(m.data as MetaFull).pipeline_version}</p>; })() : null}
           </div>
         ) : null}
-        <details className="ev-limits" open={motion ? shown >= 7 : true}>
+        <details className="ev-limits" open={motion ? shown >= 7 && innerWidth >= 768 : true}>
           <summary>LIMITATIONS ({limits.length})</summary>
           <ul tabIndex={0} aria-label="Limitations">{limits.map((l) => <li key={l}>{l}</li>)}</ul>
         </details>

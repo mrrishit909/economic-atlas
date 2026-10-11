@@ -48,6 +48,8 @@ export function PlaneOverlay({ rec, show, labels = 8 }: { rec: BetaRecord; show:
         <pattern id="ci-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
           <line x1="0" y1="0" x2="0" y2="6" stroke="#58B8E1" strokeWidth="1" opacity="0.5" />
         </pattern>
+        {/* L16: axis words and iso labels sit on a black plate so seeds passing behind never drop their contrast */}
+        <filter id="plane-plate" x="-0.06" y="-0.25" width="1.12" height="1.5"><feFlood floodColor="#000" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter>
       </defs>
       {show.zero > 0 && dom.y[0] < 0 && dom.y[1] > 0 ? (
         <line x1={r.x0} x2={r.x0 + (r.x1 - r.x0) * show.zero} y1={Y(0)} y2={Y(0)} className="plane__zero" />
@@ -55,15 +57,22 @@ export function PlaneOverlay({ rec, show, labels = 8 }: { rec: BetaRecord; show:
       {show.zero > 0 ? (
         <g className="plane__x" style={{ opacity: show.zero }}>
           {xTicks(dom).map((t) => <text key={t.v} x={X(t.x)} y={r.y1 + 22} textAnchor="middle">{t.label}</text>)}
-          <text x={r.x1} y={r.y1 + 40} textAnchor="end" className="plane__unit">{`GDP PER CAPITA IN ${rec.start} · ${unitOf(rec.price_basis)}`}</text>
-          <text x={r.x0 + 4} y={r.y0 + 14} className="plane__unit">{S04.yUnit}</text>
+          {cls === "M" ? (
+            <text x={r.x1} y={r.y1 + 38} textAnchor="end" className="plane__unit" filter="url(#plane-plate)"><tspan x={r.x1}>{`GDP PER CAPITA IN ${rec.start}`}</tspan><tspan x={r.x1} dy={14}>{unitOf(rec.price_basis)}</tspan></text>
+          ) : (
+            <text x={r.x1} y={r.y1 + 40} textAnchor="end" className="plane__unit" filter="url(#plane-plate)">{`GDP PER CAPITA IN ${rec.start} · ${unitOf(rec.price_basis)}`}</text>
+          )}
+          {[-4, -2, 2, 4, 6, 8].filter((v) => v > dom.y[0] && v < dom.y[1]).map((v) => (
+            <text key={v} x={cls === "M" ? r.x1 - 2 : r.x1 + 8} y={Y(v) + 4} textAnchor={cls === "M" ? "end" : "start"} className="plane__y" filter="url(#plane-plate)">{v > 0 ? `+${v}%` : `${v}%`}</text>
+          ))}
+          <text x={r.x0 + 4} y={r.y0 + 14} className="plane__unit" filter="url(#plane-plate)">{S04.yUnit}</text>
         </g>
       ) : null}
       {show.fit ? (
         <g key={rec.id} className="plane__fit" data-fit={rec.id} data-slope={rec.beta}>
           <polygon points={[...up, ...dn].join(" ")} fill="url(#ci-hatch)" />
           <line x1={X(x0)} x2={X(x1)} y1={Y(fitAt(rec, x0).y)} y2={Y(fitAt(rec, x1).y)} className="plane__line" />
-          {lab.map((l) => <text key={l.iso} x={X(pts!.x[l.i]!) + 7} y={Y(pts!.y[l.i]!) + 4} className="plane__lab">{l.iso}</text>)}
+          {lab.map((l) => <text key={l.iso} x={X(pts!.x[l.i]!) + 7} y={Y(pts!.y[l.i]!) + 4} className="plane__lab" filter="url(#plane-plate)">{l.iso}</text>)}
         </g>
       ) : null}
     </svg>

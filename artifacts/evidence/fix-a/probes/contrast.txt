@@ -1,0 +1,2 @@
+1 of 1802 small-text boxes under 4.5:1
+1.00:1  768x1024_atlas_0  'ONE INDICATOR, ONE UNIT AT A TIME. COUNT'  fs 16  bg p95 rgb(255, 255, 255)

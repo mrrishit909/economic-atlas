@@ -18,11 +18,11 @@ function Unavailable({ file, s, retry }: { file: string; s: LoadState<unknown>; 
 /** S02 Origin of the data (interaction 4): four story cards, each bound to its artifact. */
 export function S02Sources({ def }: { def: SceneDef }) {
   const [f, retryF] = useArtifact(FACTS, false);
-  const [m] = useArtifact(META, false);
-  const [cs] = useArtifact(COUNTRIES, false);
+  const [m, retryM] = useArtifact(META, false);
+  const [cs, retryCs] = useArtifact(COUNTRIES, false);
   const [rc, retryRc] = useArtifact(RECONCILIATION, false);
   const [pan, retryPan] = useArtifact(PANEL, false);
-  const [ind] = useArtifact(INDICATORS, false);
+  const [ind, retryInd] = useArtifact(INDICATORS, false);
   const [cov, retryCov] = useArtifact(COVERAGE, false);
   const [lr, retryLr] = useArtifact(LONGRUN, false);
   if (f.status !== "ready") return <Track id={def.id} height={def.track} landing={def.landing} className="scene scene-sources"><h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="sr-only">{def.title}</h2><div className="sources-head"><Statuses items={[["facts", f, retryF]]} /></div></Track>;
@@ -117,6 +117,8 @@ export function S02Sources({ def }: { def: SceneDef }) {
       <div className="sources-head">
         <p className="scene-kicker">{S02.kicker}</p>
         <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="sr-only">{def.title}</h2>
+        {/* L4: the head line names every artifact this deck reads outside a card (pipeline line, names, card 2 rows) */}
+        <Statuses items={[["meta", m, retryM], ["countries", cs, retryCs], ["indicators", ind, retryInd]]} />
       </div>
       <StoryDeck track={def.id} cards={cards} />
       {m.status === "ready" ? <p className="sources-pipeline">PIPELINE v{(m.data as MetaFull).pipeline_version} · {m.data.vintage.text} {F.strings.attribution_wdi}</p> : null}

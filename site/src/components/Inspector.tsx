@@ -6,6 +6,7 @@ import { layoutFor, latestYear, valueOfInd } from "../scenes/director";
 import { narrativeFamilies, unitFor, type Ind } from "../model/atlas";
 import { render, type Inputs } from "../model/narratives";
 import { HonestyChip } from "./HonestyChip";
+import { Statuses } from "./StateUI";
 import { d1, int, money } from "../data/copy";
 
 /**
@@ -19,9 +20,16 @@ export function Inspector() {
   const v = useStore(view), a = useStore(atlas), y = useStore(yearsStore);
   const [cs] = useArtifact(COUNTRIES, false);
   const [ind] = useArtifact(INDICATORS, false);
-  const [nr] = useArtifact(NARRATIVES, !!iso);
-  const [bd] = useArtifact(BOUNDARIES, !!iso);
+  const [nr, retryNr] = useArtifact(NARRATIVES, !!iso);
+  const [bd, retryBd] = useArtifact(BOUNDARIES, !!iso);
   const ref = useRef<HTMLElement>(null);
+  const openedIn = useRef<string | null>(null);
+  // L17: the inspector belongs to the scene that opened it; leaving that scene closes it
+  useEffect(() => {
+    if (!iso) { openedIn.current = null; return; }
+    if (openedIn.current === null) openedIn.current = v.scene;
+    else if (v.scene !== openedIn.current) inspector.set({ iso: null, returnTo: null });
+  }, [iso, v.scene]);
   const close = () => { inspector.set({ iso: null, returnTo: null }); (returnTo ?? document.querySelector<HTMLElement>(`#${v.scene}-title`))?.focus({ preventScroll: true }); };
   useEffect(() => {
     if (!iso) return;
@@ -44,14 +52,17 @@ export function Inspector() {
   const brk = bd.status === "ready" ? bd.data.rows.find((x) => x.iso3 === iso && x.territory_break_year !== null) : undefined;
   return (
     <section ref={ref} className="inspector" role="dialog" aria-modal="false" aria-labelledby="inspector-name" tabIndex={-1}>
-      <span className="story-card__chip">{iso} · {c.region.toUpperCase()} · {c.income_group.toUpperCase()} (CURRENT WB LABEL)</span>
+      <div className="inspector__top">
+        <span className="story-card__chip">{iso} · {c.region.toUpperCase()} · {c.income_group.toUpperCase()} (CURRENT WB LABEL)</span>
+        <button type="button" className="btn-square inspector__close" onClick={close}>CLOSE (ESC)</button>
+      </div>
       <h3 id="inspector-name" className="inspector__name serif">{c.name}</h3>
       <p className="tnum inspector__val">{I.label.toUpperCase()} · {year}: {value}</p>
       <p className="tnum">{r >= 0 && L ? `RANK ${int(r + 1)} OF ${int(L.order.length)} COUNTRIES WITH DATA` : `NOT RANKED IN ${year} (NO VALUE)`}</p>
+      <Statuses items={[["narratives", nr, retryNr], ["boundaries", bd, retryBd]]} />
       <div className="inspector__narr">{texts.map((t) => <p key={t}>{t}</p>)}</div>
       {brk ? <p className="inspector__brk">TERRITORY NOTE: {brk.event.toUpperCase()} ({brk.event_year}, {brk.event_evidence.replace("_", " ")}). {brk.treatment.toUpperCase()}</p> : null}
       <p className="s03-chips"><HonestyChip tag="OBSERVED" detail="WDI VALUE" /><HonestyChip tag="DERIVED" detail="RANK, NARRATIVE" /></p>
-      <button type="button" className="btn-square" onClick={close}>CLOSE (ESC)</button>
     </section>
   );
 }

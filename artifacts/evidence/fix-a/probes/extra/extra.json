@@ -1,0 +1,714 @@
+{
+ "s05_basis_swap": {
+  "samples": 70,
+  "mixedFrames": 0
+ },
+ "crit7_weighted_readout": "SLOPE -0.82 PP / YR PER LN UNIT (95% CI -1.95 TO 0.31, HC3; BOOTSTRAP -1.26 TO -0.01) · N 102 · R² 0.45\n\nNO HALF-LIFE: NO CLEAR CATCH-UP IN THIS WINDOW\n\nPEOPLE-WEIGHTED, ALL: -0.82 (95% CI -1.95 TO 0.31) · N 102\n\nCHINA + INDIA SET ASIDE: -0.12 (95% CI -0.37 TO 0.12) · N 100\n\nSEED AREA = POPULATION AT THE START (THE WLS WEIGHT)\n\nDERIVED\n· GDPPC_CONST_1960_2024_POP_WEIGHTED",
+ "atlas_swap": {
+  "samples": 23,
+  "mixedStatusLegendPaths": 0,
+  "narrativeBasisDiffersFromStatus": 0
+ },
+ "atlas_agr_two_countries_narrative": "Agriculture's share of value added moved from 21.6% in 2000 to 16.2% in 2025; industry from 27.3% to 25.2%; services from 42.7% to 49.3%.\n\nAgriculture's share of value added moved from 4.8% in 2000 to 6.1% in 2025; industry from 23.0% to 20.1%; services from 58.3% to 59.7%.\n\nDERIVED\n· TEMPLATE RENDE",
+ "l4_extra": [
+  {
+   "vp": 1440,
+   "file": "seedhead/agr_share",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/gdp_growth",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/gdppc_const",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/gdppc_nominal",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/hhi5",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/ind_share",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/inflation",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/population",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/productivity",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/srv_share",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/trade_open",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/x_agri",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/x_food",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/x_fuel",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/x_manf",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "seedhead/x_mmtl",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 1440,
+   "file": "narratives",
+   "consumer": "inspector",
+   "alertInInspector": true,
+   "text": "DEU · EUROPE & CENTRAL ASIA · HIGH INCOME (CURRENT WB LABEL)\nCLOSE (ESC)\nGermany\n\nGDP PER CAPITA, PPP · 2025: 62,824 CONSTANT 2021 INTL $ (PPP)\n\nRANK 21 OF 185 COUNTRIES WITH DATA\n\nCOULD NOT LOAD NARR"
+  },
+  {
+   "vp": 1440,
+   "file": "boundaries",
+   "consumer": "inspector",
+   "alertInInspector": true,
+   "text": "DEU · EUROPE & CENTRAL ASIA · HIGH INCOME (CURRENT WB LABEL)\nCLOSE (ESC)\nGermany\n\nGDP PER CAPITA, PPP · 2025: 62,824 CONSTANT 2021 INTL $ (PPP)\n\nRANK 21 OF 185 COUNTRIES WITH DATA\n\nCOULD NOT LOAD BOUN"
+  },
+  {
+   "vp": 1440,
+   "file": "panel_income",
+   "consumer": "S02 card at p 0.314",
+   "inView": true,
+   "res": "ok refetch 1"
+  },
+  {
+   "vp": 1440,
+   "file": "coverage",
+   "consumer": "S02 card at p 0.504",
+   "inView": true,
+   "res": "ok refetch 1"
+  },
+  {
+   "vp": 1440,
+   "file": "longrun",
+   "consumer": "S02 card at p 0.694",
+   "inView": true,
+   "res": "ok refetch 1"
+  },
+  {
+   "vp": 1440,
+   "file": "reconciliation",
+   "consumer": "S02 card at p 0.124",
+   "inView": true,
+   "res": "ok refetch 1"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/agr_share",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/gdp_growth",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/gdppc_const",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/gdppc_nominal",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/hhi5",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/ind_share",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/inflation",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/population",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/productivity",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/srv_share",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/trade_open",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/x_agri",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/x_food",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/x_fuel",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/x_manf",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "seedhead/x_mmtl",
+   "alertVisible": true,
+   "res": "ok refetch 1 recovered true"
+  },
+  {
+   "vp": 390,
+   "file": "narratives",
+   "consumer": "inspector",
+   "alertInInspector": true,
+   "text": "DEU · EUROPE & CENTRAL ASIA · HIGH INCOME (CURRENT WB LABEL)\nCLOSE (ESC)\nGermany\n\nGDP PER CAPITA, PPP · 2025: 62,824 CONSTANT 2021 INTL $ (PPP)\n\nRANK 21 OF 185 COUNTRIES WITH DATA\n\nCOULD NOT LOAD NARR"
+  },
+  {
+   "vp": 390,
+   "file": "boundaries",
+   "consumer": "inspector",
+   "alertInInspector": true,
+   "text": "DEU · EUROPE & CENTRAL ASIA · HIGH INCOME (CURRENT WB LABEL)\nCLOSE (ESC)\nGermany\n\nGDP PER CAPITA, PPP · 2025: 62,824 CONSTANT 2021 INTL $ (PPP)\n\nRANK 21 OF 185 COUNTRIES WITH DATA\n\nCOULD NOT LOAD BOUN"
+  },
+  {
+   "vp": 390,
+   "file": "panel_income",
+   "consumer": "S02 card at p 0.314",
+   "inView": true,
+   "res": "ok refetch 1"
+  },
+  {
+   "vp": 390,
+   "file": "coverage",
+   "consumer": "S02 card at p 0.504",
+   "inView": true,
+   "res": "ok refetch 1"
+  },
+  {
+   "vp": 390,
+   "file": "longrun",
+   "consumer": "S02 card at p 0.694",
+   "inView": true,
+   "res": "ok refetch 1"
+  },
+  {
+   "vp": 390,
+   "file": "reconciliation",
+   "consumer": "S02 card at p 0.124",
+   "inView": true,
+   "res": "ok refetch 1"
+  }
+ ],
+ "silent_facts_weight": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD FACTS (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "WEIGHT · SORTED BY GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP)\n\nCount people, not countries.\n\nCOULD NOT LOAD FACTS (HTTP 404)\n\nRETRY\nCOUNT\nCOUNTRIES\nPEOPLE\nYEAR\n1990\n2025\nSET ASIDE\nCHINA + INDIA\nRESET\n\n185 SEEDS · 1 PER COUNTRY · 2025\n\n2824\n5361\n10.1K\n16K\n28K\n48.1K\n\n±1 SD OF LN INCOME, COUNTRIE"
+ },
+ "silent_facts_years": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD FACTS (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "YEARS · GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP) · 1 SEED ≈ 1 MILLION PEOPLE\n\nThirty-five years: the disc grew, and its middle moved.\nFOLLOW\n\nCOULD NOT LOAD FACTS (HTTP 404)\n\nRETRY\n\n2016\n\n7,416 SEEDS · 7.39 BN PEOPLE WITH DATA\n\nMIDDLE PERSON'S COUNTRY: ZAF · 14,501 CONSTANT 2021 INTL $ (PPP)"
+ },
+ "silent_facts_evidence": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD FACTS (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "How we know.\n\nCOULD NOT LOAD FACTS (HTTP 404)\n\nRETRY\nLIMITATIONS (7)"
+ },
+ "silent_indicators_weight": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD INDICATORS (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "WEIGHT · SORTED BY GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP)\n\nCount people, not countries.\n\nCOULD NOT LOAD INDICATORS (HTTP 404)\n\nRETRY\nCOUNT\nCOUNTRIES\nPEOPLE\nYEAR\n1990\n2025\nSET ASIDE\nCHINA + INDIA\nRESET\n\nSPREAD OF LN INCOME (SD), 1990 → 2025\n\nCOUNTRIES 1.17 → 1.13\n\nPEOPLE 1.20 → 0.89\n\nCATCH-"
+ },
+ "silent_countries_years": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD COUNTRIES (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "YEARS · GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP) · 1 SEED ≈ 1 MILLION PEOPLE\n\nThirty-five years: the disc grew, and its middle moved.\nFOLLOW\n\nCOULD NOT LOAD COUNTRIES (HTTP 404)\n\nRETRY\n\n2016\n\n7,416 SEEDS · 7.39 BN PEOPLE WITH DATA\n\nMIDDLE PERSON'S COUNTRY: ZAF · 14,501 CONSTANT 2021 INTL $ ("
+ },
+ "silent_meta_atlas": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD META (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "THE ATLAS\n\nCompare any economies, on one footing.\n\nGDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP) · 2025 · 185 COUNTRIES WITH DATA · WDI\n\nCOULD NOT LOAD META (HTTP 404)\n\nRETRY\n2824\n5361\n10.1K\n16K\n28K\n48.1K\nCONSTANT 2021 INTL $ (PPP)\n1 SEED ≈ 1 MILLION PEOPLE\n\nOBSERVED\n· WDI VALUES\nDERIVED\n· LAYOUT"
+ },
+ "silent_seedhead/gdppc_ppp_latest_weight": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "WEIGHT · SORTED BY GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP)\n\nCount people, not countries.\n\nCOULD NOT LOAD SEEDHEAD/GDPPC_PPP_LATEST (HTTP 404)\n\nRETRY\nCOUNT\nCOUNTRIES\nPEOPLE\nYEAR\n1990\nLATEST\nSET ASIDE\nCHINA + INDIA\nRESET\n\nSPREAD OF LN INCOME (SD), 1990 → 2025\n\nCOUNTRIES 1.17 → 1.13\n\nPEOPLE 1."
+ },
+ "silent_panel_income_weight": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD PANEL_INCOME (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "WEIGHT · SORTED BY GDP PER CAPITA, PPP · CONSTANT 2021 INTL $ (PPP)\n\nCount people, not countries.\n\nCOULD NOT LOAD PANEL_INCOME (HTTP 404)\n\nRETRY\nCOUNT\nCOUNTRIES\nPEOPLE\nYEAR\n1990\n2025\nSET ASIDE\nCHINA + INDIA\nRESET\n\nSPREAD OF LN INCOME (SD), 1990 → 2025\n\nCOUNTRIES 1.17 → 1.13\n\nPEOPLE 1.20 → 0.89\n\nCATC"
+ },
+ "silent_facts_likeness": {
+  "anyAlertOnScreen": [
+   "COULD NOT LOAD FACTS (HTTP 404)RETRY"
+  ],
+  "sceneTextHead": "LIKENESS · PEER GROUPS (K-MEANS, K = 3)\n\nThree loose groups, not three kinds of country.\n\nCOULD NOT LOAD FACTS (HTTP 404)\n\nRETRY\nMETHOD\nK-MEANS\nWARD\n\nHOLLOW SEEDS: NEGATIVE SILHOUETTE (THEY FIT ANOTHER GROUP ABOUT AS WELL)\n\nSEED COLOUR = INCOME (PPP, LATEST): GROUPS ARE READ BY POSITION\n\nPREDICTED\n·"
+ },
+ "l15_1440": [
+  {
+   "i": 0,
+   "size": "none",
+   "lit": 0
+  },
+  {
+   "i": 1,
+   "size": "1440x900",
+   "png": 843920,
+   "label": null
+  },
+  {
+   "i": 2,
+   "size": "none",
+   "lit": 0
+  },
+  {
+   "i": 3,
+   "size": "260x260",
+   "png": 38945,
+   "label": "1990 · 5,202 SEEDS · 5.17 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 4,
+   "size": "260x260",
+   "png": 45132,
+   "label": "2000 · 6,078 SEEDS · 6.05 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 5,
+   "size": "260x260",
+   "png": 50438,
+   "label": "2010 · 6,900 SEEDS · 6.87 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 6,
+   "size": "260x260",
+   "png": 57938,
+   "label": "2025 · 8,005 SEEDS · 7.98 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 7,
+   "size": "240x240",
+   "png": 49621,
+   "label": "PEOPLE · 2025"
+  },
+  {
+   "i": 8,
+   "size": "240x240",
+   "png": 21634,
+   "label": "COUNTRIES · 2025"
+  },
+  {
+   "i": 9,
+   "size": "240x240",
+   "png": 32794,
+   "label": "PEOPLE · 1990"
+  },
+  {
+   "i": 10,
+   "size": "240x240",
+   "png": 70749,
+   "label": "PEOPLE · 2025 · CHINA + INDIA SET ASIDE"
+  },
+  {
+   "i": 11,
+   "size": "240x240",
+   "png": 50039,
+   "label": "YOUR VIEW · PEOPLE · 2025"
+  }
+ ],
+ "l15_390": [
+  {
+   "i": 0,
+   "size": "none",
+   "lit": 0
+  },
+  {
+   "i": 1,
+   "size": "390x844",
+   "png": 253447,
+   "label": null
+  },
+  {
+   "i": 2,
+   "size": "none",
+   "lit": 0
+  },
+  {
+   "i": 3,
+   "size": "260x260",
+   "png": 38945,
+   "label": "1990 · 5,202 SEEDS · 5.17 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 4,
+   "size": "260x260",
+   "png": 43562,
+   "label": "2000 · 6,078 SEEDS · 6.05 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 5,
+   "size": "260x260",
+   "png": 50438,
+   "label": "2010 · 6,900 SEEDS · 6.87 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 6,
+   "size": "260x260",
+   "png": 55115,
+   "label": "2025 · 8,005 SEEDS · 7.98 BN PEOPLE WITH DATA"
+  },
+  {
+   "i": 7,
+   "size": "240x240",
+   "png": 49621,
+   "label": "PEOPLE · 2025"
+  },
+  {
+   "i": 8,
+   "size": "240x240",
+   "png": 21255,
+   "label": "COUNTRIES · 2025"
+  },
+  {
+   "i": 9,
+   "size": "240x240",
+   "png": 32794,
+   "label": "PEOPLE · 1990"
+  },
+  {
+   "i": 10,
+   "size": "240x240",
+   "png": 68895,
+   "label": "PEOPLE · 2025 · CHINA + INDIA SET ASIDE"
+  },
+  {
+   "i": 11,
+   "size": "240x240",
+   "png": 44738,
+   "label": "YOUR VIEW · PEOPLE · 2025"
+  }
+ ],
+ "l14_fixture": {
+  "before": 390,
+  "after": {
+   "sw": 2000,
+   "iw": 1560
+  },
+  "configured": 390,
+  "caughtVsConfigured": true,
+  "caughtVsInnerWidth": true
+ },
+ "l12_sweep_390": [
+  [
+   "SKIP INTRO",
+   "ok",
+   true
+  ],
+  [
+   "MENU pill",
+   "ok",
+   "true"
+  ],
+  [
+   "menu LAB",
+   "ok"
+  ],
+  [
+   "hash after menu",
+   "#lab"
+  ],
+  [
+   "S05 CONTROLS",
+   "ok",
+   "true"
+  ],
+  [
+   "S05 2000",
+   "ok",
+   "true"
+  ],
+  [
+   "S05 UPPER THIRD",
+   "ok",
+   "true"
+  ],
+  [
+   "S05 RESET",
+   "ok",
+   null
+  ],
+  [
+   "S03b COUNTRIES",
+   "ok",
+   "true"
+  ],
+  [
+   "S03b 1990",
+   "ok",
+   "true"
+  ],
+  [
+   "S03b SET ASIDE",
+   "ok",
+   "true"
+  ],
+  [
+   "S03b RESET",
+   "ok"
+  ],
+  [
+   "S06 WARD",
+   "ok",
+   "true"
+  ],
+  [
+   "ATLAS INDEX = 100",
+   "ok",
+   "true"
+  ],
+  [
+   "ATLAS COUNTRIES",
+   "ok",
+   "true"
+  ],
+  [
+   "ATLAS chip -> inspector",
+   "ok",
+   true
+  ],
+  [
+   "inspector CLOSE",
+   "ok",
+   false
+  ],
+  [
+   "S08 OPEN THE ATLAS",
+   "ok"
+  ],
+  [
+   "scene after S08 link",
+   "atlas"
+  ]
+ ],
+ "l12_sweep_1440": [
+  [
+   "SKIP INTRO",
+   "ok",
+   true
+  ],
+  [
+   "nav LAB",
+   "ok"
+  ],
+  [
+   "hash after nav",
+   "#lab"
+  ],
+  [
+   "S05 2000",
+   "ok",
+   "true"
+  ],
+  [
+   "S05 UPPER THIRD",
+   "ok",
+   "true"
+  ],
+  [
+   "S05 RESET",
+   "ok",
+   null
+  ],
+  [
+   "S03b COUNTRIES",
+   "ok",
+   "true"
+  ],
+  [
+   "S03b 1990",
+   "ok",
+   "true"
+  ],
+  [
+   "S03b SET ASIDE",
+   "ok",
+   "true"
+  ],
+  [
+   "S03b RESET",
+   "ok"
+  ],
+  [
+   "S06 WARD",
+   "ok",
+   "true"
+  ],
+  [
+   "ATLAS INDEX = 100",
+   "ok",
+   "true"
+  ],
+  [
+   "ATLAS COUNTRIES",
+   "ok",
+   "true"
+  ],
+  [
+   "ATLAS chip -> inspector",
+   "ok",
+   true
+  ],
+  [
+   "inspector CLOSE",
+   "ok",
+   false
+  ],
+  [
+   "S08 OPEN THE ATLAS",
+   "ok"
+  ],
+  [
+   "scene after S08 link",
+   "atlas"
+  ],
+  [
+   "MOTION toggle",
+   "ok",
+   "true"
+  ]
+ ],
+ "s08_p075_1920x1080": {
+  "R": 768,
+  "diamOverH": 1.422,
+  "cx": 1200,
+  "cy": 564
+ },
+ "s08_p075_1440x900": {
+  "R": 640,
+  "diamOverH": 1.422,
+  "cx": 900,
+  "cy": 470
+ },
+ "s08_p075_768x1024": {
+  "R": 620,
+  "diamOverH": 1.211,
+  "cx": 300,
+  "cy": 420
+ },
+ "s08_p075_390x844": {
+  "R": 510,
+  "diamOverH": 1.208,
+  "cx": 195,
+  "cy": 270
+ },
+ "s08_p075_375x812": {
+  "R": 490,
+  "diamOverH": 1.208,
+  "cx": 188,
+  "cy": 260
+ },
+ "s08_p075_360x800": {
+  "R": 480,
+  "diamOverH": 1.2,
+  "cx": 180,
+  "cy": 256
+ }
+}

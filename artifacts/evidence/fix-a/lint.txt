@@ -1,0 +1,5 @@
+
+> economic-atlas@0.1.0 lint
+> eslint .
+
+lint=0

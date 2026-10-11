@@ -136,6 +136,7 @@ export const S06 = {
   caption: (i: number, k: number, size: number, sig: string) => `GROUP ${i + 1} OF ${k} · ${size} COUNTRIES · "${sig.toUpperCase()}"`,
   notGrouped: (n: number) => `NOT GROUPED: ${n} COUNTRIES MISSING A FEATURE`,
   ward: (n: number, of: number) => `${n} OF ${of} COUNTRIES CHANGE GROUP UNDER A DIFFERENT METHOD`,
+  ledgerShort: (sil: number, stab: number, hier: number) => `SILHOUETTE ${d2(sil)} (WEAK) · SEED ARI ${d2(stab)} · WARD ARI ${d2(hier)}`,
   ledger: (sil: number, stab: number, hier: number) => `SILHOUETTE ${d2(sil)} (WEAK) · SAME GROUPS ACROSS 20 SEEDS (ARI ${d2(stab)}) · WARD AGREEMENT ARI ${d2(hier)}`,
   rho: (rho: number, lo: number, hi: number, n: number) => `SPEARMAN RHO ${d2(rho)} (95% CI ${d2(lo)} TO ${d2(hi)}) · N ${n}`,
   order: (a: string, b: string) => `ORDER BY ${a} · LIGHT BY ${b} (RANK SEVENTHS)`,

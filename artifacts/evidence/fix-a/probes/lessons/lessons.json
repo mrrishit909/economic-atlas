@@ -1,0 +1,52 @@
+[
+ {
+  "viewport": "1920x1080",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: 296 entities. 217 economies. | 217 COUNTRIES | 79 AGGREGATES · NEVER RANKED"
+  ]
+ },
+ {
+  "viewport": "1440x900",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Three different dollars. | INDONESIA · THE MIDDLE PERSON'"
+  ]
+ },
+ {
+  "viewport": "1280x720",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Three different dollars. | INDONESIA · THE MIDDLE PERSON'",
+   "evidence@0.95: L2/L11/L13 \"VALUE-ADDED SHARES SUM TO ABOUT 93 P\" x \"EIGHT BILLIONSOURCESYEARSWEIGHTCATCH\" (173x32)"
+  ]
+ },
+ {
+  "viewport": "1024x768",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | DERIVED",
+   "evidence@0.95: L2/L11/L13 \"CLUSTER SILHOUETTE IS LOW (WEAK SEPA\" x \"EIGHT BILLIONSOURCESYEARSWEIGHTCATCH\" (201x32)"
+  ]
+ },
+ {
+  "viewport": "768x1024",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199"
+  ]
+ },
+ {
+  "viewport": "390x844",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199"
+  ]
+ },
+ {
+  "viewport": "375x812",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199"
+  ]
+ },
+ {
+  "viewport": "360x800",
+  "defects": [
+   "sources@0.694: L14 text outside viewport: Missing stays missing. | GDPPC_PPP · 2025 · N 185 | GDPPC_CONST · 2024 · N 199"
+  ]
+ }
+]

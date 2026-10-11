@@ -3,7 +3,7 @@ import { Track } from "../scroll/Track";
 import type { SceneDef } from "../app/scenes";
 import { useArtifact } from "../data/useArtifact";
 import { CONVERGENCE, PANEL } from "../data/artifacts";
-import { S05 } from "../data/copy";
+import { S05, d2 } from "../data/copy";
 import { HonestyChip } from "../components/HonestyChip";
 import { ArtifactStatus, Statuses } from "../components/StateUI";
 import { Footer } from "../components/Footer";
@@ -41,10 +41,14 @@ export function S05Lab({ def }: { def: SceneDef }) {
     <Track id={def.id} height={def.track} landing={def.landing} className="scene scene-lab">
       <ArtifactStatus file="convergence" state={cv} retry={retry} empty="">
         {(c) => {
-          // the record on screen follows the basis drawn (it swaps inside the neutral phase); controls show the choice
-          const shownId = labRecordId(L.shownBasis, L.shownBasis === L.basis ? L.start : WINDOWS[L.shownBasis][0]!, L.shownBasis === L.basis ? L.sample : "primary");
-          const rec = recordOf(labRecordId(L.basis, L.start, L.sample)) ?? recordOf(shownId)!;
-          const drawn = recordOf(shownId) ?? rec;
+          // every unit-bearing element (axes, labels, fit, readout, chip, table) reads the record DRAWN, which flips
+          // in one store update inside the neutral phase of a basis swap; the controls show the visitor's choice (QA L18)
+          const rec = recordOf(L.shownId) ?? recordOf(labRecordId(L.basis, L.start, L.sample))!;
+          const drawn = rec;
+          // criterion 7: a people-weighted slope is never shown without its set-aside counterpart (and vice versa)
+          const pair = rec.sample.startsWith("pop_weighted")
+            ? [recordOf(rec.id.replace(rec.sample, "pop_weighted")), recordOf(rec.id.replace(rec.sample, "pop_weighted_ex_chn_ind"))]
+            : null;
           const slice = (ind: string) => (pan.status === "ready" ? { iso3: pan.data.iso3, years: pan.data.years, values: pan.data.series[ind]!.values } : null);
           const off = (b: Basis, s: number, smp: string) => {
             const r = recordOf(labRecordId(b, s, smp));
@@ -81,6 +85,12 @@ export function S05Lab({ def }: { def: SceneDef }) {
                 <Statuses items={[["panel_income", pan, retryPan]]} />
                 <div className="plane-read">
                   <Ledger r={rec} />
+                  {pair && pair[0] && pair[1] ? (
+                    <div className="weighted-pair" data-weighted-pair>
+                      <p className={`tnum ledger__row ${rec.sample === "pop_weighted" ? "is-lit" : ""}`}>PEOPLE-WEIGHTED, ALL: {d2(pair[0].beta)} (95% CI {d2(pair[0].ci95[0])} TO {d2(pair[0].ci95[1])}) · N {pair[0].n}</p>
+                      <p className={`tnum ledger__row ${rec.sample !== "pop_weighted" ? "is-lit" : ""}`}>CHINA + INDIA SET ASIDE: {d2(pair[1].beta)} (95% CI {d2(pair[1].ci95[0])} TO {d2(pair[1].ci95[1])}) · N {pair[1].n}</p>
+                    </div>
+                  ) : null}
                   {rec.sample.startsWith("tercile") ? <p className="ledger__small">{c.copy.interpretation!.toUpperCase()}</p> : null}
                   {rec.sample.startsWith("pop_weighted") ? <p className="ledger__small">{S05.weighted}</p> : null}
                   <p className="s03-chips"><HonestyChip tag="DERIVED" detail={`${rec.id.toUpperCase()}`} /></p>

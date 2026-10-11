@@ -1,0 +1,33 @@
+
+Running 27 tests using 1 worker
+
+  ✓   1 [desktop] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree (9.8s)
+  ✓   2 [desktop] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores (8.9s)
+  ✓   3 [desktop] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers (2.7s)
+  ✓   4 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (2.4s)
+  ✓   5 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers (2.4s)
+  ✓   6 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers (2.2s)
+  ✓   7 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.4s)
+  ✓   8 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.3s)
+  ✓   9 [desktop] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.4s)
+  -  10 [tablet] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree
+  -  11 [tablet] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores
+  -  12 [tablet] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers
+  -  13 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers
+  -  14 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers
+  -  15 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers
+  -  16 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers
+  -  17 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers
+  -  18 [tablet] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers
+  -  19 [mobile] › e2e/stageb.spec.ts:75:3 › Stage B scenes › ATLAS indicator change across bases passes through neutral; status, legend and canvas agree
+  ✓  20 [mobile] › e2e/stageb.spec.ts:132:3 › Stage B scenes › ATLAS: aggregates never offered, INDEX disabled for shares, template narratives match the reference, RESET restores (10.9s)
+  ✓  21 [mobile] › e2e/stageb.spec.ts:231:1 › L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recovers (3.2s)
+  ✓  22 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD SEEDHEAD/GDPPC_PPP + RETRY in view, and recovers (1.8s)
+  ✓  23 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD NARRATIVES + RETRY in view, and recovers (2.5s)
+  ✓  24 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_STRUCTURE + RETRY in view, and recovers (2.7s)
+  ✓  25 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD PANEL_INCOME + RETRY in view, and recovers (2.3s)
+  ✓  26 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD INDICATORS + RETRY in view, and recovers (2.2s)
+  ✓  27 [mobile] › e2e/stageb.spec.ts:262:3 › L4: atlas shows COULD NOT LOAD COUNTRIES + RETRY in view, and recovers (2.4s)
+
+  10 skipped
+  17 passed (1.1m)

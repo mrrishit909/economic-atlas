@@ -33,9 +33,9 @@ function firstChange(layouts: Map<number, SeedheadYear> | null) {
 export function S03aYears({ def }: { def: SceneDef }) {
   const [ys, retry] = useArtifact(SEED_YEARS, false);
   const [cv, retryCv] = useArtifact(CONVERGENCE, false);
-  const [f] = useArtifact(FACTS, false);
-  const [cs] = useArtifact(COUNTRIES, false);
-  const [ind] = useArtifact(INDICATORS, false);
+  const [f, retryF] = useArtifact(FACTS, false);
+  const [cs, retryCs] = useArtifact(COUNTRIES, false);
+  const [ind, retryInd] = useArtifact(INDICATORS, false);
   const [pan, retryPan] = useArtifact(PANEL, false);
   const { year, follow } = useStore(yearsStore);
   const motion = useMotion();
@@ -86,7 +86,7 @@ export function S03aYears({ def }: { def: SceneDef }) {
         <h2 id={`${def.id}-title`} tabIndex={-1} data-scene-heading className="statement">{S03A.statement}</h2>
       </div>
       {followBox}
-      <Statuses items={[["panel_income", pan, retryPan]]} />
+      <Statuses items={[["panel_income", pan, retryPan], ["facts", f, retryF], ["countries", cs, retryCs], ["indicators", ind, retryInd]]} />
       <div className="years-readout" tabIndex={0} onKeyDown={onKey} aria-label="Year readout. Left and right arrows step the year.">
         <ArtifactStatus file="seedhead/gdppc_ppp" state={ys} retry={retry} empty={S03A.notPublished(year)}>
           {() => y ? (

@@ -38,7 +38,9 @@ export const catchup = store({ step: 0, flight: 0 });
 export type Basis = "ppp" | "const";
 export const LAB_DEFAULT = { basis: "ppp" as Basis, start: 1990, sample: "primary" };
 /** S05: the visitor's lab choice (tour sets it below p 0.3) and the basis currently drawn (swaps at the neutral phase). */
-export const lab = store({ ...LAB_DEFAULT, live: false, shownBasis: "ppp" as Basis });
+/** S05: the visitor's lab choice and the record actually drawn. Every unit-bearing element reads `shownId`, which
+ * flips in one store update inside the neutral phase of a basis swap (QA L18). */
+export const lab = store({ ...LAB_DEFAULT, live: false, shownBasis: "ppp" as Basis, shownId: "gdppc_ppp_1990_2025_primary" });
 
 /** S06: part 1 groups (method) / part 2 relations (a, b). */
 export const likeness = store({ part: 1, method: "kmeans" as "kmeans" | "ward", a: "ln_gdppc_ppp", b: "ln_productivity", free: false });

@@ -4,7 +4,7 @@
   --accent-secondary: #ff2f7a;
   --control-fill: #690de2; /* fill only: never text, line, seed or data area */
   --text-dim: rgb(255 255 255 / 0.7);
-  --backing: rgb(0 0 0 / 0.78);
+  --backing: rgb(0 0 0 / 0.88);
 }
 
 /* ---------- layers: canvas, labels, then every track's text ---------- */
@@ -38,13 +38,13 @@ html[data-motion="off"] .seed-glow { display: none; }
 .scene-eb .stage-content { pointer-events: none; }
 .scene-eb .stage-content :is(button, a, input, [role="alert"]) { pointer-events: auto; }
 .hero-scrim {
-  position: absolute; left: 0; top: 65.5%; width: 69.4%; height: 27.8%;
+  position: absolute; left: 0; top: 65.5dvh; width: 69.4%; height: 27.8dvh;
   background: linear-gradient(90deg, rgb(0 0 0 / 0.92) 0%, rgb(0 0 0 / 0.92) 45%, rgb(0 0 0 / 0) 100%);
   -webkit-mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
   mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
 }
 .hero-title {
-  position: absolute; left: 96px; top: 68.9%; margin: 0; max-width: 12em; transform-origin: 0 0;
+  position: absolute; left: 96px; top: 68.9dvh; margin: 0; max-width: 12em; transform-origin: 0 0;
   font-family: var(--font-display); font-weight: 400; font-size: 88px; line-height: 0.98; letter-spacing: -0.015em;
 }
 .hero-title:focus { outline: none; }
@@ -56,7 +56,7 @@ html[data-motion="off"] .seed-glow { display: none; }
 .s00-foot .chip { display: block; height: auto; white-space: normal; line-height: 1.4; background: #000; }
 .s00-foot .chip__mark { display: inline-block; margin-right: 6px; }
 .s00-chips, .s03-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
-.s00-status { position: absolute; left: 32px; top: 50%; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; background: #000; padding: 8px; }
+.s00-status { position: absolute; left: 32px; top: 50dvh; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; background: #000; padding: 8px; }
 .s00-status:empty { display: none; }
 .s01-footer { position: absolute; left: 32px; right: 32px; bottom: 64px; opacity: 0; }
 .chip { font-size: 13px; }
@@ -153,8 +153,8 @@ html[data-motion="off"] .scene-eb .stage-content { height: 100dvh; }
 
 /* ---------- T ---------- */
 @media (max-width: 1023px) {
-  .hero-scrim { top: 66%; width: 78%; height: 25%; }
-  .hero-title { left: 48px; top: 68.4%; font-size: 64px; max-width: 8.6em; }
+  .hero-scrim { top: 66dvh; width: 78%; height: 25dvh; }
+  .hero-title { left: 48px; top: 68.4dvh; font-size: 64px; max-width: 8.6em; }
   .s00-tl { left: 24px; }
   .s00-tr { right: 24px; }
   .s00-nodata { display: none; }
@@ -178,12 +178,12 @@ html[data-motion="off"] .scene-eb .stage-content { height: 100dvh; }
 }
 /* ---------- M ---------- */
 @media (max-width: 767px) {
-  .hero-scrim { left: 0; top: 56.9%; width: 100%; height: 29.6%; background: rgb(0 0 0 / 0.92); }
-  .hero-title { left: 16px; right: 16px; top: 64%; font-size: 40px; max-width: none; }
+  .hero-scrim { left: 0; top: 56.9dvh; width: 100%; height: 29.6dvh; background: rgb(0 0 0 / 0.92); }
+  .hero-title { left: 16px; right: 16px; top: 64dvh; font-size: 40px; max-width: none; }
   .s00-tl { left: 16px; top: 16px; }
   .s00-tr { left: 16px; right: 16px; top: 36px; text-align: left; }
   .s00-tr p { font-size: 11px; }
-  .s00-foot { left: 16px; right: 16px; top: 80.5%; bottom: auto; gap: 4px; }
+  .s00-foot { left: 16px; right: 16px; top: 80.5dvh; bottom: auto; gap: 4px; }
   .s00-foot { top: 84px !important; bottom: auto; }
   .s00-foot .legend { width: 220px; padding: 6px; background: var(--backing); }
   .s00-foot .legend__note { display: block; }
@@ -281,7 +281,7 @@ html[data-motion="off"] .s01 { position: relative; top: auto; left: auto; paddin
 .plane { position: absolute; left: 0; top: 0; z-index: 0; pointer-events: none; overflow: visible; }
 .plane__zero { stroke: rgb(255 255 255 / 0.5); stroke-width: 1; }
 .plane__x text { font: 400 11px var(--font-mono); fill: rgb(255 255 255 / 0.75); letter-spacing: 0.04em; }
-.plane__unit { font-size: 11px !important; fill: rgb(255 255 255 / 0.75) !important; }
+.plane .plane__x .plane__unit, .plane .plane__unit { font-size: 11px; fill: rgb(255 255 255 / 0.75); }
 .plane__line { stroke: var(--tag-derived); stroke-width: 2; }
 .plane__fit { animation: fade-in var(--motion-fast) linear both; }
 .plane__lab { font: 400 11px var(--font-mono); fill: #fff; paint-order: stroke; stroke: #000; stroke-width: 3px; }
@@ -638,3 +638,109 @@ html[data-motion="off"] .scene-resorted .stage-content > * { position: relative;
   .sources-head .scene-kicker { font-size: 11px; }
   .sources-pipeline { top: 20px; font-size: 11px !important; line-height: 1.25; }
 }
+
+/* ---------- reduced motion: S00 end state and S01 in normal flow, one after the other (QA D-001) ---------- */
+html[data-motion="off"] .scene-eb .stage-content { height: auto; min-height: 100dvh; display: flow-root; }
+html[data-motion="off"] .s01 { position: relative; top: auto; left: auto; right: auto; width: auto; max-width: 720px; margin: 100dvh 0 0; padding: 24px var(--margin) 16px; opacity: 1 !important; }
+html[data-motion="off"] .s01-footer { position: relative; top: auto; right: auto; left: auto; bottom: auto; margin: 0 var(--margin) 96px; max-width: 720px; opacity: 1 !important; text-align: left; }
+html[data-motion="off"] .s01-footer .scene-footer { text-align: left; }
+
+/* ---------- FIX-A: legend numerals never run together (D-007), corner lines on a backing (D-011) ---------- */
+.legend, .s00-foot .legend, .col__legend .legend, .atlas__legend .legend { width: 300px; max-width: calc(100vw - 32px); }
+.legend__edges span { padding: 0 1px; background: #000; }
+.s00-tr p, .s00-tl .wordmark { display: inline-block; background: var(--backing); padding: 2px 6px; }
+.s00-tr p { display: block; width: fit-content; margin-left: auto; }
+@media (max-width: 767px) {
+  .s00-tr { top: 34px; }
+  .s00-tr p { margin-left: 0; }
+  .s00-foot { top: 112px !important; }
+  .scene-years .col__legend { top: 166px; }
+  .scene-years .years-readout { bottom: 106px; }
+}
+/* S02 cards fit their content at every size (QA D-003): measured with visual.scrollHeight <= clientHeight */
+.scene-sources .deck { --cw: 380px; }
+.scene-sources .story-card { gap: 12px; padding: 20px 22px; }
+.scene-sources .story-card__title { font-size: 32px; }
+.scene-sources .story-card__body { font-size: 14px; line-height: 1.2; }
+@media (min-width: 1024px) and (max-height: 820px) { .scene-sources .deck { --ch: 600px; } .scene-sources .story-card__title { font-size: 28px; } .scene-sources .story-card__body { font-size: 13px; } }
+@media (min-width: 768px) and (max-width: 1023px) { .scene-sources .deck { --cw: 360px; --ch: 660px; } }
+@media (max-width: 767px) { .scene-sources .deck { --cw: min(340px, calc(100vw - 20px)); --ch: 644px; } .scene-sources .story-card__title { font-size: 26px; } .scene-sources .story-card__body { font-size: 12px; } }
+/* inspector: CLOSE stays in view (sticky header), the body scrolls (QA D-005) */
+.inspector { padding-top: 0; }
+.inspector__top { position: sticky; top: 0; z-index: 1; display: flex; gap: 8px; align-items: flex-start; justify-content: space-between; padding: 16px 0 8px; background: var(--surface-primary); }
+.inspector__close { flex: none; }
+/* ATLAS on phones (criterion 11, QA D-008): the disc stays visible; every control lives in a CONTROLS bottom sheet */
+.atlas-sheet-toggle, .rail__sheet-close { display: none; }
+.rail__controls { display: flex; flex-direction: column; gap: 10px; }
+@media (max-width: 767px) {
+  .atlas__legend { top: 61dvh; }
+  .rail { margin-top: 76dvh; }
+  .atlas-sheet-toggle { display: block; position: static; align-self: flex-start; height: 44px; }
+  .rail__controls { display: none; }
+  .rail__controls.is-open { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; max-height: 82dvh; overflow: auto; padding: 16px 16px 24px; background: #111; box-shadow: 0 -1px 0 rgb(255 255 255 / 0.2); animation: sheet-in var(--motion-standard) var(--ease-premium) both; }
+  .rail__controls.is-open .rail__sheet-close { display: block; align-self: flex-end; height: 44px; }
+  .rail__controls :is(select, input, .opt, .btn-square) { min-height: 44px; }
+  .rail__controls .chipsel button { height: 44px; }
+}
+/* D-018: skip link, visible on focus */
+.skip-link { position: fixed; left: 8px; top: 8px; z-index: 100; padding: 8px; background: #fff; color: #000; font: 400 13px / 1 var(--font-mono); letter-spacing: var(--tracking-label); transform: translateY(-200%); }
+.skip-link:focus { transform: none; }
+/* D-011: chips on the violet card get a solid backing; coverage captions on their own row */
+.note--violet .chip, .story-card--violet .chip { background: #000; }
+.comb__row figcaption { display: block; margin-top: 2px; background: var(--surface-primary); color: #c8c8c8; }
+.plane__y { font: 400 11px var(--font-mono); fill: rgb(255 255 255 / 0.75); }
+/* D-013: S07 receipt and limitations never cover the stack on T/M */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ev-side { top: 96px; bottom: auto; left: var(--margin); right: var(--margin); max-height: 150px; overflow: auto; }
+  .ev-stack { top: 262px; bottom: calc(var(--nav-clear) + 24px); height: auto; }
+}
+@media (max-width: 767px) {
+  .ev-side { max-height: 96px; }
+  .ev-stack { top: 236px; bottom: calc(var(--nav-clear) + 12px); height: auto; overflow: hidden; }
+  .ev-a .mini { display: none; } /* the receipt names the artifact; the stack keeps the text whole on phones */
+}
+@media (max-width: 767px) { .s08-links { top: 104px; } .s08-caption { top: 30%; } }
+@media (max-width: 380px) { .s08-para { font-size: 21px; } .s08-links .s08-link { padding: 6px 8px; } }
+
+/* ---------- FIX-A pass 2 ---------- */
+.ledger--short { display: none; }
+.ev-side { max-height: calc(100dvh - 128px - var(--nav-clear) - 24px); overflow: auto; }
+.ev-limits ul { max-height: none; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .scene-catchup .plane-read, .scene-lab .plane-read { top: 124px; }
+  .col--plane .ledger__causal { top: 256px; }
+  .scene-lab .lab-controls, .verdict-card { top: 336px; }
+  .ev-stack { bottom: calc(var(--nav-clear) + 44px); }
+}
+@media (max-width: 767px) {
+  .s00-tr { top: 42px; }
+  .col--plane .ledger__causal { top: 184px; }
+  .scene-catchup .col__head .chip { font-size: 11px; }
+  .rail { margin-top: 84dvh; }
+  .s08-caption { top: 186px; }
+  .s08-para { top: 268px; }
+  .s08-links { top: 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+  .s08-links .s08-link { font-size: 11px; }
+  .ev-side { max-height: 64px; }
+  .ev-stack { top: 204px; }
+  .ev-extra { display: none; }
+  .ledger--long { display: none; }
+  .ledger--short { display: block; }
+  .scene-likeness .plane-read { top: 176px; bottom: auto; }
+}
+/* reduced motion: every column scene and its footer in normal flow (QA D-001) */
+@media (max-width: 1279px) { html[data-motion="off"] :is(.scene-years, .scene-weight) .stage-content > .scene-footer { position: relative; inset: auto; margin: 8px 0 24px; max-width: 640px; width: auto; text-align: left; } }
+@media (max-width: 767px) {
+  .col--plane .ledger__causal { top: 198px; }
+  .verdict-card { padding: 8px; gap: 3px; }
+  .verdict-card__line { font-size: 17px !important; }
+}
+/* reduced motion S07: the receipt and limitations are page content, never a clipped scroller */
+html[data-motion="off"] .scene-evidence .ev-side { max-height: none; overflow: visible; }
+html[data-motion="off"] .scene-evidence .ev-limits ul { max-height: none; overflow: visible; }
+/* wide desktops: a wider side panel fits all limitations without an inner scroll */
+@media (min-width: 1400px) { .ev-side { width: 380px; } }
+/* L16 (D-011): chips on violet cards and on the ATLAS legend get a solid plate a little wider than their box; seed labels get a plate */
+.note--violet .chip, .story-card--violet .chip, .atlas__legend .chip { background: #000; box-shadow: 0 0 0 3px #000; }
+.seed-label { background: #000; padding: 1px 2px; }
+html[data-motion="off"] .s01__kicker { background: #000; width: fit-content; padding: 2px 6px; margin-left: -6px; }

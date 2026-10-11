@@ -24,6 +24,13 @@ async function ready(page: Page, q = "?quality=high") {
   await page.waitForFunction(() => (window as unknown as { __eca: Eca }).__eca.debug().introDone, null);
 }
 
+/** On phones the ATLAS controls live in a CONTROLS sheet (QA D-008): open it before using a control, close it to see the map. */
+async function atlasSheet(page: import("@playwright/test").Page, open: boolean) {
+  const t = page.locator("#atlas .atlas-sheet-toggle");
+  if (!(await t.isVisible())) return;
+  if ((await t.getAttribute("aria-expanded") === "true") !== open) await (open ? t : page.locator(".rail__sheet-close")).click();
+}
+
 test.describe("Stage B scenes", () => {
   test("every scene renders its heading at its landing; never two bases in one visual element", async ({ page }) => {
     await ready(page);
@@ -129,6 +136,7 @@ test.describe("Stage B scenes", () => {
     const nr = await (await page.request.get("data/narratives.json")).json() as { examples: { iso3: string; template: string; text: string }[]; pair_examples: { a: string; b: string; template: string; text: string }[] };
     await page.waitForTimeout(1500);
     await jump(page, "atlas", 0); await page.waitForTimeout(1200);
+    await atlasSheet(page, true);
     const opts = await page.locator("#atlas-list option").evaluateAll((o) => o.map((x) => (x as HTMLOptionElement).value));
     for (const a of cs.aggregates) expect(opts).not.toContain(a.name);
     await page.fill("#atlas-country", "United States"); await page.waitForTimeout(300);
@@ -140,12 +148,15 @@ test.describe("Stage B scenes", () => {
     await page.selectOption("#atlas-ind", "agr_share");
     await expect(page.getByRole("radio", { name: /INDEX = 100/ })).toHaveAttribute("aria-disabled", "true");
     // inspector: opened from a chip, Esc closes it and focus returns to the chip
+    // (on phones the chip lives in the sheet: opening the inspector closes the sheet and focus returns to CONTROLS)
+    const phone = await page.locator("#atlas .atlas-sheet-toggle").isVisible();
     const chip = page.locator(".chipsel__name").first();
     await chip.click();
     await expect(page.getByRole("dialog")).toBeVisible();
     await page.keyboard.press("Escape");
     await expect(page.getByRole("dialog")).toHaveCount(0);
-    await expect(chip).toBeFocused();
+    await expect(phone ? page.locator("#atlas .atlas-sheet-toggle") : chip).toBeFocused();
+    await atlasSheet(page, true);
     await page.getByRole("button", { name: "RESET" }).last().click();
     await expect(page.locator(".chipsel")).toHaveCount(0);
     await expect(page.locator("#atlas-ind")).toHaveValue("gdppc_ppp");
@@ -225,7 +236,9 @@ test("L4: an ATLAS layout for a non-PPP indicator fails visibly and RETRY recove
   await page.keyboard.press("Escape");
   await page.waitForTimeout(1500);
   await jump(page, "atlas", 0);
+  await atlasSheet(page, true);
   await page.selectOption("#atlas-ind", "agr_share");
+  await atlasSheet(page, false);
   const alert = page.locator("#atlas [role=alert]").filter({ hasText: "COULD NOT LOAD SEEDHEAD/AGR_SHARE (HTTP 404)" });
   await expect(alert).toBeVisible({ timeout: 15000 });
   block = false;

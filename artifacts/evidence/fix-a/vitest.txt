@@ -1,0 +1,9 @@
+
+ RUN  v5.0.3 /Users/rishitmathurrishit/data-frontier/projects/05-economic-atlas/site
+
+
+ Test Files  9 passed (9)
+      Tests  111 passed (111)
+   Start at  11:06:37
+   Duration  456ms (transform 54%, tests 28%, import 16%, worker 2%)
+
