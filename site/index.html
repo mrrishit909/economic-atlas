@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" data-motion="on">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <title>Economic Atlas</title>
+    <meta name="description" content="Economic Atlas: the world explained through economic forces, from World Bank World Development Indicators." />
+    <script>
+      // Before first paint: motion preference (OS or in-site session override) and gallery flag.
+      (function () {
+        var d = document.documentElement, o = null;
+        try { o = sessionStorage.getItem("eca.motion"); } catch (e) {}
+        var rm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+        d.setAttribute("data-motion", o === "on" || o === "off" ? o : rm ? "off" : "on");
+        if (/[?&]gallery(=|&|$)/.test(location.search)) d.classList.add("is-gallery");
+      })();
+    </script>
+  </head>
+  <body>
+    <main id="main"><div id="root"></div></main>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
