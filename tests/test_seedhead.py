@@ -36,7 +36,7 @@ def test_layout_exact_counts_and_deterministic():
 
 def test_warm_start_keeps_counts():
     iso, c = _synthetic()
-    _, _, sites, _ = sh.layout(iso, c, iters=80)
+    _, _, sites, *_ = sh.layout(iso, c, iters=80)
     c2 = c.copy()
     c2[3] += 2
     c2[7] -= 1 if c2[7] > 1 else 0
@@ -97,8 +97,9 @@ def test_layout_inputs_are_the_readout_panel(art):
 def test_layout_byte_identical_on_rerun(panel):
     from pipelines import seedhead as sp
     d = json.loads((PUBLIC / "seedhead" / "gdppc_ppp.json").read_text())
-    r1, s1 = sp.one_year(panel, "gdppc_ppp", 1990, None)
-    r2, _ = sp.one_year(panel, "gdppc_ppp", 1991, s1)
+    edges = next(i["display"]["bins"] for i in json.loads((PUBLIC / "indicators.json").read_text())["indicators"] if i["id"] == "gdppc_ppp")
+    r1, s1 = sp.one_year(panel, "gdppc_ppp", 1990, None, edges)
+    r2, _ = sp.one_year(panel, "gdppc_ppp", 1991, s1, edges)
     for new, old in ((r1, d["years"][0]), (r2, d["years"][1])):
         assert json.dumps(sp.py(new), sort_keys=True) == json.dumps(old, sort_keys=True)
 
@@ -130,3 +131,55 @@ def test_median_person_and_budget(art):
     m = art("meta")["seedhead_bytes"]
     assert m["gdppc_ppp.json"] < 150 * 1024 and m["gdppc_ppp_latest.json"] < 6 * 1024 and max(m.values()) < 400 * 1024
     assert all(v < 30 * 1024 for k, v in m.items() if k != "gdppc_ppp.json")
+
+
+@pytest.mark.slow
+def test_every_layout_meets_rank_order_bound():
+    """P05-DATA-003: published layouts stay in rank order (Spearman of rank vs centroid radius >= 0.80)."""
+    n = 0
+    for f in _files():
+        for y in json.loads(f.read_text())["years"]:
+            ro = y["rank_order"]
+            assert ro["rank_radius_spearman"] >= 0.80, (f.name, y["year"], ro)
+            assert 0 <= ro["max_radius_deviation"] <= 1.5
+            n += 1
+    assert n >= 100
+
+
+@pytest.mark.slow
+def test_published_spearman_recomputes_from_owner_array():
+    d = json.loads((PUBLIC / "seedhead" / "gdppc_ppp.json").read_text())
+    for y in (d["years"][0], d["years"][17], d["years"][-1]):
+        c = np.array(y["counts"])
+        own = np.frombuffer(base64.b64decode(y["owner"]), dtype=np.uint8).astype(int)
+        rho, dev, _ = sh.rank_stats(own, sh.lattice(len(own)), c)
+        assert rho == pytest.approx(y["rank_order"]["rank_radius_spearman"], abs=1e-4)
+        assert dev == pytest.approx(y["rank_order"]["max_radius_deviation"], abs=1e-4)
+
+
+@pytest.mark.slow
+def test_latest_layout_has_a_bright_core():
+    y = json.loads((PUBLIC / "seedhead" / "gdppc_ppp_latest.json").read_text())["years"][0]
+    c = np.array(y["counts"])
+    own = np.frombuffer(base64.b64decode(y["owner"]), dtype=np.uint8).astype(int)
+    _, _, cen = sh.rank_stats(own, sh.lattice(len(own)), c)
+    r = np.hypot(cen[:, 0], cen[:, 1])
+    assert (r[:10] <= 0.25).all(), dict(zip(y["order"][:10], r[:10].round(2)))
+    assert r[y["order"].index("USA")] < 0.3
+
+
+@pytest.mark.slow
+def test_dr9_value_bins_match_display_edges(art):
+    ind = {i["id"]: i for i in art("indicators")["indicators"]}
+    pan = {**art("panel_income")["series"], **art("panel_structure")["series"]}
+    iso = art("panel_income")["iso3"]
+    years = art("panel_income")["years"]
+    for f in _files():
+        d = json.loads(f.read_text())
+        edges = np.array(ind[d["indicator"]]["display"]["bins"])
+        for y in d["years"]:
+            vb = np.frombuffer(base64.b64decode(y["value_bin"]), dtype=np.uint8)
+            assert len(vb) == y["n"] and vb.max() <= 6
+            col = years.index(y["year"])
+            vals = np.array([pan[d["indicator"]]["values"][iso.index(c)][col] for c in y["order"]], dtype=float)
+            assert (vb == np.searchsorted(edges, vals, side="right")).all(), (f.name, y["year"])

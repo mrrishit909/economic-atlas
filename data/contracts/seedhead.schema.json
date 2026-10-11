@@ -75,6 +75,9 @@
   "unit_people": {
    "const": 1000000
   },
+  "value_bins": {
+   "type": "string"
+  },
   "years": {
    "items": {
     "additionalProperties": true,
@@ -165,8 +168,32 @@
      "people_millions": {
       "type": "number"
      },
+     "rank_order": {
+      "additionalProperties": true,
+      "properties": {
+       "max_radius_deviation": {
+        "type": "number"
+       },
+       "rank_radius_spearman": {
+        "type": "number"
+       },
+       "solved_cold": {
+        "type": "boolean"
+       }
+      },
+      "required": [
+       "rank_radius_spearman",
+       "max_radius_deviation",
+       "solved_cold"
+      ],
+      "type": "object"
+     },
      "slots": {
       "type": "integer"
+     },
+     "value_bin": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
      },
      "year": {
       "type": "integer"
@@ -179,6 +206,8 @@
      "counts",
      "area_scale",
      "owner",
+     "value_bin",
+     "rank_order",
      "slots",
      "people_millions",
      "no_data",
@@ -201,6 +230,7 @@
   "seed",
   "rounding",
   "method",
+  "value_bins",
   "source",
   "years"
  ],

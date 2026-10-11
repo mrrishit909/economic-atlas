@@ -43,10 +43,12 @@ def _cost(G, S, w):
     return (G * G).sum(1)[:, None] - 2.0 * (G @ S.T) + (S * S).sum(1)[None, :] - w[None, :]
 
 
-def assign(counts: np.ndarray, iters: int = 120, seed_sites: np.ndarray | None = None, step: float = 0.6, relax: float = 0.3):
+def assign(counts: np.ndarray, iters: int = 120, seed_sites: np.ndarray | None = None, step: float = 0.6, relax: float = 0.3, anchor: float = 0.0):
     n = int(counts.sum())
     G = lattice(n)
-    S = rank_sites(counts) if seed_sites is None else seed_sites.copy()
+    RS = rank_sites(counts)
+    rr = np.hypot(RS[:, 0], RS[:, 1])
+    S = RS.copy() if seed_sites is None else seed_sites.copy()
     w = np.zeros(len(counts))
     for _ in range(iters):
         own = _cost(G, S, w).argmin(1)
@@ -57,6 +59,10 @@ def assign(counts: np.ndarray, iters: int = 120, seed_sites: np.ndarray | None =
         cy = np.bincount(own, weights=G[:, 1], minlength=len(counts))
         cen = np.c_[cx, cy] / np.maximum(got, 1)[:, None]
         S[live] = (1 - relax) * S[live] + relax * cen[live]
+        if anchor:  # rank-radius anchor: pull each site's radius toward its rank radius, keeping its angle
+            r = np.hypot(S[:, 0], S[:, 1])
+            tgt = (1 - anchor) * r + anchor * rr
+            S = np.where(r[:, None] > 1e-9, S * (tgt / np.maximum(r, 1e-9))[:, None], RS)
     d = _cost(G, S, w)
     own = d.argmin(1)
     got = np.bincount(own, minlength=len(counts))
@@ -183,15 +189,86 @@ def polish(G: np.ndarray, own: np.ndarray, S: np.ndarray, counts: np.ndarray, nb
     return own
 
 
-def layout(iso3: list[str], counts: np.ndarray, warm: dict[str, np.ndarray] | None = None, iters: int | None = None):
-    """Layout for countries in rank order. warm maps iso3 -> previous final site (missing countries get their rank seed)."""
-    seed = None
-    if warm:
-        r = rank_sites(counts)
-        seed = np.array([warm.get(c, r[k]) for k, c in enumerate(iso3)])
-    G, own, S = assign(counts, iters=iters or (200 if warm else 600), seed_sites=seed)
+RANK_BOUND = 0.85   # layouts below this rank-radius Spearman are re-solved cold (the published tests assert >= 0.80)
+ANCHOR = 0.5
+
+
+def rank_stats(own: np.ndarray, G: np.ndarray, counts: np.ndarray) -> tuple[float, float, np.ndarray]:
+    """(Spearman of rank vs centroid radius, max |centroid radius - rank radius|, centroids)."""
+    from scipy.stats import spearmanr
+    cen = np.c_[np.bincount(own, weights=G[:, 0], minlength=len(counts)), np.bincount(own, weights=G[:, 1], minlength=len(counts))] / counts[:, None]
+    r = np.hypot(cen[:, 0], cen[:, 1])
+    rr = np.hypot(*rank_sites(counts).T)
+    rho = 1.0 if len(counts) < 3 else float(spearmanr(np.arange(len(counts)), r)[0])
+    return rho, float(np.abs(r - rr).max()), cen
+
+
+DEV_TOL = 0.2
+
+
+def reseed(G: np.ndarray, own: np.ndarray, counts: np.ndarray, tol: float = DEV_TOL) -> np.ndarray:
+    """Return stranded territories to their rank radius (count-preserving). For a country whose centroid radius is more than
+    `tol` from its rank radius, it takes the grains nearest its rank site; the countries those grains belonged to receive the
+    same number of the country's old grains (nearest their own centroids). Rank order scan, ties to the lowest index."""
+    own = own.copy()
+    RS = rank_sites(counts)
+    for A in range(len(counts)):
+        mine = np.flatnonzero(own == A)
+        cen = G[mine].mean(0)
+        if abs(np.hypot(*cen) - np.hypot(*RS[A])) <= tol:
+            continue
+        d = ((G - RS[A]) ** 2).sum(1)
+        want = np.lexsort((np.arange(len(G)), d))[: counts[A]]
+        gain = want[own[want] != A]
+        lose = mine[~np.isin(mine, want)]
+        if len(gain) == 0:
+            continue
+        owners = own[gain]
+        cens = {int(b): G[own == b].mean(0) for b in np.unique(owners)}
+        lose = sorted(lose.tolist())
+        for b in sorted(cens):
+            k = int((owners == b).sum())
+            pick = sorted(lose, key=lambda g: (((G[g] - cens[b]) ** 2).sum(), g))[:k]
+            own[pick] = b
+            lose = [g for g in lose if g not in set(pick)]
+        own[gain] = A
+    return own
+
+
+def _solve(counts, seed, iters, anchor=ANCHOR, do_reseed=True):
+    G, own, S = assign(counts, iters=iters, seed_sites=seed, anchor=anchor)
     nb = knn_graph(G)
-    own = polish(G, own, S, counts, nb)  # S here is the pre-repair site (used as the pull target)
-    cx = np.bincount(own, weights=G[:, 0], minlength=len(counts))
-    cy = np.bincount(own, weights=G[:, 1], minlength=len(counts))
-    return G, own, np.c_[cx, cy] / counts[:, None], connectivity(G, own, counts, nb=nb)
+    own = polish(G, own, S, counts, nb)
+    if do_reseed:
+        own = reseed(G, own, counts)
+        own = polish(G, own, S, counts, nb)
+    return G, own, S, nb
+
+
+COLD_TRIES = [(600, ANCHOR, True), (600, ANCHOR, False), (800, ANCHOR, True), (500, ANCHOR, True), (700, 0.3, True), (900, ANCHOR, True)]
+
+
+def layout(iso3: list[str], counts: np.ndarray, warm: dict[str, np.ndarray] | None = None, iters: int | None = None):
+    """Layout for countries in rank order. `warm` maps iso3 -> previous final centroid: the new site keeps the previous
+    direction but takes its radius from the current rank (territories drift in angle, never in rank order). A candidate is
+    accepted when its rank-radius Spearman is >= RANK_BOUND and at most one territory is under 95 percent connected; otherwise
+    the next deterministic candidate is tried (warm first, then cold solves with other iteration counts), and the best by
+    (fragmented territories, Spearman) is kept. Returns G, own, centroids, connectivity, (spearman, max radius deviation, cold)."""
+    r = rank_sites(counts)
+    tries = []
+    if warm:
+        seed = np.array([np.hypot(*r[k]) * warm[c] / max(np.hypot(*warm[c]), 1e-9) if c in warm else r[k] for k, c in enumerate(iso3)])
+        tries.append((seed, iters or 200, ANCHOR, True, False))
+    tries += [(None, iters or it, an, rs, True) for it, an, rs in COLD_TRIES]
+    best = None
+    for seed, it, an, rs, cold in tries:
+        G, own, S, nb = _solve(counts, seed, it, an, rs)
+        rho, dev, cen = rank_stats(own, G, counts)
+        cf = connectivity(G, own, counts, nb=nb)
+        bad = int((cf < 0.95).sum())
+        cand = ((bad, -rho), G, own, cen, cf, (rho, dev, cold))
+        if best is None or cand[0] < best[0]:
+            best = cand
+        if bad <= 1 and rho >= RANK_BOUND:
+            break
+    return best[1], best[2], best[3], best[4], best[5]

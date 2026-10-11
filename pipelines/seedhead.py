@@ -28,30 +28,34 @@ def year_inputs(p: Panel, ind: str, y: int):
     return idx, v, pop, nodata
 
 
-def one_year(p: Panel, ind: str, y: int, warm: dict | None):
+def one_year(p: Panel, ind: str, y: int, warm: dict | None, edges: list[float] | None = None):
     idx, v, pop, nodata = year_inputs(p, ind, y)
     iso = [p.iso3[k] for k in idx]
     pops = pop[idx]
     counts = sh.counts_for(pops)
-    G, own, sites, cf = sh.layout(iso, counts, warm=warm)
+    G, own, sites, cf, (rho, dev, cold) = sh.layout(iso, counts, warm=warm)
     assert (np.bincount(own, minlength=len(iso)) == counts).all()
     # median person: ascending by value, first country where cumulative people reaches half
     asc = np.argsort(-np.arange(len(iso)), kind="stable")  # order is descending by value; reverse for ascending
     cum = np.cumsum(pops[asc])
     mi = int(asc[int(np.searchsorted(cum, cum[-1] / 2))])
+    vb = np.searchsorted(np.asarray(edges), v[idx], side="right").astype(np.uint8) if edges else np.zeros(len(idx), np.uint8)
     rec = dict(year=int(y), n=len(iso), order=iso, counts=counts.tolist(), area_scale=np.round(pops / (counts * sh.UNIT_PEOPLE), 4).tolist(),
-               owner=base64.b64encode(own.astype(np.uint8).tobytes()).decode(), slots=int(counts.sum()), people_millions=round(float(pops.sum()) / 1e6, 3),
+               owner=base64.b64encode(own.astype(np.uint8).tobytes()).decode(), value_bin=base64.b64encode(vb.tobytes()).decode(), slots=int(counts.sum()), people_millions=round(float(pops.sum()) / 1e6, 3),
                no_data=nodata, median_person=dict(iso3=iso[mi], value=float(v[idx[mi]])),
+               rank_order=dict(rank_radius_spearman=round(rho, 4), max_radius_deviation=round(dev, 4), solved_cold=bool(cold)),
                connectivity=dict(min=round(float(cf.min()), 4), mean=round(float(cf.mean()), 4), below_95=int((cf < 0.95).sum())))
     return rec, dict(zip(iso, sites))
 
 
 def build(p: Panel, inds=None, years_override=None) -> dict:
     rk = json.loads((PUBLIC / "rankings.json").read_text())["indicators"]
+    disp = {i["id"]: i["display"]["bins"] for i in json.loads((PUBLIC / "indicators.json").read_text())["indicators"]}
     sha = hashlib.sha256((PUBLIC / "panel_income.json").read_bytes()).hexdigest()
     head = dict(schema_version=SCHEMA_VERSION, tags={"layout": "DERIVED"}, lattice=dict(rule="vogel", golden_angle_deg=137.50776, slot_area=1), unit_people=sh.UNIT_PEOPLE, seed=SEED,
                 rounding="slots = max(1, floor(population / 1e6 + 0.5)) per country (half-up); population = published panel_income value of that year",
-                method="capacity-constrained power assignment on a Vogel lattice (design/sketches/territories.py) plus a count-preserving contiguity repair; iterations 600 cold, 200 warm",
+                method="capacity-constrained power assignment on a Vogel lattice (design/sketches/territories.py) with a rank-radius anchor (0.5) and a count-preserving contiguity repair; iterations 600 cold, 200 warm (warm keeps the previous direction, takes the radius from the current rank); layouts below rank-radius Spearman 0.85 are re-solved cold",
+                value_bins="value_bin[i] = number of indicators[].display.bins edges <= value of order[i] (0..6); uint8, base64, aligned with order",
                 source=dict(panel_income_sha256=sha, population_indicator="population", values_decimals=0))
     sizes = {}
     for ind in inds or IDS:
@@ -64,7 +68,7 @@ def build(p: Panel, inds=None, years_override=None) -> dict:
             years = years_override
         recs, warm = [], None
         for y in years:
-            rec, sites = one_year(p, ind, y, warm if ind == "gdppc_ppp" else None)
+            rec, sites = one_year(p, ind, y, warm if ind == "gdppc_ppp" else None, disp[ind])
             recs.append(rec)
             warm = sites
         doc = dict(head, indicator=ind, price_basis=BASIS[ind], years=recs)

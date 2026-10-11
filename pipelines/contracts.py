@@ -157,12 +157,14 @@ SCHEMAS["meta"]["required"].remove("seedhead_bytes")  # optional: present once t
 
 SEED_YEAR = obj({
     "year": I, "n": I, "order": arr(ISO3), "counts": arr(I), "area_scale": arr(N), "owner": {"type": "string", "pattern": "^[A-Za-z0-9+/]*={0,2}$"},
+    "value_bin": {"type": "string", "pattern": "^[A-Za-z0-9+/]*={0,2}$"},
+    "rank_order": obj({"rank_radius_spearman": N, "max_radius_deviation": N, "solved_cold": B}),
     "slots": I, "people_millions": N, "no_data": arr(obj({"iso3": ISO3, "population": N})),
     "median_person": obj({"iso3": ISO3, "value": N}),
     "connectivity": obj({"min": N, "mean": N, "below_95": I})})
 SCHEMAS["seedhead"] = top("seedhead", {
     "indicator": S, "price_basis": BASIS, "lattice": obj({"rule": {"const": "vogel"}, "golden_angle_deg": N, "slot_area": N}), "unit_people": {"const": 1000000}, "seed": I,
-    "rounding": S, "method": S, "source": obj({"panel_income_sha256": S, "population_indicator": {"const": "population"}, "values_decimals": I}),
+    "rounding": S, "method": S, "value_bins": S, "source": obj({"panel_income_sha256": S, "population_indicator": {"const": "population"}, "values_decimals": I}),
     "years": arr(SEED_YEAR, lo=1)})
 # seedhead files live in site/public/data/seedhead/<indicator>.json (+ gdppc_ppp_latest.json), all validated by the one schema
 
