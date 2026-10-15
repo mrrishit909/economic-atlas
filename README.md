@@ -60,3 +60,7 @@ Convergence, correlations and clusters are descriptive and not causal.
 ## Measured results
 
 Builder-measured Lighthouse, pending independent QA: mobile LCP 1.81 s, performance 88 / 99 / 99 across three runs, accessibility 100; desktop 100 / 100. Independent QA, deployed-URL checks and frame pacing: `TBD (pending QA)`. See `docs/TESTING.md`.
+
+## Code licence status
+
+No code licence has been selected for this repository. It is public so the work can be viewed; public visibility does not itself grant any right to copy, modify, redistribute or reuse the code, text or design. All rights are reserved by the author until a licence file is added. Third-party data keeps its own licence and attribution terms, listed in `docs/DATA_SOURCES.md`.
